@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+        .box {
+            width: 210px;
+            height: 45px;
+            margin: 40px auto;
+            border:1px solid #ccc;
+            line-height: 45px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .txt {
+            font-size: 12px;
+            color: #333;
+        }
+        .star {
+            display: inline-block;
+            width: 90px;
+            height: 21px;
+            
+            /* 文本和图片 ,文本和行内块元素 */
+            vertical-align: middle;
+            background: url(./image/star-gray.png) no-repeat right center  ;
+            background-color: #e6e6e6;
+        }
+        .red-star {
+            width: 80%;
+            height: 100%;
+            background: url(./image/star-light.png) repeat-x   left center;
+        }
+        .wrap {
+            width: 1200px;
+            height: 100px;
+           
+            margin:50px auto 0px;
+            background: url(./image/jd_bg01.png) no-repeat center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="">
+            <span class="txt">店铺星级</span>
+            <div class="star">
+
+                <div class="red-star">
+
+                </div>
+
+            </div>
+        </a>
+    </div>
+
+    <div class="wrap">
+
+    </div>
+</body>
+</html>

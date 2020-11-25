@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            width: 100%;
+            height: 150px;
+            line-height: 150px;
+
+        }
+
+        .wrapp {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .logo {
+            margin-left: 10px;
+            width: 448px;
+            height: 100px;
+            vertical-align: middle;
+        }
+
+        .sousuo {
+            display: inline-block;
+            width: 300px;
+            height: 50px;
+            border: 1px solid #cccccc;
+            margin-left: 117px;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .gjz {
+            display: inline-block;
+            width: 255px;
+            text-indent: 30px;
+
+        }
+
+        .fdj {
+
+            width: 40px;
+            padding: 10px 0;
+            vertical-align: middle;
+
+        }
+
+        .erweima {
+            display: inline-block;
+            width: 80px;
+            margin-left: 50px;
+            vertical-align: middle;
+
+        }
+
+        .wrapp .erweima img {
+            display: block;
+            width: 77px;
+            height: 77px;
+            margin: 0 auto;
+        }
+
+        .erweima .gz {
+            font-size: 14px;
+            color: #6b6b6b;
+            text-align: center;
+            line-height: 18px;
+        }
+
+        .zhuce {
+            float: right;
+            display: inline-block;
+
+            width: 70px;
+            height: 40px;
+            background-color: #0052d9;
+            color: white;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            margin-top: 55px;
+            margin-right: 10px;
+
+        }
+
+        .denglu {
+            float: right;
+            display: inline-block;
+
+            width: 70px;
+            height: 40px;
+            background-color: #0052d9;
+            color: white;
+            font-size: 16px;
+            margin-top: 55px;
+            margin-right: 10px;
+            line-height: 40px;
+            text-align: center;
+
+        }
+
+        .daohang {
+            width: 100%;
+            height: 48px;
+            background-color: #0052d9;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .daohang ul {
+            width: 1250px;
+            margin: 0 auto;
+
+        }
+
+        .daohang ul li {
+            display: inline-block;
+            margin-left: 5px;
+            border-bottom: 2px solid transparent;
+
+        }
+
+        .daohang ul li a {
+
+            /* height: 48px; */
+            font-size: 18px;
+            display: block;
+            line-height: 46px;
+            padding: 0 16px;
+
+        }
+
+        .daohang li:hover {
+            /* background-color: skyblue; */
+            /* background-color:white;  */
+            border-bottom: 4px solid white;
+        }
+
+        .daohang li:hover a {
+            color: #ccc;
+        }
+
+        .bgt {
+            width: 100%;
+            height: 280px;
+            background-image: url(./img/banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 100%;
+        }
+
+        .yi {
+            width: 1200px;
+            height: 400px;
+            /* background-color:pink; */
+            margin: 0px auto;
+            padding-top: 30px;
+        }
+
+        .bgt1 {
+            display: inline-block;
+            width: 550px;
+            height: 380px;
+            padding-right: 15px;
+            background-image: url(./img/111.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            vertical-align: top;
+        }
+
+        .zxun {
+            display: inline-block;
+            width: 626px;
+            height: 144px;
+            margin-bottom: 15px;
+
+
+        }
+
+        .slan {
+            border-bottom: 1px solid #72adff;
+            background: #F4F8FF;
+            text-align: center;
+            height: 43px;
+            line-height: 43px;
+            overflow: hidden;
+        }
+
+        .slan span {
+            padding: 10px 40px;
+            background-image: url(./img/zx_icon@2x.png);
+            background-repeat: no-repeat;
+            background-size: 26px 26px;
+            background-position: left center;
+            font-weight: 800;
+            font-size: 18px;
+
+
+        }
+
+        .slan a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            float: right;
+            /* margin-left: 200px; */
+            /* margin-top: 5px ; */
+            margin-right: 22px;
+            background: url(./img/doubleRight.png) no-repeat right center;
+
+        }
+
+        .nr {
+
+            width: 596px;
+            height: 80px;
+            padding: 15px;
+            /* background-color:blue; */
+            overflow: hidden;
+        }
+
+        .nr .box1 li {
+            float: left;
+            width: 280px;
+            height: 40px;
+        }
+
+        .zz1::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: rgb(211, 212, 211);
+            border-radius: 50%;
+            line-height: 5px;
+        }
+
+        .zz2::after {
+            content: "置顶";
+            display: inline-block;
+            width: 36px;
+            height: 24px;
+            color: #FFFFFF !important;
+            font-size: 12px !important;
+            font-weight: bolder;
+            line-height: 24px;
+            text-align: center;
+            background-color: #FF0000;
+        }
+
+        .dtai {
+            display: inline-block;
+            width: 300px;
+            height: 255px;
+            margin-right: 15px;
+
+
+        }
+
+        .title2 {
+            border-bottom: 1px solid #72adff;
+            background: #F4F8FF;
+            /* text-align: center; */
+            height: 43px;
+            line-height: 43px;
+            overflow: hidden;
+        }
+
+        .title2 span {
+            padding: 10px 40px;
+            background-image: url(./img/navbg1.png);
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: left center;
+            font-size: 18px;
+
+
+        }
+
+        .title2 a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            float: right;
+            /* margin-left: 200px; */
+            /* margin-top: 5px ; */
+            margin-right: 22px;
+            background: url(./img/doubleRight.png) no-repeat right center;
+
+        }
+
+        .nr1 {
+
+            width: 280px;
+            height: 160px;
+            padding: 15px;
+            /* background-color:blue; */
+            overflow: hidden;
+        }
+
+        .nr1 .box1 li {
+            width: 280px;
+            height: 40px;
+        }
+
+        .tgao {
+            display: inline-block;
+            width: 300px;
+            height: 255px;
+
+
+
+        }
+
+        .title3 {
+            border-bottom: 1px solid #72adff;
+            background: #F4F8FF;
+            /* text-align: center; */
+            height: 43px;
+            line-height: 43px;
+            overflow: hidden;
+        }
+
+        .title3 span {
+            padding: 10px 40px;
+            background-image: url(./img/navbg1.png);
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: left center;
+            font-size: 18px;
+
+
+        }
+
+        .title3 a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            float: right;
+            /* margin-left: 200px; */
+            /* margin-top: 5px ; */
+            margin-right: 22px;
+            background: url(./img/doubleRight.png) no-repeat right center;
+
+        }
+
+        .nr2 {
+
+            width: 280px;
+            height: 165px;
+            padding: 15px;
+            /* background-color:blue; */
+            overflow: hidden;
+        }
+
+        .nr2 .box1 li {
+            width: 280px;
+            height: 40px;
+        }
+
+        .er {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .er img {
+            width: 100%;
+            height: 117px;
+            padding: 30px 0;
+        }
+
+        .san {
+            overflow: hidden;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lisss {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list1 {
+            display: inline-block;
+            width: 550px;
+            height: 200px;
+            padding: 15px;
+            background-color: #f3f5f6;
+
+        }
+
+        .list1 li a {
+            width: 422px;
+            display: inline-block;
+            border-bottom: 1px solid #d8d8d8;
+
+            color: #666;
+            /* margin: 0 14px; */
+            line-height: 40PX;
+            padding-right: 10px;
+        }
+
+        .list1 li span {
+            display: inline-block;
+            /* margin: 0 5px; */
+            font-size: 14px;
+            color: #A0A0A0;
+            line-height: 37PX;
+            border-bottom: 1px solid #d8d8d8;
+            margin-left: -10px;
+        }
+
+        .right1 {
+            margin-right: 32px;
+        }
+
+        .si {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .si img {
+            width: 100%;
+            height: 92px;
+            padding: 20px 0;
+        }
+
+        .wu {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .xiehuikanwu {
+            width: 390px;
+            height: 414px;
+            margin-right: 15px;
+            float: left;
+
+        }
+
+        .title4 {
+            border-bottom: 2px solid #377ae2;
+            background: #F4F8FF;
+            overflow: hidden;
+        }
+
+        .title4 span {
+            font-weight: 300;
+            font-size: 18px;
+            color: #333;
+            line-height: 43px;
+            padding-left: 20px;
+
+        }
+
+        .title4 a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            margin-top: 12px;
+            float: right;
+            margin-right: 22px;
+            background: url(./img/doubleRight.png) no-repeat right center;
+        }
+
+        .title4-text li {
+            color: #666;
+            height: 40px;
+            line-height: 39px;
+            margin: 0 14px;
+            padding-right: 30px;
+            overflow: hidden;
+        }
+
+        b {
+            float: left;
+            color: #377ae2;
+
+        }
+
+        .huiyuanfengcai {
+            width: 755px;
+            height: 414px;
+            margin-left: 35px;
+            float: left;
+
+        }
+
+        .title5 {
+            border-bottom: 2px solid #377ae2;
+            background: #F4F8FF;
+            overflow: hidden;
+        }
+
+        .title5 span {
+            font-weight: 300;
+            font-size: 18px;
+            color: #333;
+            line-height: 43px;
+            padding-left: 20px;
+
+        }
+
+        .title5 a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            margin-top: 12px;
+            float: right;
+            margin-right: 22px;
+            background: url(./img/doubleRight.png) no-repeat right center;
+        }
+
+        .title5-text {
+            width: 755px;
+            height: 250px;
+        }
+
+        .huiyuanfengcai img {
+            width: 380px;
+            margin: 20px 20px 0 0;
+            vertical-align: bottom;
+        }
+
+        .title5-text ul {
+            display: inline-block;
+            width: 300px;
+            /* margin-top: 30px; */
+            padding: 15px;
+        }
+
+        .title5-text li {
+            width: 260px;
+            color: #666;
+            height: 40px;
+            line-height: 39px;
+            margin: 0 14px;
+            /* padding-right: 30px; */
+
+        }
+
+        p {
+            width: 1200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 24px;
+            margin: 0 auto;
+            background: url(./img/lernbg@2x.png) no-repeat 260px center;
+            background-size: 821px 21px;
+        }
+
+        .liu {
+            width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #e5e5e5;
+            padding: 10px 20px;
+        }
+
+
+        .keji {
+            display: inline-block;
+            width: 567px;
+            height: 242px;
+            margin-right: 15px;
+
+
+        }
+
+        .ttitle2 {
+            /* border-bottom: 1px solid #72adff; */
+            background: #F4F8FF;
+            /* text-align: center; */
+            height: 43px;
+            line-height: 43px;
+            overflow: hidden;
+        }
+
+        .ttitle2 span {
+            padding: 10px 25px;
+            background-image: url(./img/kj_icon@2x.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: left center;
+            font-size: 16px;
+            margin-left: 15px;
+
+
+        }
+
+        .ttitle2 a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            float: right;
+            /* margin-left: 200px; */
+            /* margin-top: 5px ; */
+            margin-right: 22px;
+            background: url(./img/icon2-j-t.png) no-repeat right center;
+
+        }
+
+        .nnr1 {
+
+            width: 567px;
+            height: 200px;
+            /* padding: 15px; */
+            /* background-color:blue; */
+            overflow: hidden;
+        }
+
+        .nnr1 .bbox1 li {
+            width: 550px;
+            height: 40px;
+            line-height: 40px;
+            color: #666;
+            padding-left: 17px;
+        }
+
+        .shihua {
+            display: inline-block;
+            width: 567px;
+            height: 242px;
+
+
+
+        }
+
+        .ttitle3 {
+            /* border-bottom: 1px solid #72adff; */
+            background: #F4F8FF;
+            /* text-align: center; */
+            height: 43px;
+            line-height: 43px;
+            overflow: hidden;
+        }
+
+        .ttitle3 span {
+            padding: 10px 25px;
+            background-image: url(./img/tlhs_icon@2x.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: left center;
+            font-size: 16px;
+            margin-left: 15px;
+
+
+        }
+
+        .ttitle3 a {
+            font-size: 14px;
+            color: #1F67DE;
+            padding: 0px 20px 0 0;
+            float: right;
+            /* margin-left: 200px; */
+            /* margin-top: 5px ; */
+            margin-right: 22px;
+            background: url(./img/icon2-j-t.png) no-repeat right center;
+
+        }
+
+        .nnr2 {
+
+            width: 567px;
+            height: 200px;
+            /* padding: 15px; */
+            /* background-color:blue; */
+            overflow: hidden;
+        }
+
+        .nnr2 .bbox1 li {
+            width: 550px;
+            height: 40px;
+            line-height: 40px;
+            color: #666;
+            padding-left: 17px;
+        }
+
+        .foot {
+            width: 100%;
+            height: 224px;
+            background-color: #00092b;
+            margin-top: 100px;
+        }
+
+        .foot-middle {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .foot-lianjie {
+            width: 100%;
+            border-bottom: 1px solid #25305b;
+            overflow: hidden;
+        }
+
+        .f1 {
+            float: left;
+            font-size: 14px;
+            color: #fff;
+            line-height: 88px;
+            margin-right: 50px;
+        }
+
+        .p1,
+        .p2 {
+            width: 100%;
+            font-size: 12px;
+            color: white;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .pp1 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="title">
+        <div class="wrapp">
+            <img src="./img/logo.jpg" alt="" class="logo">
+            <div class="sousuo">
+                <span class="gjz">请输入关键字</span><img src="./img/fdj.png" alt="" class="fdj">
+            </div>
+            <div class="erweima">
+                <img src="./img/erweicode.png" alt="">
+                <div class="gz">微信公众号</div>
+            </div>
+            <div class="zhuce">注册</div>
+            <div class="denglu">登录</div>
+        </div>
+    </div>
+    <div class="daohang">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">行业概况</a></li>
+            <li><a href="#">协会动态</a></li>
+            <li><a href="#">政策法规</a></li>
+            <li><a href="#">行业资讯</a></li>
+            <li><a href="#">会员专区</a></li>
+            <li><a href="#">协会刊物</a></li>
+            <li><a href="#">交流培训</a></li>
+            <li><a href="#">咨询服务</a></li>
+            <li><a href="#">统计工作</a></li>
+            <li><a href="#">通知公告</a></li>
+        </ul>
+    </div>
+    <div class="bgt"></div>
+    <div class="yi">
+        <div class="bgt1"></div>
+        <div class="zxun">
+            <div class="slan">
+                <span>资讯速览</span>
+                <a href="#">更多</a>
+            </div>
+            <div class="nr">
+                <ul class="box1">
+                    <li class="zz1 zz2">关于邀请出席“京投发展第三届</li>
+                    <li class="zz1 zz2">中国地方铁路协会关于组织会</li>
+                    <li class="zz1 zz2">中国地方铁路协会关于组织会</li>
+                    <li class="zz1 zz2">国家铁路局关于铁路专用产品</li>
+                </ul>
+            </div>
+
+            <div class="dtai">
+                <div class="title2">
+                    <span>协会动态</span>
+                    <a href="#">更多</a>
+                </div>
+                <div class="nr1">
+                    <ul class="box1">
+                        <li class="zz1 zz2">关于邀请出席“京投发展第三届</li>
+                        <li class="">中国地方铁路协会关于组织会</li>
+                        <li class="">中国地方铁路协会关于组织会</li>
+                        <li class="">国家铁路局关于铁路专用产品</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tgao">
+                <div class="title3">
+                    <span>通知公告</span>
+                    <a href="#">更多</a>
+                </div>
+                <div class="nr2">
+                    <ul class="box1">
+                        <li class="zz1 zz2">关于邀请出席“京投发展第三届</li>
+                        <li class="">中国地方铁路协会关于组织会</li>
+                        <li class="">中国地方铁路协会关于组织会</li>
+                        <li class="">国家铁路局关于铁路专用产品</li>
+                        <li class="">国家铁路局关于铁路专用产品</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="er">
+        <img src="./img/img-02.png" alt="">
+    </div>
+    <div class="san">
+        <img src="./img/hyzx.png" alt="" class="right1">
+        <img src="./img/zcfg.png" alt="">
+    </div>
+    <div class="lisss">
+        <div class="list1 right1">
+            <ul>
+                <li><a href="#">国家铁路局关于铁路专用产品质量监督抽查情况的通报（2020年第6批）</a>
+                    <span>2020-11-16</span>
+                </li>
+                <li><a href="#">国家铁路局关于发布铁道行业标准的公告（2020年第6批）</a>
+                    <span>2020-11-16</span>
+                </li>
+                <li><a href="#">国家铁路局关于发布铁道行业标准的公告(2020年第5批）</a>
+                    <span>2020-11-16</span>
+                </li>
+            </ul>
+
+        </div>
+        <div class="list1">
+            <ul>
+                <li><a href="#">国家铁路局关于铁路专用产品质量监督抽查情况的通报（2020年第6批）</a>
+                    <span>2020-11-16</span>
+                </li>
+                <li><a href="#">国家铁路局关于发布铁道行业标准的公告（2020年第6批）</a>
+                    <span>2020-11-16</span>
+                </li>
+                <li><a href="#">国家铁路局关于发布铁道行业标准的公告(2020年第5批）</a>
+                    <span>2020-11-16</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="si">
+        <img src="./img/img-03.png" alt="">
+    </div>
+    <div class="wu">
+        <div class="xiehuikanwu">
+            <div class="title4">
+                <span>协会刊物</span>
+                <a href="#">更多</a>
+            </div>
+            <div class="title4-text">
+                <ul>
+                    <li><b>1</b>《中国地方铁路信息》第106期</li>
+                    <li><b>2</b>《中国地方铁路信息》第105期</li>
+                    <li><b>3</b>《中国地方铁路信息》第104期</li>
+                    <li><b>4</b>《中国地方铁路信息》第103期</li>
+                    <li><b>5</b>《中国地方铁路信息》第102期</li>
+                </ul>
+            </div>
+        </div>
+        <div class="huiyuanfengcai">
+            <div class="title5">
+                <span>会员风采</span>
+                <a href="#">更多</a>
+            </div>
+            <div class="title5-text">
+                <img src="./img/fengcai.jpg" alt="">
+                <ul>
+                    <li>砥砺奋斗四十载&nbsp;沧桑巨变谱新篇</li>
+                    <li>中国铁路与北斗</li>
+                    <li>会员风采：陕西铁路物流集团高质...</li>
+                    <li>铁五院召开"十四五"战略规划...</li>
+                    <li>为武汉"重启"加速加油</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>学习园地</p>
+    <div class="liu">
+        <div class="keji">
+            <div class="ttitle2">
+                <span>科技信息</span>
+                <a href="#">更多</a>
+            </div>
+            <div class="nnr1">
+                <ul class="bbox1">
+                    <li>关于邀请出席“京投发展第三届</li>
+                    <li>中国地方铁路协会关于组织会</li>
+                    <li>中国地方铁路协会关于组织会</li>
+                    <li>国家铁路局关于铁路专用产品</li>
+                    <li>国家铁路局关于铁路专用产品</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="shihua">
+            <div class="ttitle3">
+                <span>铁路史话</span>
+                <a href="#">更多</a>
+            </div>
+            <div class="nnr2">
+                <ul class="bbox1">
+                    <li>关于邀请出席“京投发展第三届</li>
+                    <li>中国地方铁路协会关于组织会</li>
+                    <li>中国地方铁路协会关于组织会</li>
+                    <li>国家铁路局关于铁路专用产品</li>
+                    <li>国家铁路局关于铁路专用产品</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+
+        <div class="foot-middle">
+            <div class="foot-lianjie">
+                <div class="f1">友情链接</div>
+                <div class="f1">中央和国家委部</div>
+                <div class="f1">国家铁路本级网站</div>
+                <div class="f1">国家铁路集团所属的各个单位网站</div>
+                <div class="f1">铁路相关单位网站</div>
+            </div>
+            <div class="p1 pp1">中国地方铁路协会|电话：010-51844642|北京市海淀区玲珑路9号院东区5号楼南楼6层</div>
+            <div class="p2">【京ICP备19022869号】</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 400px;
+            /* padding: 0px 30px; */
+            height: 200px;
+            background-color: red;
+        }
+
+        /* 块默认取父盒子有效内容宽度的100% 作为自己的宽度 */
+        .b {
+            /* 盒模型宽度 = 100% +40px = 400px+40px >400px 溢出 */
+            /* width:100%; */
+            padding: 0px 20px;
+            /* width:auto;浏览器有一个默认行为 会自动的把内边距和边框算到width里 ---》不溢出 */
+            height: 100px;
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b"></div>
+    </div>
+</body>
+</html>

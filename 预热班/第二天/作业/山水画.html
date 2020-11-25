@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山水名画</title>
+    <style>
+        .bigframe{
+            position: relative;
+            width: 1200px;
+            height: 730px;
+            border: 5px solid skyblue;
+            background-color:#aed8e6;
+            overflow: hidden;
+        }
+        .baiyun{
+            position:absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 150px;
+            /* background-color:pink; */
+            animation: yunfly 3s linear 3.2s infinite alternate;
+        }
+        .ball1{
+            position: absolute;
+            left: 69px;
+            top: 38px;
+            width: 100px;
+            height: 50px;
+            background-color:#f8fbfd;
+            border-radius: 50%;
+        }
+        .ball2{
+            position: absolute;
+            left: 41px;
+            top: 41px;
+            width: 40px;
+            height: 40px;
+            background-color:#f8fbfd;
+            border-radius: 50%;
+        }
+        .ball3{
+            position: absolute;
+            left: 155px;
+            top: 34px;
+            width: 40px;
+            height: 60px;
+            background-color:#f8fbfd;
+            border-radius: 50%;
+            transform: rotate(60deg);
+        }
+        .sun{
+            position: absolute;
+            left: 169px;
+            top: 124px;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #f8fc00;
+            animation: sunle 2s linear 1s 1 forwards;
+        }
+      .box1{position: absolute;
+            left: 52px;
+            bottom:-109px;
+            width: 250px;
+            height: 400px;
+            border-radius: 80px;
+            background-color: #008000;
+            transform: rotate(45deg);
+
+      }
+      .box2{position: absolute;
+            left:309px;
+            bottom:-168px;
+            width: 400px;
+            height: 400px;
+            border-radius: 80px;
+            background-color: #008000;
+            transform: rotate(45deg);
+
+      }
+      .box3{position: absolute;
+            left:701px;
+            bottom:-167px;
+            width: 250px;
+            height: 350px;
+            border-radius: 80px;
+            background-color:#008000;
+            transform: rotate(45deg);
+
+      }
+      .box4{position: absolute;
+            left:986px;
+            bottom:-119px;
+            width: 250px;
+            height: 350px;
+            border-radius: 80px;
+            background-color:#008000;
+            transform: rotate(45deg);
+
+      }
+      .fengshan{
+        position: absolute;
+            left:599px;
+            top:389px;
+            width: 80px;
+            height: 80px;
+            transform: rotate(0deg);
+            animation: fczhuan 2s linear 3.5s infinite ;
+            /* background-color:pink; */
+            z-index: 2;
+            
+      }
+      .shan1{
+        position: absolute;
+            left:35px;
+            top:0px;
+            width: 10px;
+            height: 80px;
+            border-radius:50%;
+            background-color: #f8fbfd;
+            z-index: 2;
+            
+      }
+      .shan2{
+        position: absolute;
+            left:35px;
+            top:0px;
+            width: 10px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #f8fbfd;
+            transform: rotate(90deg);
+            z-index: 2;
+            
+      }
+      .zhu{
+        position: absolute;
+            left:635px;
+            top:435px;
+            width: 6px;
+            height: 124px;
+            background-color: #deb887;
+            z-index: 0;
+            
+      }
+      @keyframes sunle{
+          0%{
+            left: 200px;
+            top: 124px;
+          }
+          25%{
+            left: 350px;
+            top: 300px;
+          }
+          50%{
+            left: 500px;
+            top: 450px;
+          }
+          75%{
+            left: 650px;
+            top: 310px;
+          }
+          100%{
+            left: 800px;
+            top: 125px;
+          }
+      }
+      @keyframes yunfly{
+
+          0%{
+left: 0;
+top: 0;
+          }
+          50%{
+            left: 500px;
+top: 0;
+          }
+          100%{
+            left:1000px;
+top: 0;
+          }
+      }
+      @keyframes fczhuan{
+          0%{
+transform: rotate(0deg);
+          }
+          25%{
+            transform: rotate(45deg);
+          }
+          50%{
+            transform: rotate(90deg);
+          }
+          75%{
+            transform: rotate(135deg);
+          }
+          100%{
+            transform: rotate(180deg);
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="bigframe">
+        <div class="baiyun">
+        <div class="ball1"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+        </div>
+        <div class="sun"></div>
+        <div class="fengshan">
+         <div class="shan1"></div>
+        <div class="shan2"></div>
+         </div>
+        
+        <div class="zhu"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

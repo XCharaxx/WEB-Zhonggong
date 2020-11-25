@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective:900px;
+
+        }
+        .box{
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        .door1{
+            position:absolute;
+            left: 0px;
+            width: 300px;
+            height: 400px;
+            background-color:red;
+            border: 1px solid black;
+            transform-origin: left center;
+            transform: rotate3d(0,0,0,0);
+            transition: transform 0.1s linear;
+            z-index: 2;
+        }
+        .door2{
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            height: 400px;
+            background-color:red;
+            border: 1px solid black;
+            transform-origin: right center;
+            transform: rotate3d(0,0,0,0);
+            transition: transform 0.1s linear;
+            z-index: 2;
+        }
+        .key1{
+           position: absolute;
+           right: 2px;
+           top: 185px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: black;
+           
+        }
+        .key2{
+           position: absolute;
+           right: 2.5px;
+           top:2.5px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: red;
+           
+        }
+        .key3{
+           position: absolute;
+           left: px;
+           top: 185px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: black;
+           
+        }
+        .key4{
+           position: absolute;
+           right: 2.5px;
+           top:2.5px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: red;
+           
+        }
+        .box:hover .door1{
+            transform: rotate3d(0,-1,0,170deg);
+        }
+        .box:hover .door2{
+            transform: rotate3d(0,1,0,170deg);
+        }
+        img{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            width: 600px;
+            height: 400px;
+         z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="door1">
+            <div class="key1">
+                <div class="key2"></div>
+            </div>
+        </div>
+        <img src="https://www.17sucai.com/preview/2037869/2020-03-24/%E6%99%AF%E6%B7%B1/dog.gif" alt="">
+        <div class="door2">
+            <div class="key3">
+                <div class="key4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(0deg);
+            transition: background-color 2s linear, transform 1s linear 1s;
+        }
+        .box:hover{
+            transform: rotate(45deg);
+            background-color: yellow;
+            width: 200px;
+            /* transition: background-color 2s; */
+            /* transition: transform 2s; */
+            /* transition: 2s;  省略过度的属性名称表示所有变化的属性都过渡 */
+            /* transition: all 2s; */
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

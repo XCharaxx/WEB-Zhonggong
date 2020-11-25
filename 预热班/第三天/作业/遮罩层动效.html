@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tu{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 10px #333;
+            overflow: hidden;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+
+        }
+        .cover{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color:rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            color: white;
+            
+            }
+            .aa{
+                transform-origin: right bottom;
+            transform: rotate(0deg);
+            transition: transform 0.5s linear;
+            }
+            .tu:hover .aa{
+                transform: rotate(90deg);
+            }
+            .bb{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+              transition: 1s ;
+            }
+            .tu:hover .bb{
+                position: absolute;
+                left: 300px;
+                top: 300px;
+                transition: 1s ;
+            }
+            .cc{
+             transform: scale(1);
+             transition: transform 1s;
+            }
+            .tu:hover .cc{
+            transform: scale(0);
+            transition: transform 1s;
+            }
+            .dd{
+             transform: scale(1);
+             transition: transform 1s;
+            }
+            .tu:hover .dd{
+                transform: scale(1.5);
+            transition: transform 1s;
+            }
+    </style>
+</head>
+<body>
+      <div class="tu">
+          <img src="../../imgg/Snipaste_2020-11-11_18-48-12.png">
+          <div class="cover aa">cover</div>
+      </div>
+      <br>
+      <div class="tu">
+        <img src="../../imgg/Chrysanthemum.jpg">
+        <div class="cover bb">cover</div>
+    </div>
+    <br>
+    <div class="tu">
+        <img src="../../imgg/Desert.jpg">
+        <div class="cover cc">cover</div>
+    </div>
+    <br>
+        <div class="tu">
+            <img src="../../imgg/Koala.jpg" class="dd">
+           
+    </div>
+</body>
+</html>

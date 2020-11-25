@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+            overflow: hidden;
+
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+           
+        }
+        .box .smbox{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+            background-color:rgba(0,0,0,0.4);
+            text-align: center;
+            line-height:100px ;
+            color: white;
+          
+        }
+         .box .cover {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(0,0,0,0);
+            position: absolute;
+            top: 0;
+            transition: all .6s ease;
+            color: white;
+            text-align: center;
+            /* line-height: 200px; */
+           
+        }
+        .zz{
+           width: 300px;
+           height: 400px;
+           margin: 200px auto;
+            display: none;
+        }
+        .box:hover .cover {
+            background-color: rgb(0,0,0,0.6);
+        
+        }
+        .box:hover .smbox{
+            display: none;
+        }
+       .box:hover .zz{
+           
+           /* width: 500px; */
+             display: block;
+        }
+        .box:hover img{
+             filter: blur(3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">
+            <img src="./img/1.jpg" alt="">
+            <div class="smbox">B</div>
+            <div class="cover"><div class="zz">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或哈哈咔咔咔咔咔咔扩扩哈哈哈哈哈哈哈哈哈哈哈哈哈</div></div>
+        </a>
+        
+
+    </div>
+</body>
+</html>

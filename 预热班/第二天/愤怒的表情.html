@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width:300px ;
+            height: 300px;
+            /* background-color:pink; */
+        }
+        .box1{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color:#e25d5d;
+            border-radius: 50%;
+        }
+        
+        .box2{
+            position: absolute;
+            left: 100px;
+            top: 142px;
+            width: 40px;
+            height: 10px;
+            background-color: #7f2626;
+            border-radius: 0;
+            animation: mouthyy 1s linear 1s infinite alternate;
+        }
+        .box3{
+            position: absolute;
+            left: 63px;
+            top: 60px;
+            width: 20px;
+            height: 20px;
+            background-color:#7f2626;
+            border-radius: 50%;
+
+        } 
+        .box4{
+            position: absolute;
+            left:155px ;
+            top: 60px;
+            width: 20px;
+            height: 20px;
+            background-color:#7f2626;
+            border-radius: 50%;
+
+        } 
+        .box5{
+            position: absolute;
+            top: 58px;
+            left: 61px;
+            width: 35px;
+            height: 10px;
+            background-color:#7f2626;
+            transform: rotate(30deg);
+            animation: meimao-left 3s linear 1s infinite alternate;
+
+
+        }
+       
+        
+        .box6{
+            position: absolute;
+            top: 58px;
+            left: 145px;
+            width: 35px;
+            height: 10px;
+            background-color:#7f2626;
+            transform: rotate(-30deg);
+            animation: meimao-right 3s linear 1s infinite alternate;
+
+        }
+        @keyframes meimao-left{
+            0%{
+                transform: rotate(30deg);
+            }
+            50%{
+                transform: rotate(50deg);
+            }
+            100%{
+                transform: rotate(60deg);
+            }
+        }
+        @keyframes meimao-right{
+            0%{
+                transform: rotate(-30deg);
+            }
+            50%{
+                transform: rotate(-50deg);
+            }
+            100%{
+                transform: rotate(-60deg);
+            }
+        }
+        @keyframes mouthyy{
+            0%{
+                border-radius: 0; 
+                height: 10px;           }
+            50%{
+                border-radius:5px 5px 0 0;
+                height: 5px;
+            }
+            100%{
+               border-radius:10px 10px 0 0;
+               height: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        
+    </div>
+</body>
+</html>

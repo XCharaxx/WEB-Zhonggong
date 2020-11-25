@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        .box{
+            position: relative;
+            width: 200px;
+            height: 300px;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(30deg);
+            
+        }
+        .ho{
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 200px;
+             height: 300px;
+             border: 1px solid black;
+
+        }
+        .zuo{
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100px;
+             height: 300px;
+             border: 1px solid black;
+             transform-origin: left center;
+             transform: rotateY(-90deg);
+
+        }
+        .you{
+             position: absolute;
+             right: 0;
+             top: 0;
+             width: 100px;
+             height: 300px;
+             border: 1px solid black;
+             transform-origin: right center;
+             transform: rotateY(90deg);
+
+        }
+        .table1{
+            position: absolute;
+             left: 0;
+             top: 200PX;
+             width: 200px;
+             height: 100px;
+             border: 0.5px solid black;
+             transform-origin: center bottom;
+             transform: rotateX(-90deg);
+             background-color:pink;
+             border-collapse: collapse;
+             transition: transform 0.5s linear;
+        }
+        .t1{
+            position: absolute;
+            left: 0;
+            top: 200px;
+            width:200px ;
+            height: 100px;
+            border: 1px solid black;
+            transform: translateZ(100px);
+            background-color: #add8e6;
+            transition: transform 0.5s linear;
+            border-collapse: collapse;
+
+        }
+        .table2{
+            position: absolute;
+             left: 0;
+             top: 100PX;
+             width: 200px;
+             height: 100px;
+             border: 0.5px solid black;
+             transform-origin: center bottom;
+             transform: rotateX(-90deg);
+             background-color:pink;
+             transition: transform 0.5s linear;
+             border-collapse: collapse;
+        }
+        .t2{
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width:200px ;
+            height: 100px;
+            border: 1px solid black;
+            transform: translateZ(100px);
+            background-color: #add8e6;
+            transition: transform 0.5s linear;
+            border-collapse: collapse;
+        }
+        .table3{
+            position: absolute;
+             left: 0;
+             top: 0;
+             width: 200px;
+             height: 100px;
+             border: 0.5px solid black;
+             transform-origin: center bottom;
+             transform: rotateX(-90deg);
+             background-color:pink;
+             transition: transform 0.5s linear;
+             border-collapse: collapse;
+        }
+        .t3{
+            position: absolute;
+            left: 0;
+            top:0px;
+            width:200px ;
+            height: 100px;
+            border: 1px solid black;
+            transform: translateZ(100px);
+            background-color: #add8e6;
+            transition: transform 0.5s linear;
+            border-collapse: collapse;
+        }
+        /* .gui1{
+            position: absolute;
+            width:200px ;
+            height: 100px;
+            border: 3px solid red;
+            transition: transform 1s linear;
+        } */
+        .gui1:hover .table1 {
+            transform: rotateX(-90deg) translateY(-30px);
+        }
+        .gui1:hover .t1 {
+            transform: translateZ(130px);
+        }
+        /* .gui2{
+            position: absolute;
+            width:200px ;
+            height: 100px;
+            border: 3px solid red;
+            transition: transform 1s linear;
+        } */
+        .gui2:hover .table2 {
+            transform: rotateX(-90deg) translateY(-30px);
+        }
+        .gui2:hover .t2 {
+            transform: translateZ(130px);
+        }
+        /* .gui3{
+            position: absolute;
+            width:200px ;
+            height: 100px;
+            
+            border: 3px solid red;
+            background-color:blue;
+            transition: transform 1s linear;
+        } */
+        .gui3:hover .table3 {
+            transform: rotateX(-90deg) translateY(-30px);
+        }
+        .gui3:hover .t3 {
+            transform: translateZ(130px);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="ho"></div>
+        <div class="zuo"></div>
+        <div class="you"></div>
+        <div class="gui1">
+            <div class="table1"></div>
+            <div class="t1"></div>
+        </div>
+        <div class="gui2">
+            <div class="table2"></div>
+            <div class="t2"></div>
+        </div>
+        <div class="gui3">
+            <div class="table3"></div>
+            <div class="t3"></div>
+        </div>
+    </div>
+</body>
+</html>

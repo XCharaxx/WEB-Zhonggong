@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            position: relative;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+         z-index: 0;
+        }
+        .bgc1{position: absolute;
+           left: 0;
+           top: 0;
+            width: 200px;
+            height: 100px;
+            background-color:pink;
+            transform: scale(0,1);
+            transform-origin: right center;
+            transition: transform 0.5s linear ;
+            z-index: 0;
+
+        }
+        .box1:hover .bgc1{
+            transform: scale(1,1);
+            transform-origin: left center;
+            transition: transform 0.5s linear ;
+        }
+        .bgc2{
+            position: absolute;
+           left: 0;
+           top: 0;
+            width: 200px;
+            height: 100px;
+            background-color:pink;
+            transform: scale(0,0);
+            transform-origin: right bottom;
+            transition: transform 0.5s linear ;
+
+
+        }
+        .box1:hover .bgc2{
+            transform: scale(1,1);
+            transform-origin: left top;
+            /* transition: transform 0.5s linear ; */
+        }
+        .bgc3{
+            position: absolute;
+           left: 0;
+           top: 0;
+            width: 200px;
+            height: 100px;
+            background-color:pink;
+            transform: scale(0,0);
+            transform-origin: center bottom;
+            transition: transform 0.5s linear ;
+
+
+        }
+        .box1:hover .bgc3{
+            transform: scale(1,1);
+            transform-origin: center top;
+            transition: transform 0.5s linear ;
+        }
+        .z{
+        position: absolute;
+         left: 0;
+         top: 0;
+         width: 200px;
+         height: 100px;
+         z-index: 2;
+         font-size: 30px;
+         font-weight: 700;
+         text-align: center;
+         line-height:100px;
+         transition: color 0.5s linear;
+        }
+        .box1:hover .z{
+            color:white ;
+            
+
+        }
+     </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="z">hover me</div>
+    <div class="bgc1"></div>
+        
+    </div>
+    <div class="box1">
+        <div class="z">hover me</div>
+        <div class="bgc2"></div>
+    </div>
+    <div class="box1">
+        <div class="z">hover me</div>
+        <div class="bgc3"></div>
+    </div>
+</body>
+</html>

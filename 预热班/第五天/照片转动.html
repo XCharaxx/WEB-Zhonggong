@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{perspective:2000px;}
+        .box{ 
+            position: relative;
+            width: 800px;
+            height: 500px;
+            /* border: 1px solid black; */
+            margin: 0px auto;
+            transform-style:preserve-3d;
+            transform: rotateX(-30deg);
+            animation: zz 5s linear infinite;
+
+        }
+        .box1{
+            position: absolute;
+            left: 300px;
+            bottom:50px;
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+
+        }
+        .lab1{
+            transform:rotateY(45deg)  translateZ(350px);
+        }
+        .lab2{
+            transform:rotateY(90deg) translateZ(350px);
+        }
+        .lab3{
+            transform:rotateY(135deg) translateZ(350px);
+        }
+        .lab4{
+            transform:rotateY(180deg) translateZ(350px);
+        }
+        .lab5{
+            transform:rotateY(225deg) translateZ(350px);
+        }
+        .lab6{
+            transform:rotateY(270deg) translateZ(350px);
+        }
+        .lab7{
+            transform:rotateY(315deg) translateZ(350px);
+        }
+        .lab8{
+            transform:rotateY(360deg) translateZ(350px);
+        }
+        @keyframes zz{
+            0%{
+                /* transform: rotateX(-30deg); */
+                transform: rotateX(-20deg) rotateY(0deg);
+            }
+            100%{
+                /* transform: rotateX(-30deg); */
+                transform: rotateX(-20deg) rotateY(360deg);
+            }
+        }
+        img{
+            width: 200px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="box1 lab1">
+        <img src="../imgg/Chrysanthemum.jpg" alt="">
+    </div>
+    <div class="box1 lab2">
+        <img src="..//imgg/Desert.jpg" alt="">
+    </div>
+    <div class="box1 lab3">
+        <img src="../imgg/Hydrangeas.jpg" alt="">
+    </div>
+    <div class="box1 lab4">
+        <img src="../imgg/Jellyfish.jpg" alt="">
+    </div>
+    <div class="box1 lab5">
+        <img src="../imgg/Koala.jpg" alt="">
+    </div>
+    <div class="box1 lab6">
+        <img src="../imgg/Lighthouse.jpg" alt="">
+    </div>
+    <div class="box1 lab7">
+        <img src="../imgg/Penguins.jpg" alt="">
+    </div>
+    <div class="box1 lab8">
+        <img src="../imgg/Snipaste_2020-11-11_18-48-12.png" alt="">
+    </div>
+</div>
+    
+</body>
+</html>

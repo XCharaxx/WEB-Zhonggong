@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+                /* 表情2：难过 */
+        .face1{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color:#f2dd68;
+            border-radius: 50%;
+        }
+        .eye-left{
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #995710;
+        }
+
+        .face1:hover .eye-left{
+            animation: eye-ani 0.3s linear 2 alternate;
+        }
+        .face1:hover .eye-right{
+            animation: eye-ani 0.3s linear 2 alternate;
+        }
+        .eye-right{
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #995710;
+        }
+        .mouth{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 30px;
+            background-color: #995710;
+            border-radius:  0px 0px 30px 30px;
+        }
+
+        @keyframes eye-ani {
+            0%{
+                transform: scale(1,1);
+            }
+            100%{
+                transform: scale(1,0.2);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="face1">
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+        <div class="mouth">
+            
+        </div>
+    </div>
+</body>
+</html>

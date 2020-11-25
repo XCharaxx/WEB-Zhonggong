@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            position: relative;
+            width: 220px;
+            height: 160px;
+            margin-left: 100px;
+            margin-top: 100px;
+            /* 溢出隐藏 ，切掉 */
+            overflow: hidden;
+
+        }
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px;
+
+        }
+        .circle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -40px;
+            margin-top: -40px;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(0,0,0,.4);
+            line-height: 80px;
+            text-align: center;
+          
+
+        }
+        .mask {
+            display: none;
+            /* 定位盒子和参考元素宽高一样 */
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.2);
+            z-index: 22;
+
+        }
+        /* > 空格 父子后代  + ~兄弟关系 */
+        .box:hover .mask {
+            display: block;
+        }
+        .box:hover .circle {
+            display: none;
+        }
+        .box:hover img {
+            filter:blur(8px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="">
+            <img src="./image/singapore256-256.jpg" alt="">
+            
+            <div class="mask">B</div>
+            <div class="circle">A</div>
+        </a>
+       
+    </div>
+</body>
+</html>

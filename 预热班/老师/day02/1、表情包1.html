@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /* 表情2：难过 */
+        .face1{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color:#f2dd68;
+            border-radius: 50%;
+        }
+        .eye-left{
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #995710;
+        }
+        .eye-right{
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #995710;
+        }
+        .mouth{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 30px;
+            background-color: #995710;
+            border-radius: 30px 30px 0px 0px;
+
+        }
+        .inner{
+            position: absolute;
+            left: 15px;
+            bottom: 0px;
+            width: 30px;
+            height: 15px;
+            background-color: #d8aa2b;
+            border-radius: 15px 15px 0px 0px;
+        }
+        /* 表情6：花痴 */
+        .face2{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color:#f2dd68;
+            border-radius: 50%;
+        }
+
+        .heart-left{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            /* background-color: pink; */
+            transform: rotate(-30deg);
+        }
+        .heart-right{
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            /* background-color: pink; */
+            transform: rotate(30deg);
+        }
+        .mouth2{
+            position: absolute;
+            left: 35px;
+            bottom: 25px;
+            width: 30px;
+            height: 15px;
+            background-color: #995710;
+            border-radius: 0px 0px 15px 15px;
+        }
+        .circle01{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .circle02{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .square{
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 表情2：难过 -->
+    <div class="face1">
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+        <div class="mouth">
+            <div class="inner"></div>
+        </div>
+    </div>
+    <!-- 表情6：花痴 -->
+
+    <div class="face2">
+
+        <div class="heart-left">
+            <div class="circle01"></div>
+            <div class="circle02"></div>
+            <div class="square"></div>
+        </div>
+        <div class="heart-right">
+            <div class="circle01"></div>
+            <div class="circle02"></div>
+            <div class="square"></div>
+        </div>
+        <div class="mouth2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* #b {
+            color: tan;
+        } */
+
+        * {
+            color: red;
+        }
+        div {
+            color: blue;
+        }
+        .f {
+           color: tomato;
+        }
+        .a {
+            color: springgreen;
+        }
+      
+       
+
+
+
+
+        .fa {
+            /* 继承color 属性 */
+            color: thistle;
+        }
+        /* 01 ---》 1 */
+       /* 优先级 行内样式 1000 > id 100>class 10 > 标签选择器 1 > *0 > 继承属性,浏览器默认分配属性 */
+       .fa > .a {
+           background-color: wheat;
+       }
+       .fa .a {
+
+           height: 400px;
+           background-color: violet;
+
+       }
+      
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="fa">
+
+         <!-- * tagName 标签名  class类  id  -->
+         <div class="a f" id="b">auihdwiuer</div>
+
+    </div>
+   
+</body>
+</html>

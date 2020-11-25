@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: #333;
+            font-family: "宋体";
+            font-size: 14px;
+        }
+        a {
+            /* 取消下划线 */
+            text-decoration: none;
+        }
+        ul {
+            /* 取消无序列表有序列表前缀 */
+            list-style: none;
+        }
+        li {
+            line-height: 30px;
+        }
+        /* 图文垂直对齐  对齐属性加在图片 */
+        img {
+            vertical-align: middle;
+        }
+        span:hover {
+            text-decoration: underline;
+            color: orange;
+           
+        }
+        /* 继承属性0 <外部 < 内部 <行内 */
+        /* 鼠标移入a选择a的后代span */
+        /* a:hover span {
+            color: orange;
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href=""><img src="./image/pic.png" alt=""><span>长征五号遥五火箭完成垂直转运 嫦娥五号月底将发</span></a></li>
+        <li><a href=""><img src="./image/pic.png" alt=""><span>长征五号遥五火箭完成垂直转运 嫦娥五号月底将发</span></a></li>
+        <li><a href=""><img src="./image/pic.png" alt=""><span>长征五号遥五火箭完成垂直转运 嫦娥五号月底将发</span></a></li>
+        <li><a href=""><img src="./image/pic.png" alt=""><span>长征五号遥五火箭完成垂直转运 嫦娥五号月底将发</span></a></li>
+    </ul>
+</body>
+</html>
