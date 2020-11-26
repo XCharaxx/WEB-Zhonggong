@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .face{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background-color: #e25d5d;
+            border-radius: 50%;
+        }
+        .brow-left{
+            position: absolute;
+            top: 48px;
+            left: 23px;
+            width: 29px;
+            height: 8px;
+            background-color: #7f2626;
+            transform: rotate(20deg);
+            animation: ani-left 0.2s linear infinite alternate;
+        }
+        .brow-right{
+            position: absolute;
+            top: 48px;
+            right: 23px;
+            width: 29px;
+            height: 8px;
+            background-color: #7f2626;
+            transform: rotate(-20deg);
+            animation: ani-right 0.2s linear infinite alternate;
+        }
+        .eye-left{
+            position: absolute;
+            left: 28px;
+            top: 52px;
+            width: 16px;
+            height: 16px;
+            background-color: #7f2626;
+            border-radius: 50%;
+        }
+        .eye-right{
+            position: absolute;
+            right: 28px;
+            top: 52px;
+            width: 16px;
+            height: 16px;
+            background-color: #7f2626;
+            border-radius: 50%;
+        }
+        .mouth{
+            position: absolute;
+            left: 60px;
+            bottom: 48px;
+            width: 30px;
+            height: 6px;
+            background-color: #7f2626;
+        }
+
+
+
+        @keyframes ani-left{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(30deg);
+            }
+        }
+
+
+        @keyframes ani-right{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(-30deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="brow-left"></div>
+        <div class="brow-right"></div>
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>

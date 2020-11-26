@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 105px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: left bottom;
+            transition: transform 0.5s linear;
+        }
+        .box:hover img:nth-child(1){
+           
+            transform: rotate(-75deg);
+        }
+        .box:hover img:nth-child(2){
+           
+           transform: rotate(-60deg);
+       }
+       .box:hover img:nth-child(3){
+           
+           transform: rotate(-45deg);
+       }
+       .box:hover img:nth-child(4){
+           
+           transform: rotate(-30deg);
+       }
+       .box:hover img:nth-child(5){
+           
+           transform: rotate(-15deg);
+       }
+       .box:hover img:nth-child(7){
+           
+           transform: rotate(15deg);
+       }
+       .box:hover img:nth-child(8){
+           
+           transform: rotate(30deg);
+       }
+       .box:hover img:nth-child(9){
+           
+           transform: rotate(45deg);
+       }
+       .box:hover img:nth-child(10){
+           
+           transform: rotate(60deg);
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/1.jpg" alt="">
+        <img src="./img/2.jpg" alt="">
+        <img src="./img/3.jpg" alt="">
+        <img src="./img/4.jpg" alt="">
+        <img src="./img/5.jpg" alt="">
+        <img src="./img/6.jpg" alt="">
+        <img src="./img/7.jpg" alt="">
+        <img src="./img/8.jpg" alt="">
+        <img src="./img/9.jpg" alt="">
+        <img src="./img/10.jpg" alt="">
+    </div>
+</body>
+</html>

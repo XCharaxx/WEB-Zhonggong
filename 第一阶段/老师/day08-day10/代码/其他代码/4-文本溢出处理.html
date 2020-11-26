@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one-line {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            border:1px solid #000;
+            /* 文本强制一行显示 */
+            white-space: nowrap;
+            /* 溢出处理 */
+            overflow: hidden;
+            /* 文本溢出处理   ellipsis省略号*/
+            text-overflow: ellipsis;
+        }
+        .many-line1 {
+            /* 3行 */
+            width:300px;
+            border:1px solid #000;
+            /* 固定写法 webkit内核独有 */
+
+            /* 一个盒子显示3行 */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+
+            /* 盒子溢出处理 */
+            overflow: hidden;
+            /* 需要显示省略号 */
+            text-overflow: ellipsis;
+
+     
+        }
+        .many-line2 {
+            position: relative;
+            width:300px;
+            border:1px solid #000;
+            /* 显示2行 */
+            height: 60px;
+            line-height: 30px;
+            overflow: hidden;
+
+        }
+         .many-line2::after {
+             content: '...';
+             position: absolute;
+             right: 0;
+             bottom: 0;
+             padding-right: 8px;
+         } 
+    </style>
+</head>
+<body>
+    <h1>单行溢出显示省略号</h1>
+    <p class="one-line">
+        南极人毛衣男士冬季新款韩版潮流半高领线衣男秋冬装加绒打底针织衫 焦糖色 M（普通款）
+    </p>
+    <h1>多行溢出显示省略号</h1>
+    <h4>方法1：</h4>
+     <p class="many-line1">
+        南极人毛衣男士冬季新款韩版潮流半高领线衣男秋冬装加绒打底针织衫 焦糖色 M（普通款）
+        南极人毛衣男士冬季新款韩版潮流半高领线衣男秋冬装加绒打底针织衫 焦糖色 M（普通款）
+     </p>
+
+    <h4>方法2：</h4>
+    <p class="many-line2">
+        南极人毛衣男士冬季新款韩版潮流半高领线衣男秋冬装加绒打底针织衫 焦糖色 M（普通款）
+        南极人毛衣男士冬季新款韩版潮流半高领线衣男秋冬装加绒打底针织衫 焦糖色 M（普通款）
+     </p>
+
+</body>
+</html>

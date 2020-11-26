@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .face{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #f2dd68;
+            border-radius: 50%;
+        }
+        .eye1{
+            position: absolute;
+            left: 15px;
+            top:32px ;
+            width: 11px;
+            height: 11px;
+            background-color: #995710;
+            border-radius: 50%;
+        }
+        .eye2{
+            position: absolute;
+            right: 15px;
+            top:32px ;
+            width: 11px;
+            height: 11px;
+            background-color: #995710;
+            border-radius: 50px;
+        }
+        .mouth1{
+            position: absolute;
+            top: 48px;
+            left: 15px;
+            width: 70px;
+            height: 35px;
+            background-color: #fffae6;
+            border-radius: 0 0 35px 35px;
+            overflow: hidden;
+
+        }
+        .mouth2{
+            position: absolute;
+            top: 10px;
+            left: 0px;
+            width: 70px;
+            height: 35px;
+            background-color: #995710;
+            border-radius: 0 0 35px 35px;
+
+        }
+        .mouth3{
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            width: 40px;
+            height: 20px;
+            background-color: #d8aa2b;
+            border-radius: 20px 20px 0 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+        <div class="mouth1">
+            <div class="mouth2"></div>
+            <div class="mouth3"></div>
+        </div>
+    </div>
+</body>
+</html>

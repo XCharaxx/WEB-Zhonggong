@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a .b {
+
+            border:1px solid skyblue;
+
+        }
+        .a > .b {
+            border-color: black;
+        }
+
+        .box > li {
+
+            border-bottom: 1px solid red;
+        }
+        .box > li > ul >li {
+            background-color: blanchedalmond;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        父亲
+        <div class="b ">
+            儿子
+            <span class="b">
+                孙子
+            </span>
+        </div>
+
+        <p class="b">我是p元素</p>
+    </div>
+
+    <ul class="box">
+        <li>cof</li>
+        <li>def
+
+            <ul>
+                <li>ee</li>
+                <li>ss</li>
+            </ul>
+        </li>
+        <li>asf</li>
+    </ul>
+</body>
+</html>

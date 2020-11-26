@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--内部 嵌入 -->
+    <style>
+
+        /* 1.挑选元素 2. 加样式 写在
+        {
+            属性1:属性值;
+            属性2:属性值;
+            属性3:属性值;
+            ....
+
+        } */
+      div  {
+        width:200px;
+        height:200px;
+        background-color: slateblue;
+        }
+
+        /* 基础选择器  css选择器  ---》挑选元素
+            * {}  全局选择器 (通配符) 匹配的是包含html在内的所有元素
+
+            标签选择器
+            标签名  {
+
+            }
+            类选择器 {
+
+            }
+            (1)先写一个类名 
+            (2)挑选 .类名 {}
+
+
+            id选择器 (一个)
+            (1)先起一个id名字
+            (2)#id值{}
+        
+         */
+
+         * {
+             color:tomato;
+         }
+
+         p {
+               font-size: 30px;
+         }
+         .list-data {
+
+             font-size: 22px;
+             color: springgreen;
+
+         }
+         .first {
+             color: #000;
+         }
+
+         #one {
+            color: #000;
+         }
+         
+
+    
+
+    </style>
+</head>
+<body>
+    <!-- 行内 style=“css属性集合”
+    
+    style: {
+      width:200px;
+      height:200px;
+      background-color: slateblue;
+    }
+    
+    -->
+    <div  style="width:200px;height:200px;background-color: slateblue;">
+       div元素
+    </div>
+    <p>
+        wajfdisfjr
+    </p>
+    <p>
+        wajfdisfjr
+    </p>
+    <p>
+        wajfdisfjr
+    </p>
+    <p>
+        wajfdisfjr
+    </p>
+
+    <span class="list-data">frjfwf</span>
+    <!-- width 自带属性  默认属性 -->
+    <!-- <img src="./image/timg.jpg" alt="" style="width:500px"> -->
+
+    <ul>
+        <li class="list-data first" id="one">列表数据1</li>
+        <li class="list-data">列表数据2</li>
+        <li class="list-data">列表数据3</li>
+        <li>列表数据4</li>
+        <li>列表数据5</li>
+        <li>列表数据6</li>
+        <li>列表数据7</li>
+        <li>列表数据8</li>
+        <li>列表数据9</li>
+        <li>列表数据10</li>
+    </ul>
+</body>
+</html>

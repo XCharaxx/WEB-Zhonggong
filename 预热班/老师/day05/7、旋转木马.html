@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        .box{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            transform: rotateX(-20deg);
+            transform-style: preserve-3d;
+            animation: rotate 6s linear infinite;
+        }
+        .box div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .box img{
+            width: 300px;
+            height: 300px;
+        }
+
+        .box div:nth-child(1){
+            transform: translateZ(400px);
+        }
+        .box div:nth-child(2){
+            transform: rotateY(45deg) translateZ(400px);
+        }
+        .box div:nth-child(3){
+            transform: rotateY(90deg) translateZ(400px);
+        }
+        .box div:nth-child(4){
+            transform: rotateY(135deg) translateZ(400px);
+        }
+        .box div:nth-child(5){
+            transform: rotateY(180deg) translateZ(400px);
+        }
+        .box div:nth-child(6){
+            transform: rotateY(225deg) translateZ(400px);
+        }
+        .box div:nth-child(7){
+            transform: rotateY(270deg) translateZ(400px);
+        }
+        .box div:nth-child(8){
+            transform: rotateY(315deg) translateZ(400px);
+        }
+
+        @keyframes rotate {
+            0%{
+                transform:rotateX(-20deg) rotateY(0deg);
+            }
+            100%{
+                transform:rotateX(-20deg)  rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <img src="../day04/images/2.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/3.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/4.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/5.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/6.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/7.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/8.jpg" alt="">
+        </div>
+        <div>
+            <img src="../day04/images/9.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

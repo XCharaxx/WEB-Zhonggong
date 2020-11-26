@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            height: 800px;
+            background: url(./image/3S9sFMD.jpg) repeat-x ;
+        }
+        .nav {
+            width: 100%;
+            height: 74px;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .nav ul {
+            padding-left: 200px;
+        }
+        .nav li {
+            float: left;
+           
+            margin-top: 18px;
+            margin-left: 20px;
+        
+        }
+        .nav li a {
+            display: inline-block;
+            padding-left: 20px;
+           
+           
+            line-height: 33px;
+            height: 33px;
+        }
+        .nav li a span {
+            display: inline-block;
+            padding-right: 20px;
+          
+            line-height: 33px;
+            height: 33px;
+        }
+        .first a {
+            background-image: url(./image/lTcb_ve.png);
+            background-position: 0% 0%;
+        }
+        .first a span {
+            background-image: url(./image/lTcb_ve.png);
+            background-position: 100% 0%;
+
+        }
+        .nav li:hover a {
+            background-image: url(./image/lTcb_ve.png);
+            background-position: 0% 0%;
+
+        }
+        .nav li:hover a span {
+            background-image: url(./image/lTcb_ve.png);
+            background-position: 100% 0%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="clearfix">
+                <!-- a铺背景图的左侧 bgp:0% 0%  span铺背景图的右侧 bgp:100% 0% -->
+               <li class="first"><a href=""><span>帮助</span></a></li>
+               <li><a href=""><span>帮助与反馈</span></a></li>
+               <li><a href=""><span>帮助与</span></a></li>
+               <li><a href=""><span>帮助与反</span></a></li>
+               <li><a href=""><span>帮助与反</span></a></li>
+               <li><a href=""><span>帮助与反馈台</span></a></li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>

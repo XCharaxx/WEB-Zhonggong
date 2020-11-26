@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        .floder{
+            position: relative;
+            width: 200px;
+            height: 150px;
+            background-color: burlywood;
+            margin: 100px auto;
+            border-radius:0px 10px 10px 10px;
+            transform:rotateY(30deg) rotateX(-20deg);
+            transform-style: preserve-3d;
+        }
+        .c1{
+            position: absolute;
+            top: -10px;
+            width: 50px;
+            height: 10px;
+            background-color: burlywood;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .face{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 150px;
+            background-color: chocolate;
+            border-radius: 10px;
+            transform-origin: center bottom;
+            transition: transform 0.5s linear;
+
+        }
+        .card{
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            width: 190px;
+            height: 140px;
+            transform-origin: right bottom;
+            transition: transform 0.5s linear;
+
+        }
+        .card01{
+            background-color: lightblue;
+        }
+        .card02{
+            background-color: yellow;
+        }
+        .card03{
+            background-color: pink;
+        }
+        .card04{
+            background-color: lightgreen;
+        }
+
+
+        .floder:hover .face{
+            transform: rotateX(-30deg);
+        }
+        .floder:hover .card01{
+            transform:rotate(15deg);
+        }
+        .floder:hover .card02{
+            transform:rotate(30deg);
+        }
+        .floder:hover .card03{
+            transform:rotate(45deg);
+        }
+        .floder:hover .card04{
+            left: 20px;
+            transform:rotate(60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="floder">
+         <div class="c1"></div>
+       <div class="card card01"></div> 
+       <div class="card card02"></div> 
+       <div class="card card03"></div> 
+       <div class="card card04"></div> 
+       
+       <div class="face"></div>
+    </div>
+</body>
+</html>

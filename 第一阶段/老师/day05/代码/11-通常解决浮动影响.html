@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= </p>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .f {
+            width: 100%;
+            height: auto;
+            background-color: tomato;
+        }
+        .box {
+            float: left;
+            width: calc(25% - 1px );
+            height: 200px;
+          
+            border-right: 1px solid #000;
+        }
+        .clearfix::after,.clearfix::before {
+            content: '';
+            display: block;
+            clear: both;
+
+        }
+        /* .clearfix::after,.clearfix::before {
+            content: '';
+            table和block一样 都可以
+            display: table;
+            clear: both;
+
+        } */
+
+        /* 针对低版本浏览器的写法 ie8- */
+        /* .clearfix::after,.clearfix::before {
+            content: '.';
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            height: 0;
+            clear: both;
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="f clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <!-- 最后一个子元素 -->
+    </div>
+</body>
+</html>

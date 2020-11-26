@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         html {
+            /* 1rem = 20px */
+            font-size: 20px;
+        }
+        .a {
+
+            width: 10rem;
+            height:5rem;
+            background-color: fuchsia;
+            /* font-style: oblique; */
+            font-weight: 400;
+            /* font-size: 20px; */
+            /* 字体属性是可继承属性  父盒子有 子元素就有   */
+
+        }
+        .b {
+            /* 相对于父盒子字体大小 */
+            width: 10em;
+            height: 5em;
+            font-size: 12px;
+            background-color: skyblue;
+        }
+        /* i,em 把他当小盒子 跟span */
+        i,em {
+            font-style: normal;
+        }
+        .b {
+            font-weight: 500;
+        }
+        b,strong {
+            font-weight: 400;
+        }
+
+        i {
+            font-size: 10px;
+            text-transform: capitalize;
+            text-decoration: line-through;
+        }
+        a{
+            text-decoration: none;
+            word-spacing: 20px;
+            letter-spacing: 50px;
+        }
+
+        /* :hover 鼠标悬停移入 :active鼠标点击上去 */
+        a:hover {
+
+            text-decoration: underline;
+            color: red;
+          
+
+        }
+        .a:active {
+            background-color: yellow;
+        }
+        p {
+            font-size: 40px;
+            /* text-indent: -2em; */
+            text-indent: -9999px;
+        }
+       .box2 {
+           background-color: tomato;
+           /* 格式化输出 */
+           /* white-space: pre; */
+        white-space: pre-wrap;
+       }
+        .box3 {
+            width: 300px;
+            height: 30px;
+            background-color: yellow;
+            /* 强制文本一行显示 */
+            white-space: nowrap;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="a">我是优秀的少先队员
+
+        <div class="b">  <br>我是少先队员two</div>
+    </div>
+  
+    <i>HGGY</i>
+
+    <a href="">我是优秀的少先队员</a>
+
+    <p>
+        中央气象台11月18日6时发布暴雪橙色预警、暴雨蓝色预警。
+
+        中央气象台11月18日6时发布暴雪橙色预警，预计，11月18日08时至19日08时，黑龙江东南部、吉林西部和北部、辽宁西部、内蒙古中部和东部偏南地区、河北北部等地有大到暴雪，部分地区大暴雪(20～29毫米)。上述地区新增积雪深度5～15厘米，局地30厘米以上。 
+    </p>
+
+    <!-- 格式化输出 -->
+    <div class="box2">
+                   
+        var a ;               
+        var b ;
+        var c = a+b;
+
+
+    </div>
+
+    <div class="box3">
+        中央气象台11月18日6时发布暴雪橙色预警，预计，11月18日08时至19日08时，黑龙江东南部、吉林西部和北部、辽宁西部、内蒙古中部和东部偏南地区、河北北部等地有大到暴雪，部分地区大暴雪(20～29毫米)。上述地区新增积雪深度5～15厘米，局地30厘米以上。
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

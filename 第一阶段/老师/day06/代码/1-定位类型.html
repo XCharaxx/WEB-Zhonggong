@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            /* 只对文字起效果 */
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+
+        }
+        /* 
+        1. 能不能使盒子发生位置变化
+        2. 参考对象：
+        3. 脱离不脱离标准流 
+        4. 是否适合布局：
+         */
+
+         /* 静态定位不能使盒子位置变化 不适合布局 默认值
+         
+         作用：解决低版本浏览器兼容问题 
+           */
+        .box1 {
+            background-color: blue;
+            /* 1.声明类型 */
+            position: static;
+            /* 2.定位值 */
+            left:100px;
+            top:100px;
+        }
+
+        /* 
+        1. 能不能使盒子发生位置变化 yes
+        2. 参考对象：自身初始位置
+        3. 脱离不脱离标准流 不脱离标准（保留原来位置 ）
+        4. 是否适合布局：不适合布局（压盖，特殊位置）因为会留空白
+
+        作用：1. 微调元素的位置（相当于外边距）  2.辅助绝对定位(子绝父相) 
+        
+         */
+        .box2 {
+            background-color: deeppink;
+            /* position: relative; */
+            /* left: 10px;
+            top: 10px; */
+            /* right:-10px ;
+            bottom:-10px; */
+        }
+        /* 1. 能不能使盒子发生位置变化 yes
+           2. 参考对象：body和浏览器可视窗口（看盒子随着滚动条动不动  不动---》浏览器  动---》body）
+
+           最终确定： 以body做参考(左上以body参考 右下以浏览器窗口做参考)
+
+
+            绝对定位的盒子是以距离(html)它最近的拥有定位属性(除了静态定位都可以)的父级盒子作为参考
+
+        3. 脱离不脱离标准流 脱离标准（不占据原来位置 ）
+        4. 是否适合布局：非常适合布局 （压盖）不仅脱离标准流 还脱离文本流 */
+        .box3{
+            background-color: forestgreen;
+            /* position: absolute; */
+            /* left: 100px;
+            top: 100px; */
+            /* right: 100px;
+            bottom:100px; */
+        }
+
+
+        /* 
+        1. 能不能使盒子发生位置变化 yes
+        2. 参考对象： 浏览器可视窗口--->不随滚动条滚动而滚动
+        3. 脱离不脱离标准流 脱离标准流
+        4. 是否适合布局：适合 有限制的布局：不随滚动条滚动而滚动的布局 */
+        .box4{
+            position: fixed;
+            /* left:100px;
+            top: 100px; */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            background-color:tomato;
+        }
+        .test {
+            width: 300px;
+            height: 300px;
+            background-color: #000;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box box1">静态</div>
+    <div class="box box2">相对</div>
+    <div class="box box3">绝对</div>
+
+        <div class="box box4">固定</div>
+ 
+   
+
+    <div class="test"></div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

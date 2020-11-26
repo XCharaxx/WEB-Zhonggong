@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f {
+            width: 800px;
+            /* 1.定高 */
+            /* height: 200px; */
+            /* 2.overflow */
+            /* overflow: hidden; */
+          
+            border:2px solid #000;
+            margin-left: 100px;
+           
+        }
+        .box {
+           
+            width: 200px;
+            height: 200px;
+
+            font-size: 50px;
+          
+        }
+        .one {
+            background-color: brown;
+            float: left;
+           
+          
+        }
+        .two {
+            background-color: burlywood;
+            float: left;
+        
+       
+        }
+        .three {
+            background-color: yellow;
+            float: left;
+          
+          
+        }
+        .test {
+            width: 300px;
+            height: 400px;
+            background-color: #000
+        }
+
+        /* 伪元素创造 <div style=" clear:both;"></div>*/
+        .clearfix:after {
+            content: '';
+            /* 清除浮动影响的必须是块类型 */
+            display: block;
+            clear: both;
+
+        }
+        .clearfix:before{
+            content: '';
+            /* 清除浮动影响的必须是块类型 */
+            display: block;
+            clear: both;
+
+        }
+     
+
+    </style>
+</head>
+<body>
+
+    <div class="f clearfix">
+        <div class="box one">1</div>  
+        <!-- --------- --> 
+        <div class="box two">2 </div>
+        <!-- ------- --> 
+        <div class="box three">3</div>
+        <!-- -------- -->
+        <!-- clear:both位置  行内类型（行内块）  块类型 
+        
+        只有块类型的元素才能清除浮动带来的影响
+        -->
+        <!-- <div style=" clear:both;"></div> -->
+        
+    </div>
+  
+    <div class="test"></div>
+    <div class="boxx clearfix">
+        <div class="box one">1</div>  
+        <!-- --------- --> 
+        <div class="box two">2 </div>
+        <!-- ------- --> 
+        <div class="box three">3</div>
+        <!-- -------- -->
+        <!-- clear:both位置  行内类型（行内块）  块类型 
+        
+        只有块类型的元素才能清除浮动带来的影响
+        -->
+        <!-- <div style=" clear:both;"></div> -->
+        
+    </div>
+    <div class="top-nav clearfix">
+        <div class="box one">1</div>  
+        <!-- --------- --> 
+        <div class="box two">2 </div>
+        <!-- ------- --> 
+        <div class="box three">3</div>
+        <!-- -------- -->
+        <!-- clear:both位置  行内类型（行内块）  块类型 
+        
+        只有块类型的元素才能清除浮动带来的影响
+        -->
+        <!-- <div style=" clear:both;"></div> -->
+        
+    </div>
+   
+ 
+</body>
+</html>
+
+         

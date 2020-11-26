@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wind-car{
+            position: relative;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 100px auto;
+            animation: wind-rotate 2s linear infinite;
+        }
+        .leaf01{ 
+        }
+        .leaf02{
+            transform: rotate(90deg);
+        }
+        .leaf{
+            position: absolute;
+            left: 43px;
+            top: 0;
+            width: 14px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: lightblue;
+        }
+
+        @keyframes wind-rotate {
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wind-car">
+        <!-- 一个标签可以设置多个class属性值，leaf类用来添加公共样式，leaf01和leaf02用来添加各自不同的样式 -->
+        <div class="leaf leaf01"></div>
+        <div class="leaf leaf02"></div>
+    </div>
+
+</body>
+</html>

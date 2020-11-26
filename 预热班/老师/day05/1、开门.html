@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        .box{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 50px auto;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        .door{
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 200px;
+            background-color: brown;
+            transition: transform 0.5s linear;
+        }
+        .left{
+            left: 0;
+            transform-origin: left center;
+        }
+        .right{
+            transform-origin: right center;
+            right:0;
+        }
+
+        .box:hover .left{
+           
+            transform: rotateY(-120deg);
+        }
+        .box:hover .right{
+           
+            transform: rotateY(120deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://www.17sucai.com/preview/2037869/2020-03-24/%E6%99%AF%E6%B7%B1/dog.gif" alt="">
+        <div class="door left"></div>
+        <div class="door right"></div>
+    </div>
+</body>
+</html>

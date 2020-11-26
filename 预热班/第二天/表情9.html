@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .face{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #f2dd68;
+            border-radius: 50%;
+        }
+        .eye1{
+            position: absolute;
+            left: 15px;
+            top:20px ;
+            width: 20px;
+            height: 20px;
+            /* background-color:pink; */
+            transform: rotate(-30deg);
+            
+        }
+        .box1{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background-color: #e25d5d;
+            border-radius: 50%;
+
+        }
+        .box2{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background-color: #e25d5d;
+            border-radius: 50%;
+        }
+        .box3{
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background-color: #e25d5d;
+            transform: rotate(45deg);
+        }
+        .eye2{
+            position: absolute;
+            right: 15px;
+            top:20px ;
+            width: 20px;
+            height: 20px;
+            /* background-color:pink; */
+            transform: rotate(30deg);
+        }
+        
+
+        
+        .mouth1{
+            position: absolute;
+            top: 58px;
+            left: 32.5px;
+            width: 35px;
+            height: 17.5px;
+            background-color: #995710;
+            border-radius: 0 0 17.5px 17.5px;
+            overflow: hidden;
+
+        }
+        .mouth2{
+            position: absolute;
+            top: 8px;
+            left: 7.5px;
+            width: 20px;
+            height: 20px;
+            background-color: #d8aa2b;
+            border-radius: 50%;
+         
+
+        }
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="eye1">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+        <div class="eye2">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+        <div class="mouth1">
+            <div class="mouth2"></div>
+            
+        </div>
+    </div>
+</body>
+</html>

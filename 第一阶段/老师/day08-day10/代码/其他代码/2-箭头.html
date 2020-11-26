@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box {
+                width: 50px;
+                height: 50px;
+                /* background-color: pink; */
+                position: relative;
+                margin-left: 100px;
+                margin-top: 100px;
+            }
+            /* 定位 黑色  */
+            .arrow::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 1px;
+                border-width:20px 20px 0px 20px;
+                border-style:solid;
+                border-color:#000 transparent transparent transparent;
+
+            }
+            /* 白色 */
+            .arrow::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0px;
+                border-width:20px 20px 0px 20px;
+                border-style:solid;
+                border-color:#fff transparent transparent transparent;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box arrow"></div>
+    </body>
+    </html>

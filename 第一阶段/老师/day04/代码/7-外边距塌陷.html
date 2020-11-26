@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;]
+        }
+        .a {
+            width: 300px;
+            height: 300px;
+            background-color: springgreen;
+            /* border-top:1px solid #fff; */
+            /* padding-top:1px; */
+            overflow: hidden;
+           
+        }
+        .b {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 50px;
+            /* 现象：
+            子元素设置上外边距会带着父盒子一起向下移动 （浏览器默认问题）
+            原因：父子共用一段上外边距
+
+            解决办法:
+
+            1. 父盒子设置1px 上边框（内外分割线）
+            2. 父盒子设置1px上内边距
+            3. BFC规则 （BFC盒子的话那么这个盒子是一个独立私有区域，内部不影响外部 外部不影响内部）
+               给这个盒子加属性overflow:hidden ---> BFC盒子(我们经常)
+
+
+             */
+        }
+        .c {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* margin-bottom: 100px; */
+            margin-bottom: 80px;
+        }
+        .d {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* margin-top: 100px; */
+            margin-top: 20px;
+        }
+        .f {
+            overflow: hidden;
+        }
+        /* 兄弟塌陷现象：
+           上面盒子设置下外边距  下面设置上外边距 这个两个边距会取较大值渲染出来 （合并，塌陷）
+
+           原因：上下两个共用一段外边距
+
+           解决办法：
+           1. 避免 
+           2. 随便在两个兄弟里挑一个盒子  给他加一个父盒子 给这个父盒子+ overflow:hidden
+         */
+    </style>
+</head>
+<body>
+    <h1>父子嵌套塌陷</h1>
+    <div class="a">
+        <div class="b"></div>
+    </div>
+    <h1>兄弟上下塌陷</h1>
+
+    <div class="f">
+        <div class="c">3</div>
+    </div>
+
+    
+    <div class="d">4</div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

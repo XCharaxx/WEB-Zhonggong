@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>复杂结构</h1>
+    <!-- 大盒子 -->
+    <table>
+        <!-- 头部 第一行 字段 -->
+        <thead>
+            <!-- tr table row 行 -->
+            <tr>
+                <!-- th table head单元格 列 -->
+                <th>姓名</th>
+                <th>基本工资</th>
+                <th>岗位工资</th>
+                <th>补助</th>
+                <th>其他</th>
+            </tr>
+        </thead>
+        <!-- 主体 具体数据 -->
+        <tbody>
+            <tr>
+                <td>马杰伦</td>
+                <td>800</td>
+                <td>100</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>朱德华</td>
+                <td>2000</td>
+                <td>500</td>
+                <td>50</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>张荣浩</td>
+                <td>3000</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            数据s说明
+        </tfoot>
+
+    </table>
+
+    <h1>简单结构 （90%常用）</h1>
+    <!-- 默认属性 
+     border:边框 border="1px" 
+     cellpadding:单元格内部边框和内容的距离
+     cellspacing: 单元格与单元格之间的距离
+     align:水平对齐方式 left right center 
+     (1)写在table里  那就是表格大盒子对齐
+     (2)写在td单元格里 那就是单元格内容对齐  不要一个个的给td加 应该加在tr身上
+
+     width:
+     height:
+
+     bgcolor：背景色  table or tr or td 
+
+
+     细线边框属性(table) 粗线---》细线
+     css属性: border-collapse:collapse
+
+     
+
+
+-->
+    <table border="1px" cellpadding="0" cellspacing="0" style="border-collapse:collapse" align="center" width="500px"
+        height="300px">
+
+        <tr bgcolor="red">
+            <td>姓名</td>
+            <td>基本工资</td>
+            <td>岗位工资</td>
+            <td>补助</td>
+            <td>其他</td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="yellow">马杰伦</td>
+            <td colspan="2">800+100</td>
+            <!-- <td>100</td> -->
+            <td width="200px">0</td>
+            <td>0</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="2">德华荣浩组</td>
+            <td>2000</td>
+            <td>500</td>
+            <td>50</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <!-- <td>张荣浩</td> -->
+            <td>3000</td>
+            <td>1000</td>
+            <td>1000</td>
+            <td>0</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
