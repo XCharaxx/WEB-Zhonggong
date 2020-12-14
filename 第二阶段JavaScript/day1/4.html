@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/cts-fan.jpg" alt="" class="img1" width="500px" height="306" id="tu">
+    <!-- <img src="./img/qs.jpg" alt="" class="img2" width="500px" height="306"> -->
+
+    <script>
+        var oTu = document.getElementById("tu");
+        oTu.onmouseover = function(){
+              oTu.src="./img/qs.jpg";
+
+        }
+         oTu.onmouseout = function () {
+                oTu.src = "./img/cts-fan.jpg";
+
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            height: 400px;
+            padding: 10px 15px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+
+        #p1 {
+            background-color: red;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        ul li {
+            height: 100px;
+            border-top: 2px solid #7c7c7c;
+            line-height: 100px;
+        }
+
+        input::placeholder {
+            font-size: 20px;
+
+        }
+
+        .tex {
+            border: 1px solid #d3d4d7;
+            height: 30px;
+            border-right: none;
+
+
+        }
+
+        .btn {
+            height: 30px;
+            font-weight: 600;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p id="p1">哈哈哈哈，我来优就业学全栈。</p>
+    </div>
+    <ul>
+        <li>
+            <input type="text" placeholder="请输入背景颜色" id="tex1" class="tex"><button id="btn1" class="btn">修改背景颜色</button>
+        </li>
+        <li>
+            <input type="text" placeholder="请输入文字颜色" id="tex2" class="tex"><button id="btn2" class="btn">修改文字颜色</button>
+        </li>
+        <li>
+            <input type="text" placeholder="请输入宽度" id="tex3" class="tex"><button id="btn3" class="btn">修改宽度</button>
+        </li>
+        <li style="border-bottom:2px solid #7c7c7c;">
+            <input type="text" placeholder="请输入高度" id="tex4" class="tex"><button id="btn4" class="btn">修改高度</button>
+        </li>
+    </ul>
+
+
+    <script>
+        var oP1 = document.getElementById("p1");
+        var oTex1 = document.getElementById("tex1");
+        var oBtn1 = document.getElementById("btn1");
+        var oTex2 = document.getElementById("tex2");
+        var oBtn2 = document.getElementById("btn2");
+        var oTex3 = document.getElementById("tex3");
+        var oBtn3 = document.getElementById("btn3");
+        var oTex4 = document.getElementById("tex4");
+        var oBtn4 = document.getElementById("btn4");
+        oBtn1.onclick = function () {
+            var bgc = oTex1.value;
+            oP1.style.backgroundColor = bgc;
+        }
+        oBtn2.onclick = function () {
+            var cor = oTex2.value;
+            oP1.style.color = cor;
+        }
+        oBtn3.onclick = function () {
+            var wit = oTex3.value;
+            oP1.style.width = wit;
+        }
+        oBtn4.onclick = function () {
+            var hit = oTex4.value;
+            oP1.style.height = hit;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <br>
+    小夏：<input type="text" id="tex"><button id="btn">发送</button>
+
+    <script>
+          var oDiv =document.getElementById("box");
+          var oBtn = document.getElementById("btn");
+          var oTex = document.getElementById("tex");
+          oBtn.onclick = function(){
+              var t = oTex.value ;
+              oTex.value = "";
+oDiv.innerHTML += "小夏老师:" + t + "<br>";
+          }
+          
+    </script>
+</body>
+</html>
