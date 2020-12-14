@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 800px;
+            height: 800px;
+            background-color:black;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .box .in-box{
+            position: relative;
+            left: 50%;
+            top: 50%;
+            margin-left: -175px;
+            margin-top:-175px ;
+            transform: rotate(30deg);
+            width: 350px;
+            height: 350px;
+          
+            /* border: 1px solid white; */
+            animation: zhuan 5s linear infinite ;
+        }
+        .box .in-box .yeye{
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            /* transform: translate(-50%,-50%); */
+            width: 100px;
+            height: 30px;
+            border-radius: 30px 0 30px 0;
+            background-color:black;
+           transform-origin: left bottom;
+          
+
+        }
+        .box .in-box .tiao1{
+                 transform: rotate(45deg) translateX(25px); 
+                animation: shaw2 .3s linear infinite alternate;
+        }
+         .box .in-box .tiao2{
+                 transform: rotate(90deg)translateX(25px); 
+             animation: shaw2 .3s linear infinite alternate;
+        }
+         .box .in-box .tiao3{
+                 transform: rotate(135deg) translateX(25px); 
+                 animation: shaw2 .3s linear infinite alternate;
+        }
+         .box .in-box .tiao4{
+                 transform: rotate(180deg) translateX(25px); 
+            animation: shaw2 .3s linear infinite alternate;
+        }
+         .box .in-box .tiao5{
+                 transform: rotate(225deg)translateX(25px); 
+                animation: shaw1 .3s linear infinite alternate;
+        }
+         .box .in-box .tiao6{
+                 transform: rotate(270deg)translateX(25px); 
+                animation: shaw1 .3s linear infinite alternate;
+        }
+         .box .in-box .tiao7{
+                 transform: rotate(315deg)translateX(25px); 
+                animation: shaw1 .3s linear  infinite alternate;
+        }
+          .box .in-box .tiao8{
+                 transform: rotate(360deg)translateX(25px); 
+                animation: shaw1 .3s linear  infinite alternate;
+        }
+        @keyframes zhuan{
+            0%{
+              transform: rotate(30deg); 
+            }
+            100%{
+                   transform: rotate(-500deg); 
+            }
+        }
+        @keyframes shaw1{
+            0%{
+                border: 2px solid skyblue;
+               box-shadow: 0px 0px 20px skyblue;
+            }
+            100%{ border: 2px solid purple;
+               box-shadow: 0px 0px 20px  purple;
+            }
+        }
+         @keyframes shaw2{
+            0%{border: 2px solid purple;
+                box-shadow: 0px 0px 20px  purple;
+            }
+            100%{ border: 2px solid skyblue;
+              box-shadow: 0px 0px 20px skyblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="in-box">
+           <div class="yeye tiao1"></div>
+           <div class="yeye tiao2"></div>
+           <div class="yeye tiao3"></div>
+           <div class="yeye tiao4"></div>
+           <div class="yeye tiao5"></div>
+           <div class="yeye tiao6"></div>
+           <div class="yeye tiao7"></div>
+           <div class="yeye tiao8"></div>
+        </div>
+    </div>
+</body>
+</html>

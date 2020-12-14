@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [class] {
+            font-size: 100px;
+        }
+        [index]:hover {
+
+            color: brown;
+
+        }
+        [id] {
+            font-size: 30px;
+        }
+        [class="b"] {
+
+            background-color: tomato;
+
+        }
+        [id^="li-"] {
+
+            background-color: deeppink;
+
+        }
+        [class*="s"] {
+            border:1px solid #000;
+        }
+        [class$="p"] {
+            background-color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <div class="a se">asfsagf</div>
+    <p class="b sp">我是p元素</p>
+
+    <ul>
+        <!-- index 自定义属性 -->
+        <li index="0">1</li>
+        <li index="1">2</li>
+        <li index="2" id="li-3">3</li>
+        <li index="3" id="li-4">4</li>
+    </ul>
+</body>
+</html>

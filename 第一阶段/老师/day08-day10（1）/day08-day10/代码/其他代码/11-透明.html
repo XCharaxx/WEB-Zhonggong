@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ie8不识别 rgba 和 opacity
+        ie有自己的透明度滤镜 filter:Alpha(opacity=n) n [0,100] 取整数 30(0.3),40(0.4),50,60
+        
+
+        ie透明度滤镜 实现的是一起透明   ie8下透明度是穿透的 
+        */
+        .box1 {
+            width: 300px;
+            height: 200px;
+            /* background-color: rgba(255,20,147,0.4); */
+            background-color: rgb(255,20,147);
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            filter:Alpha(opacity = 40);
+            position: static;
+        }
+        .box2 {
+            width: 300px;
+            height: 200px;
+            background-color: rgb(255,20,147);
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            /* opacity: 0.4; */
+            filter:Alpha(opacity = 40);
+        }
+        .one {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>背景透明，内容不透明</h1>
+    <div class="box1">
+        <div class="one">
+            HTTF
+        </div>
+          
+      
+        
+     
+    </div>
+    <h1>背景透明和内容一起透明</h1>
+    <div class="box2">ERCY</div>
+</body>
+</html>

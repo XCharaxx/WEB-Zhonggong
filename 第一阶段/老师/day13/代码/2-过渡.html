@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            transition: width  2s  linear 0s;
+
+            /* 多属性过渡  width  2s linear 0s ,height 1s linear 0s ,bgc .5s linear 0s
+            当属性时间和延时，运动曲线 是一致  
+
+            transition: all  2s linear 0s;
+            */
+
+            transition: all 1s linear 2s;
+
+            /* transition:width  2s linear 0s ,height 1s linear 0s ,background-color .5s linear 0s ; */
+           
+           
+           
+        }
+        .a:active {
+          
+           height: 400px;
+           background-color: chartreuse;
+            width: 400px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>

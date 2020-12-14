@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            width: 400px;
+            border:3px solid #000;
+            /* 解决方法1 */
+            /* font-size: 0;
+            line-height: 0; */
+            
+        }
+        .box img {
+            /* 1. 图片下间隙 2. 图文对齐  */
+            /* vertical-align: middle; */
+            display: block;
+        }
+
+        /* 
+        图片下间隙：
+        原因：图片具有文本的特性---》 以基线对齐---》 间距就是基底之间距离
+        解决办法：
+          1. 给父盒子加字体属性
+          2. 图片设置除了基线以外的对齐属性
+          3. 给图片转块元素 
+        
+        
+        */
+    </style>
+</head>
+<body>
+   <div class="box">
+       <img src="./sub.png" alt="">
+     
+  </div> 
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [type="range"] {
+
+            width: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./1-h5语义化标记.html">
+        <div>
+            <!-- 手机号类型：type:tel -->
+            <label for="">手机号:</label>
+            <input type="tel">
+        </div>
+        <div>
+            <!-- -->
+            <label for="">邮箱:</label>
+            <input type="email">
+        </div>
+        <div>
+            <!--  -->
+            <label for="">网址:</label>
+            <input type="url">
+        </div>
+        <div>
+            <!--  -->
+            <label for="">分数:</label>
+            <input type="number">
+        </div>
+        <div>
+            <!--  -->
+            <label for="">颜色:</label>
+            <input type="color">
+        </div>
+        <div>
+            <!--  -->
+            <label for="">体型:</label>
+            <input type="range">
+        </div>
+
+        <div>
+            <!--  -->
+            <label for="">体型:</label>
+            <input type="range">
+        </div>
+
+        <div>
+            <label for="">周：</label>
+            <input type="week">
+
+            <label for="">月份</label>
+            <input type="month">
+
+            <label for="">date</label>
+            <input type="date">
+
+            <label for="">time</label>
+            <input type="time">
+
+            <label for="">datetime</label>
+            <input type="datetime">
+
+            <label for="">datetime-local</label>
+            <input type="datetime-local">
+        </div>
+
+
+        <div>
+            <label for="">你最近关心得话题:</label>
+            <input type="search">
+        </div>
+ 
+        <div>
+            <label for="">请选择学院：</label>
+            <!-- 必须要配合一个输入框 (list属性 = "id值") -->
+            <input type="text" list="collage">
+            <datalist id="collage" name="user">
+                <option value="体育学院">
+                <option value="音乐学院">
+                <option value="舞蹈学院">
+                <option value="化工学院">
+                <option value="物联网学院">
+                <option value="机电学院">
+            </datalist>
+        </div>
+     
+  
+
+
+        <div>
+            <input type="submit">
+        </div>
+
+
+    </form>
+</body>
+
+</html>

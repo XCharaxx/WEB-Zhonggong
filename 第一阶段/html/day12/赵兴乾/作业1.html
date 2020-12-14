@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .big-box{
+            width:730px ;
+            height:290px;
+            padding: 40px 0 0 20px;
+            margin: 50px auto;
+            background-image: url(./img/cts-flower.png),url(./img/1.jpg);
+            background-repeat: no-repeat;
+            background-position:  100% 100%,  0 0;
+            background-size: 268px 215px, 100% 100%;
+        }
+        .big-box div:nth-child(1){
+                  font-weight: 900;
+                  font-size: 25px;
+                 line-height:60px ;
+        }
+        .big-box div:nth-child(2)
+        {
+            font-weight: 700;
+            font-size:18px;
+             line-height:40px ;
+        }
+        .big-box div:nth-child(n+3){
+            font-size: 20px;
+             line-height:40px ;
+        }
+    </style>
+</head>
+<body>
+     <div class="big-box">
+         <div>题都城南庄</div>
+         <div>【作者】&nbsp;崔护</div>
+         <div>去年今日此门中，人面桃花相映红。</div>
+         <div>人面不知何处去，桃花依旧笑春风。</div>
+     </div>
+</body>
+</html>

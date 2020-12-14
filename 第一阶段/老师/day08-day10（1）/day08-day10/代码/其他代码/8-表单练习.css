@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+}
+.regist-form {
+    width: 420px;
+    background-color: #f9f9f9;
+    margin:40px auto;
+
+}
+.re-head h2{
+
+    height:80px ;
+    line-height: 80px;
+    color: #979595;
+    text-align: center;
+    background-color: #f3f6f7;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+
+}
+.form-content {
+    padding: 0px 24px 0px 36px;
+    height:370px ;
+}
+.row1 {
+    height: 40px;
+}
+.col1,.col2 {
+    float: left;
+    height: 40px;
+}
+.col1 {
+ line-height: 40px;
+ margin-right: 14px;
+ letter-spacing: 20px;
+}
+.col2 div {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+}
+.col2 div label {
+    padding-left: 22px;
+    background-image: url(./sex.jpg);
+    background-repeat: no-repeat;
+   
+}
+.male {
+    background-position: 0px 0px;
+}
+.femal {
+    background-position: 0px -32px;
+}

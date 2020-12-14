@@ -41,20 +41,55 @@
 }
 .header-right {
     margin-left: 150px;
+     margin-top: 26px;
+    margin-bottom: 6px;
+     width: 540px;
+    height: 60px;
+    /* background-color: pink; */
+}
+.search-box .tex{
+    float: left;
+    width: 398px;
+    height: 34px;
+    border-width:2px 0 2px 2px ;
+    border-color:#f26b11 ;
+    border-style: solid;
+    padding-left: 20px;
+    color:#555 ;
+}
+.search-box .sub{
+    float: left;
+    width: 120px;
+    height: 38px;
+    border: 2px solid #f26b11;
+    background-color: #f26b11;
+   font-weight: 700;
+    font-size: 20px;
+   color: white;
+
+}
+.search-box{
+    position: relative;
+    line-height: 38px;
+
+}
+.search-box .icon-sousuo{
+    position: absolute;
+    left: 5px;
+    font-size: 14px;
+
 }
 
-.search-box {
-    margin-top: 26px;
-    margin-bottom: 6px;
-    width: 536px;
-    height: 36px;
-    /* background-color: skyblue; */
+/* .search-box {
+  
+   
+ 
     border: 2px solid  #f26b11;
     line-height:36px ;
     color: #ccc;
 
-}
-.search-box a{
+} */
+/* .search-box a{
        float: right;
        width:120px;
        height: 100%;
@@ -63,11 +98,11 @@
        font-size: 20px;
        color: white;
        background-color: #f26b11;
-}
-.search-box i{
+} */
+/* .search-box i{
     padding: 0px 3px;
     font-size: 12px;
-}
+} */
 .header-nav li {
     float: left;
 }
@@ -107,7 +142,7 @@
     font-size: 14px;
   
   
-       line-height: 38px;
+       /* line-height: 38px; */
      background-color:#f26b11 ;
 
 }
@@ -183,34 +218,164 @@ color:#f26b11 ;
 /* 产品列表结束 */
 
 
-/* 广告图片开始 */
 
-.bgbanner {
-       width: 100%;
-       height: 480px;
-       background-color:#f43f52;
-}
-.banner img{
-   
-    width: 100%;
-    height: 480px;
-}
-.banner{
+
+
+
+
+
+/* end */
+.endd{
     position: relative;
+    width: 320px;
+    height: 61px;
+    text-align: center;
+    line-height: 61px;
+    margin: 0 auto;
 }
-.bgbanner .icon-xiangzuolajiantou{
-    font-weight: 300;
-    font-size: 25px;
+.endd .left-line{
     position: absolute;
-    left: 190px;
-    top: 225px;
+    left: 0;
+    top: 30px;
+    width: 96px;
+    height: 1px;
+    background-color: #cdcdcd;
 }
-.bgbanner .icon-xiangyoulajiantou{
-    font-weight: 300;
-    font-size: 25px;
+.endd .right-line{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 96px;
+    height: 1px;
+    background-color: #cdcdcd;
+}
+.endd .middle-zi{
+    font-weight: 700;
+     font-size: 18px;
+    color: #cdcdcd;
+}
+/* end */
+/* 商品页面结束 */
 
-    position: absolute;
-   right: 0;
-    top: 225px;
+
+/* 固定栏start */
+.fixx a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
-/* 广告图片结束 */
+.fixx .div-a{
+    width: 70px;
+    height: 38px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.fixx .div-b{
+     width: 70px;
+    height: 29px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.fixx .div-c a{
+    width: 70px;
+    height: 29px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: #fe9900;
+     border: 1px solid #ccc;
+    border-top: none;
+}
+.fixx .div-c .x-box{
+    display: inline-block;
+        width: 13px;
+        height: 15px;
+        background:url(../img/sprite.png) no-repeat -768px -89px;
+        /* color: #fe9900; */
+        margin-right: 2px;
+        vertical-align: middle;
+}
+.fixx .cc:hover a{
+    background-color:#fe9900;
+    color: white;
+}
+.fixx{
+    position: fixed;
+    left: 272px;
+    bottom: 160px;
+    background-color: #f8f8f8;
+}
+/* .fixx{
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    right: auto;
+    margin-left: -670px;
+    margin-top: -106px;
+    display: block;
+    z-index: 50;
+} */
+/* 固定栏end */
+
+
+/* 底部栏start */
+.nav-bottom{
+    width: 100%;
+    height: 342px;
+    background-color: #333333;
+}
+.nav-bottom .mind {
+    width: 800px;
+    height: 190px;
+    margin: 0px auto;
+    padding-top: 20px;
+    color: #b3b3b3;
+
+}
+.nav-bottom .mind a{
+          color: #b3b3b3;
+          font-size: 13px;
+}
+.nav-bottom .mind dd:hover a{
+        color  :#fe9900;
+}
+.nav-bottom .mind .ddl{
+    margin-right: 105px;
+}
+
+.nav-bottom .mind dt{
+    height: 45px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.nav-bottom .mind dd{
+    height: 30px;
+    list-style: 30px;
+    font-size: 13px;
+}
+.beian{
+   width: 100%;
+   /* height: 100px; */
+   border-top: 1px solid #3b3b3b;
+   color: #646464;
+}
+ .beian .bei1{
+    width: 700px;
+    text-align: center;
+    margin: 30px auto 0;
+}
+ .beian .bei2{
+    width: 700px;
+    text-align: center;
+    margin: 5px auto 0;
+}
+/* 底部栏end */

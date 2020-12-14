@@ -1,0 +1,19 @@
+.a {
+    width: 200px;
+    height: 200px;
+}
+.c {
+    background-image: url(../image/img01.jpg);
+}
+// 继承引入类  并集 ---》少
+.top-nav {
+    border-radius: 50%;
+    &:extend(.a,.c);
+}
+//混入引入类  复制  ---》 多
+
+.top {
+    border-radius: 50%;
+    .a;
+    .c; 
+}

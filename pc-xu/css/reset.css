@@ -6,12 +6,15 @@
 }
 body {
     font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    
 }
+
 ul ,ol {
     list-style: none;
 }
 a {
     text-decoration: none;
+    color: black;
 }
 img {
     /* 图文对齐 以中线对齐 */
@@ -47,4 +50,9 @@ table {
 .w {
     width: 1190px;
     margin: 0 auto;
+}
+input{
+    border: 0;
+    /* 外轮廓 */
+    outline:none;
 }

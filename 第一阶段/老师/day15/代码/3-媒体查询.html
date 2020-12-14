@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+
+        }
+
+        /* 小 768px--992px */
+        @media screen and (min-width: 768px) and (max-width:992px) {
+
+            .box {
+                background-color: deeppink;
+            }
+
+        }
+
+        /* 中 992px--1200px */
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+
+            .box {
+                background-color: red;
+            }
+
+        }
+
+
+        /* >1200px 大 */
+        @media screen and (min-width:1200px) {
+            .box {
+                background-color: #000;
+            }
+        }
+
+
+
+        /* 超<768px */
+        @media screen and (max-width:768px) {
+
+            .box {
+                background-color: skyblue;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

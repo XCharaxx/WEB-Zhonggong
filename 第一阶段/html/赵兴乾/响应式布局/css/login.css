@@ -1,0 +1,88 @@
+html{
+    width: 100%;
+    min-width: 320px;
+    max-width: 1200px;
+    margin:0 auto;
+   
+}
+.big-w{
+    /* max-width:1200px ; */
+    width: 100%;
+    height: 100vh;
+    margin:0px auto;
+    background-image: linear-gradient(180deg,#f4f3f1 30%,#eb937f 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.big-w .biaod{
+    width: 375px;
+    height: 465px;
+    /* width: 40%;
+    height: 60%; */
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 30px ;
+  
+}
+.big-w .biaod > input{
+    width: 100%;
+    height: 40px;
+}
+.big-w .biaod p:nth-child(1){
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+.big-w .biaod .a{
+     font-size: 14px;
+     line-height: 25px;
+}
+.big-w .biaod .sub{
+       background-color: tomato;
+       color: white;
+       font-size: 16px;
+       border: none;
+}
+.big-w .biaod p:nth-last-of-type(1){
+    text-align: center;
+    font-size: 12px;
+     padding-top: 10px;
+}
+.big-w .biaod p:nth-last-of-type(1) a{
+    text-decoration: underline;
+    color: #4371d1;
+   
+}
+@media screen  and (max-width:992px){
+.big-w .biaod{
+    width: 600px;
+    height: 350px;
+    /* width: 40%;
+    height: 60%; */
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 30px ;
+  
+}
+.big-w >img{
+    display: none;
+}
+.big-w .biaod > input{
+    width: 100%;
+    height: 30px;
+}   
+}
+@media screen  and (max-width:768px){
+.big-w .biaod{
+    width: 300px;
+    height: 500px;
+    /* width: 40%;
+    height: 60%; */
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 30px ;
+  
+}
+}

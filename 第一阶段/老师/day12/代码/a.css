@@ -1,0 +1,23 @@
+.box {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    /* css3背景渐变属性 */
+   
+    background-image: -webkit-linear-gradient(red,yellow);
+   
+    background-image: -moz-linear-gradient(red,yellow);
+   
+    background-image: -o-linear-gradient(red,yellow);
+   
+    background-image: linear-gradient(red,yellow);
+
+    -webkit-animation: move 1s;
+
+       -moz-animation: move 1s;
+
+         -o-animation: move 1s;
+
+            animation: move 1s;
+
+}

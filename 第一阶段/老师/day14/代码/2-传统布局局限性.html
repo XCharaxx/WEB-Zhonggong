@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            border:1px solid #000;
+            /* 清除浮动影响  */
+            overflow: hidden;
+        }
+        .col1 {
+
+            float: left;
+            width: 20%;
+            height: 200px;
+            background-color: tomato;
+
+        }
+        .col2 {
+            position: absolute;
+            left: 50%;
+             transform:translate(-50%,0px);
+            /* float: left; */
+            width: 20%;
+            height: 200px;
+            background-color: skyblue;
+            /* margin-left: 20%; */
+
+        }
+        .col3 {
+            width:20%;
+            height: 200px;
+            background-color: deeppink;
+
+            float: right;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="col1">1</div>
+        <div class="col2">2</div>
+        <div class="col3">3</div>
+        <!-- <div class="col3">4</div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* reset.css */
+        input {
+            border:0;
+            /* 外轮廓 */
+            outline:none;
+        }
+        .search-bar {
+            width: 540px;
+            height: 40px;
+        }
+
+        .search-bar form {}
+
+        /* 文本框盒模型是外扩的 边框和内边距  */
+
+        .search-bar form input.txt {
+            float: left;
+            width: 399px;
+            height: 38px;
+            border:1px solid tomato;
+            border-right: 0;
+            padding-left: 40px;
+
+        }
+/*  文本框盒模型是自动内减型 都会算到width  height  */
+        .search-bar form input.sub {
+            float: left;
+            width: 100px;
+            height: 40px;
+            border:1px solid tomato;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-bar">
+        <form action="">
+            <input type="text" class="txt" placeholder="电冰箱">
+            <input type="submit" class="sub">
+        </form>
+    </div>
+</body>
+
+</html>

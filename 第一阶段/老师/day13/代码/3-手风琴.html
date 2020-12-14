@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 300px;
+            height: auto;
+            border:1px solid rgba(0,0,0,.5);
+            margin:40px auto 0;
+        }
+        .item {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .title,.content {
+            width: 100%;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+
+        }
+        .title {
+            
+            height: 50px;
+            background-image: linear-gradient(90deg,#f2c311,#f8b396);
+            
+        }
+        .content {
+            overflow: hidden;
+
+            color: #000;
+            font-size: 50px;
+            height: 0px;
+
+            /* height: 300px; */
+            background-image: linear-gradient(180deg,#c06c83,#6b5c79);
+            transition: height 1s;
+
+        }
+        /* 标题 和内容什么关系 ？ 兄弟  父子后代 */
+        .title:hover + .content {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">
+            <div class="title">娱乐新闻</div>
+            <div class="content">
+                金鸡奖最佳新人奖：易烊千玺
+            </div>
+        </div>
+        <div class="item">
+            <div class="title">
+                体育新闻
+            </div>
+            <div class="content">NBA湖人队夺冠</div>
+        </div>
+        <div class="item">
+            <div class="title">实时新闻</div>
+            <div class="content">巴拉巴拉小魔仙</div>
+        </div>
+        <div class="item">
+            <div class="title">时尚新闻</div>
+            <div class="content">阿巴巴阿巴巴</div>
+        </div>
+    </div>
+</body>
+</html>

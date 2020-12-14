@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--[if lte IE 8]>
+
+    <script src="../资料/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* header,footer ,nav,article,section,figure {
+            display: block;
+        } */
+        header {
+            width: 100%;
+            height: 40px;
+            background-color: #c9261a;
+        }
+        .main {
+
+            width: 100%;
+            height: 300px;
+            background-color: yellow;
+
+
+        }
+        nav {
+
+            width: 100%;
+            height: 200px;
+            background-color: skyblue;
+
+        }
+        article {
+            width: 100%;
+            height: auto;
+            border:2px solid #000;
+            border-left:0;
+            border-right:0;
+            padding-bottom: 60px;
+            /* 清除浮动影响 */
+            overflow: hidden;
+        }
+        section {
+            width: calc(50% - 2px);
+            height: 100px;
+            float: left;
+            border:1px solid red;
+
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 60px;
+            width: 100%;
+            background-color: purple;
+        }
+    </style>
+
+    <script>
+        // js代码  要创建这些元素 可以被ie8-识别
+        // document.createElement("header");
+        // document.createElement("nav");
+        // document.createElement("footer");
+        // document.createElement("article");
+        // document.createElement("section");
+        // document.createElement("figure");
+        // document.createElement("aside");
+        // js创建出来的元素默认是行内类型的
+
+        
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+   <header>头部</header>
+    <!-- 核心区 -->
+   <div class="main">核心区轮播图</div>
+
+   <!-- 导航区 -->
+   <nav>导航区</nav>
+
+   <article>
+       <section>独立区域
+
+          <figure>
+              <a href="">
+                  <img src="" alt="">
+                  <p></p>
+              </a>
+          </figure>
+       </section>
+       <section>独立区域</section>
+       <section>独立区域</section>
+       <section>独立区域</section>
+   </article>
+
+   <!-- 底部区 -->
+   <footer>
+       底部区
+   </footer>
+</body>
+</html>

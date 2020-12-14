@@ -1,0 +1,58 @@
+
+.big-box{
+    width: 7.1rem;
+    height: 13.4rem;
+    background-color: #fff;
+    margin: .32rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+    text-align: center;
+}
+.big-box img{
+    width: 3.64rem;
+    height: .96rem;
+    margin: 0 auto;
+    margin-bottom: .64rem;
+}
+.code-yanz{
+    position: relative;
+     width: 6.1rem;
+    height: .78rem;
+} 
+ .pnumber,.yanzheng{
+    width: 6.1rem;
+    height: .78rem;
+    border-bottom: 1px solid #dddddd;
+}
+.code-yanz .wen1{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.24rem;
+    width: 1.6rem;
+    height: .48rem;
+    background-color: #cccccc;
+    color: white;
+    text-align: center;
+    line-height: .48rem;
+}
+
+.big-box .login{
+    width: 6.1rem;
+    height: .98rem;
+    margin: .4rem auto;
+    background-color: #cccccc;
+    color: white;    
+    font-weight: 600;
+    font-size: .32rem;
+   
+   letter-spacing: .3rem;
+}
+.fix{
+    height: 1rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-end;
+}

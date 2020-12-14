@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+          
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: red;
+        }
+        .box a {
+            /* 1. */
+            display: flex;
+            /* 2. 设置主轴方向 */
+            flex-direction: column;
+            /* 3.设置主轴排列方式 */
+            /* 4. 设置交叉轴排列方式 水平 居中 */
+            align-items: center;
+            width: 100%;
+            padding: 20px 0px;
+        }
+        .bg {
+            width: 40px;
+            height: 40px;
+            background-image: url(./image/home-fivemain-sprite2x@v7.15.png);
+            /* 80*400 ---> 40px auto */
+            background-size: 40px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 弹性盒 -->
+        <a href="">
+            <!-- 子项 -->
+            <span class="bg"></span>
+            <span>攻略·景点</span>
+        </a>
+    </div>
+</body>
+
+</html>

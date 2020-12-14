@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        input {
+            border:0;
+            outline:none;
+        }
+        .box {
+            margin: 40px auto;
+            position: relative;
+            width: 470px;
+            height: auto;
+            /* border:2px solid brown; */
+          
+
+        }
+        .box span {
+            position: absolute;
+            left: 30px;
+            top:-20px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #fff;
+            color: chartreuse;
+
+        }
+        .box form input {
+            margin:20px 0;
+            display: block;
+            width: 420px;
+            height: 25px;
+            border:1px solid #999;
+        }
+       .box  .btn {
+            height: 40px;
+        }
+
+        fieldset {
+            padding: 50px 0px 50px 20px;
+            border-color: chocolate;
+        }
+        legend {
+            color: skyblue;
+            text-align: center;
+        } 
+
+    </style>
+</head>
+<body>
+
+    <!-- form 给你提供了表单框架盒子  fieldset 自带边框  表单标题 legend -->
+    <div class="box">
+        <!-- <span>学生档案</span> -->
+        <form action="">
+            <fieldset>
+                <legend>学生档案</legend>
+                <div>
+                    <label for="">姓名</label>
+                    <input type="search">    
+                </div>
+                <div>
+                    <label for="">电话号码</label>
+                    <input type="tel">
+                </div>
+                <div>
+                    <label for="">邮箱</label>
+                    <input type="email">
+                </div>
+                <div>
+                    <label for="">所属学院</label>
+                    <input type="text">
+                    <datalist>
+                        <option value="外语学院">
+                        <option value="法律学院">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="">入学成绩</label>
+                    <input type="number" min="0" max="100">
+                </div>
+    
+                <div>
+                    <label for="">基础水平</label>
+                    <input type="range" >
+                </div>
+                <div>
+                    <label for="">入学日期</label>
+                    <input type="date" >
+                </div>
+                <div>
+                    <label for="">毕业日期</label>
+                    <input type="date" >
+                </div>
+               <div>
+                   <input type="submit" class="btn">
+               </div>
+            </fieldset>
+           
+          
+
+        </form>
+    </div>
+</body>
+</html>

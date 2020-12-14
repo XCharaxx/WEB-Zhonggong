@@ -1,3 +1,1224 @@
 /* 首页自己的样式 */
 
+
+
+
+/* 广告图片开始 */
+
+.bgbanner {
+       width: 100%;
+       height: 480px;
+       background-color:#f43f52;
+}
+.banner img{
+   
+    width: 100%;
+    height: 480px;
+}
+.banner{
+    position: relative;
+}
+.banner .circular{
+    position: absolute;
+    bottom: 10px;
+    left: 190px;
+    width: 1000px;
+    /* background-color: black; */
+     text-align: center;
+}
+.banner .circular span{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+
+} 
+.bgbanner .icon-xiangzuolajiantou{
+    font-weight: 300;
+    font-size: 25px;
+    position: absolute;
+    padding:5px;
+    background-color: #aaa;
+    left: 190px;
+    top: 225px;
+}
+.bgbanner .icon-xiangyoulajiantou{
+    font-weight: 300;
+    font-size: 25px;
+    padding:5px;
+    background-color: #aaa;
+    position: absolute;
+    right: 0;
+    top: 225px;
+}
+/* 广告图片结束 */
+
+
+
+/* 商品页面开始 */
+
+.Goods-list{
+    width: 100%;
+    background-color: #f5f5f5;
+}
+/* 限时抢购开始 */
+
+/* .limit-time {
+    margin-top: 20px;
+
+} */
+.limit-time .qianggo{
+   float: left;
+   width: 790px;
+   height: 330px;
+   background-color: white;
+   margin-right: 10px;
+   margin-top: 20px;
+}
+.limit-time .qianggo .title-one{
+    width: 748px;
+    margin: 0 auto;
+    border-bottom: 2px solid #f5f5f5;
+
+}
+.limit-time .qianggo .ltime-left{
+         float: left;
+         height: 45px;
+         line-height: 45px;
+
+}
+.ltime-left .span-a{
+    font-weight: 900px;
+    font-size: 20px;
+    color: #ef0405;
+    
+}
+.ltime-left .span-b{
+    padding: 0 5px;
+}
+.ltime-left .span-c{
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px;
+    color: white;
+    background-color: black;
+    margin-right: 5px;
+
+}
+.limit-time .qianggo .ltime-right{
+           float: right;
+           height: 45px;
+           line-height: 48px;
+           font-size: 13px;
+}
+.ltime-right .span-a{
+           color: white;
+           background-color:#f26b11;
+           padding: 4px 4px;
+           border-radius: 12px;
+           margin-right: 20px;
+}
+.qianggo ul li{
+    float: left;
+    width: 170px;
+    /* background-color:blue; */
+   margin: 0 13px;
+
+}
+.qianggo ul li a{
+    display: block;
+   width: 100%;
+   height: 100%;
+    
+
+}
+.qianggo ul li img{
+    width: 100%;
+    height: 190px;
+}
+.qianggo ul li .wenz{
+    padding: 4px 0;
+}
+.qianggo ul li .xian{
+    font-weight: 700px;
+    font-size: 18px;
+    color:#f26b11; 
+
+}
+.qianggo ul li .yuan{
+    font-weight: 700px;
+    font-size: 12px;
+   color: #aaa;
+   text-decoration: line-through;
+
+}
+.qianggo ul li .san{
+    padding: 4px 0;
+}
+.qianggo ul li .large-line{
+    display: inline-block;
+    width: 105px;
+    height: 4px;
+    background-color: #fbe6ed;
+ border-radius: 4px;
+}
+.qianggo ul li .short-line{
+    width: 35px;
+    height: 4px;
+    background-color:#f26b11 ;
+    border-radius: 4px;
+    
+}
+.qianggo ul li .jingdu{
+    padding-left: 4px;
+    color: #aaa ;
+}
+.limit-time .jvhui{
+    float: left;
+    width: 390px;
+    height: 330px;
+    background-color: white;
+      margin-top: 20px;
+    
+}
+.jvhui .title-two{
+    width: 368px;
+    margin: 0 auto;
+    border-bottom: 2px solid #f5f5f5;
+}
+.jvhui .title-two .wen-left{
+    font-weight: 600;
+         font-size: 20px;
+         line-height: 45px;
+}
+.jvhui .title-two .wen-right{
+        float: right;
+         font-size: 13px;
+         color: #aaa;
+         line-height: 45px;
+}   
+.jvhui .title-two .icon-xiangyoujiantou{
+     font-size: 15px;
+}
+.jvhui .shansong{
+       width: 350px;
+       height: 175px;
+       margin: 5px auto;
+       
+}  
+.jvhui .shansong a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.jvhui .shansong a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.jvhui .shansong a .sxx{
+    position: absolute;
+    left: 20px;
+    top: 35px;
+    width: 150px;
+    height: 95px;
+}
+.jh-bottom ul li{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 101px;
+    height: 70px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.jh-bottom ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.jh-bottom ul li a .sz-zi{
+    /* padding:2px 0; */
+    font-weight: 600;
+}
+/* 限时抢购结束 */
+
+
+/* 排行榜和人气好货开始 */
+.er .paihang{
+    float: left;
+    position: relative;
+    width: 390px;
+    height:425px ;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+.er .paihang .title-one{
+    line-height: 45px;
+    background-color:#fcf6f6;
+    width: 100%;
+} 
+.er .paihang .title-one .wen-left{
+    float: left;
+
+}
+.er .paihang .title-one .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:#d9585c ;
+    margin-right: 10px;
+
+}
+.er .paihang .title-one .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:#d9585c  ;
+}
+.er .paihang .title-one .wen-right{
+    float: right;
+    padding-right: 8px;
+    
+}
+.er .paihang .title-one .wen-right a
+{
+    font-size: 14px;
+    color: #9997a2;
+}
+.paihang .icon-xiangyoujiantou{
+     font-size: 18px;
+    color: #9997a2;
+}
+.paihang .title-two {
+         width: 370px;
+         line-height: 40px;
+         margin: 0 auto;
+         border-bottom: 2px solid #f5f5f5;
+}
+/* .paihang .title-two span a{
+    display: inline-block;
+   
+} */
+.paihang .title-two span{
+    display: inline-block;
+    line-height: 16px;
+    font-size: 16px;
+    padding: 3px 10px;
+    margin-right: 5px;
+    border-radius:18px ;
+    color: black;
+}
+.paihang .title-two span:hover{
+    background-color: #ec7271;
+    color: white;
+}
+.paihang .title-three .item1{
+    width: 370px;
+    height: 105px;
+    margin: 0 auto;
+
+}
+.paihang .title-three .item1 a{
+    width: 100%;
+    height: 100%;
+}
+.paihang .title-three .item1 img{
+    float: left;
+    width: 110px;
+    height: 100px;
+    padding-top: 5px;
+}
+.paihang .title-three .item1 .neirong{
+    float: left;
+    width: 260px;
+    height:82px ;
+    padding-top: 23px;
+}
+.paihang .title-three .item1 .neirong .qia{
+    margin-bottom: 30px;
+}
+.paihang .title-three .item1 .neirong .jge{
+    color:  #ec7271;
+    font-size: 14px;
+}
+.paihang .title-three .item1 .neirong .fright{
+    float: right;
+    font-size: 14px;
+    color: #ec7271;
+    padding: 3px 10px;
+    background-color: #f5e0de;
+    border-radius: 14px;
+}
+.paihang .title-four{
+    position: absolute;
+    bottom: 2px;
+    /* background-color: black; */
+    width: 100%;
+    text-align: center;
+
+}
+.paihang .title-four span{
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #dd5859;
+    margin-right: 5px;
+}
+
+
+
+.er .people-stuff{
+    float: left;
+    position: relative;
+    width: 790px;
+    height:425px ;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.er .people-stuff .title-one{
+    line-height: 45px;
+    background-color:#f8faf9;
+    width: 100%;
+} 
+.er .people-stuff .title-one .wen-left{
+    float: left;
+
+}
+.er .people-stuff .title-one .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:#1799e7 ;
+    margin-right: 10px;
+
+}
+.er .people-stuff .title-one .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:#1799e7  ;
+}
+.er .people-stuff .title-one .wen-right{
+    float: right;
+    padding-right: 8px;
+    
+}
+.er .people-stuff .title-one .wen-right a
+{
+    font-size: 14px;
+    color: #9997a2;
+}
+.people-stuff .icon-xiangyoujiantou{
+     font-size: 18px;
+    color: #9997a2;
+}
+.er .people-stuff .title-two{
+    height: 385px;
+    width: 100%;
+    padding: 5px 10px;
+
+}
+.er .people-stuff .title-two li{
+    float: left;
+    width: 190px;
+    height: 180px;
+    border-right:1px solid #f2f2f2 ;
+    border-bottom:1px solid #f2f2f2 ;
+    text-align: center;
+    font-size: 13px;
+
+}
+.er .people-stuff .title-two li img{
+    width: 160px;
+    height: 130px;
+}
+.er .people-stuff .title-two li .redd{
+     font-size: 12px;
+     color:  #e55151;
+}
+.er .people-stuff .title-two li .bluee{
+     font-size: 12px;
+     color: #068be6 ;
+}
+/* 排行榜和人气好货结束 */
+
+/* 广告图 start*/
+
+.san ul{
+        margin-top: 20px;
+}
+.san ul li{
+        float: left;
+        width: 396px;
+        height: 100px;
+}
+.san ul li img{
+      width: 100%;
+      height: 100%;
+}
+/* 广告图end */
+
+
+/* 发现好货 start */
+.si .find-gstuff{
+  
+    float: left;
+    width: 190px;
+    height: 260px;
+    background: url(../img/find01.png) no-repeat ;
+    background-size:100% 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.si .find-gstuff .haoh{
+    position: relative;
+}
+.si .find-gstuff img
+{
+     margin-top: 20px;
+}
+.si .find-gstuff .haoh a{
+      position: absolute;
+     bottom: 4px;
+     left: 36px;
+     display: block;
+     font-size: 16px;
+     color: #c2c5cc;
+     padding: 3px 0;
+
+}
+.si .find-gstuff a .icon-xiangyoujiantou{
+     color: #c2c5cc;
+     font-size: 18px;
+}
+.si .right-tu{
+    position: relative;
+    float: left;
+    width: 990px;
+    height: 260px;
+    margin-top: 20PX;
+    background-color: #fff;
+
+} 
+.si .right-tu li{
+    float: left;
+    width: 198px;
+    height:90% ;
+    
+    text-align: center;
+} 
+.si .right-tu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.si .right-tu li a span{
+    display: block;
+    font-size: 14px;
+    padding: 30px 0 10px 0;
+
+}
+.si .right-tu li a img{
+    /* display: block; */
+    width: 160px;
+    height: 130px;
+    margin-top: 30px;
+
+}
+.si .right-tu .huadong{
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    width: 960px;
+    height: 2px;
+    margin: 0 auto;
+    background-color:#e1e1e1;
+     border-radius: 20px;
+}
+.si .right-tu .hua1{
+    width: 200px;
+    height: 10px;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+    margin-top: -3px;
+}
+/* 发现好货   end */
+
+
+
+/* 服装配饰和运动户外和金融和阅读start */
+
+.wu .clothes{
+    float: left;
+    width: 590px;
+    height:405px ;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+.wu .clothes .title-one{
+    line-height: 45px;
+    background-color:#f8faf9;
+    width: 100%;
+} 
+.wu .clothes .title-one .wen-left{
+    float: left;
+
+}
+.wu .clothes .title-one .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:#9670a9 ;
+    margin-right: 10px;
+
+}
+.wu .clothes .title-one .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:#9670a9  ;
+     margin-right: 10px;
+}
+.wu .clothes .title-one .wen-left img{
+     vertical-align:middle;
+     width: 20px;
+     height: 20px;
+     margin-top: -7px;
+     
+}
+.wu .clothes .title-one .wen-right{
+    float: right;
+    padding-right: 8px;
+    
+}
+.wu .clothes .title-one .wen-right a
+{
+    font-size: 14px;
+    color: #9997a2;
+    padding-right: 15px;
+}
+
+.wu .clothes .title-two .tu-left{
+  position: relative;
+  float: left;
+   width: 190px;
+   height: 360px;
+
+}
+.wu .clothes .title-two .tu-left a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wu .clothes .title-two .tu-left img{
+    width: 100%;
+    height: 100%;
+}
+.wu .clothes .title-two .tu-left .zhubao{
+    position: absolute;
+    bottom:10px ;
+    width: 150px;
+    height: 60px;
+    border-radius: 0 10px 10px 0;
+    background-color:rgb(0,0,0,.5);
+   
+
+}
+.wu .clothes .title-two .tu-left .zhubao .wen-one{
+       display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+        color: white;
+        padding: 5px 0 2px 10px;
+
+}
+.wu .clothes .title-two .tu-left .zhubao .wen-two{
+  display: inline-block;
+    font-size: 13px;
+        color: white;
+        padding: 0px 0 0px 10px;
+}
+.wu .clothes .title-two .tu-right{
+          float: left;
+          width:400px ;
+          height:360px ;
+}
+.wu .clothes .title-two li{
+    float: left;
+    width: 200px;
+    height: 180px;
+    
+    text-align: center;
+    font-size: 13px;
+
+}
+.wu .clothes .title-two li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wu .clothes .title-two li .span-one{
+    display: block;
+    margin-top: 10px;
+     font-size: 16px;
+     line-height: 0px;
+     color: black;
+}
+.wu .clothes .title-two li .span-two{
+     display: block;
+     line-height: 18px;
+     font-size: 13px;
+     color:#9670a9  ;
+}
+.wu .clothes .title-two li img{
+    width: 120px;
+    height: 120px;
+    margin-top: -15px;
+}
+
+
+
+
+
+
+
+
+
+
+.wu .sport{
+    float: left;
+    width: 590px;
+    height:405px ;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+    background-color: #fff;
+}
+.wu .sport .title-one{
+    line-height: 45px;
+    background-color:#f8faf9;
+    width: 100%;
+} 
+.wu .sport .title-one .wen-left{
+    float: left;
+
+}
+.wu .sport .title-one .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:#9670a9 ;
+    margin-right: 10px;
+
+}
+.wu .sport .title-one .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:#9670a9  ;
+     margin-right: 10px;
+}
+.wu .sport .title-one .wen-left img{
+     vertical-align:middle;
+     width: 20px;
+     height: 20px;
+     margin-top: -7px;
+     
+}
+.wu .sport .title-one .wen-right{
+    float: right;
+    padding-right: 8px;
+    
+}
+.wu .sport .title-one .wen-right a
+{
+    font-size: 14px;
+    color: #9997a2;
+    padding-right: 15px;
+}
+
+.wu .sport .title-two .tu-left{
+  position: relative;
+  float: left;
+   width: 190px;
+   height: 360px;
+
+}
+.wu .sport .title-two .tu-left a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wu .sport .title-two .tu-left img{
+    width: 100%;
+    height: 100%;
+}
+.wu .sport .title-two .tu-left .zhubao{
+    position: absolute;
+    bottom:10px ;
+    width: 150px;
+    height: 60px;
+    border-radius: 0 10px 10px 0;
+    background-color:rgb(0,0,0,.5);
+   
+
+}
+.wu .sport .title-two .tu-left .zhubao .wen-one{
+       display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+        color: white;
+        padding: 5px 0 2px 10px;
+
+}
+.wu .sport .title-two .tu-left .zhubao .wen-two{
+  display: inline-block;
+    font-size: 13px;
+        color: white;
+        padding: 0px 0 0px 10px;
+}
+.wu .sport .title-two .tu-right{
+          float: left;
+          width:400px ;
+          height:360px ;
+}
+.wu .sport .title-two li{
+    float: left;
+    width: 200px;
+    height: 180px;
+    
+    text-align: center;
+    font-size: 13px;
+
+}
+.wu .sport .title-two li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wu .sport .title-two li .span-one{
+    display: block;
+    margin-top: 10px;
+     font-size: 16px;
+     line-height: 0px;
+     color: black;
+}
+.wu .sport .title-two li .span-two{
+     display: block;
+     line-height: 18px;
+     font-size: 13px;
+     color:#9670a9  ;
+}
+.wu .sport .title-two li img{
+    width: 120px;
+    height: 120px;
+    margin-top: -15px;
+}
+
+
+
+
+
+
+.wu .finance{
+    float: left;
+    width: 590px;
+    height:405px ;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+.wu .finance .title-one{
+    line-height: 45px;
+    background-color:#f8faf9;
+    width: 100%;
+} 
+.wu .finance .title-one .wen-left{
+    float: left;
+
+}
+.wu .finance .title-one .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:#9670a9 ;
+    margin-right: 10px;
+
+}
+.wu .finance .title-one .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:#9670a9  ;
+     margin-right: 10px;
+}
+.wu .finance .title-one .wen-left img{
+     vertical-align:middle;
+     width: 20px;
+     height: 20px;
+     margin-top: -7px;
+     
+}
+.wu .finance .title-one .wen-right{
+    float: right;
+    padding-right: 8px;
+    
+}
+.wu .finance .title-one .wen-right a
+{
+    font-size: 14px;
+    color: #9997a2;
+    padding-right: 15px;
+}
+
+.wu .finance .title-two .tu-left{
+  position: relative;
+  float: left;
+   width: 190px;
+   height: 360px;
+
+}
+.wu .finance .title-two .tu-left a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wu .finance .title-two .tu-left img{
+    width: 100%;
+    height: 100%;
+}
+.wu .finance .title-two .tu-left .zhubao{
+    position: absolute;
+    bottom:10px ;
+    width: 150px;
+    height: 60px;
+    border-radius: 0 10px 10px 0;
+    background-color:rgb(0,0,0,.5);
+   
+}
+.wu .finance .title-two .tu-left .zhubao .wen-one{
+       display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+        color: white;
+        padding: 5px 0 2px 10px;
+
+}
+.wu .finance .title-two .tu-left .zhubao .wen-two{
+  display: inline-block;
+    font-size: 13px;
+        color: white;
+        padding: 0px 0 0px 10px;
+}
+.wu .finance .title-two .tu-right{
+          float: left;
+          width:400px ;
+          height:360px ;
+}
+.wu .finance .title-two li{
+    float: left;
+    width: 200px;
+    height: 180px;
+    
+    text-align: center;
+    font-size: 13px;
+
+}
+.wu .finance .title-two li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wu .finance .title-two li .span-one{
+    display: block;
+    margin-top: 10px;
+     font-size: 16px;
+     line-height: 0px;
+     color: black;
+}
+.wu .finance .title-two li .span-two{
+     display: block;
+     line-height: 18px;
+     font-size: 13px;
+     color:#9670a9  ;
+}
+.wu .finance .title-two li img{
+    width: 120px;
+    height: 120px;
+    margin-top: -15px;
+}
+
+
+
+
+.wu .read{
+    float: left;
+    width: 590px;
+    height:405px ;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+    background-color: #fff;
+}
+.wu .read .title-one{
+    line-height: 45px;
+    background-color:#f8faf9;
+    width: 100%;
+} 
+.wu .read .title-one .wen-left{
+    float: left;
+
+}
+.wu .read .title-one .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:#9670a9 ;
+    margin-right: 10px;
+
+}
+.wu .read .title-one .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:#9670a9  ;
+     margin-right: 10px;
+}
+.wu .read .title-one .wen-left img{
+     vertical-align:middle;
+     width: 20px;
+     height: 20px;
+     margin-top: -7px;
+     
+}
+.wu .read .title-one .wen-right{
+    float: right;
+    padding-right: 8px;
+    
+}
+.wu .read .title-one .wen-right a
+{
+    font-size: 14px;
+    color: #9997a2;
+    padding-right: 15px;
+}
+
+.wu .read .title-two .tu-left{
+  position: relative;
+  float: left;
+   width: 190px;
+   height: 360px;
+
+}
+.wu .read .title-two .tu-left a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wu .read .title-two .tu-left img{
+    width: 100%;
+    height: 100%;
+}
+.wu .read .title-two .tu-left .zhubao{
+    position: absolute;
+    bottom:10px ;
+    width: 150px;
+    height: 60px;
+    border-radius: 0 10px 10px 0;
+    background-color:rgb(0,0,0,.5);
+   
+}
+.wu .read .title-two .tu-left .zhubao .wen-one{
+       display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+        color: white;
+        padding: 5px 0 2px 10px;
+
+}
+.wu .read .title-two .tu-left .zhubao .wen-two{
+  display: inline-block;
+    font-size: 13px;
+        color: white;
+        padding: 0px 0 0px 10px;
+}
+.wu .read .title-two .tu-right{
+          float: left;
+          width:400px ;
+          height:360px ;
+}
+.wu .read .title-two li{
+    float: left;
+    width: 200px;
+    height: 180px;
+    
+    text-align: center;
+    font-size: 13px;
+
+}
+.wu .read .title-two li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wu .read .title-two li .span-one{
+    display: block;
+    margin-top: 10px;
+     font-size: 16px;
+     line-height: 0px;
+     color: black;
+}
+.wu .read .title-two li .span-two{
+     display: block;
+     line-height: 18px;
+     font-size: 13px;
+     color:#9670a9  ;
+}
+.wu .read .title-two li img{
+    width: 120px;
+    height: 120px;
+    margin-top: -15px;
+}
+
+/* 服装配饰和运动户外和金融和阅读end */
+
+/* 广告图 start*/
+.liu ul{
+        margin-top: 20px;
+}
+.liu ul li{
+        float: left;
+        width: 396px;
+        height: 100px;
+}
+.liu ul li img{
+      width: 100%;
+      height: 100%;
+}
+
+
+/* 广告图end */
+
+
+/* 猜你喜欢start */
+.qi .like{
+    
+    width:100%;
+    
+    margin-top: 20px;
+    /* margin-right: 10px; */
+    background-color: #fff;
+}
+.qi .like .title-top{
+    line-height: 40px;
+    background-color:#f8faf9;
+    width: 100%;
+} 
+.qi .like .title-top .wen-left{
+    float: left;
+
+}
+.qi .like .title-top .wen-left .cushu{
+     display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color:pink ;
+    margin-right: 10px;
+
+}
+.qi .like .title-top .wen-left .left-zhi{
+    font-weight: 900;
+   
+    font-size: 20px;
+    color:black;
+     margin-right: 10px;
+}
+.qi .like ul li{
+       float: left;
+       width: 200px;
+       height: 302px;
+       padding: 20px 18px 18px 20px;
+}
+.qi .like ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.qi .like ul li img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.qi .like ul li .ziying{
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    background:url(../img/sprite.png) no-repeat -561px -270px;
+    vertical-align: middle;
+}
+.qi .like ul li .span-a{
+    line-height: 24px;
+
+
+}
+.qi .like ul li .span-b{
+    float: left;
+    font-weight: 700;
+    font-size: 16px;
+    color:#fb5f01 ;
+}
+.qi .like ul li .span-c{
+    float: right;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color:#fb5f01 ;
+    border: 1px solid #fb5f01;
+    border-radius: 4px;
+}
+.qi .like ul li .span-d{
+    float: left;
+    height:16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    background-color: tomato;
+    border-radius: 3px 0 0 3px;
+    padding-left: 3px;
+}
+.qi .like ul li .span-e{
+    float: left;
+    height: 14px;
+    font-size: 12px;
+    line-height: 14px;
+    color: tomato ;
+    /* background-color: tomato; */
+    border-radius: 0px 3px 3px 0px;
+    padding:0 3px 0 3px;
+    border: 1px solid tomato;
+    margin-right: 8px;
+}
+.qi .like ul li .span-f{
+   display: inline-block;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: white ;
+    background-color: tomato;
+    /* background-color: tomato; */
+    border-radius: 3px;
+    padding:0 3px 0 3px;
+    /* border: 1px solid tomato; */
+}
+/* 猜你喜欢end */
+
 /*  */

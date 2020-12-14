@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../day16/代码/m-xu/css/reset.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .content {
+            width: 100%;
+            height: calc(100vh - 100px);
+          
+            padding: 0px 20px;
+            overflow-x: auto;
+            overflow-y: auto;
+          
+        }
+        table td {
+            border:1px solid #bbb;
+        }
+        table {
+            width: 100%;
+            font-size: 14px;  
+            text-align: center;
+            /* 最小就是800px  当前屏幕 500px 此时表格是800px 溢出 */
+            min-width: 800px;
+            
+        }
+        table tr {
+            height: 40px;
+        }
+        table tr:nth-child(1) {
+
+            font-size: 16px;
+            font-weight: 700;
+
+        }
+        .box {
+            width: 100%;
+            height: 100px;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="content" >
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>
+                    商品ID
+                </td>
+                <td>商品的名称</td>
+                <td>商品的名称</td>
+                <td>商品的名称</td>
+                <td>商品的名称</td>
+                <td>商品的名称</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>    <tr>
+                <td>
+                     <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>
+                    华为Mate40
+                </td>
+                <td>3020</td>
+                <td>数码产品</td>
+                <td>手机</td>
+                <td>国产手机</td>
+                <td>申请中</td>
+          
+                <td>
+                    <a href="">详情</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

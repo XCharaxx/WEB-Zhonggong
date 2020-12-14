@@ -1,0 +1,57 @@
+
+@import "./2-类混入.less";
+.xk {
+
+    overflow: hidden;
+    position: relative;
+    width: 590px;
+    height: 400px;
+    margin:0 auto;
+    .pic-tiao {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 500%;
+        height: 100%; 
+        li {
+            float: left;
+            width: 20%;
+            height: 100%;
+            a {
+                .wh100;
+                img {
+                    .wh100;
+                }
+            }
+            
+        }
+
+    }
+    .arrow {
+        //&代指上一级选择器
+        &:hover {
+            background-color: #000;
+        }
+
+    }
+    #zuo {
+
+    }
+    #you {
+
+    }
+    .circle {
+        span {
+            &:first-of-type {
+                background-color: red;
+
+            }
+            &::after {
+                content: '';
+                
+            }
+
+        }
+    }
+
+}

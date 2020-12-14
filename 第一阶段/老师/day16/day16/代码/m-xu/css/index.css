@@ -1,0 +1,171 @@
+.fn14White {
+  font-size: 0.28rem;
+  color: #fff;
+}
+.max {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+}
+/* 适配文件 : h5媒体查询+rem */
+@media screen and (min-width: 320px) {
+  /* 1rem = 42.6667 */
+  html {
+    font-size: 42.66666667px;
+  }
+}
+@media screen and (min-width: 360px) {
+  /* 1rem = 48px */
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 375px) {
+  /* 1rem = 50 */
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 414px) {
+  /* 1rem =  55.2px*/
+  html {
+    font-size: 55.2px;
+  }
+}
+@media screen and (min-width: 540px) {
+  /* 1rem =  72px*/
+  html {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* 1rem =  85.3px*/
+  html {
+    font-size: 85.33333333px;
+  }
+}
+@media screen and (min-width: 750px) {
+  /* 1rem =  100px*/
+  html {
+    font-size: 100px;
+  }
+}
+header {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+  height: 1.6rem;
+  background-image: linear-gradient(180deg, #FF6040, #FF8A80);
+}
+header .header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 0.96rem;
+}
+header .header-top .icon-dizhi {
+  width: 0.36rem;
+  height: 0.44rem;
+  background-image: url(../images/address.png);
+  background-size: 100% 100%;
+}
+header .header-top .logo img {
+  width: 1.82rem;
+  height: 0.48rem;
+}
+header .header-top .search-bar {
+  width: 3.4rem;
+  height: 0.64rem;
+}
+header .header-top .search-bar form {
+  width: 100%;
+  height: 100%;
+}
+header .header-top .search-bar form input {
+  width: 100%;
+  height: 100%;
+  padding-left: 0.52rem;
+}
+header .header-top .icon-menu {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-image: url(../images/store.png);
+  background-size: 100% 100%;
+}
+header .header-nav {
+  position: relative;
+  width: 100%;
+  height: 0.64rem;
+}
+header .header-nav .view-box {
+  overflow-x: auto;
+  width: 100%;
+  height: 100%;
+}
+header .header-nav .view-box ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 0.64rem;
+}
+header .header-nav .view-box ul li {
+  white-space: nowrap;
+}
+header .header-nav .view-box ul li a {
+  font-size: 0.28rem;
+  color: #fff;
+  padding: 0px 0.2rem;
+}
+header .header-nav .nav-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.3rem;
+  height: 0.64rem;
+  background-color: yellow;
+}
+.main {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+  height: 4.2rem;
+  padding: 0.2rem 0.4rem;
+}
+.main .view-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main .view-box .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .view-box .item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main .view-box .item a img {
+  width: 100%;
+  height: 100%;
+}
+.main .view-box .circle {
+  position: absolute;
+  bottom: 0.2rem;
+  text-align: center;
+  width: 100%;
+}
+.main .view-box .circle span {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 0.2rem;
+}

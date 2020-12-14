@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        img {
+            display: block;
+            width: 200px;
+            margin:40px auto 0px;
+            transition: transform 1s;
+        }
+        img:active {
+            transform:translate3d(100px,100px,100px);
+            /* transform: translateX(100px) translateY(100px) translateZ(0px); */
+        }
+    </style>
+</head>
+<body>
+    <img src="./image/timg.jpg" alt="">
+</body>
+</html>

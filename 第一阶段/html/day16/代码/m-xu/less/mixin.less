@@ -1,0 +1,50 @@
+
+@import "./var.less";
+// 定义一些less类
+.fn14White {
+    font-size: 14rem/50px;
+    color: #fff;
+
+}
+.max {
+    width: 100%;
+    min-width: @smin;
+    max-width: @smax;
+}
+.f(@a){
+    float: @a;
+
+}
+.plt(@a,@l,@t){
+    position: @a;
+    left: @l;
+    top: @t;
+}
+.prb(@a,@l,@t){
+    position: @a;
+    right: @l;
+    bottom: @t;
+}
+.bs(@str,@color){
+    box-shadow: @arguments;
+}
+.flex(@a,@b,@c){
+    display: flex;
+    flex-direction: @a;
+    justify-content: @b;
+    align-items: @c;
+
+}
+.br(@a:50%){
+    border-radius: @a;
+}
+.border(@t,@r,@b,@l){
+    border-top:@t;
+    border-right:@r;
+    border-bottom:@b;
+    border-left:@l;
+}
+.m(@a,@b,@c,@d){
+    margin:@arguments;
+
+}

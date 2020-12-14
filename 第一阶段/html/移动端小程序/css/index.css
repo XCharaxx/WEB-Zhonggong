@@ -1,0 +1,387 @@
+.header{
+    width: 100%;
+    height: 1.6rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(180deg,#FF6040 ,#FF8A80 );
+}
+.header .header-top{
+    width: 100%;
+    height: .7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header .header-top img{
+    width: 1.82rem;
+    height: .48rem;
+}
+.header .header-top .search{
+    position: relative;
+    width: 3.4rem;
+    height: .64rem;
+
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: .1rem;
+}
+.header .header-top .search input{
+    width: 100%;
+     line-height: .44rem;
+    padding: .1rem  0 0 .68rem;
+}
+.header .header-top .search .iconsousuo{
+   width: .34rem;
+   height: .34rem;
+   line-height: .34rem;
+    position: absolute;
+    left: .24rem;
+    top: .16rem;
+}
+.header .header-bottom{
+    width: 100%;
+    height: .7rem;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    
+}
+.header .header-bottom .menu{
+    width: .64rem;
+    height: .7rem;
+   
+    
+}
+.header .header-bottom .menu a{
+    display: block;
+    width: 100%;
+    height: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header-bottom span {
+    line-height: .64rem;
+color: #FFF3F2;
+}
+.header .header-bottom .heng{
+    width: .4rem;
+    height: .04rem;
+    background-color: #fff;
+    display: none;
+}
+.header .header-bottom a:hover span{
+    font-weight: 600;
+    font-size: .32rem;
+     color: white;
+}
+.header .header-bottom a:hover .heng{
+   display: block;
+}
+.header .header-bottom  .lei{
+    position: relative;
+    width: 1.3rem;
+    height: .64rem;
+      padding-left: .46rem;
+      box-shadow: -0.1rem .02rem .2rem -0.1rem #E63D2E ;
+}
+.header .header-bottom  .lei i{
+    position: absolute;
+    left: .1464rem;
+    /* top: .06rem; */
+    line-height: .64rem;
+}
+
+ /* 轮播图区域  */
+
+ .main-banner{
+     background-color: white;
+     width: 100%;
+     height: 6rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+
+ }
+ .xk{
+     position: relative;
+     width: 6.7rem;
+     height: 3.9rem;
+    box-shadow: 0 10px 10px 0 rgba(255,96,64,0.20);
+ }
+ .xk .item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+.xk .bg1{
+    z-index: 2;
+    animation: bannerlun 8s linear  infinite alternate;
+}
+.xk .bg2{
+    z-index: 3;
+}
+@keyframes bannerlun{
+    0%{
+       z-index: 2;
+    }
+ 
+    40%{
+        z-index:4;
+    }
+   
+    100%{
+        z-index: 4;
+    }
+}
+ .xk .item  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.xk .item a img {
+    width: 100%;
+    height: 100%;
+}
+.xk .circle{
+    position: absolute;
+    left: 0;
+    bottom: .2rem;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+
+}
+.xk .circle span{
+    display: inline-block;
+    width: .12rem;
+    height: .12rem;
+    border-radius: 50%;
+    margin-right: .05rem;
+    background-color: #bbb;
+}
+.ico{
+    width: 100%;
+    height: 1.34rem;
+    display: flex;
+    justify-content: space-around;
+}
+.ico div{
+     width: 1rem;
+     height:.94rem;
+     
+}
+.ico div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+
+}
+.ico div a span{
+       font-size: .20rem;
+    color: #333333 ;
+}
+
+
+
+
+
+
+
+
+
+.big-img{
+    width: 100%;
+    height: auto;
+    padding-top: .2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.big-img .bimg{
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: .1rem;
+}
+.big-img .bimg .wen1{
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    font-size: .32rem;
+    color: #85A642;
+}
+.big-img .bimg .wen2{
+    position: absolute;
+    left: 2.2rem;
+    top: .26rem;
+    font-size: .24rem;
+    transform: scale(0.8);
+    color: #333333;
+}
+.big-img .bimg .wen3{
+    position: absolute;
+    left: 0rem;
+    top: .72rem;
+    font-size: .24rem;
+    transform: scale(0.8);
+    color: #B1CC7A;
+}
+.big-img .bimg .wen4{
+    position: absolute;
+    left: .2rem;
+    top: 1.06rem;
+    font-size: .28rem;
+    color:#85A642;
+}
+.big-img .bimg .wen4 span{
+    padding: .04rem .08rem;
+    background-color: #85A642;
+    color: white;
+}
+.big-img img{
+    width: 100%;
+    height: 100%;
+}
+.big-img .simg {
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+.big-img .simg .simg-1{
+    position: relative;
+    width: 100%;
+    height: 1.7rem;
+}
+.big-img .simg .simg-1 .wen1{
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    font-size: .32rem;
+    color:#FF6040;
+}
+
+.big-img .simg .simg-1 .wen2{
+    position: absolute;
+    left: 0rem;
+    top: .72rem;
+    font-size: .24rem;
+    transform: scale(0.8);
+    color:#FF9580;
+}
+.big-img .simg .simg-1 .wen3{
+    position: absolute;
+   
+    height: .4rem;
+    border-radius: 0 .4rem .4rem 0;
+    left: .2rem;
+    top: 1.06rem;
+    text-align: center;
+    line-height: .4rem;
+    font-size: .28rem;
+    color: white;
+    background-color: #FF6040;
+}
+.big-img .simg .simg-2{
+    position: relative;
+    width: 100%;
+    height: 1.7rem;
+}
+.big-img .simg .simg-2 .wen1{
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    font-size: .32rem;
+    color:#AF40FF;
+}
+
+.big-img .simg .simg-2 .wen2{
+    position: absolute;
+    left: 0rem;
+    top: .72rem;
+    font-size: .24rem;
+    transform: scale(0.8);
+    color:#CA80FF;
+}
+.big-img .simg .simg-2 .wen3{
+    position: absolute;
+   
+    height: .4rem;
+    border-radius: 0 .4rem .4rem 0;
+    left: .2rem;
+    top: 1.06rem;
+    text-align: center;
+    line-height: .4rem;
+    font-size: .28rem;
+    color: white;
+    background-color:#AF40FF;
+}
+.yvgo{
+     width: 7.1rem;
+    height: auto;
+    padding-top: .2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.yvgo .hang1{
+    width: 100%;
+    line-height: .8482rem;
+    
+    display: flex;
+    justify-content: space-around;
+}
+.yvgo .hang1 a span{
+    font-size: .28rem;
+    color: #999999;
+}
+.yvgo .hang1 a span:hover{
+    font-size: .32rem;
+    color: #FF6040 ;
+}
+.yvgo .hang2{
+    width: 100%;
+    padding: 0 .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.yvgo .hang2 .goods {
+           width: 1.6rem;
+           height: auto; 
+           text-align: center;
+          
+
+}
+.yvgo .hang2 .goods a{
+    display: block;
+    width: 100%;
+    height: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.yvgo .hang2 .goods a img{
+    width: 100%;
+    height: 1.6552rem;
+}
+.yvgo .hang2 .goods a .intro{
+      font-size: .24rem;
+      transform: scale(0.8);
+}
+.yvgo .hang2 .goods a .spice{
+    font-weight: 600;
+    font-size: .32rem;
+    color: orange;
+}

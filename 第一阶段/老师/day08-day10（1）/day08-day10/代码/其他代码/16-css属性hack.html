@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            color: red;
+            
+             /* ie7及其以下的标识是* */
+             *color:orange;
+            /* ie6及其以下是蓝色 */
+            _color:blue;
+             /* ie8-ie9识别\0 */
+             color:deeppink\0;
+
+           
+           
+        }
+        /* ie6下识别的类 */
+       *html .a {
+            background-color: deeppink;
+            border-radius: 50%;
+
+        }
+        /* ie7下识别的类 */
+       * + html .a {
+            background-color: springgreen;
+            border-radius: 50%;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="box a">
+
+        efreg
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+
+.big-w{
+    /* max-width:1200px ; */
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+     background-color: #fff;
+
+}
+.nav-top{
+    position: relative;
+       width: 100%;
+       height: 70px;
+       line-height: 70px;
+       display: flex;
+    justify-content: space-between;
+       align-items: center;
+     padding-right: 10px;
+}
+.nav-top .iconmulu{
+    position: absolute;
+    padding-bottom: 20px;
+    left: 18px;
+    top: 0px;
+    display: none;
+    z-index: 99;
+}
+.nav-top .left-menu-01{
+    position: absolute;
+    left: 0;
+    top:53px;
+     width: 100%;
+    background-color: white;
+    display: none;
+    z-index: 99;
+}
+.nav-top .title-left{
+       width: 253px;
+       height: 70px;
+       text-align: center;
+       line-height: 70px;
+       font-size: 18px;
+       color: white;
+       background-color:#ea967a;
+}
+.nav-top .title-right img:nth-of-type(2){
+       padding-left: 10px;
+}
+.main-body{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.main-body .left-menu{
+    width: 253px;
+    background-color: white;
+    
+
+}
+
+.main-body .left-menu ul{
+    padding: 40px 0 0 50px;
+
+}
+
+.main-body .left-menu ul li{
+    position: relative;
+    padding-bottom: 45px;
+    font-size: 18px;
+}
+.in-list{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    display: none;
+
+}
+.main-body .left-menu ul li:hover .in-list{
+
+    display: block;
+}
+.main-body .left-menu ul li:hover .in-list div:hover{
+      
+       background-color:coral;
+    
+    
+}
+.main-body .left-menu ul li:hover {
+  
+    padding-bottom: 100px;
+   
+}
+.main-body .left-menu ul li:hover >span{
+    color: yellowgreen;
+   
+}
+.right-menu{
+    height: 100%;
+    background-color:#f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+.right-menu .r-top{
+    display: flex;
+    justify-content: space-between;
+    color: #ea967a;
+    font-size: 16px;
+    padding: 0 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 10px;
+}
+.right-menu .r-middle{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.right-menu .r-middle .box1{
+    position: relative;
+    width: 20%;
+    height: 125px;
+    background-color: #ea967a;
+    border-radius: 5px;
+     padding-left: 10px;
+}
+.right-menu .r-middle .box1 p:nth-child(1){
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+   
+}
+.right-menu .r-middle .box1 p:nth-child(2){
+    font-size: 16px;
+    color: white;
+   
+}
+.right-menu .r-middle .box1 .xiangq{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background-color:rgba(0,0,0,.3);
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      font-size: 12px;
+}
+@media screen and (max-width:992px){
+   .right-menu .r-middle .box1{
+       width: 40%;
+       margin: 10px;
+   }
+    
+   .main-body .left-menu{
+       display: none;
+   }
+   .nav-top .title-right img:nth-of-type(2){
+       display: none;
+   }
+    .nav-top .title-right span:nth-of-type(2){
+       display: none;
+   }
+   .nav-top .title-left{
+       opacity: 0;
+   }
+   .nav-top .iconmulu{
+   
+    
+    display: block;
+}
+
+ .nav-top i:hover + .left-menu-01{
+      display: block;
+    text-align: center;
+ }
+}
+@media screen and (max-width:768px){
+ .right-menu .r-middle .box1{
+       width: 80%;
+       margin-top:10px;
+   }
+}

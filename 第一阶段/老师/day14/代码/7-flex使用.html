@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul {
+
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color:#333;
+            font-size: 14px;
+        }
+        .one {
+            display: flex;
+            width: 100%;
+            /* 移动端 手机 320px-750px or 640px */
+            min-width: 320px;
+            max-width: 750px;
+            height: auto;
+        }
+        .one li {
+            flex:1;
+            /* border-right: 1px solid #000; */
+        }
+        .one li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0px;
+
+        }
+        .one  span:nth-child(1) {
+            width: 40px;
+            height: 40px;
+            background-image: url(./image/home-fivemain-sprite2x@v7.15.png);
+            background-size: 40px auto;
+
+        }
+        .two {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            /* 移动端 手机 320px-750px or 640px */
+            min-width: 320px;
+            max-width: 750px;
+            height: auto;
+        }
+        .two li {
+            width: 20%;
+            /* flex:1; */
+        }
+        .two li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0px;
+
+        }
+        .two  span:nth-child(1) {
+            width: 28px;
+            height: 28px;
+            background-image: url(./image/un_ico_subnav2x@v7.152.png);
+            background-size: 28px auto;
+
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+            min-width: 320px;
+            max-width: 750px;
+            height: 50px;
+             
+        }
+        .left {
+
+            flex:1;
+            height: 50px;
+            background-color: aqua;
+
+
+        }
+        .right {
+            width: 50px;
+            height: 50px;
+            background-color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- flex适合于一行 放置子项 -->
+    <ul class="one">
+        <li><a href=""><span></span><span>景点</span></a></li>
+        <li><a href=""><span></span><span>景点</span></a></li>
+        <li><a href=""><span></span><span>景点</span></a></li>
+        <li><a href=""><span></span><span>景点</span></a></li>
+        <li><a href=""><span></span><span>景点</span></a></li>
+    </ul>
+
+    <ul class="two">
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+        <li><a href=""><span></span><span>自由行</span></a></li>
+    </ul>
+
+    <div class="header">
+        <div class="left">left</div>
+        <div class="right">我的</div>
+    </div>
+</body>
+</html>

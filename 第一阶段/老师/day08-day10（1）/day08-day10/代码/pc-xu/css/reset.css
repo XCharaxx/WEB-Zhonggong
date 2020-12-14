@@ -1,0 +1,55 @@
+/* 清除浏览器默认样式 兼容问题 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+}
+ul ,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    /* 图文对齐 以中线对齐 */
+    vertical-align: middle;
+}
+em,i {
+    font-style: normal;
+}
+b,strong {
+    font-weight: 400;
+}
+table {
+    border-collapse: collapse;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix::after,.clearfix::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+.brn {
+    border-right:none;
+}
+.bbn {
+    border-bottom:none;
+}
+input {
+    border:0;
+    /* 外轮廓 */
+    outline:none;
+}
+/* 版心类 */
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 30px;
+            background-color: #000;
+            line-height: 30px;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .erwm {
+            position: absolute;
+            left: 50%;
+            bottom: 120px;
+            margin-left: -62.5px;
+            /* left: -12px;
+            top: -110px; */
+            width: 125px;
+            height: 124px;
+            background-image: url(./image/erweicode.png);
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.5s,bottom 0.5s;
+        }
+        .box:hover + .erwm {
+            opacity: 1;
+            bottom:140px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="box">
+        <span>手机端</span>
+     
+    </div>
+    <div class="erwm">
+            
+    </div>
+  
+</body>
+</html>

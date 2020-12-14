@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .form{
+           border:1px solid orange ;
+           width: 300px;
+     
+           padding: 10px;
+           margin: 0 auto   ;
+       }
+       .sub{
+           margin: 0 auto;
+           width: 100%;
+           background-color:orange;
+           color: white;
+       }
+       input{
+           margin:7px 0 10px 0;
+       }
+    </style>
+</head>
+<body>
+    <div class="form">
+         <form action="">
+         <p>姓名</p>
+        <div>
+            <input type="text" value="请输入姓名" name="name">
+        </div>
+        <p>电话号码</p>
+        <div>
+            <input type="text" value="" name="imoble">
+        </div>
+        <p>邮箱</p>
+        <div>
+            <input type="email" name="email" id="">
+        </div>
+        <p>所属院校</p>
+        <div>
+            <input type="text" list="yuan">
+            <datalist id="yuan" name="colleage">
+                <option value="美术学院"></option>
+                <option value="物理学院"></option>
+            </datalist>
+        </div>
+        <p>入学成绩</p>
+        <div>
+            <input type="number" value="0" min="0" max="100">
+        </div>
+        <p>基础水平</p>
+        <div>
+            <input type="range">
+            
+        </div>
+        <p>入学日期</p>
+        <div>
+           <input type="date">
+        </div>
+        <p>毕业日期</p>
+        <div>
+           <input type="date">
+        </div>
+        <div>
+            <input type="submit" value="提交"  class="sub">
+        </div>
+        </form>
+    </div>
+    
+</body>
+</html>

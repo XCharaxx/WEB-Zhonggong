@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .fl{
+            float: left;
+        }
+        .box{
+            width: 650px;
+            height: 250px;
+            margin: 100px auto;
+           
+        }
+        .box .box1{
+            position: relative;
+            width: 400px;
+            height: 250px;
+            margin-right: 50px;
+           overflow: hidden;
+        }
+        .box  img{
+                   width: 100%;
+                   height: 100%;
+                   transition: all 1s;
+        }
+         .box  .bian1{
+             position: absolute;
+             top: 0;
+             left: 0;
+            width: 100%;
+            height: 100%;
+             border: 2px solid white;
+             transition: all 1s;
+             z-index: 2;
+         }
+          .box .box1:hover img{
+              transform: scale(1.2);
+          }
+           .box .box1:hover .bian1{
+               transform: scale(0.9);
+           }
+         .box .box2 .box3{
+             position: relative;
+             width: 200px;
+             height: 100px;
+             margin-bottom: 50px;
+              overflow: hidden;
+         }
+          .box .box2 .box4{
+              position:relative;
+               width: 200px;
+             height: 100px;
+              overflow: hidden;
+          }
+            .box .box3:hover img{
+              transform: scale(1.2);
+          }
+           .box .box3:hover .bian1{
+               transform: scale(0.8);
+           }
+            .box .box4:hover img{
+              transform: scale(1.2);
+          }
+           .box .box4:hover .bian1{
+               transform: scale(0.8);
+           }
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="box1 fl">
+             <img src="http://asset.ibanquan.com/s/30611/919/index_global3_pic_1?v=1588934327_1603158216" alt="">
+            <div class="bian1"></div>
+        </div>
+        <div class="box2 fl">
+            <div class="box3">
+                <img src="http://asset.ibanquan.com/s/30611/919/index_global3_pic_2?v=1588934327_1603158216" alt="">
+                <div class="bian1"></div>
+            </div>
+            <div class="box4">
+                <img src="http://asset.ibanquan.com/s/30611/919/index_global3_pic_3?v=1588934327_1603158216" alt="">
+                <div class="bian1"></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

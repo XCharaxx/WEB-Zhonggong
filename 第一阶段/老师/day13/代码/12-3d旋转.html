@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        img {
+            width: 200px;
+            display: block;
+            margin:50px auto 0px;
+            transition: transform 1s;
+        }
+        img:active {
+            /* transform: rotate3d(1,0,0,180deg); */
+            /* transform: rotate3d(0,1,0,-45deg); */
+            /* transform: rotate3d(0,0,1,45deg); */
+            /* transform:rotate3d(1,1,0,90deg) ; */
+
+            transform:rotate3d(1,1,1,45deg) ;
+
+            
+
+        }
+    </style>
+</head>
+<body>
+   <img src="./image/timg.jpg" alt=""> 
+</body>
+</html>

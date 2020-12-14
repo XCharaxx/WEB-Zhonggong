@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .w {
+            margin: 40px auto 0px;
+            width: 1140px;
+            height: 380px;
+        }
+        .left {
+            position: relative;
+            overflow: hidden;
+            float: left;
+            height: 100%;
+            width: 680px;
+        }
+        .right {
+            width: 450px;
+            float: right;
+            height: 100%;
+        }
+        .home-section img {
+            width: 100%;
+            height: 100%;
+        }
+        .top,.bottom {
+            position: relative;
+            overflow: hidden;
+
+            width: 100%;
+            height:186px ;
+
+        }
+        .bottom {
+            margin-top: 8px;
+
+        }
+        .home-section   img {
+            transition: transform 0.3s linear 0s;
+        }
+        .left:hover img {
+            transform:scale(1.1);
+        }
+        .top:hover img,.bottom:hover img {
+            transform:scale(1.1);
+        }
+
+        /* 白色边框 */
+        .left::after ,.top::after,.bottom::after {
+
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            bottom: 10px;
+            right:10px;
+            background-color: rgba(0,0,0,0);
+            border:3px solid #fff;
+            transition: transform 0.5s;
+            transform:scale(1.1,1.2);
+            
+
+        }
+        /* 挑选left的盒子的后伪元素 */
+        .left:hover::after ,.top:hover::after,.bottom:hover::after{
+            transform:scale(1);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w  home-section">
+        <div class="left">
+            <a href="">
+                <img src="http://asset.ibanquan.com/s/30611/
+                919/index_global3_pic_1?v=1588934327_1603158216" alt="">
+
+            </a>
+        </div>
+        <div class="right">
+            <div class="top">
+                <a href="">
+                    <img src="http://asset.ibanquan.com/s/30611/
+                    919/index_global3_pic_2?v=1588934327_1603158216" alt="">
+                </a>
+            </div>
+            <div class="bottom"><a href="">
+                <img src="http://asset.ibanquan.com/s/30611/919/index_global3_pic_3?v=1588934327_1603158216"
+                        
+                        alt=""></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

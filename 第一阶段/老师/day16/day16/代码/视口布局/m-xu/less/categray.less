@@ -1,0 +1,45 @@
+@import "./adapter.less";
+@import "./mixin.less";
+@import "./reset.less";
+@import "./mixin.less";
+// 获取浏览器可视区域高度
+html,body {
+    height: 100%;
+}
+header {
+    .max;
+    height: 52rem/@psdFS;
+    background-color: red;
+}
+// 浏览器高度 - 头部高度 -底部高度
+.main {
+    //  100vh 就是浏览器窗口的高度 100vw就是浏览器窗口的宽度
+    .max;
+    // unit(表达式,单位)---》把表达式算出来的单位替换成第2个参数
+    //unit(100px,rem)===> 100rem
+    height:calc(100vh - unit(52px/@psdFS+83px/@psdFS,rem) );
+    
+    .flex(row,flex-start,stretch);
+    .left {
+        // 固定宽度
+        width: 118px;
+        background-color: tomato;
+        // 溢出处理
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+    .right {
+       flex:1;
+       background-color: peru;
+        // 溢出处理
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+}
+footer {
+    .max;
+    height: 83rem/@psdFS;
+    background-color:#000;
+}

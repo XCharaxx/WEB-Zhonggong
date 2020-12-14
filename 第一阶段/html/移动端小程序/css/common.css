@@ -1,0 +1,96 @@
+html{
+    width: 100%;
+    min-width: 320px;
+    max-width: 750px;
+    margin:0 auto;
+    background-color: #f2f2f2;
+}
+.fix{
+    min-width: 320px;
+    max-width: 750px;
+    position: fixed;
+    width: 100%;
+    height: 1.66rem;
+    background-color: #fff;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    padding: .1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.fix .text1{
+    width: 100%;
+    height: .8rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.fix .text1 .sbox{
+   
+    width: .9rem;
+    height: .78rem;
+}
+.fix .text1 .sbox a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #999999;
+}
+.fix .text1 .sbox .tu{
+    position: relative;
+    width: .36rem;
+    height: .4rem;
+}
+.fix .text1 .sbox img{
+    width: .36rem;
+    height: .4rem;
+    background-color: #fff;
+}
+.fix .text1 .sbox span{
+    /* position: absolute;
+    bottom: 0;
+     left: 50%;
+    transform: translateX(-50%); */
+    font-size: .24rem;
+    transform: scale(0.8);
+}
+.fix .text1 .sbox  .shang-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+     z-index: 2;
+}
+.fix .text1 .sbox  .xia-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+     z-index: 0;
+}
+
+.fix .text1 .sbox a:hover span{
+    color: #FF6040;
+}
+
+.fix .text1 .sbox a:hover .shang-bg{
+         z-index: -1;
+}
+.fix .text2{
+    width: 2.68rem;
+    height: .68rem;
+   
+
+}
+.fix .text2 img{
+    width: 100%;
+    height: 100%;
+}

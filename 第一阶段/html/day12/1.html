@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+      
+        li{
+            width: 200px;
+            height: 200px;
+             margin: 0 auto;
+             border: 1px solid black;
+        }
+        ul li:nth-child(even){
+             background-color:red;
+        }
+        ul li:nth-child(odd){
+            background-color:blue;
+
+        }
+        ul li:nth-child(-n+3){
+            background-color: green;
+        }
+        ul li:nth-child(n+7){
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+   
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* 适配文件 */
+@import "../adapter.css";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f6f6f6;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input {
+    border:none;
+    outline:none;
+}
+.header {
+   
+    -webkit-display:flex;
+    display: flex;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 750px;
+    width: 100%;
+    height: 0.44rem;
+    background-color: #c82519;
+}
+.left-menu,.right-login {
+
+    width: 44px;
+    height: 0.4rem;
+   
+
+}
+.left-menu {
+  
+} 
+.right-login {
+    
+}
+.center-search {
+    flex:1;
+    height: 0.44rem;
+    
+}
+.left-menu a ,.right-login a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sp-menu {
+    display: block;
+    width: 0.2rem;
+    height: 0.16rem;
+    background-image: url(./menu.png);
+    background-size: 0.2rem 0.16rem;
+    margin: 0.14rem 0px 0px 0.1rem;
+}
+.right-login a {
+
+    line-height: 0.44rem;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+
+}
+.center-search form {
+    margin-top: 0.06rem;
+    overflow: hidden;
+    width: 100%;
+    height: 0.3rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+.center-search form  input {
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+/* }
+.main-banner {
+    margin-top: 30px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 750px;
+    padding: 0px 14px;
+    height: 200px;
+   
+
+}
+.xk {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  
+}
+.xk .item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 200px;
+   
+}
+.xk .item  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.xk .item a img {
+    width: 100%;
+    height: 100%;
+}
+.nav {
+    width: 100%;
+    min-width: 320px;
+    max-width: 750px;
+
+}
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+.nav li {
+    width: 20%;
+    text-align: center;
+    padding: 20px 0px;
+
+}
+.nav li a img {
+    width: 50%;
+}
+.nav p {
+    color: #222;
+    font-size: 14px;
+} */

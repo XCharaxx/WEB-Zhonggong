@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            /* 1. 确定弹性盒  父盒子 你想要摆哪几个盒子 那么他们的父元素就是弹性盒 
+            声明弹性盒 display:flex;
+            默认： 1： 排列方向  主轴在水平方向  2.排列方式 左对齐
+            
+             */
+
+             /* 
+                2. 确定主轴方向 
+                flex-direction:row行(默认 start在左  end在右)/column列/row-reverse行反向/column-reverse列反向
+
+                3. 确定主轴方向的排列方式 
+                justify-content:
+                    左对齐 flex-start(默认)
+                    右对齐 flex-end 
+                    居中对齐 center
+                    两端对齐中间间距等分 space-between
+                    间距等分   space-evenly
+                    两端间距等于中间间距的一半 space-around
+
+                4. 设置交叉轴的排列方式
+                 align-items:flex-start/flex-end/center/baseline基线对齐/stretch延伸，占满的
+
+              */
+             display: flex;
+             flex-direction: row;
+             /* justify-content: flex-start; */
+             /* justify-content: flex-end; */
+             /* justify-content: center; */
+             /* justify-content: space-between; */
+             /* justify-content: space-evenly; */
+             justify-content: space-around;
+             /* align-items: stretch; */
+
+            width: 800px;
+            margin:40px auto 0px;
+            height: 600px;
+            border:1px solid #000;
+          
+        }
+        .box div {
+            width: 100px;
+            /* height: 100px; */
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+        .col1 {
+            background-color: deeppink;
+            /* height: 200px; */
+            order:3;
+            align-self: stretch;
+        }
+        .col2 {
+            background-color: darkgreen;
+            height: 100px;
+            order:2;
+            align-self: center;
+        }
+        .col3 {
+            order:1;
+            height: 100px;
+            background-color: purple;
+            align-self: flex-end;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="col1">1</div>
+        <div class="col2">2</div>
+        <div class="col3">3</div>  
+      
+    </div>
+</body>
+</html>

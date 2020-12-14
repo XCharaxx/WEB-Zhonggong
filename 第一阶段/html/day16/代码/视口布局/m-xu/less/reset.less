@@ -1,0 +1,60 @@
+@import "./var.less";
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ 
+ body {
+     background-color: @bodyBg;
+     font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+ }
+ ul ,ol {
+     list-style: none;
+ }
+ a {
+     text-decoration: none;
+ }
+ img {
+     /* 不具有基线对齐现象 */
+      display: block;
+ }
+ em,i {
+     font-style: normal;
+ }
+ b,strong {
+     font-weight: 400;
+ }
+ table {
+     border-collapse: collapse;
+ }
+ .fl {
+     float: left;
+ }
+ .fr {
+     float: right;
+ }
+ .clearfix::after,.clearfix::before {
+     content: '';
+     display: block;
+     clear: both;
+ }
+ .brn {
+     border-right:none;
+ }
+ .bbn {
+     border-bottom:none;
+ }
+ input {
+     border:0;
+     /* 外轮廓 */
+     outline:none;
+ }
+
+//  声明rem 和px 和vw的关系  1rem = 50px 
+// 1rem = 50px  100vw = 375px  1px = 0.26666667vw 
+//1rem = 50px = 50*0.266666667vw = 13.333335vw;
+html {
+    font-size:13.333335vw ;
+}

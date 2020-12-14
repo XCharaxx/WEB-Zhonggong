@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: #fff;
+            border: 1px solid black;
+        }
+        .z-box{ 
+
+            width: 100px;
+            /* height: 30px; */
+            background-color: pink;
+                position: absolute;
+                left: 0;
+                top: 60px;
+                display: none;
+        }
+    .box:hover .z-box{
+          display: block;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+            <span>商品分类</span>
+            <div class="z-box">
+                收藏的宝贝
+            </div>
+    </div>
+</body>
+</html>

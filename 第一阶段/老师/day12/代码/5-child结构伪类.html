@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box span:first-child {
+
+            background-color: firebrick;
+
+        }
+
+        .box span:nth-child(2){
+
+            background-color: firebrick;
+
+        }
+        .box .s:nth-child(3) {
+            font-size: 100px;
+        }
+        ul li:nth-child(n+4) {
+
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="a">第一个孩子 p类型</p>
+        <span class="a"> 第2个孩子 span类型</span>
+        <div class="s">第3个孩子 div类型 </div>
+    </div>
+
+    <!-- 结构单一 ul>li ol>li dl>dt+dd -->
+    <ul>
+        <li>我是第1个元素</li>
+        <li>我是第2个元素</li>
+        <li>我是第3个元素</li>
+        <li>我是第4个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+        <li>我是第5个元素</li>
+    </ul>
+</body>
+
+</html>

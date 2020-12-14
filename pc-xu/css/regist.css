@@ -1,0 +1,211 @@
+.regist-header{
+   
+    height: 110px;
+    /* background-color: pink; */
+
+}
+
+.regist-header .logo-box {
+    font-size: 0px;
+    margin-top: 60px;
+    margin-right: 10px;
+}
+.regist-header .wc-regist{
+    
+    font-size: 20px;
+    color: #8c8c8c;
+    border-left: 1px solid  #8c8c8c;
+    padding: 5px 10px;
+    margin-top: 60px;
+}
+/* regist登录头部 end */
+
+
+.zhut {
+   
+    width: 100%;
+    height:450px ;
+    background-color: #f6f6f6;
+    overflow: hidden;
+}
+
+.zhut .formm{
+    width:650px ;
+    height: 378px;
+    margin: 30px auto;
+    background-color: #fff;
+    border: 2px solid #eeeeee;
+    border-top: 2px solid #f26b11;
+   
+}
+.zhut .formm .form-regist{
+    width: 650px;
+    height: 378px;
+      overflow: hidden;
+  
+}
+.zhut .formm .form-regist .form-top{
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 24px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.zhut .formm .form-regist .one{
+    
+      width: 378px;
+      height: 64px;
+       /* border:1px solid  #d2d2d2; */
+      /* border:1px solid  #f26b11; */
+   
+      margin: 0 auto;
+       margin-bottom: 13px;
+     
+}
+.zhut .formm .form-regist .one .span-a{
+         color:#f26b11 ;
+         line-height: 30px;
+}
+.zhut .formm .form-regist .form-name{
+    position: relative;
+      width: 378px;
+      height: 34px;
+       border:1px solid  #d2d2d2;
+      /* border:1px solid  #f26b11; */
+   
+      /* margin: 0 auto;
+       margin-bottom: 13px; */
+     
+}
+.zhut .formm .form-regist .form-name:hover{
+    border:1px solid  #f26b11;
+}
+.zhut .formm .form-regist .form-name:hover .icon-youxiang{
+   border-right: 1px solid #f26b11;
+   color:#f26b11;
+
+}
+.zhut .formm .form-regist .form-name .tex{
+       width:328px;
+       height: 34px;
+       padding-left: 50px;
+       font-size: 14px;
+    
+}
+.zhut .formm .form-regist .icon-youxiang
+{   
+    position: absolute;
+    /* left: -1px;
+    top: -1px; */
+    padding: 4px 6px 0px;
+    color: #d2d2d2;
+    font-size: 20px;
+    background-color: #eee;
+    /* color:#f26b11; */
+    border-right: 1px solid #d2d2d2;
+    /* border-right: 1px solid #f26b11; */
+   vertical-align: bottom;
+}
+
+
+
+
+.zhut .formm .form-regist .form-password{
+    position: relative;
+      width: 378px;
+      height: 34px;
+      /* border:1px solid  #f26b11; */
+       border: 1px solid #d2d2d2;
+      
+       /* margin: 0 auto;
+      margin-bottom: 13px; */
+}
+.zhut .formm .form-regist .form-password:hover{
+    border:1px solid  #f26b11;
+}
+.zhut .formm .form-regist .form-password:hover .icon-mima1{
+   border-right: 1px solid #f26b11;
+   color:#f26b11;
+
+}
+.zhut .formm .form-regist .form-password .tex{
+       width:328px;
+       height: 34px;
+       padding-left: 50px;
+       font-size: 14px;
+}
+.zhut .formm .form-regist .icon-mima1
+{   
+    position: absolute;
+    /* left: -1px;
+    top: -1px; */
+    padding: 4px 6px 0px;
+    color: #d2d2d2;
+    font-size: 20px;
+    /* color:#f26b11; */
+     border-right: 1px solid #d2d2d2;
+      background-color: #eee;
+    /* border-right: 1px solid #f26b11; */
+}
+
+
+
+
+
+.zhut .formm .form-regist .form-verify{
+    /* position: relative; */
+      width: 278px;
+      height: 34px;
+      /* border:1px solid  #f26b11; */
+       /* border: 1px solid #d2d2d2; */
+       /* margin-bottom: 13px; */
+      
+     
+}
+.zhut .formm .form-regist .form-verify .tex:hover{
+    border:1px solid  #f26b11;
+}
+.zhut .formm .form-regist .form-verify .tex{
+       width:208px;
+       height: 34px;
+       padding-left: 8px;
+       border: 1px solid #d2d2d2;
+       font-size: 14px;
+    
+}
+.zhut .formm .form-regist .v-number
+{   display:inline-block;
+    vertical-align: bottom;
+   
+    color: #3c58aa;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+   
+   
+}
+
+/* .zhut .form .form-regist .form-button
+{
+    width: 278px;
+      height: 34px;
+} */
+
+.zhut .formm .form-regist .ce{
+    display: block;
+    width: 378px;
+      height: 34px;
+      background-color: #f26b11;
+      color: white;
+      border-radius: 3px;
+      font-size: 16px;
+         margin: 0 auto; 
+         margin-bottom: 13px;
+}
+.zhut .formm .form-regist  .function{
+    text-align: center;
+}
+.zhut .formm .form-regist  .function a{
+    color:#f26b11 ;
+}

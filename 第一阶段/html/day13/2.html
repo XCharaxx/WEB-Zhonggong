@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       ul{
+           list-style: none;
+       }
+       .box{
+           width: 300px;
+           height: auto;
+           margin: 100px auto;
+           border: 1px solid black;
+       }
+        .box ul li{
+            width:100%;
+            height: auto;
+            cursor: pointer;
+            text-align: center;
+            
+        }
+       .box ul li .title{
+           font-weight: 700;
+           font-size: 20px;
+           color: white;
+        line-height: 60px;
+           width: 300px;
+           height: 60px;
+           background-image: linear-gradient(90deg,green,skyblue);
+       }
+        .box ul li:hover .inwen{
+                    height: 80px;
+
+        }
+        .box ul li .inwen{
+            font-weight: 900;
+            font-size: 40px;
+            width: 300px;
+            height: 0;
+            line-height: 50px;
+            overflow: hidden;
+            transition: height 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="title">娱乐新闻</div>
+                <div class="inwen">卡也&nbsp;卡梅隆</div>
+            </li>
+            <li><div class="title">娱乐新闻</div>
+            <div class="inwen">卡也&nbsp;卡梅隆</div></li>
+            <li><div class="title">娱乐新闻</div>
+            <div class="inwen">卡也&nbsp;卡梅隆</div></li>
+            <li><div class="title">娱乐新闻</div>
+            <div class="inwen">卡也&nbsp;卡梅隆</div></li>
+        </ul>
+    </div>
+</body>
+</html>

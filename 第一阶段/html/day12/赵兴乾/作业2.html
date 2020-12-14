@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2226585_7yqt7v3a5ir.css">
+    <style>
+        .icon-xiangyoulajiantou {
+            font-size: 12px;
+            /* vertical-align: middle; */
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        b {
+            font-weight: normal;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .out-box {
+            width: 910px;
+            height: 630px;
+            padding: 12px 0 0 24px;
+            border: 1px solid #aaa;
+            margin: 30px auto;
+        }
+
+        .out-box .in-box .float1 {
+            float: left;
+            width: 286px;
+            height: 590px;
+            border: 1px solid #aaa;
+        }
+
+        .out-box .in-box .float1 .top-list {
+            padding: 20px;
+            width: 246px;
+            height: 109px;
+
+
+        }
+
+        .out-box .in-box .float1 .top-list .bangtu {
+            float: left;
+            width: 100px;
+            height: 102px;
+            background-image: url(./img/coverall.png), url(./img/18696095720518497.jpg);
+            background-repeat: no-repeat;
+            background-position: 0px -320px, 0 0;
+            background-size: 100px 102px, 100px 100%;
+            box-shadow: 0 5px 5px;
+        }
+
+        .out-box .in-box .float1 .top-list .tu1 {
+            background-image: url(./img/coverall.png), url(./img/18696095720518497.jpg);
+        }
+
+        .out-box .in-box .float1 .top-list .tu2 {
+            background-image: url(./img/coverall.png), url(./img/18713687906568048.jpg);
+        }
+
+        .out-box .in-box .float1 .top-list .tu3 {
+            background-image: url(./img/coverall.png), url(./img/18740076185638788.jpg);
+        }
+
+        .out-box .in-box .float1 .top-list .right-bang {
+            float: left;
+            padding: 10px 4px 10px 10px;
+
+        }
+
+        .out-box .in-box .float1 .top-list .right-bang span {
+            display: block;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .out-box .in-box .float1 .top-list .right-bang .tu-a {
+
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+
+        }
+
+        .out-box .in-box .float1 .top-list .right-bang a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .out-box .in-box .float1 .top-list .right-bang .start {
+            float: left;
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -267px -205px;
+            /* background-size: 100% 100%; */
+        }
+
+        .out-box .in-box .float1 .top-list .right-bang .add {
+            float: left;
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -300px -205px;
+            /* background-size: 100% 100%; */
+        }
+
+        .out-box .in-box .float1 .ttu-a {
+            display: none;
+            width: 25px;
+            height: 18px;
+            margin-top: 10px;
+            margin-right: 10px;
+
+        }
+        .out-box .in-box .float1 li:nth-child(n+2):hover .ttu-a {
+                        display: block;
+        }
+        .out-box .in-box .float1 .a-one {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .out-box .in-box .float1 li .addd {
+            float: right;
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -297px -267px;
+            /* margin-left: 2px; */
+            /* background-size: 100% 100%; */
+        }
+
+        .out-box .in-box .float1 li .startt {
+            float: right;
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -267px -267px;
+            /* background-size: 100% 100%; */
+        }
+
+        .ttu-a .aaa1:hover {
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -267px -287px;
+        }
+
+        .ttu-a .aaa2:hover {
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -297px -287px;
+        }
+
+        .tu-a .aa1:hover {
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -267px -235px;
+        }
+
+        .tu-a .aa2:hover {
+            background-image: url(./img/index.png);
+            background-repeat: no-repeat;
+            background-position: -300px -235px;
+        }
+
+        .out-box .in-box .float1 li:nth-child(n+2) a:hover {
+            text-decoration: underline;
+        }
+
+        .uul li:nth-child(n+2) {
+            width: 251px;
+            height: 40px;
+            font-weight: 600;
+            line-height: 40px;
+            padding-left: 35px;
+        }
+
+        .uul li:nth-child(even) {
+            background-color: #e8e8e8;
+        }
+
+        .uul li:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+
+        .in-box .float1 .numble {
+            font-weight: 600;
+            font-size: 18px;
+            color: #b0ada9;
+            text-indent: 2px;
+        }
+
+        .last-list a {
+            padding-left: 140px;
+        }
+
+        .last-list a:hover {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out-box ">
+        <div class="in-box clearfix">
+            <ul>
+                <li class="float1 " style="border-right: none;">
+                    <ul class="uul">
+                        <li class="top-list clearfix">
+                            <div class="bangtu tu1"></div>
+                            <div class="right-bang clearfix">
+                                <span>云音乐飙升榜</span>
+                                <div class="tu-a start"><a href="" class="aa1"></a></div>
+                                <div class="tu-a add"><a href="" class="aa2"></a></div>
+                            </div>
+                        </li>
+                        <li class="clearfix"><b class="numble" style="color:#d35645 ;">1</b>&nbsp<a href="">不容</a>
+
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble" style="color:#d35645 ;">2</b>&nbsp<a href="">朝露人间</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble" style="color:#d35645 ;">3</b>&nbsp<a href="">慢慢等</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">4</b>&nbsp<a href="">石头</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">5</b>&nbsp<a href="">Love&nbsp;Me&nbsp;Better</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">6</b>&nbsp<a href="">奔山赴海去见你</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">7</b>&nbsp<a href="">Not&nbsp;Angry</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">8</b>&nbsp<a href="">伊甸园</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">9</b>&nbsp<a href="">火烧云</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">10</b>&nbsp<a href="">paperback</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li class="last-list"><a href="">查看全部<i class="iconfont icon-xiangyoulajiantou"></i></a></li>
+                    </ul>
+                </li>
+
+
+
+
+                <li class="float1" style="border-right: none;">
+                    <ul class="uul">
+                        <li class="top-list clearfix">
+                            <div class="bangtu tu2"></div>
+                            <div class="right-bang clearfix">
+                                <span>云音乐新歌榜</span>
+                                <div class="tu-a start"><a href="" class="aa1"></a></div>
+                                <div class="tu-a add"><a href="" class="aa2"></a></div>
+                            </div>
+                        </li>
+                        <li class="clearfix"><b class="numble" style="color:#d35645 ;">1</b>&nbsp<a href="">耗尽</a>
+
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble" style="color:#d35645 ;">2</b>&nbsp<a href="">我很好（吉他版）</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble" style="color:#d35645 ;">3</b>&nbsp<a href="">慢慢等</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">4</b>&nbsp<a href="">石头</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">5</b>&nbsp<a href="">Love&nbsp;Me&nbsp;Better</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">6</b>&nbsp<a href="">奔山赴海去见你</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">7</b>&nbsp<a href="">Not&nbsp;Angry</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">8</b>&nbsp<a href="">伊甸园</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">9</b>&nbsp<a href="">火烧云</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">10</b>&nbsp<a href="">paperback</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li class="last-list"><a href="">查看全部<i class="iconfont icon-xiangyoulajiantou"></i></a></li>
+                    </ul>
+                </li>
+                <li class="float1">
+                    <ul class="uul">
+                        <li class="top-list clearfix">
+                            <div class="bangtu tu3"></div>
+                            <div class="right-bang clearfix">
+                                <span>网易原创歌曲榜</span>
+                                <div class="tu-a start"><a href="" class="aa1"></a></div>
+                                <div class="tu-a add"><a href="" class="aa2"></a></div>
+                            </div>
+                        </li>
+                        <li class="clearfix"><b class="numble" style="color:#d35645 ;">1</b>&nbsp<a href="">海上吟</a>
+
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble" style="color:#d35645 ;">2</b>&nbsp<a href="">圆圈</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble" style="color:#d35645 ;">3</b>&nbsp<a href="">森林巴士</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">4</b>&nbsp<a href="">石头</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">5</b>&nbsp<a href="">Love&nbsp;Me&nbsp;Better</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">6</b>&nbsp<a href="">奔山赴海去见你</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">7</b>&nbsp<a href="">Not&nbsp;Angry</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">8</b>&nbsp<a href="">伊甸园</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">9</b>&nbsp<a href="">火烧云</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li><b class="numble">10</b>&nbsp<a href="">paperback</a>
+                            <div class="ttu-a addd"><a href="" class="a-one aaa2"></a></div>
+                            <div class="ttu-a startt"><a href="" class="a-one aaa1"></a></div>
+                        </li>
+                        <li class="last-list"><a href="">查看全部<i class="iconfont icon-xiangyoulajiantou"></i></a></li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

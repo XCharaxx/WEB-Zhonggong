@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .box{
+            width: 460px;
+            height: 460px;
+            background-color: #232e6d;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .box ul{
+            width: 350px;
+            height: 120px;
+            margin: 200px auto;
+
+        }
+        .box li{
+             float: left;
+             width: 26px;
+             height: 26px;
+             border-radius:13px;
+             margin-left: 9px;
+          
+        }
+        .box li:nth-child(1){
+            background-color: #f62e74;
+             
+            animation: xing1 1s linear 0s forwards;
+        }
+        .box li:nth-child(9){
+            background-color: #f62e74;
+           
+            animation: xing1 1s linear 1.6s forwards;
+        }
+        .box li:nth-child(2){
+            background-color:#f45330;
+          
+            animation: xing2 1s linear 0.2s forwards;
+        }
+        .box li:nth-child(8){
+            background-color: #f45330;
+           
+            animation: xing2 1s linear 1.4s forwards;
+        } 
+        .box li:nth-child(3){
+            background-color: #ffc883;
+            
+            animation: xing3 1s linear 0.4s forwards;
+        } 
+        .box li:nth-child(7){
+            background-color:#ffc883;
+         
+            animation: xing3 1s linear 1.2s forwards;
+        } 
+        .box li:nth-child(4){
+            background-color: #30d268;
+         
+            animation: xing4 1s linear 0.6s forwards;
+        } 
+        .box li:nth-child(6){
+            background-color: #784697;
+             
+            animation: xing4 1s linear 1s forwards;
+        } 
+        .box li:nth-child(5){
+            background-color:#006cb4;
+           
+            animation: xing5 1s linear 0.8s forwards;
+        } 
+        @keyframes xing1{
+            0%{
+               height: 26px;
+              
+            }
+          100%{
+              height: 100px;
+               transform: translateY(-50%);
+            }
+        }
+         @keyframes xing2{
+            0%{
+              height: 26px;
+            }
+          100%{
+               height: 157px;
+                transform: translateY(-50%);
+            }
+        }
+         @keyframes xing3{
+            0%{
+              height: 26px;
+            }
+          100%{
+               height: 200px;
+                transform: translateY(-50%);
+            }
+        }
+         @keyframes xing4{
+            0%{
+              height: 26px;
+            }
+          100%{
+               height:226px;
+                transform: translateY(-40%);
+            }
+        }
+         @keyframes xing5{
+            0%{
+              height: 26px;
+            }
+          100%{
+               height: 237px;
+                transform: translateY(-30%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div> 
+</body>
+</html>

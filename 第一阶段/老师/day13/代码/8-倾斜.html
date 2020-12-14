@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+            background-color: deeppink;
+            margin:40px auto 0px;
+            transition: transform 1s;
+        }
+        .box:hover {
+            /* transform:skew(45deg,0deg); */
+            /* transform:skew(0deg,-45deg); */
+            transform:skew(45deg,45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">HT</div>
+</body>
+</html>

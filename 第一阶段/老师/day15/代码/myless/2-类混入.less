@@ -1,0 +1,22 @@
+
+// 定义一个盒子阴影的类
+.bs1(@h,@v,@blur,@size,@color) {
+    // box-shadow:@h @v @blur @size @color;
+    box-shadow: @arguments;
+}
+.bs2(@str,@color){
+
+    box-shadow: @arguments;
+
+}
+.wh100 {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+//类的使用
+.box {
+    width:200px;
+    height: 200px;
+    .bs2(0px  0px  10px 0px,blue);
+}

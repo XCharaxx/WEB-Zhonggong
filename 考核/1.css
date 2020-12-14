@@ -1,0 +1,230 @@
+ut-box{
+    width:600px;
+    height: 470px;
+    background-color: #fff;
+    
+    border-bottom: 1px solid #d0d0d0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 100px auto;
+}
+.box-one{
+     width: 100%;
+     height: 220px;
+     border-top: 1px solid #f4f4f4;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.box-one p:nth-child(1) a{
+    font-size: 20px;
+    
+}
+.box-one  p:nth-child(1) a:hover{
+    color:#fe4848;
+    
+}
+.box-one  div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-one  div:nth-child(2) .tu1{
+    width: 190px;
+    height: 120px;
+    
+}
+.box-one  div:nth-child(2) .tu1 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.box-one  div:nth-child(2) .tu1 img{
+    width: 100%;
+    height: 100%;
+    transition: transform .5s linear ;
+}
+.box-one  div:nth-child(2) .tu1:hover img{
+    transform: scale(1.2);
+}
+.box-one  div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+.box-one  div:nth-child(3) .left-bom{
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-one  div:nth-child(3) .left-bom span:nth-child(1) a{
+    color: #ff9999;
+    padding:1px 6px ;
+    border: 1px solid #ff9999;
+}
+.box-one  div:nth-child(3) .left-bom span:nth-child(1) a:hover{
+    color: #fe4848;
+ 
+    border: 1px solid #fe4848;
+}
+.box-one  div:nth-child(3) .left-bom .span1 a{
+   color: #888888; 
+}
+.box-one  div:nth-child(3) .left-bom   span:nth-child(2) a:hover {
+   color:  #fe4848; 
+}
+
+.box-one  div:nth-child(3) .left-bom .span2 {
+   color: #bbbbbb; 
+}
+.box-one  div:nth-child(3) .left-bom .shu {
+   width: 1px;
+   height: 14px;
+   background-color: #bbbbbb;
+}
+.box-one  div:nth-child(3)  .right-bom{
+    width: 145px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box-one  div:nth-child(3)  .right-bom .spr1{
+    width: 38px;
+    height: 27px;
+    background: url(./img/sprite0613v3.png) no-repeat -196px -125px;
+}
+.box-one  div:nth-child(3)  .right-bom .spr22{
+    width: 75px;
+    height: 20px;
+    overflow: hidden;
+}
+.box-one  div:nth-child(3)  .right-bom .spr2{
+    width: 75px;
+    height:40px;
+    color: #bbbbbb ;
+    padding-left: 26px;
+    background: url(./img/sprite0613v3.png) no-repeat -200px -108px;
+}
+
+
+
+
+
+
+
+
+.box-two p:nth-child(1) a{
+    font-size: 20px;
+    
+}
+.box-two  p:nth-child(1) a:hover{
+    color:#fe4848;
+    
+}
+.box-two  div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-two  div:nth-child(2) .tu1{
+    width: 190px;
+    height: 120px;
+    
+}
+.box-two  div:nth-child(2) .tu1 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.box-two  div:nth-child(2) .tu1 img{
+    width: 100%;
+    height: 100%;
+    transition: transform .5s linear ;
+}
+.box-two  div:nth-child(2) .tu1:hover img{
+    transform: scale(1.2);
+}
+.box-one  div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+.box-two  div:nth-child(3) .left-bom{
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-two  div:nth-child(3) .left-bom span:nth-child(1) a{
+    color: #ff9999;
+    padding:1px 6px ;
+    border: 1px solid #ff9999;
+}
+.box-two  div:nth-child(3) .left-bom span:nth-child(1) a:hover{
+    color: #fe4848;
+ 
+    border: 1px solid #fe4848;
+}
+.box-two div:nth-child(3) .left-bom .span1 a{
+   color: #888888; 
+}
+.box-two div:nth-child(3) .left-bom   span:nth-child(2) a:hover {
+   color:  #fe4848; 
+}
+
+.box-two  div:nth-child(3) .left-bom .span2 {
+   color: #bbbbbb; 
+}
+.box-two div:nth-child(3) .left-bom .shu {
+   width: 1px;
+   height: 14px;
+   background-color: #bbbbbb;
+}
+.box-two  div:nth-child(3)  .right-bom{
+    width: 145px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box-two div:nth-child(3)  .right-bom .spr1{
+    width: 38px;
+    height: 27px;
+    background: url(./img/sprite0613v3.png) no-repeat -196px -125px;
+}
+.box-two  div:nth-child(3)  .right-bom .spr22{
+    width: 75px;
+    height: 20px;
+    overflow: hidden;
+}
+.box-two div:nth-child(3)  .right-bom .spr2{
+    width: 75px;
+    height:40px;
+    color: #bbbbbb ;
+    padding-left: 26px;
+    background: url(./img/sprite0613v3.png) no-repeat -200px -108px;
+}
+
+
+.box-two{
+     width: 100%;
+     height: 105px;
+     border-top: 1px solid #f4f4f4;
+     display: flex;
+    
+    justify-content: space-between;
+}
+.box-three{
+     width: 100%;
+     height: 105px;
+     border-top: 1px solid #f4f4f4;
+     display: flex;
+    
+    justify-content: space-between;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            height: 3px;
+            width: 300px;
+            background-color: deeppink;
+            /* 解决办法： */
+            _line-height: 0;
+            _font-size: 0px;
+
+            /* _属性名 :'属性值'--->ie6及其以下识别 css属性hack  */
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>

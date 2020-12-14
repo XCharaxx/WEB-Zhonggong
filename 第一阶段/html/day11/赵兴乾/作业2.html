@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2226585_7yqt7v3a5ir.css">
+    <style>
+         .icon-xiala{
+               font-size: 14px;
+            font-weight: 900;
+            color: #ccc;
+            vertical-align: middle;
+         }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .w{
+            width: 1190px;
+            height: auto;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .clearfix::after{
+              content: "";
+               display: block;
+               clear: both;
+        }
+        .fl{
+          float: left;
+        }
+        .fr{
+            float: right;
+        }
+        li{
+            list-style: none;
+        }
+        .nav-top{
+            width: 100%;
+            color: white;
+            font-size: 14px;
+            background-color: black;
+            line-height: 35px;
+        }
+        .nav-top a{
+            color: white;
+        }
+        .nav-top .left-box span{
+                   padding: 0 10px;
+                   border-right:1px solid #777 ;
+        }
+         .nav-top .left-box .span-a{
+              border-right:none;
+         }
+         .nav-top .right-box li{
+                    float: left;
+                     padding: 0 20px;
+         } 
+          .nav-top .right-box li .denglu {
+                   display: inline-block;
+                    width: 82px;
+                    height: 35px;
+                    background-color:red;
+                    text-align: center;
+          }
+          .header{
+               border-bottom: 2px solid #ccc;
+               
+          }
+          .header .logo{
+              font-weight: 900;
+              font-size: 20px;
+              line-height: 80px;
+
+          }
+           .header img{
+               vertical-align: middle;
+           }
+          .header ul{
+              margin-left: 90px;
+          }
+           .header ul li{
+               display: inline-block;
+               height: 40px;
+               margin: 20px 0px;
+               padding: 0 22px;
+               border-right: 1px solid #ccc;
+           }
+            .header ul li .bigz{
+                font-size: 20px;
+            }
+            .banner-left{
+                position: relative;
+            
+                width: 900px;
+                height: 400px;
+                margin-right: 40px;
+
+            }
+             .banner-left img{
+                 width: 100%;
+                 height: 100%;
+             }
+             .banner-right{
+                 display: inline-block;
+                  width: 210px;
+                  height: 360px;
+                  background-color: #3e505d;
+                  padding:20px ;
+                  color: white;
+            }
+            .banner-left .smallbox{
+                position: absolute;
+                left: 50px;
+                top: 100px;
+                width: 440px;
+                height: 140px;
+                background-color: white;
+                padding: 30px;
+            }
+            .banner-left .smallbox .zhenxuan{
+                font-weight: 700;
+                font-size: 40px;
+                padding-bottom: 10px;
+            }
+            .banner-left .smallbox .xiang{
+                display: block;
+                width: 165px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                margin-top: 10px;
+            }
+            .banner-left .smallbox .xiang a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: white;
+                background-color:#db0011;
+            }
+             .banner-right .right-top{
+                 width: 100%;
+                 height: 200px;
+                 border-bottom: 1px solid #aaa;
+             }
+             .banner-right  .wen1 a{
+                 display: inline-block;
+                 margin-bottom: 20px;
+                 font-weight: 700;
+                 font-size:25px ;
+                 color: white;
+             }
+              .banner-right .right-bottom .wen1 a{
+               margin-top: 20px;
+             }
+             .div-middle{
+                 margin-top: 30px;
+
+             }
+              .div-middle ul li{
+                  float: left;
+                  width: 380px;
+                  height: 300px;
+                  margin-right: 20px;
+                  border: 1px solid #ccc;
+              }
+               .div-middle ul .li3{
+                
+                  margin-right: 0px;
+              }
+               .div-middle ul li a{
+                   display: block;
+                   width: 100%;
+                   height: 100%;
+
+               }
+               .div-middle ul li a img{
+                   width: 100%;
+                   height: 200px;
+               }
+               .div-middle ul li a .span-a{
+                       font-weight: 700;
+                        padding-left: 10px;
+                        font-size: 20px;
+                        line-height:60px ;
+               }
+                .div-middle ul li a .span-b{
+                      padding-left: 10px;
+                }
+                .div-bottom{
+                    padding-top: 10px;
+                }
+                .div-bottom ul li{
+                  float: left;
+                  width: 280px;
+                  height: 180px;
+                  padding: 20px 8px;
+                
+              }
+              .div-bottom ul li a .span-a{
+                           font-weight: 700;
+                         font-size: 20px;
+                        line-height:60px ;
+               }
+                 .div-bottom ul li a .span-b{
+                      padding-bottom: 50px;
+                }
+               .nav-bottom{
+    width: 100%;
+    height: 242px;
+    background-color: #333;
+}
+.nav-bottom .mind {
+    width: 1190px;
+    height: 242px;
+    margin: 0px auto;
+    padding-top: 20px;
+   
+
+}
+.nav-bottom .mind a{
+          color: #b3b3b3;
+          font-size: 13px;
+}
+.nav-bottom .mind dd:hover a{
+        color  :#fe9900;
+}
+.nav-bottom .mind .ddl{
+    border-right: 1px solid white;
+}
+.nav-bottom .mind .ddl-4{
+     border-right:0;
+}
+.nav-bottom .mind .ddl{
+    padding-top: 30px;
+    padding-left:20px ;
+    padding-right: 205px;
+}
+.nav-bottom .mind dt{
+    height: 45px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color:#b3b3b3 ;
+}
+
+.nav-bottom .mind dd{
+    height: 30px;
+    /* list-style: 0px; */
+    font-size: 13px;
+}
+.bottom-beian{
+      width: 100%;
+      background-color: black;
+      color: white;
+}
+
+ .beian .bei1{
+    
+   line-height: 150px;
+   
+}
+ .beian .bei2{
+    
+     line-height: 150px;
+    
+}
+    </style>
+</head>
+<body>
+      <div class="nav-top">
+          <div class="w clearfix">
+              <div class="left-box fl">
+                  <span><a href="">个人银行</a></span>
+                  <span><a href="">小企业服务</a></span>
+                  <span><a href="">商业理财</a></span>
+                  <span><a href="">环球银行及资本市场</a></span>
+                  <span><a href="">私人银行</a></span>
+                  <span class="span-a"><a href="">村镇银行</a></span>
+              </div>
+              <div class="right-box fr clearfix">
+                  <ul>
+                      <li><a href=""><img src="" alt=""><span>中国</span></a></li>
+                      <li><a href=""><span>简体</span><i class="iconfont icon-xiala"></i></a></li>
+                      <li><a href="" class="denglu"><span>登录</span><i class="iconfont icon-xiala"></i></a></li>
+                  </ul>
+                
+              </div>
+          </div>
+      </div>
+
+      <div class="header">
+          <div class="w  clearfix">
+              <div class="fl">  <img src="./img/banner04.jpg" alt="">
+              <span class="logo">汇丰</span></div>
+            
+              <ul class="fl">
+                  <li><div class="bigz">银行服务</div>
+                <div>账户借记卡</div></li>
+                  <li>
+                      <div class="bigz">借贷</div>
+                      <div>贷款及借记卡</div>
+                  </li>
+                  <li>
+                        <div class="bigz">投资</div>
+                        <div>投资及理财</div>
+                  </li>
+                  <li>
+                        <div class="bigz">保险</div>
+                        <div>产品及服务</div>
+                  </li>
+                  <li>
+                        <div class="bigz">财富远见</div>
+                        <div>市场咨讯及财富规划</div>
+                  </li>
+                  <li style="border-right: none;">
+                        <div class="bigz">全渠道银行</div>
+                        <div>电子银行及分支行</div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+
+      <div class="w clearfix">
+             <div class="banner-left fl">
+                 <img src="./img/banner.webp" alt="">
+                 <div class="smallbox">
+                     <div class="zhenxuan">汇飨大湾在广州</div>
+                     <div>臻选美食+最高人民币800元刷卡金&nbsp;不容错过</div>
+                    <div class="xiang"><a href="">了解详情</a></div>
+                 </div>
+             </div>
+             <div class="banner-right fl">
+                 <div class="right-top">
+                     <div class="wen1"><a>汇丰中国信用卡</a></div>
+                    <div >成功申请即享精彩礼遇，随心还款，尽享便捷</div>
+                 </div>
+                <div class="right-bottom">
+                    <div class="wen1"><a>汇丰中国信用卡</a></div>
+                    <div>汇丰信用卡为您打造周末用餐、购物、休闲娱乐好去处</div>
+                </div>
+             </div>
+      </div>
+
+
+      <div class="w div-middle clearfix">
+           <ul>
+               <li><a href=""><img src="./img/tu3.png" alt="">
+                
+                    <div class="span-a">汇丰尚玉</div>
+                    <div class="span-b">尚臻无界&nbsp;玉成大家</div>
+               
+            </a></li>
+               <li><a href=""><img src="./img/tu3.png" alt="">
+            <div class="span-a">汇丰尚玉</div>
+            <div class="span-b">尚臻无界&nbsp;玉成大家</div></a></li>
+               <li class="li3"><a href=""><img src="./img/tu3.png" alt="">
+            <div class="span-a">汇丰尚玉</div>
+            <div class="span-b">尚臻无界&nbsp;玉成大家</div></a></li>
+           </ul> 
+      </div>
+
+
+
+    <div class="w div-bottom clearfix">
+                <ul>
+                    <li><a href="">
+                
+                            <div class="span-a">汇丰存款业务</div>
+                            <div class="span-b">以优质的存款服务，帮助你轻松累积财富并管理个人财务，实现未来规划</div>
+                            <a href="">还回顶部</a>
+                        </a></li>
+                    <li><a href="">
+                            <div class="span-a">汇丰存款业务</div>
+                            <div class="span-b">以优质的存款服务，帮助你轻松累积财富并管理个人财务，实现未来规划</div>
+                        </a></li>
+                    <li ><a href="">
+                            <div class="span-a">汇丰存款业务</div>
+                            <div class="span-b">以优质的存款服务，帮助你轻松累积财富并管理个人财务，实现未来规划</div>
+                        </a></li>
+                        <li ><a href="">
+                            <div class="span-a">汇丰存款业务</div>
+                            <div class="span-b">以优质的存款服务，帮助你轻松累积财富并管理个人财务，实现未来规划</div>
+                            </a></li>
+                </ul>
+
+   </div>
+     
+
+
+<div class="nav-bottom">
+    <div class="mind w clearfix">
+        <dl class="ddl fl">
+            <dt>联系汇丰</dt>
+            <dd><a href="">致电或留言给我们</a></dd>
+            
+
+        </dl>
+        <dl class="ddl fl">
+            <dt>联系汇丰</dt>
+            <dd><a href="">致电或留言给我们</a></dd>
+           
+        </dl>
+        <dl class="ddl fl">
+            <dt>联系汇丰</dt>
+            <dd><a href="">致电或留言给我们</a></dd>
+            
+        </dl>
+        <dl class="ddl fl ddl-4">
+        <dt>联系汇丰</dt>
+        <dd><a href="">致电或留言给我们</a></dd>
+        </dl>
+    </div>
+    </div>
+    <div class="bottom-beian">
+    <div class="beian w clearfix">
+        <div class="bei1 fl">保密及安全&nbsp;使用条款&nbsp;网站链接的规定&nbsp;网络安全&nbsp;消费者教育</div>
+        <div class="bei2 fr">版权所有。汇丰恨行〔中国)有限公司2019。不得转载。</div>
+    </div>
+</div>
+</body>
+</html>

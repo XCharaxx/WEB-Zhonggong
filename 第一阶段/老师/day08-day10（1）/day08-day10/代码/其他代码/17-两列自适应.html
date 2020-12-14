@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body {
+            height: 100%;
+        }
+        .max {
+            width: 100%;
+            /* 浏览器窗口高度 */
+            height: 100%;
+
+        }
+        .col1 {
+            /* 1.解决方案： float: left; */
+            /* 2.解决方案  position:absolute */
+            position:absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            background-color: brown;
+        }
+        .col2 {
+            padding-left: 100px;
+            /* auto时自动内减 */
+            width:auto;
+            /* width:100%; */
+            /* float: left; */
+            /* calc() 超前了！！！ 你换别的方法吧！ */
+            /* width:calc(100% - 100px); */
+            height: 100%;
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="max">
+        <div class="col1">col1</div>
+        <div class="col2">col2</div>
+    </div>
+</body>
+</html>

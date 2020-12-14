@@ -1,0 +1,9 @@
+.fn14White {
+  font-size: 0.28rem;
+  color: #fff;
+}
+.max {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+}
