@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        #list{
+            width: 300px;
+            margin: 30px auto;
+        }
+         #list h4{
+             padding-left: 5px;
+             line-height: 40px;
+             background-color:pink;
+         }
+          #list ul{
+              display: none;
+          }
+           #list ul li{
+               line-height: 22px;
+           }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>
+            <h4><img src="./img/ico1.gif" alt="">朋友</h4>
+            <ul>
+                <li>李铁蛋</li>
+                <li>二狗子</li>
+                <li>铁锤妹</li>
+                <li>王大嘴</li>
+                <li>李小乖</li>
+                <li>赵四</li>
+            </ul>
+        </li>
+        <li>
+            <h4><img src="./img/ico1.gif" alt="">亲人</h4>
+            <ul>
+                <li>赵妈妈</li>
+                <li>赵爸爸</li>
+                <li>赵弟弟</li>
+                <li>赵萌萌</li>
+                <li>赵妹妹</li>
+                <li>四大姨</li>
+            </ul>
+        </li>
+        <li>
+            <h4><img src="./img/ico1.gif" alt="">陌生人</h4>
+            <ul>
+                <li>张三</li>
+                <li>李四</li>
+                <li>王二</li>
+                <li>孙麻子</li>
+                <li>周小无</li>
+                <li>郑三</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var oImg =document.getElementsByTagName("img");
+        var oUl =document.getElementsByTagName("ul");
+        for(var i=0;i<oImg.length;i++){
+            oImg[i].tag = true;
+            oImg[i].index =i+1;
+            oImg[i].onclick =function(){
+                if(this.tag==true){
+                      this.src = "./img/ico2.gif";
+                oUl[this.index].style.display ="block";
+                this.tag=false;
+                }else{
+                     this.src = "./img/ico1.gif";
+                    oUl[this.index].style.display = "none";
+                    this.tag = true;
+                }
+              
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -29,6 +29,7 @@
             text-align: center;
             line-height: 400px;
             font-size: 25px;
+            display: none;
         }
     </style>
 </head>
@@ -43,6 +44,18 @@
         <li>内容三</li>
     </ul>
 </div>
-   
+   <script>
+       var oBtns =document.getElementsByTagName("button");
+       var oLis =document.getElementsByTagName("li");
+       for(var i=0;i<oBtns.length;i++){
+           oBtns[i].index =i;
+           oBtns[i].onclick =function(){
+               for(var j=0;j<oLis.length;j++){
+                   oLis[j].style.display = "none";
+               }
+               oLis[this.index].style.display = "block";
+           }
+       }
+   </script>
 </body>
 </html>

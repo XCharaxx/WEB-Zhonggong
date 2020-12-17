@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+    
+            div {
+                width: 500px;
+                margin: 30px auto;
+            }
+    
+            ul {
+                position: relative;
+                list-style: none;
+                width: 400px;
+                height: 400px;
+                border: 1px solid #008080;
+                text-align: center;
+                line-height: 400px;
+                font-size: 25px;
+            }
+    
+            /* li {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 400px;
+                font-size: 25px;
+                display: none;
+            } */
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <button>菜单一</button>
+            <button>菜单二</button>
+            <button>菜单三</button>
+            <ul>
+                <!-- <li>内容一</li>
+                <li>内容二</li>
+                <li>内容三</li> -->
+            </ul>
+        </div>
+        <script>
+            var arr =["内容一","内容二","内容三"];
+            var oBtns = document.getElementsByTagName("button");
+            var oUl = document.getElementsByTagName("ul")[0];
+            // var oLis = document.getElementsByTagName("li");
+            for (var i = 0; i < oBtns.length; i++) {
+                oBtns[i].index = i;
+                oBtns[i].onclick = function () {
+                    // for (var j = 0; j < oLis.length; j++) {
+                    //     oLis[j].style.display = "none";
+                    // }
+                    // oLis[this.index].style.display = "block";
+                    oUl.innerHTML = "<li>" +arr[this.index]+ "</li>";
+                }
+            }
+        </script>
+    </body>
+    
+    </html>
+</body>
+</html>
