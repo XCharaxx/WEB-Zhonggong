@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color:pink;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">1点睡觉，8点起</div>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementById("box");
+
+        //2。移入，改变200*200，背景red
+        oDiv.onmouseover = function(){
+            oDiv.style.width = "200px";
+            oDiv.style.height = "200px";
+            oDiv.style.backgroundColor = "red";
+            oDiv.style.fontSize = "20px";
+        }
+    </script>
+</body>
+</html>

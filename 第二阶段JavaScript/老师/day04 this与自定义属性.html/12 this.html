@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>火锅</button>
+    <button>烤肉</button>
+    <button>烤乳猪</button>
+    <button>小烧烤</button>
+    <button>串串香</button>
+    <script>
+        //this：这个
+        //this：特殊对象，指向当前当用函数的对象（this没有一个固定的指向，所处的位置不同，代表的值不一样，取决于当前调用函数的对象）
+        //在事件函数中this指向触发事件的对象(点谁就是谁)
+
+        var  oBtns = document.getElementsByTagName("button");
+        
+        //循环给button添加点击事件
+        for(var i = 0;i<oBtns.length;i++){
+            oBtns[i].onclick = function(){
+                console.log(this.innerHTML); //this--当前被点击的标签
+            }
+        }
+    </script>
+</body>
+</html>

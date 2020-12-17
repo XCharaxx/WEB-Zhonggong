@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            border: 1px solid teal;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>热门电影</h3>
+    <ul></ul>
+    <h3>热门动漫</h3>
+    <ul></ul>
+    <h3>热门动画片</h3>
+    <ul></ul>
+<script>
+    var arr = [
+        ["我和我的家乡", "八佰"],
+        ["一人之下", "大鱼海棠", "秦时明月", "柯南"],
+        ["喜羊羊", "熊出没", "猪猪侠", "巴拉巴拉小魔仙", "海绵宝宝"]
+    ];
+    var oUl =document.getElementsByTagName("ul");
+    for(var i=0;i<oUl.length;i++){
+        var array=arr[i];
+        for(var j=0;j<array.length;j++){
+         oUl[i].innerHTML +="<li>"+array[j]+"</li>";
+        }
+    }
+
+
+
+</script>
+
+
+ 
+</body>
+
+</html>

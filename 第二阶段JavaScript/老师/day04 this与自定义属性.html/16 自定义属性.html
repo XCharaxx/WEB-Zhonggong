@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 40px;
+            background: teal;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div tag='true'></div> <!-- 展开  收起 -->
+    <div tag='true'></div> <!-- 展开  收起 -->
+    <div tag='true'></div> <!-- 展开  收起 -->
+    <div tag='true'></div> <!-- 展开  收起 -->
+    <div tag='true'></div> <!-- 展开  收起 -->
+    <script>
+        // 自定义属性：自己定义
+        // 固有属性：系统提供的
+       var oDiv = document.getElementsByTagName("div");
+
+        console.log(oDiv[0].tag); //unfined  暂时获取不到直接写在标签上的自定义属性
+
+        //1.在js中添加自定义属性 标签.属性名
+        oDiv[0].tag = true;
+        console.log(oDiv[0].tag);
+
+    </script>
+</body>
+</html>

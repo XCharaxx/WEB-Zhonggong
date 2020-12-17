@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+         switch(匹配项){
+             case 值 ： 匹配到前面的值时执行的代码；break；
+             case 值 ： 匹配到前面的值时执行的代码；break；
+             case 值 ： 匹配到前面的值时执行的代码；break；
+             case 值 ： 匹配到前面的值时执行的代码；break；
+             case 值 ： 匹配到前面的值时执行的代码；break；
+             default：上面的都没有匹配到的时候执行的代码
+         }
+         break:防止穿透，如果不加break，匹配成功以后，后面的代码不会判断，直接执行
+        */
+        var s = "*";
+        switch(s){
+            case "+" : console.log(100+10); break;
+            case "-" : console.log(100-10);break;
+            case "*" : console.log(100*10);break;
+            case "/" : console.log(100/10);break;
+            default:console.log("我太难了，要不然你换个符号");
+        }
+    </script>
+</body>
+</html>

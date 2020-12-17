@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+
+    <script>
+        /* 
+        id:静态获取，获取标签的时候有这个标签就能够获取
+        tagName/calssName:动态获取，获取的时候没有，后期添加的标签一样能够获取到
+        */
+        var oUl = document.getElementsByTagName("ul")[0];
+        var byId = document.getElementById("h");
+        var byTagName = document.getElementsByTagName("li");
+        console.log(byId,byTagName);
+
+        //在ul中添加一个li
+        oUl.innerHTML = "<li id='h' style='width:100px;height:100px;background:red'></li>";
+        console.log(byId,byTagName);
+    </script>
+</body>
+</html>

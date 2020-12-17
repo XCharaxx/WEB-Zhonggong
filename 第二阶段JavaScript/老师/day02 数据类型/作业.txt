@@ -1,0 +1,89 @@
+1.
+var a = 10;
+var b = a++ + ++a + ++a; 
+var c = a++ + ++b + b++;
+a,b,c的值是多少?
+
+
+
+一、JavaScript 的 typeof 返回哪些字符串？
+
+  
+
+二、请写出以下运算结果：
+alert(typeof null);
+alert(typeof undefined); 
+alert(typeof NaN);  
+alert(NaN == undefined); 
+alert(NaN == NaN);  
+
+
+
+var str = "123abc";	
+alert(typeof str++);
+alert(str);
+
+
+
+
+
+
+
+
+
+三、例举至少 3 种强制类型转换和 2 种隐式类型转换?
+	
+		
+
+
+四、
+console.log(typeof undefined == typeof NULL);
+//undefined  undefined
+console.log(typeof undefined === typeof NULL);
+
+
+五、
+1、分别写出以下每个变量的值；
+var result1 = 5 - null+false;
+var result2 = "NaN" - 1+"abc"; 
+var result3 ="3"+ 5 - 3;        
+
+var result4 = 5 - "" + true;   
+var result5 = 5 - "2"+"abc"; 
+var result6 = 5 - null+2; 
+
+
+2、分别写出每个输出的值；
+console.log(undefined==undefined)   
+console.log(undefined==0)    
+console.log(null==undefined)  
+console.log(4=='abc') ;  
+
+console.log(NaN==NaN)  
+console.log(NaN!=NaN)  
+console.log(null==null); 
+console.log(null !== undefined);
+console.log(3 !== "3") 
+
+六、
+
+console.log(null == 0);  
+console.log(null == []); 
+console.log(null == null);
+
+console.log(null == undefined == null);
+
+console.log(null >= 0); 
+console.log(null <= 0); 
+
+七
+var h5course = false;
+var result = h5course / 0;   
+result ? console.log(result * 2 + '2' + 4):console.log(2 + '2' + 4); 
+
+
+八、输入一位三位数，将个位、十位、百位拆分，在控制台打印
+
+
+
+

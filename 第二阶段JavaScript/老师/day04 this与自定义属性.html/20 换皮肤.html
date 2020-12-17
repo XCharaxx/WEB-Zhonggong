@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button>死亡芭比粉</button>
+    <button>天空蓝</button>
+    <button>中国红</button>
+    <button>原谅绿</button>
+    
+    <script>
+        var arr = ["pink","skyblue","red","green"];
+                  //[button button   button button]  下标对应
+        var oBtns = document.getElementsByTagName("button");
+
+        // oBtns[0].index = 0;
+        // oBtns[1].index = 1;
+        // oBtns[2].index = 2;
+        // oBtns[3].index = 3;
+
+
+        //1.点击对应的按钮，切换对应的皮肤
+        for(var i=0;i<oBtns.length;i++){
+            oBtns[i].index = i;
+            oBtns[i].onclick = function(){
+                console.log(this.index); //对应的标签
+                document.body.style.background = arr[this.index]; //下标
+            }
+        }
+    </script>
+</body>
+</html>

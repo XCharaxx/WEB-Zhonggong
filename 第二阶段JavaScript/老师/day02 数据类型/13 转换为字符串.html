@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //String(需要转换的内容)：返回转换好的内容
+        var s = 431102200212153363;
+        var n = 10;
+        var b = true;
+        var u = undefined;
+        var nu = null;
+        var arr = [1,2,3];
+        var obj = {"name":"fd"};
+        console.log(String(n),n); //"10"
+        console.log(String(b),b);//"true"
+        console.log(String(u));//"undefined"
+        console.log(String(nu));//"null"
+        console.log(String(arr)); //"1,2,3"
+        console.log(String(obj)); //[object Object]
+
+
+        //需要转换的内容.toString(n) : 转换为对应进制的字符串  2-36
+        console.log(n.toString()); //10
+        console.log(n.toString(8)); //12
+        //console.log(u.toString());   nudefined和null没有toString方法
+        //console.log(nu.toString());
+
+        
+    </script>
+</body>
+</html>

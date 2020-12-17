@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入身高" id="tex1">
+    <input type="text" placeholder="请输入体重" id="tex2">
+    <button id="btn">开始检测</button>
+    <script>
+        var oTex1 = document.getElementById("tex1");
+         var oTex2 = document.getElementById("tex2");
+          var oBtn = document.getElementById("btn");
+          
+          
+          
+          oBtn.onclick = function(){
+              
+         var het= oTex1.value;
+          var wet  =parseFloat(oTex2.value);
+          var bwet = (het-80)*0.7;
+              if(wet==bwet){
+              console.log("标准");
+          }
+          else{
+              console.log("不标准");
+          }
+          }
+          
+    </script>
+</body>
+</html>

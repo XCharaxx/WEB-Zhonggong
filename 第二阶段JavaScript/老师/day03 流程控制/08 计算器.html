@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1">
+    <select name="" id="sel">
+        <option value="+">+</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        <option value="-">-</option>
+    </select>
+    <input type="text" id="in2">
+    <button id="sum">=</button>
+    <input type="text" id="out">
+    <script>
+        //1.获取元素
+        var oIn1 = document.getElementById("in1");
+        var oIn2 = document.getElementById("in2");
+        var oOut = document.getElementById("out");
+        var oSum = document.getElementById("sum");
+        var oSel = document.getElementById("sel");
+
+        //2.点击=号，第一个和第一个框的内容进行运算，显示到第三个框
+        oSum.onclick = function(){
+            // if(oSel.value == "+"){
+            //     oOut.value = Number(oIn1.value)+Number(oIn2.value);
+            // }else if(oSel.value == "-"){
+            //     oOut.value = Number(oIn1.value)-Number(oIn2.value);
+            // }else if(oSel.value == "*"){
+            //     oOut.value = Number(oIn1.value)*Number(oIn2.value);
+            // }else if(oSel.value == "/"){
+            //     oOut.value = Number(oIn1.value)/Number(oIn2.value);
+            // }
+
+            switch(oSel.value){
+                case "+" :  oOut.value = Number(oIn1.value)+Number(oIn2.value);break;
+                case "-" :  oOut.value = Number(oIn1.value)-Number(oIn2.value);break;
+                case "*" :  oOut.value = Number(oIn1.value)*Number(oIn2.value);break;
+                case "/" :  oOut.value = Number(oIn1.value)/Number(oIn2.value);break;
+            }
+          
+        }
+    </script>
+</body>
+</html>

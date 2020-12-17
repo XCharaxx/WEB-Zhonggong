@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        if:如果
+            语法：if(条件){  条件成立执行的代码 }
+            注意：if后面的大括号可以省略，省略了if就只能控制紧跟在后面的第一行语句
+        if-else
+            语法：if(条件){条件成立时执行的代码}else{ 条件不成立时执行的代码 }
+        */
+        //1.如果有钱(100块),花两块买彩票，中500万
+        var money = 99;
+        if (money >= 100) {
+            console.log("花两块买彩票，中500万");
+            console.log("买500万的泡面");
+        }
+        // 注意：if后面的大括号可以省略，省略了if就只能控制紧跟在后面的第一行语句
+        if (money >= 100)
+            console.log("花两块买彩票，中500万");
+            console.log("买500万的泡面");
+
+
+        //1.如果有钱，买中公的股票，没钱买二块彩票,
+        if(money>100){
+            //条件成立执行的代码
+            console.log("买中公的股票");
+        }else{
+            //条件不成立执行的代码
+            console.log("买二块钱彩票,中500万");
+        }
+
+      
+    </script>
+</body>
+
+</html>

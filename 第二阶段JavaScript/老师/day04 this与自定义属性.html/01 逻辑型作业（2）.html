@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //1.第一个问题
+         document.write("1.找出1-100之间是7的倍数或者个位数字是7或者十位数字是7的数字，并输出这些数字，统计有多少个？<br>")
+         var count = 0;
+         for(var i = 1;i<=100;i++){
+             if(i % 7 == 0 || i%10==7 || parseInt(i/10)==7){
+                 count++;
+                 document.write(" "+i+" ");
+             }
+         }
+         document.write("<br>一共有"+count+"个");
+
+
+         //2.第二问题
+         document.write('<br><br>2.找出100-999之间所有的 "水仙花数",153:一个三位数的每一位的立方数相加刚好等于这个数   153 = 1*1*1+5*5*5+3*3*3<br>');
+         for(var i = 100;i<1000;i++){
+             //先拆分个 十 百
+             var b = parseInt(i/100);
+             var s = parseInt(i%100/10);
+             var g = i%10;
+             //如果个位立方+十位立方+百位的立方 === 这个数
+             if(b*b*b+s*s*s+g*g*g == i){
+                 document.write(" "+i+" ");
+             }
+         }
+
+         //3.第三个问题
+         document.write("<br><br>3.公园里有一只猴子和一堆桃子，猴子每天吃掉桃子总数的一半，把剩下一半中扔掉一个坏的。到第七天的时候，猴子睁开眼发现只剩下一个桃子。问公园里刚开始有多少个？");
+
+         //1
+         //(1+1)*2  = 4
+         //(4+1)*2 = 10
+         //(10+1)*2 = 22
+         //(22+1)*2 = 46
+         //(46+1)*2 = 94
+         //(94+1)*2 = 190
+         var sum = 1;
+         for(var i = 1;i<7;i++){
+             sum = (sum+1)*2;
+         }
+         document.write("<br>原来有"+sum+"个桃");
+    
+    </script>
+</body>
+</html>

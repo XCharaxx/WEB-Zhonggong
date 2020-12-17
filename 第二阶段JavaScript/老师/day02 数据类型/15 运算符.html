@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"><button>拆分</button>
+    <script>
+        //1.赋值运算符 = += -= *= /=  %=
+        var a = 10; //将10赋值给a
+        console.log(a);
+
+        a += 2; //累加追加 在当前的基础上+   a = a + 2
+        console.log(a);
+
+        //2.算术运算符 + - * / %（取余，求模） ++自加  --
+        console.log(10+4);//14
+        console.log(10-4);//6
+        console.log(10*4);//40
+        console.log(10/4);//2.5
+        console.log(10%4);//2
+        //隐式转换，运算过程中数值自己进行的转换 
+        //+只要遇到字符串就会变成连接符，其他运算符都会转换为number进行运算
+        console.log(10-"2");// “2”--2
+        console.log("10"*1);// “10”--10
+        console.log(10+20+"age"+10+18);//30age1018
+
+        
+        var a = 10;
+        a++;  //11
+        ++a;  //11
+        //如果是运算或者是打印的时候，++在前先自加，后运算，++在后，先运算，后自加
+        console.log(a);
+        
+        var x = 10;
+        var y = x++; //y = 10  x=11
+        console.log(x,y);//11 10
+
+        var m = 10;
+        var n = ++m;//m = 11 n = 11
+        console.log(m,n);//11 11 
+
+        //3.比较运算符 > < >= <= ==（相等）  !=  ===(全等)  !==
+        //判断的时候都会尽可能转换为number进行比较,字符串和字符串在比较的时候不会转换，一位一位比
+        //比较的是编码ASCII “0”--48  ”A“--65   ”a"---97
+        console.log(2>"1000000000");//false
+        console.log("2">"10000000000000"); //true
+
+        //null、undefined使用 “==” 做判断的时候，不进行隐式转换
+        console.log(null == null); //true
+        console.log(null == undefined); //true
+        console.log(undefined == undefined); //true
+
+        
+        //==(会进行隐式转换)    ===(不会进行隐式转换，一模一样)
+        console.log(10 == "10");//true
+        console.log(10 === "10");//false
+
+
+        //4.逻辑运算符 &&与  ||或  ！非
+        // &&与  ||或:连接两个判断条件的
+        var c = 89;
+        //两个条件都为真，结果才为真
+        console.log(100>c && c>80); //true
+
+        //|| 一真为真
+        var a = 56;
+        var b = 65;
+        console.log(a>=60 || b>=60);
+
+        //!：取反  true false
+        console.log(![]); //false
+        console.log(!1);  //false
+        console.log(!"");  //true
+
+        //短路运算
+        //&&两真为真，如果第一个条件为假，第二个条件就不看了
+        //&&两真为真，如果第一个条件为真，再去看第二个条件
+        var m = 1 && 3;
+        console.log(m);//3
+
+        var n = 0 && 1;
+        console.log(n);//0
+
+        //一真为真，如果第一个值为真，第二个值就不看了
+        //一真为真，如果第一个值为假，再去看第二个条件
+        var x = 1 || 3;
+        var y = 0 || 1;
+        console.log(x,y);//1 1
+
+
+        //5.三目运算符
+        //语法：条件 ？条件成立时执行的代码 ： 条件不成立时执行的代码？
+        var age = 10;
+        age < 7 ? console.log("找对象") : console.log("结婚");
+
+
+
+
+
+       
+
+
+
+        
+
+    </script>
+</body>
+</html>

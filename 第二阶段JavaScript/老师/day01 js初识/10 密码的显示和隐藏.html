@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="pass"><button id="show">显示</button><br>
+    <input type="text" id="text">
+    <script>
+        //1.获取元素
+        var oPass = document.getElementById("pass");
+        var oText = document.getElementById("text");
+        var oShow = document.getElementById("show");
+
+        //2.点击显示按钮，获取密码框中的数据，显示到文本框中
+        oShow.onclick = function(){
+            //获取密码框中的数据  var 变量 = 标签.value
+            //var v = oPass.value;
+            
+            //显示到文本框中 标签.value = 值
+            //oText.value = v;
+            oText.value = oPass.value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        //1.获取元素
+        var oLis = document.getElementsByTagName("li");
+
+        //2.添加点击事件
+        oLis[0].onclick = function(){
+            alert("点击")
+        }
+        oLis[1].onclick = function(){
+            alert("点击")
+        }
+        oLis[2].onclick = function(){
+            alert("点击")
+        }
+        oLis[4].onclick = function(){
+            alert("点击")
+        }
+        oLis[5].onclick = function(){
+            alert("点击")
+        }
+    </script>
+</body>
+</html>

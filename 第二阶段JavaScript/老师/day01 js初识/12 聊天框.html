@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            border:1px solid teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    </div>
+    小夏: <input type="text" id="in"><button id="send">发送</button>
+    <!-- 小芳: <input type="text" id="in"><button id="send">发送</button> -->
+    <script>
+        //1.获取元素
+        var oBox = document.getElementById("box");
+        var oIn = document.getElementById("in");
+        var oSend = document.getElementById("send");
+     
+        //2.点击发送按钮，获取输入框中数据，显示到div中
+        oSend.onclick = function(){
+            //获取输入框中数据  标签.value
+            var v = oIn.value;
+
+            //显示到div中  标签.innerHTML
+            oBox.innerHTML += "小夏："+ v + "</br>";
+
+            //清空输入框
+            oIn.value = "";
+
+        }
+        
+    </script>
+</body>
+</html>

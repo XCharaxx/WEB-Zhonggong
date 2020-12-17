@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 40px;
+            background: teal;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div> <!-- 展开  收起 -->
+    <div></div> <!-- 展开  收起 -->
+    <div></div> <!-- 展开  收起 -->
+    <div></div> <!-- 展开  收起 -->
+    <div></div> <!-- 展开  收起 -->
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div");
+
+       for(var i = 0;i<oDiv.length;i++){
+           //给每一个标签都添加一个属于自己的标识
+           oDiv[i].tag = true;
+           oDiv[i].onclick = function(){
+               if(this.tag == true){ //被点击的标签的标识
+                  //被点击标签的高度
+                  this.style.height = "100px";
+                  this.tag = false;
+               }else{
+                    //被点击标签的高度
+                  this.style.height = "40px";
+                  this.tag = true;
+               }
+           }
+       }
+    </script>
+</body>
+
+</html>

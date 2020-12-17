@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+
+        }
+        ul{
+            list-style: none;
+        }
+        .clearfix{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div{
+            width: 901px;
+            height: 901px;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            margin: 100px auto;
+            
+        }
+      li{
+          float: left;
+          width: 300px;
+          height: 300px;
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
+       
+          font-size: 0px;
+          text-align: center;
+          line-height: 300px;
+          /* color: white; */
+        
+      }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <ul >
+        <li >杨洋</li>
+        <li >胡歌</li>
+        <li >赵丽颖</li>
+        <li >迪丽热巴</li>
+        <li >乔碧萝殿下</li>
+        <li >易烊千玺</li>
+        <li >为你按下F键</li>
+        <li >肖战</li>
+        <li >王一博</li>
+        </ul>
+
+
+
+        <script>
+          
+            var oLi =document.getElementsByTagName("li");
+            for(var i=0;i<oLi.length;i++){
+               oLi[i].tag = true;
+                oLi[i].onclick =function(){
+                     for(var j=0;j<oLi.length;j++){
+                    oLi[j].style.fontSize = "0px";
+                }
+                      if(this.tag==true){
+                          this.style.fontSize="30px";
+                          this.tag=false;
+                      }else{
+                          this.style.fontSize="0px";
+                          this.tag=true;
+                      }
+                      
+                } 
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

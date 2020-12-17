@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //0.typeOf 返回对应数值的数据类型
+        //语法：typeof(数值)   typeof 数值 
+
+        //1.number：数值  小数、整数 八进制 十六进制 NaN infinity
+        //1.1整数
+        var n1 = 10;
+        //1.2小数
+        var n2 = 3.14;
+        var t1 = typeof(n1);
+        console.log(t1); //number
+
+        var t2 = typeof n2;
+        console.log(t2); //number
+
+        //1.3八进制，以0开头，并且没有超过8的值，表示8进制，
+        var n3 = 045;
+        console.log(typeof n3,n3); //number 37
+
+        //1.4 十六进制  0x开头
+        var n4 = 0x22;
+        console.log(typeof n4,n4);//number 34
+
+        //1.5 NaN : not a number
+        var n5 = "睡觉"*6;  //NaN，js中所有的数据运动都不会报错，如果不能正常运算结果为NaN
+        console.log(typeof n5,n5); //number NaN
+
+        //1.6 Infinity
+        var n6 = 5/0;
+        console.log(typeof n6,n6);  //number Infinity
+
+        //1.7 小数在计算的时候稍微有点小偏差(精度缺失)，不要用小数作为判断条件
+        console.log(0.1+0.2) //0.30000000000000004
+        console.log(0.1+0.2 == 0.3); //false
+
+        //2.字符串  引号引起来的就是字符串 所有从页面获取的内容都是字符串
+        var s1 = "web1116";
+        var s2 = 'web1109';
+        console.log(typeof s1,typeof s2); //string string
+        var len = s1.length;  //获取字符串的个数
+        console.log(len); //7
+
+        //字符串.charAt(下标) ：获取对应下标字符,所有的下标从0开始
+        console.log(s1.charAt(0));//w
+        
+
+        //3.Boolean布尔： true false,要么是判断结果，要么是判断条件
+        var b1 = true;
+        var b2 = false;
+        console.log(typeof b1); //boolean
+        console.log(10>20); //false 判断结果
+        
+
+        //4.undefined 和 null
+        //undefined：未定义 声明变量但是没有赋值，结果就是undefined
+        var a;
+        console.log(typeof a,a); //undefined
+
+        //null:空对象，获取一个不存在对象返回的值
+        var oHa =  document.getElementById("哈哈哈");
+        console.log(typeof oHa,oHa); //object null
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="tex">
+    <div id="div">我也不知道是什么</div>
+    <button id="btn">获取类型</button>
+
+
+    <script>
+        var oTex = document.getElementById("tex");
+        var oDiv = document.getElementById("div");
+        var oBtn = document.getElementById("btn");
+        var t = oTex.value;
+        var d = oDiv.innerHTML;
+        oBtn.onclick = function () {
+            console.log("第一个类型为：", typeof t, "字符数为：", t.length);
+            console.log("第二个类型为：", typeof d, "字符数为：", d.length);
+        }
+
+    </script>
+</body>
+
+</html>

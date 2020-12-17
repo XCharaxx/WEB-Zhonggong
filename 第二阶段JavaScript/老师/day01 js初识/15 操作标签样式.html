@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementById("box");
+
+        //2.移入，200*200
+        oDiv.onmouseover = function(){
+            //操作样式，标签.style.属性名 = 属性值
+            oDiv.style.width = "200px";
+            oDiv.style.height = "200px";
+            oDiv.style.background = "red";
+            oDiv.style.border = "2px solid teal";
+        }
+    </script>
+</body>
+</html>

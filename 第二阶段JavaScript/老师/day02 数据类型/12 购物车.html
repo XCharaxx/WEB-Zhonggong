@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        商品名：iphone12<br>
+        价格：<span id="price">99.99元</span><br>
+        数量：<input type="number" value="0" id="count" style='width:50px'><br>
+        小计：<span id="sum">0元</span>
+    </p>
+    <script>
+        //1.获取元素
+        var oPrice = document.getElementById("price");
+        var oCount = document.getElementById("count");
+        var oSum = document.getElementById("sum");
+
+        //2.点击input，计算小计 = 价格*数量
+        oCount.onclick = function(){
+            oSum.innerText = (parseFloat(oPrice.innerText)*Number(oCount.value)).toFixed(2)+"元";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {"name":"小夏","c":101},
+            {"name":"老夏","c":80},
+            {"name":"小唐","c":30},
+            {"name":"小芳","c":80},
+            {"name":"过来一下","c":40}
+        ]
+        //遍历数组，找到第一个人不及格的人，循环结束
+        for(var i = 0;i<arr.length;i++){
+            if(arr[i].c < 60){
+                break; //结束循环,后面所有的操作都不会再执行
+            }
+            console.log(arr[i]);
+        }
+
+        //1.遍历数组，跳过所有不及格的人
+        for(var i = 0;i<arr.length;i++){
+            if(arr[i].c < 60){
+               continue;//跳出本次循环，本次循环后面的代码不执行，直接进行下一次循环
+            }
+            console.log(arr[i]);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //有一段绳子1000米， 截掉 2/3 之后, 看剩下的部分, 如果大于50 就继续截, 问要截多少次
+        for (var i = 1000, count = 0; i > 50;) {
+            i = i - i * (2 / 3);
+            console.log(i);
+            count++;
+        }
+        console.log(count);
+
+     
+        
+        var i = 1000, count = 0;
+        while (i > 50) {
+            i = i - i * (2 / 3);
+            console.log(i);
+            count++;
+        }
+        console.log(count);
+    </script>
+</body>
+
+</html>

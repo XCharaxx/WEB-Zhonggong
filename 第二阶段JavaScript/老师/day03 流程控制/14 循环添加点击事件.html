@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>我和我的家乡</li>
+        <li>回家的诱惑</li>
+        <li>乡村爱情故事</li>
+        <li>奥特曼</li>
+        <li>天线宝宝</li>
+        <li>西游记</li>
+  
+    </ul>
+    <script>
+        //1.获取元素
+        var oLis = document.getElementsByTagName("li");
+
+        //2.添加点击事件
+        for (var i = 0; i < oLis.length; i++) {
+            //i = 0;  0
+            //i = 1;  1;
+            //i = 2;  2
+            oLis[i].onclick = function () {
+                console.log("我要回去看");
+            }
+        }
+        /* oLis[0].onclick = function(){
+            console.log("我要回去看");
+        }
+        oLis[1].onclick = function(){
+            console.log("我要回去看");
+        }
+        oLis[2].onclick = function(){
+            console.log("我要回去看");
+        }
+        oLis[3].onclick = function(){
+            console.log("我要回去看");
+        }
+        oLis[4].onclick = function(){
+            console.log("我要回去看");
+        }
+        oLis[5].onclick = function(){
+            console.log("我要回去看");
+        } */
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //等待文档和资源的加载，都加载完成后才会触发window.onload事件
+        window.onload = function () {
+            //获取元素
+            // Cannot set property 'onclick' of null : 前面标签问题
+            //is not defined :  没有定义，单词写错了，要么根本没有这个东西
+            alert(document.getElementById("btn"))
+            document.getElementById("btn").onclick = function () {
+                alert("好的呀");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <button id="btn">下课吃饭!!</button>
+</body>
+
+</html>

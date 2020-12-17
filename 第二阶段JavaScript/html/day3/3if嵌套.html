@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id="tex1">
+     <select id="set">
+         <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>  
+     </select>
+    <input type="text" id="tex2">
+    <button id="btn">=</button>
+    <input type="text" id="out">
+
+
+    <script>
+        var oTex1 =document.getElementById("tex1");
+        var oSet = document.getElementById("set");
+        var oTex2 = document.getElementById("tex2");
+        var oBtn = document.getElementById("btn");
+        var oOut = document.getElementById("out");
+
+        oBtn.onclick = function(){
+            var tex1 = oTex1.value;
+            var tex2 = oTex2.value;
+            var sett = oSet.value;
+            switch(sett){
+                case "+": 
+                     oOut.value = Number(tex1) + Number(tex2);
+                     break;  
+                 case "-":
+                    oOut.value = Number(tex1) - Number(tex2);
+                    break;  
+                 case "*":
+                    oOut.value = Number(tex1) * Number(tex2);
+                    break;  
+                 case "/":
+                    oOut.value = Number(tex1) / Number(tex2);
+                    break;   
+            }
+        }
+    </script>
+</body>
+</html>

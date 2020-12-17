@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //打印1-100之间的偶数
+        for(var i = 1;i <= 100;i++){
+            if(i % 2 == 0){
+                console.log(i);
+            }
+        }
+
+        //打印1-100之间能同时被2和5整除
+        for(var i = 1;i<=100;i++){
+            if(i % 2 == 0 && i % 5 == 0){
+                console.log(i);
+            }
+        }
+       
+        //打印1+100的和  
+        var sum = 0; //存储和
+        for(var i = 1;i <= 100;i++){
+           sum += i;
+        }
+        console.log(sum); //5050
+
+        
+
+        //计算6的阶乘   6! = 1*2*3*4*5*6
+        var sum = 1;
+        for(var i = 1;i<=6;i++){
+            sum *= i;
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

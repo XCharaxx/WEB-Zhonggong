@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value='鹅鹅鹅' id="in">
+    <button id="get">获取</button>
+    <button id="set">设置</button>
+
+    <select name="" id="sel">
+        <option value="2个">2个</option>
+        <option value="3个" selected>3个</option>
+        <option value="1个" >1个</option>
+    </select>
+    <script>
+        //1.获取元素
+        var oIn = document.getElementById("in");
+        var oSetBtn = document.getElementById("set"); 
+        var oGetBtn = document.getElementById("get");
+        var oSel = document.getElementById("sel");
+
+        //2.点击获取按钮，获取输入框的内容
+        oGetBtn.onclick = function(){
+            //获取：var 变量 = 标签.value
+            var v = oIn.value;
+            console.log(v);
+        }
+
+        //3.点击设置按钮，设置输入框的内容
+        oSetBtn.onclick = function(){
+            //设置：标签.value = 值
+            oIn.value = "北国风光"; //一般加引号，变量和数字不加
+        }
+    
+        //4.获取下拉列表的内容  var se = 标签.value
+        var se = oSel.value;
+        console.log(se);
+    </script>
+</body>
+</html>

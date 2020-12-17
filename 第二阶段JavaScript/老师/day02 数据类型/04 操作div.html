@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            position: relative;
+            overflow: hidden;
+            width: 627px;
+            height: 400px;
+            margin: 40px auto;
+            border: 1px solid #ccc;
+            box-shadow: 8px 5px 9px 2px rgba(0, 0, 0, .5);
+        }
+        
+        .yin {
+            display: none;
+            /* opacity: 0; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            z-index: -1;
+        }
+        
+        .yins {
+            opacity: 1;
+            z-index: 1;
+            transition: all .5s;
+        }
+        
+        .one {
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin: 50px 0 0 50px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 10px 2px rgba(118, 221, 97, 0.5);
+            transition: all .4s;
+        }
+        
+        .btn {
+            float: right;
+            margin: 50px 69px 0 0;
+        }
+        
+        .diwei {
+            position: absolute;
+            top: 50%;
+            margin-top: -150px;
+            padding-left: 10px;
+            right: 25px;
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+            background-color: #fff;
+            z-index: 10;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: all .3s;
+            display: none;
+        }
+        
+        .diweis {
+            height: 300px;
+            transition: all .5s;
+        }
+        
+        h4 {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+        
+        .first,
+        .second {
+            margin-top: 5px;
+            width: 100%;
+            list-style: none;
+            overflow: hidden;
+        }
+        
+        .first li,
+        .second li {
+            float: left;
+            width: 43%;
+            text-align: center;
+            border: 1px solid #000;
+            margin-right: 9px;
+        }
+        
+        .first li:nth-child(-n+2),
+        .second li:nth-child(-n+2) {
+            margin-bottom: 9px;
+        }
+        
+        .sure,
+        .cancel {
+            margin-top: 35px;
+            width: 50px;
+            height: 23px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            color: rgb(231, 225, 225);
+            background-color: #ff4b00;
+            cursor: pointer;
+        }
+        
+        .cancel {
+            background-color: rgb(17, 182, 154);
+        }
+   
+       
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 遮罩层 -->
+        <div class="yin" id="yin"></div>
+        <!-- y改变的div -->
+        <div class="one" id="one"></div>
+        <!-- 按钮 -->
+        <button class="btn" id="btn">点击显示div信息</button>
+        <!-- 功能块 -->
+        <div class="diwei" id="diwei">
+            <h4>大小</h4>
+            <ul class="first">
+                <li id="f1">300*300</li>
+                <li id="f2">200*300</li>
+                <li id="f3">300*200</li>
+                <li id="f4">100*300</li>
+            </ul>
+            <h4>颜色</h4>
+            <ul class="second">
+                <li id="s1">#ff0000</li>
+                <li id="s2">#00ff00</li>
+                <li id="s3">#0000ff</li>
+                <li id="s4">#00ffff</li>
+            </ul>
+            <button class="sure" id="sure">确定</button>
+            <button class="cancel" id="cancel">取消</button>
+        </div>
+    </div>
+    <script>
+       var oBtn = document.getElementById("btn");
+       var oneDiv = document.getElementById("one");
+       var coverDiv = document.getElementById("yin");
+       var diwei = document.getElementById("diwei");
+       var f1 = document.getElementById("f1");
+
+       //1.点击按钮,显示功能块，和遮罩层
+       oBtn.onclick = function(){
+          diwei.style.display = coverDiv.style.display = "block";
+       }
+
+       //2.划过li改变div的大小
+       f1.onmouseover = function(){
+          oneDiv.style.width = "300px";
+          oneDiv.style.height = "300px";
+       }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1"> +
+    <input type="text" id="in2">
+    <button id="sum">=</button>
+    <input type="text" id="out">
+
+    <script>
+        //1.获取元素
+        var oIn1 = document.getElementById("in1");
+        var oIn2 = document.getElementById("in2");
+        var sumBtn = document.getElementById("sum");
+        var oOut = document.getElementById("out");
+
+        //2.点击button
+        sumBtn.onclick = function(){
+            //所有从页面上获取的内容都是字符串，+号只要遇到字符串，就会变量拼接符
+            console.log(typeof oIn1.value);
+           //              "1"+"1"  拼接  "11"
+           oOut.value  = Number(oIn1.value) + Number(oIn2.value);
+        }
+    </script>
+</body>
+</html>

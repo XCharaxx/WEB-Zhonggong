@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./images/dark.jpg" alt="" width="300" id="img">
+    <script>
+        //1.获取
+        var oImg = document.getElementById("img");
+
+        //3.定义初始状态
+        var tag = true;  //true--黑   false--亮
+
+        //2.点击切换图片
+        oImg.onclick = function () {
+            //4.判断当前的状态
+            if (tag == true) {
+                oImg.src = "./images/bright.jpg";
+                tag = false;
+            } else {
+                oImg.src = "./images/dark.jpg";
+                tag = true;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

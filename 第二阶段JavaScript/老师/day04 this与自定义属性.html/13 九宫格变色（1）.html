@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;list-style: none;}
+        ul{
+            width: 310px;
+            margin: 50px auto;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid teal;
+            font:20px/100px "微软雅黑";
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>肖战</li>
+        <li>乔碧萝</li>
+        <li>王一博</li>
+        <li>鞠婧祎</li>
+        <li>蔡徐坤</li>
+        <li>马保国</li>
+        <li>马云</li>
+        <li>马化腾</li>
+        <li>马冬梅</li>
+    </ul>
+
+    <script>
+        //1.获取元素
+        var oLis = document.getElementsByTagName("li");
+
+        //2.点击li，改变被点击li的字体颜色
+        for(var i = 0;i<oLis.length;i++){
+            oLis[i].onclick = function(){
+                //清空所有标签的样式
+                for(var j = 0;j<oLis.length;j++){
+                    oLis[j].style.color = "#fff";
+                }
+                //改变被点击li的字体颜色
+                this.style.color = "#000";
+            }
+        }
+    </script>
+</body>
+</html>

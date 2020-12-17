@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <!-- <li>互联网营销</li>
+<li>ui设计</li>
+<li>web前端</li> -->
+    </ul>
+    <script>
+        var oUl =document.getElementsByTagName("ul")[0];
+        var kc = {
+            "kc1": "互联网营销",
+            "kc2": "ui设计",
+            "kc3": "web前端",
+            "kc4": "程序开发",
+            "kc5": "office",
+        }
+        // for(var i=0;i<5;i++){
+            for(var key in kc ){
+            oUl.innerHTML += "<li>" +key+ "&nbsp;:&nbsp;" +kc[key]+ "</li>";
+            //    }
+              
+        }
+     
+//1.通过for-in循环对象，打印key value
+
+      
+//2.生成li，把value作为li的内容
+    </script>
+</body>
+
+</html>

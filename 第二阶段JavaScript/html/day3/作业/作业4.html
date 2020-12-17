@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv{
+            width: 1000px;
+            height: 0px;
+            overflow-x: auto;
+            margin-top: 20px;
+            border:1px solid #008080;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">生成新闻</button>
+    <div id="dv">
+         <ul>
+
+         </ul>
+    </div>
+  <script>
+      var oBtn =document.getElementById("btn");
+      var oDv = document.getElementById("dv")
+      var oUl =document.getElementsByTagName("ul")[0];
+      var arr = ["数控技工参加优就业网络营销培训，成功转行入职云*集团", "年薪40万“屌丝”的优就业SEO培训学习体验", "美国疫情破1000万", "天猫销售额5千亿", "川建国同志解聘国防部长"];
+     
+          oBtn.onclick = function(){
+          oDv.style.height = "150px";
+          for(var i =0;i<arr.length;i++){
+              oUl.innerHTML += "<li>"+arr[i]+"</li>";
+          }
+        
+      }
+     
+     
+  </script>
+
+</body>
+</html>

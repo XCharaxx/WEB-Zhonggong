@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="请请输入身高" id="height">
+    <input type="text" placeholder="请请输入体重" id="weight">
+    <button id="start">开始检测</button>
+    <script>    
+          //男性:(身高cm-80)×70﹪=标准体重 女性:(身高cm-70)×60﹪=标准体重
+          //== 标准体重，弹标准  否则不标准
+
+          //1.获取元素
+          var oH = document.getElementById("height");
+          var oW = document.getElementById("weight");
+          var oBtn = document.getElementById("start");
+          
+          //2.点击检测
+          oBtn.onclick = function(){
+              //通过身高计算标准体重，如果标准体重==输入的体重
+              var bz = (oH.value-70)*0.6; //kg 160  54
+              if(bz == oW.value){
+                  console.log("标准");
+              }else{
+                  console.log("不标准");
+              }
+          }
+    </script>
+</body>
+</html>

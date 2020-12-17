@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image/1.jpg" alt="" id="img"><button id="btn">下一张</button>
+    <script>
+        //1.获取元素
+        var oImg = document.getElementById("img");
+        var oBtn = document.getElementById("btn");
+
+        /* //3.定义一个变量，存储最初的值
+        var n = 1;
+
+        //2.点击下一张，切换图片  标签.属性名 = 属性名
+        oBtn.onclick = function(){
+            //4.自加
+            n++;
+            oImg.src = "image/" + n +  ".jpg"; //变量和数字不能放到字符串中，否则就会原样输出
+        }  */
+
+       
+
+
+        //有规则，按照图片规律切换
+        //定义一个变量，存储初始值
+       /*  var index = 1;
+        oBtn.onclick = function(){
+            index++;  //自加1
+            //改变图片路径
+            oImg.src = "./image/"+index+".jpg";
+        } */
+
+        //没有规律，将图片路径存储在数组中
+        var imgS = ["./images/aa.jpg","./images/bb.jpg","./images/cc.jpg","./images/xx.jpg","./images/yy.jpg"];
+        var n = 0;
+        oBtn.onclick = function(){
+            n++;
+            oImg.src = imgS[n];
+        }
+
+    </script>
+</body>
+</html>

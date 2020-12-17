@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var oDiv = document.getElementById("box");
+        //1.object：对象
+        console.log(typeof window); //object
+        console.log(typeof document);//object
+        console.log(typeof oDiv);//object  所有的标签都是对象
+
+        //自己创建对象  键值对组成   key:value
+        var obj = {
+            "sex":"异性",
+            "height":"2米以上",
+            "weight":"188",
+            "city":"北京户口",
+            "parent":"是局长"
+        }
+        console.log(obj);
+        console.log(obj.city); //北京户口
+        console.log(obj["city"]);//北京户口
+
+
+        //2.array：存储数据的容器，可以存储任意数据类型，可以存储任意多个
+        var arr = [1,"a",true,null,undefined,{},[1,2,3]];
+        console.log(arr);
+        console.log(typeof arr); //object
+        console.log(arr.length); //7个,获取数组的长度
+        console.log(arr[2]); //下标从0开始  true
+
+        //3.function : 函数
+        //函数：存储一段代码块，需要的时候调用
+        //声明函数：function 函数名(){ 存储的代码块 }
+        //调用函数：函数名()
+        function homeWork(){
+            console.log("开始做作业");
+            console.log("正在做作业");
+            console.log("作业已完成");
+        }
+        //在需要的时候调用，可以重复使用
+        homeWork();
+        homeWork();
+        homeWork();
+        homeWork();
+        homeWork();
+        console.log(typeof homeWork);
+
+
+   
+
+
+    </script>
+</body>
+</html>

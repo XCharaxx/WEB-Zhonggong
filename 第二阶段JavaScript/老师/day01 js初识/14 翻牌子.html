@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./default.jpg" alt="" width="500px" height="312px" id="img">
+    <script>
+        
+        var oImg = document.getElementById("img");
+
+        //鼠标移入，换成fan.jpg，鼠标离开换回来
+        oImg.onmouseover = function(){
+            //换图片： 标签.属性名 = 属性值
+            oImg.src = "./fan.jpg";
+        }
+        oImg.onmouseout = function(){
+            oImg.src = "./default.jpg";
+        }
+    </script>
+</body>
+</html>

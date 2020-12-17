@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./images/dark.jpg" alt="" width="300" id="img">
+    <script>
+        //1.获取
+        var oImg = document.getElementById("img");
+
+        //3.找不到判断条件的情况下，自己创造条件
+        var tag = true; //true---黑     false--亮  
+
+        //2.点击切换图片
+        oImg.onclick = function(){
+            //判断
+            //如果黑，亮     否则就黑
+            console.log(oImg.src); //获取的是绝对路径,不建议使用绝对路径的
+            //file:///E:/web%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/day03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/images/dark.jpg
+            if(tag == true){ //黑-----》改成亮的
+                oImg.src = "./images/bright.jpg";
+                tag = false; //状态要保持同步
+            }else{
+                oImg.src = "./images/dark.jpg"; 
+                tag = true; //状态要保持同步
+            }
+        }
+
+       
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1,#box2{
+            width: 200px;
+            height: 200px;
+            background: teal;
+            margin-bottom: 10px;
+        }
+        #box1 div,#box2 div{
+            width: 100px;
+            height: 100px;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"><div></div></div>
+    <div id="box2"><div></div></div>
+    <script>
+        //1.添加移入事件：子元素可以触发父元素的事件
+        document.getElementById("box1").onmouseover = function(){
+            alert("onmouseover移入")
+        }
+
+         //1.添加移入事件：子元素不可以触发父元素的事件
+        document.getElementById("box2").onmouseenter = function(){
+            alert("onmouseenter移入")
+        }
+    </script>
+</body>
+</html>

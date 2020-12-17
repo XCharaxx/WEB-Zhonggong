@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/1.jpg" alt="" id="img"><button id="btn">下一张</button>
+
+<script>
+    var oImg = document.getElementById("img");
+     var oBtn = document.getElementById("btn");
+    //  var n=1;
+    //  oBtn.onclick = function(){
+         
+    //      n++;
+    //      oImg.src = "./img/" + n + ".jpg";
+    //  }
+    var i=0;
+    var arr =["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg"]; 
+    oBtn.onclick = function(){
+        i++;
+        oImg.src = arr[i];
+    }
+</script>
+
+</body>
+</html>

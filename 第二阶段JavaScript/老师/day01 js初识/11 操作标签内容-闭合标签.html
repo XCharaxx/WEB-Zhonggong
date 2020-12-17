@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p>少壮不努力</p>
+    </div>
+    <script>
+        /* 
+        设置标签内容： 标签.innerHTML = 值
+        获取标签内容 var 变量 = 标签.innerHTML
+
+        特性：
+            innerHTML会覆盖标签内原有的内容
+            能识别标签
+        */
+        //1.获取元素
+        var oDiv = document.getElementById("box");
+
+        //2.获取标签内容 var 变量 = 标签.innerHTML
+        var inner = oDiv.innerHTML; 
+        console.log(inner); // <p>少壮不努力</p>
+
+        //3.设置标签内容： 标签.innerHTML = 值
+        //oDiv.innerHTML = "<p>老大徒<strong>伤</strong>悲</p>";
+
+        //4.在后面添加(不覆盖)
+        //拼接  之前+现在的
+        //oDiv.innerHTML = oDiv.innerHTML + "<p>老大徒<strong>伤</strong>悲</p>";
+
+        //追加，在末尾添加
+        oDiv.innerText += "<p>老大徒<strong>伤</strong>悲</p>";
+    </script>
+</body>
+</html>

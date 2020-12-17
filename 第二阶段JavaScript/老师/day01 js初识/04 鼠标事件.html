@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        //1.点击事件
+        document.getElementById("box").onclick = function(){
+            //alert("他扒拉我！");
+        }
+        //2.双击事件(了解)
+        document.getElementById("box").ondblclick = function(){
+            //alert("他又扒拉我！");
+        }
+        //3.移入事件
+        document.getElementById("box").onmouseover = function(){
+            //alert("鼠标移入");
+        }
+        //4.移出事件
+        document.getElementById("box").onmouseout = function(){
+            //alert("鼠标移出");
+        }
+        //5.鼠标移动事件
+        document.getElementById("box").onmousemove = function(){
+            //alert("鼠标移动");
+        }
+        //6.鼠标按下
+        document.getElementById("box").onmousedown = function(){
+            //alert("鼠标按下");
+        }
+         //6.鼠标抬起
+        document.getElementById("box").onmouseup = function(){
+            //alert("鼠标抬起");
+        }
+        //7.右击事件(了解)
+        document.getElementById("box").oncontextmenu = function(){
+            alert("菜单");
+        }
+    </script>
+</body>
+</html>

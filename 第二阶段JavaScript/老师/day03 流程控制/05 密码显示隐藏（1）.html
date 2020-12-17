@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 400px;
+            height: 40px;
+            border: 1px solid red;
+            margin: 100px auto;
+            background: #fafafa;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        div input {
+            width: 300px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+        }
+
+        #text {
+            display: none;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 8px;
+            top: 4px
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="password" id="pass">
+        <input type="text" id="text">
+        <img src="./images/hide.jpg" alt="" id="img">
+    </div>
+
+    <script>
+        //1.获取元素
+        var oPass = document.getElementById("pass");
+        var oText = document.getElementById("text");
+        var oImg = document.getElementById("img");
+
+        var tag = true;//true---闭眼    false---睁眼
+
+        //2.点击，改img图片，隐藏密码框，显示文本框
+        oImg.onclick = function () {
+            if (tag == true) {
+                oImg.src = "./images/show.jpg";
+                oPass.style.display = "none";
+                oText.style.display = "block";
+                oText.value = oPass.value;
+                tag = false;
+            }else{
+                oImg.src = "./images/hide.jpg";
+                oPass.style.display = "block";
+                oText.style.display = "none";
+                oPass.value=oText.value ;
+                tag = true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

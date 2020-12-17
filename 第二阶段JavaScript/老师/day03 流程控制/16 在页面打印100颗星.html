@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          document.write()：操作body
+          document.write()和innerHTML的区别：
+            都能识别标签
+            区别：document.write()操作body标签，innerHTML操作闭合标签
+                 innerHTML会覆盖，document.wirte不会覆盖
+        */
+        for(var i = 0;i<100;i++){
+            if(i % 10 == 0){
+               document.write("<br>");
+            }
+            //快速获取body标签的方式   document.body
+            document.write("*");
+        }
+
+    </script>
+</body>
+</html>

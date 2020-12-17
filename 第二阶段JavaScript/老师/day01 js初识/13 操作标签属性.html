@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            width: 20px;
+            height: 20px;
+            background: pink;
+            margin-bottom: 5px;
+        }
+        .active{
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" title='我是粉刷匠' class='box' ></div>
+    <ul>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementById("box");
+
+        //2.获取元素属性： 标签.属性名
+        var title = oDiv.title;
+        console.log(title);
+
+        //3.设置标签属性  标签.属性名 = 属性值
+        oDiv.title = "我是一个卖报的小行家";
+
+        //4.特殊：
+        oDiv.className = "active";
+    </script>
+</body>
+</html>

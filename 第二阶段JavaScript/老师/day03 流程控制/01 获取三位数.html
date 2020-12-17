@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <button id="btn">拆分</button>
+    <script>
+        //1.获取元素
+        var oIn = document.getElementById("in");
+        var oBtn = document.getElementById("btn");
+        
+        //2.点击按钮，获取输入的内容，拆分，打印到控制台
+        oBtn.onclick = function(){
+            //获取输入的内容
+            var v = oIn.value;
+
+            //拆分123
+            var b = parseInt(v/100); //百位  /100
+            console.log(b);
+
+            var s = parseInt(v%100/10);//十位
+            console.log(s);
+            
+            var g = v%10  //个位  %10
+            console.log(g);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+       img{
+           width: 50px;
+             
+       }
+    </style>
+</head>
+<body>
+    <img src="./img/dark.jpg" alt="">
+    <script>
+        for(i=0;i<400;i++){
+            document.body.innerHTML+= "<img src='./img/dark.jpg'>";
+        }
+        var oImg =document.getElementsByTagName("img");
+        
+        for(var j=0;j<oImg.length;j++){
+             oImg[j].tag= true;
+            oImg[j].onmouseover = function(){
+                  if(this.tag==true){
+                      this.src = "./img/bright.jpg";
+                      this.tag=false;
+                  }else{
+                        this.src = "./img/dark.jpg";
+                      this.tag = true;
+                  }
+            }
+        }
+    </script>
+</body>
+</html>

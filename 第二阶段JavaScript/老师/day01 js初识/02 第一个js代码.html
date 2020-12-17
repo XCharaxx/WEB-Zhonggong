@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="btn">休息吗？</button>
+    <script>
+        //1.获取标签  document.getElementById('id名')：严格区分大小写
+        //           在文档中  获取  元素 通过  id
+        //alert(document.getElementById("btn"));
+
+
+        //2.添加事件  标签.事件名(onclick)
+        //document.getElementById("btn").onclick 
+
+        //3.做什么事件  标签.事件名 = function() {  要做的事情 }
+        document.getElementById("btn").onclick = function(){
+            alert("休息一下,马上回来？");
+        }
+
+    </script>
+</body>
+</html>

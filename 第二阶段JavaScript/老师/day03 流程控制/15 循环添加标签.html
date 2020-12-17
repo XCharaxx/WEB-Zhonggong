@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <!-- <li>2月5号放假，2月28开学</li>
+        <li>行李都要拿回家</li>
+        <li>需要退宿舍</li>
+        <li>电脑不能带走</li> -->
+    </ul>
+
+    <script>
+        //循环添加标签
+        var arr = ["月5号放假，2月28开学","行李都要拿回家","需要退宿舍","电脑不能带走","明天下雪"];
+        var oUl = document.getElementsByTagName("ul")[0];
+        for(var i = 0;i<arr.length;i++){
+            oUl.innerHTML += "<li>"+arr[i]+"</li>";
+        }
+    </script>
+</body>
+</html>

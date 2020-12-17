@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>火锅</button>
+    <button>烤肉</button>
+    <button>烤乳猪</button>
+    <button>小烧烤</button>
+    <button>串串香</button>
+
+    <script>
+        //给所有的button添加点击事件，点击的时候获取对应标签上的内容，打印到控制台
+        //1.获取元素
+        var oBtns = document.getElementsByTagName("button");
+
+        //2.添加点击事件
+        for(var i = 0;i<oBtns.length;i++){
+            oBtns[i].onclick=function(){ 
+                //3.打印被点击按钮的内容
+                console.log(i);//5，循环很快，事件触发的时候，循环变量i已经是最后一个值了
+                console.log(oBtns[i]);//undefined
+                // console.log(oBtns[i].innerHTML);
+            }
+        }
+        //i = 0  oBtns[0]添加点击事件  
+        //i = 1  oBtns[1]添加点击事件  
+        //i = 2  oBtns[2]添加点击事件  
+        //i = 3  oBtns[3]添加点击事件  
+        //i = 4  oBtns[4]添加点击事件
+        //i = 5 结束循环  
+   
+       
+        
+    </script>
+</body>
+</html>

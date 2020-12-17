@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color:pink;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" style="width:100px;height:100px">1点睡觉，8点起</div>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementById("box");
+
+        //2。移入，改变200*200，背景red
+        oDiv.onmouseover = function(){
+            //js所有的样式操作都是在行间，cssText重新style属性
+            oDiv.style.cssText = "background:red;font-size:20px";
+        }
+    </script>
+</body>
+</html>
