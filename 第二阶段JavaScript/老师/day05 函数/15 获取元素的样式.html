@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;height:200px;background:black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div style="width:200px;height:200px;background:black"></div> -->
+    <div></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        //1.只能获取行间样式
+        var w = oDiv.style.width;
+        //console.log(w);
+
+        //2.获取非行间样式
+        //标准浏览器：getComputedStyle(标签).属性名   ie8-不兼容
+        //var w1 = getComputedStyle(oDiv).width;
+        //console.log(w1); //200px
+
+        //IE浏览器：标签.currentStyle.属性名
+        //var w1 = oDiv.currentStyle.width;
+        //console.log(w1);
+
+        //3.兼容,拿其中一个方法作为判断条件  xx.xx,  如果是直接调用的就使用window.xx
+        // alert(window.getComputedStyle);
+        //alert(oDiv.currentStyle)
+        if(oDiv.currentStyle){
+            var w1 = oDiv.currentStyle.width;
+        }else{
+            var w1 = getComputedStyle(oDiv).width;
+        }
+        console.log(w1);
+
+    </script>
+</body>
+</html>

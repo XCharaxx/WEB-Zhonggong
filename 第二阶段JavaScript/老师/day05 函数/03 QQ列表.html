@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-weight: normal;
+        }
+
+        #list {
+            width: 300px;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+
+        #list h4 {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background: pink;
+        }
+
+        #list img {
+            margin: 0 5px;
+        }
+
+        #list ul {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="list">
+        <li>
+            <h4><img src="img/ico1.gif" alt="">朋友</h4>
+            <ul>
+                <li>李铁蛋</li>
+                <li>二狗子</li>
+                <li>铁锤妹</li>
+                <li>铁锤妹</li>
+                <li>铁锤妹</li>
+                <li>铁锤妹</li>
+            </ul>
+        </li>
+        <li>
+            <h4><img src="img/ico1.gif" alt="">亲人</h4>
+            <ul>
+                <li>他大爷</li>
+                <li>他大舅</li>
+                <li>他二舅</li>
+            </ul>
+        </li>
+        <li>
+            <h4><img src="img/ico1.gif" alt="">陌生人</h4>
+            <ul>
+                <li>买保险</li>
+                <li>送外卖</li>
+                <li>销售</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        //1.获取元素
+        var oList = document.getElementById("list"); //获取父元素
+        var oHs = oList.getElementsByTagName("h4"); //通过父元素获取标签
+        var oImgs = oList.getElementsByTagName("img");
+        var oUls = oList.getElementsByTagName("ul");
+
+        //2.点击h4
+        for (var i = 0; i < oHs.length; i++) {
+            oHs[i].index = i;
+            oHs[i].tag = true;
+            oHs[i].onclick = function () {
+                if (this.tag == true) {
+                    //3.换图片，显示ul
+                    oImgs[this.index].src = "img/ico2.gif";
+                    oUls[this.index].style.display = "block";
+                    this.tag = false;
+                }else{
+                    oImgs[this.index].src = "img/ico1.gif";
+                    oUls[this.index].style.display = "none";
+                    this.tag = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

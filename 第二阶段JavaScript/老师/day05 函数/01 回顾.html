@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        div{
+            width: 300px;
+            height: 40px;
+            background: teal;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //1.点击li，打印被点击li的内容
+        var oLi = document.getElementsByTagName("li");
+
+        //2.循环添加点击事件
+        for(var i = 0;i<oLi.length;i++){
+            oLi[i].onclick = function(){
+                //打印被点击li的内容
+                console.log(oLi[i]); //没有在通过循环变量i，获取到对应被点击的标签
+                console.log(this);//触发事件的对象  点谁就是谁
+            }
+        }
+
+
+        //3.开关（多个）
+        var oDiv = document.getElementsByTagName("div");
+        for(var i =0;i<oDiv.length;i++){
+            oDiv[i].tag = true;
+            oDiv[i].onclick = function(){
+                if(this.tag == true){
+                    this.style.height = "100px";
+                    this.tag = false;
+                }else{
+                    this.style.height = "40px";
+                    this.tag = true;
+                }
+            }
+        }
+
+
+        
+
+
+    </script>
+</body>
+</html>

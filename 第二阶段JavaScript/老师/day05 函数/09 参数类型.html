@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" class='active' title="今天周五，真开心"></div>
+    <script>
+        /* 
+         参数类型：所有的js的数据类型都能做为函数的参数
+         number string boolean null undefined object(复合类型)
+         null和undefined都不会做为函数参数，没有意义，可能会报错
+        
+
+         1.先去实现效果
+         2.声明一个函数，把主要代码放入到函数中
+         3.找函数中可变的值做参数
+         4.调用调试
+        */
+        var oDiv = document.getElementById("box");
+
+        //声明一个函数，获取div元素的属性
+        function getAttr(attr) {
+            var a = oDiv[attr];
+            console.log(a);
+        }
+        getAttr("title");
+
+
+
+        //1.函数做为参数
+        function sayhello(){
+            console.log("你好呀，你吃饭了吗？");
+        }
+        function see(f){//var f = function sayhello(){console.log("你好呀，你吃饭了吗？");}
+            f();
+        }
+        see(sayhello);  
+
+    </script>
+</body>
+
+</html>

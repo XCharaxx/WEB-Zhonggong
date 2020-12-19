@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* 
+       参数：
+          什么时候用：函数中出来不能确定的值
+          形参(形式参数)： function 函数名(参数1,参数2)
+          实参(实际参数)： 函数名(10)
+
+
+       */
+
+        //单个参数
+        function sum(n){//var n;
+            var s = 0;
+            for(var i = 1;i<=n;i++){
+                s += i;
+            }
+            console.log(s);
+        }
+        //调用
+        sum(100);
+        sum(200);
+
+
+        //多个参数,多个参数之间用,隔开
+        //声明一个函数，计算两个数和
+        function add(a,b){
+            console.log(a+b);
+        }
+        add(10,20); //30
+
+
+        //声明一个函数，计算所有用户输入的和
+        //arguments:实参集合，如果参数个数确定不了，就不写形参，直接使用arguments
+        function s(){
+            console.log(arguments,arguments.length); //实参集合
+            console.log(arguments[0]); //10
+            var sum = 0;
+            for(var i = 0;i<arguments.length;i++){
+                sum += arguments[i];
+            }
+            console.log(sum);
+        }
+        s(10,20);
+        s(10,20,30);
+        s(10,20,30,40);
+
+        
+    </script>
+</body>
+</html>

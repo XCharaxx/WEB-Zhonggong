@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid teal;
+            text-align: center;
+            font:50px/300px "黑体";
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>菜单一</button>
+    <button>菜单二</button>
+    <button>菜单三</button>
+    <div style="display: block;">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+
+    <script>
+        //1.获取元素
+        var oBtns = document.getElementsByTagName("button")
+        var oDivs = document.getElementsByTagName("div");
+
+        //2.点击button
+        for(var i= 0;i<oBtns.length;i++){
+            oBtns[i].index = i;
+            oBtns[i].onclick = function(){
+                //4.全部清空
+                for(var j = 0;j<oDivs.length;j++){
+                    oDivs[j].style.display = "none";
+                }
+                //3.显示div（对应的）
+                oDivs[this.index].style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

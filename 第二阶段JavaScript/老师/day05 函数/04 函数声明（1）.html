@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        函数：是由事件驱动或者当他被调用时可重复使用的代码块
+        普通函数声明方式
+            声明:function 函数名(){ 需要重复使用的代码块}
+            调用:函数名()
+        表达式声明
+            声明：var 变量 = function (){需要重复使用的代码块}
+            调用：变量名()
+        */
+        
+        //1.普通函数声明方式
+        function study(){
+            console.log("沉迷学习，日渐消瘦");
+        }
+
+        //函数没有调用不会执行
+        console.log(study); //d打印函数
+        study();
+        study();
+        study(); //可重复使用代码块
+
+
+     
+        //2.表达式声明
+        var s = function (){
+            console.log("沉迷游戏，无法自拔");
+        }
+        s();
+        s();
+        s();
+        s();
+
+    </script>
+</body>
+</html>

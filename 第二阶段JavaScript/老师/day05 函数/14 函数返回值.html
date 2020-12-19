@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数就像一个小黑屋，里面都是局部作用域，外面都不能使用
+        function sum(a,b){
+            var c = a+b; //局部变量
+            function inn(){
+                console.log("函数");
+            }
+        }
+        sum(10,20);
+        //inn();
+        //console.log(c);
+
+
+        /* 
+          函数返回值：return 可以将函数内部的变量或函数返回到函数外面去使用
+          语法：return 需要返回的内容
+          特点：return 一次只能返回一个，写多个最后只会返回最后一个
+               函数中只要遇到return函数就结束了
+        */
+       //return 一次只能返回一个，写多个最后只会返回最后一个
+       function sum(a,b){
+           var c1 = a+b;
+           var c2 = a*b;
+           var c3 = a/b;
+           return [c1,c2,c3];
+       }
+       //函数调用表达式的结果就是函数的返回值
+       var s = sum(10,20);
+       console.log(s);
+
+
+       //函数中只要遇到return函数就结束了
+       function ss(){
+           return 1; //函数中只要遇到return函数就结束，后面的代码不会执行
+           console.log("js难吗？");
+       }
+       ss();
+       function add(){
+           s = 0;
+           for(var i = 1;i<=100;i++){
+               s += i; //s+=1
+               return s;//函数中只要遇到return函数就结束
+           }
+       }
+       var a = add();
+       console.log(a);//1
+
+
+       //声明一个函数，返回数组中最大的值
+       var arr = [6,4,8,1,9,5,3,2];
+       //原理：自定义一个最大值(arr[0]),和数组中所有的数组进行比较，如果数组中的值比较大，max存储最大值
+       function max(){
+           var m = arr[0]; //默认为第一个最大
+           //循环比较
+           for(var i = 0;i<arr.length;i++){
+               //如果数组中的值大于m中的值，
+               if(arr[i]>m){
+                   m = arr[i];
+               }
+           }
+           return m;
+       }
+       var m = max();
+       console.log(m);
+
+       //返回函数
+       function out(){
+           function inn(){
+               console.log("我是一个俄罗斯套娃");
+           }
+           return inn;
+       }
+       var f = out(); //f=function inn(){}
+       f();
+    </script>
+</body>
+</html>

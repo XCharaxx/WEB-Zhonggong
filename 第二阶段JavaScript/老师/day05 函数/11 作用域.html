@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          作用域：区域  变量或函数的有效使用范围 （生命周期）
+          全局作用域，局部作用域
+
+          全局变量/函数： 在函数外声明的变量/函数，叫全局变量/函数，可以在当前页面内任意地方使用和修改，会一直存储在内存，知道页面关闭
+
+          局部变量/函数：在函数内声明的变量/函数，叫局部变量/函数，只能在函数内部使用，出了函数的{}就销毁了
+          作用域链：
+        */
+
+        //全局变量
+        var x = 10;
+        console.log(x); //10;
+
+        x = 30;
+        console.log(x); //30
+
+
+        function fun(){
+            console.log(x);//30
+            x = 100;
+        }
+        fun();
+        console.log(x); //100
+
+
+        //局部变量
+        function fun2(m){//var m;
+            var y = 1;
+            console.log(y);
+        }
+        fun2(10);
+        //console.log(y);// y is not defined  没有声明变量y
+        //console.log(m);
+        
+
+        //作用域链：js中的一种查找机制，先查找自己作用域范围内是否存在，有就使用自己的，没有就往上一级作用域查找，依次往上查找，一直找到全局，全局没有报错，is not defined
+        var n = 10;
+        function fun3(){
+            var n = 40;
+            function inner(){
+                // var n = 100;
+                console.log(n);
+            }
+            inner();
+        }
+        fun3();
+
+
+    
+
+
+        
+    </script>
+</body>
+</html>

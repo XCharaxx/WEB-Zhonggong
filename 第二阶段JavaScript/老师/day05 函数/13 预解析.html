@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          预解析：浏览器在解析js的过程中，至少有两步，预解析，逐行执行
+            
+            预解析： 找一些东西，找var function，把var 和function的声明提到最前面
+                    找var：提前声明一下变量，存储在内存中，如果变量同名声明一次
+                    function:提前声明函数，存储在内存中，如果同名会多次声明
+            逐行执行：
+
+            所有作用域代码在执行之前都会进行预解析
+        */
+
+        //---------------------------------------------
+        //找var
+        console.log(a);
+        var a = 10;
+        console.log(a);
+        var a = 20;
+        console.log(a);
+
+        //---------------------------------------------------
+        //找function
+        console.log(sum); 
+        function sum(){
+            console.log("函数1");
+        }
+        console.log(sum); 
+        function sum(){
+            console.log("函数2");
+        }
+        console.log(sum);
+
+
+        //--------------------------------------------------------
+        //普通函数声明和表达式声明方式的区别？
+        add(); 
+        function add(){
+            console.log("和");
+        }
+
+        var addd = function(){
+            console.log("addd");
+        }
+
+
+        //----------------------------------------------------------
+        console.log(c);
+        var c = 10;
+        function c(){
+            console.log("函数1");
+        }
+        console.log(c); 
+        var c = 20;
+        function c(){
+            console.log("函数2");
+        }
+        console.log(c);
+        c();
+
+
+        //----------------------------------------------------------
+        //局部作用域预解析
+        function sum(){
+            console.log(a);
+            var a = 10;
+        }
+        sum();
+
+
+        //------------------------------------------------
+        var x = 10;
+        function fun1(){
+            console.log(x); 
+            var x = 20;
+        }
+        fun1();
+
+
+        //---------------------------------------------
+        function fun2(a){
+            console.log(a);
+            var a = 20;
+            console.log(a);
+        }
+        fun2(100);
+    </script>
+</body>
+</html>

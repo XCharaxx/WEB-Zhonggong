@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明一个函数，传入两个值a,b，如果a>b:调用gs1，否则调用gs2，    函数也需要作为参数的形式传入
+        function js(a,b,g1,g2){//a=10,b=20,g1=function 
+            if(a>b){
+                g1();
+            }else{
+                g2();
+            }
+        }
+        js(10,20);
+    </script>
+</body>
+</html>

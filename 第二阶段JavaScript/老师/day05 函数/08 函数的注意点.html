@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //形参个数与实参个数不一致的时候，一一对应，没有被赋值的就是undefined，多了的不管
+        function sum(a,b){//var a,b;
+            console.log(a+b);
+        }
+        sum(10); //NaN 实参给形参赋值的时候是一一对应 a=10,b=undefined : NaN
+        sum(10,20);//30        a = 10,b=20
+        sum(10,20,30);//30     a = 10,b=20
+
+
+        //同名会覆盖（函数和函数，函数和变量），后面会覆盖前面
+        function add(x,y){
+            console.log(x+y);
+        }
+        function add(x,y){
+            console.log(x*y);
+        }
+        // var add = 10;
+        // console.log(add);
+        add(10,20); //200  add is  not a function
+
+
+        //arguments和形参是一个东西，一改全改
+        function fun(a){
+            arguments[0] = 100;
+            console.log(a); //100
+
+            a = 200;
+            console.log(arguments[0]);
+        }
+        fun(10);
+
+
+        
+        //普通函数中this的指向----window
+        function fu(){
+            console.log(this);
+        }
+        fu();
+    </script>
+</body>
+</html>
