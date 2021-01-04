@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //---------------------单个字符----------------------
+        // . : 匹配除换行符以外的任意字符  \n
+        var str = "\nnihaoma\nimok";
+        var reg = /./;
+        console.log(reg.exec(str)); //[n index:1]
+
+        var str = "webtt1116";//web??1116
+        var reg = /web..1116/;
+        console.log(reg.exec(str));//["webtt1116"]
+
+        // []:匹配字符集中的任意一位字符 [@#$%&] [0-9][a-zA-Z]
+        var str = "0hahahah!";
+        var reg = /[0-9A-Za-z]/g;
+        console.log(reg.exec(str)); //0
+
+        // [^]:匹配除字符集中的任意一位字符
+        var reg = /[^a-z0-9]/;
+        var str = "fsrww645#yry";
+        console.log(reg.exec(str)); //#
+
+        //\d:匹配一位数字  \D:匹配一位非数字
+        var reg = /\d\d\d\d\d\d/;
+        console.log(reg.exec("123")); //null
+
+        //\w:匹配数字字母下划线  \W：匹配非数字字母下划线
+        //匹配账号   5位，数字、字母、下划线组成
+        var str = "txf_1"
+        var reg = /\w\w\w\w\w/;
+        console.log(reg.exec(str)); //["txf_1"]
+
+        //\s:匹配空格    \S：匹配非空格
+        var str = "          hello world!          ";
+        var reg = /\s/g;
+        console.log(str.replace(reg,"")); //helloworld!
+
+        // ^: ^a:以a开头     $:  a$ : 以a结尾
+        var str = "666666";
+        var reg = /^\d\d\d\d\d\d$/;
+        console.log(reg.exec(str)); //"666666"
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

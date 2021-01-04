@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        原型对象prototype：每一个函数在声明的时候，都会创建一个原型对象prototype，用于存储公共的共享的属性和方法
+
+        原型属性__proto__:每一个实例对象在创建的时候，都会创建一个原型属性__proto__,这个原型属性指向prototype
+         */
+
+
+         //1.获取原型
+        console.dir(String);
+        console.log(String.prototype); //原型对象
+        //console.log(String.prototype.indexOf()); //获取原型中的方法
+
+        //2.获取原型属性
+        var s1 = new String("12");
+        console.log(s1.__proto__); //原型属性
+        console.log(String.prototype == s1.__proto__); //true
+    </script>
+</body>
+</html>

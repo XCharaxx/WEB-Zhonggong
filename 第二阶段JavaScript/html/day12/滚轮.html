@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text" value="0">
+    <img src="./img/1.jpg" alt="">
+    <script>
+       var oIns =document.getElementsByTagName("input")[0];
+       var oImg =document.getElementsByTagName("img")[0];
+       var n=0;
+       function up(){
+           n++;
+           oIns.value = n;
+       }
+       function downs(){
+           n--;
+           oIns.value =n;
+       }
+       function imup(){
+           n=n+0.1;
+           oImg.style.transform = "scale(" + n + ")";
+       }
+       function imdown(){
+           n=n-0.1;
+            oImg.style.transform = "scale(" + n + ")";
+       }
+       mousewheel(oIns,up,downs);
+       mousewheel(oImg,imup,imdown);
+        function mousewheel(elem, upFun, downFun) {
+            //1.添加滚轮事件
+            elem.onmousewheel = scroll;
+            if (elem.addEventListener) {
+                elem.addEventListener("DOMMouseScroll", scroll)
+            }
+
+            //2.声明一个滚动事件发生时调用的函数
+            function scroll(ev) {
+                var oEv = window.event || ev;
+                //console.log(oEv.wheelDelta); //chrome ie
+                //console.log(oEv.detail);//ff
+
+                var tag = true; //上--true   下--false
+                if (oEv.wheelDelta) {
+                    tag = oEv.wheelDelta > 0 ? true : false
+                } else {
+                    tag = oEv.detail < 0 ? true : false
+                }
+
+                if (tag) {
+                    upFun()
+                } else {
+                    downFun();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

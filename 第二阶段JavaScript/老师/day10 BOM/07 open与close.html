@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- open():打开一个新窗口，如果写在行间，需要添加window-->
+    <button onclick='window.open("https://www.taobao.com/")'>淘宝</button>
+    <button onclick='cOpen()'>ujiuye</button>
+    <button onclick="window.close()">关闭</button>
+    <script>
+
+        function cOpen(){
+            //open(url,target,设置窗口信息，是否取代原有页面在浏览记录中的位置)
+            //url：地址
+            //target：_self   _blank
+            //有返回值，返回新窗口的window
+            var newWindow = open("http://www.ujiuye.com","_blank","width:800px;height:800px");
+            newWindow.alert("web1116,到此一游");
+        }
+    </script>
+</body>
+</html>

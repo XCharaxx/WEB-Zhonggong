@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 默认行为：标签，浏览器自带的默认的操作
+        a的默认跳转
+        双击默认选中文字
+        拖拽图片默认保存
+        submit默认提交
+        右击默认显示菜单
+
+        阻止默认行为
+        标签.事件     return false
+        标准浏览器    ev.preventDefault();
+        ie浏览器      ev.returnValue = false;
+
+    -->
+    <a href="http://www.baidu.com">百度</a>
+
+    <script src="./ujiuye.js"></script>
+    <script>
+        var oA = document.getElementsByTagName("a")[0];
+
+        //阻止默认行为
+        // oA.onclick = function(){
+        //     return false;
+        // }
+
+       
+        //绑定
+        bind(oA,"click",function(ev){
+            var ev = window.event || ev;
+            // 标准浏览器    ev.preventDefault();
+            // ie浏览器      ev.returnValue = false;
+            ev.preventDefault?ev.preventDefault():ev.returnValue = false;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>代码敲100遍</li>
+        <li>单词都记下来</li>
+        <li>不睡觉</li>
+    </ul>
+
+    <script>
+        var oUl = document.getElementsByTagName("ul")[0];
+        var oLi = document.getElementsByTagName("li");
+        for(var i = 0;i<oLi.length;i++){
+            oLi[i].onclick = function(){
+                console.log("老师有点变态");
+            }
+        }
+
+
+        //2.创建节点： document.createElement("标签名")
+        var cLi = document.createElement("li");
+        //cLi.innerHTML = "完成一个项目";
+
+        //3.创建文本节点：document.createTextNode("文本内容")
+        var text = document.createTextNode("完成两个项目");
+        //把文本添加到标签中
+        cLi.appendChild(text);
+
+      
+        //1.追加：在父元素的末尾添加  父节点.appendChild(子节点)
+        oUl.appendChild(cLi);
+
+
+        //4.在某个元素之前添加: 父节点.insertBefore(newChild，refChild)
+        var iLi = document.createElement("li");
+        iLi.innerHTML = "不吃饭";
+        oUl.insertBefore(iLi,oLi[2]);
+
+
+        //添加一个已经存在的标签，发生物理位移
+        oUl.appendChild(iLi);
+        
+
+    </script>
+</body>
+</html>

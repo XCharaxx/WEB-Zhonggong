@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+         1、http://item.taobo.com/item.html?a=1&b=2&c=&d=xxx&e,请写
+        一段js程序提取url中各个get参数(参数名和参数个数不确定)，将其key-value
+        形式返回到一个json结构中，如{a:“1”,b:“2”，c:“”，d：“xxx”，e:undefined}
+         */
+        var str = "http://item.taobo.com/item.html?a=1&b=2&c=&d=xxx&e";
+        var json = {};
+        //1.获取get参数(?号后面的内容)
+        str = str.split("?")[1];  //a=1&b=2&c=&d=xxx&e
+
+        //2.分割成一对一对的内容
+        var getArr = str.split("&"); //["a=1", "b=2", "c=", "d=xxx", "e"]
+
+        //3.把每一组中的key和value分割开，添加到json中
+        for (var i = 0; i < getArr.length; i++) {
+            var arr = getArr[i].split("=");  //["a","1"]
+            json[arr[0]] = arr[1];
+        }
+        console.log(json);
+
+
+
+        //2.转驼峰   font-size 转换为  fontSize
+        var str = "background-color";
+        //思路：先找到-，替换-和后面紧跟着的那个字符串，换成前面那个字符的大写
+        //1.找到-的位置
+        var n = str.indexOf("-");
+        str = str.replace(str.substr(n,2),str.charAt(n+1).toUpperCase());
+        console.log(str);
+
+
+         //3.声明一个函数，实现数组去重的功能
+         function quchong(arr){
+             var array = [];
+             for(var i = 0;i<arr.length;i++){
+                 //如果数组中没有这个元素就添加
+                 if(array.indexOf(arr[i]) == -1){
+                    array.push(arr[i]);
+                 }
+             }
+         }
+
+         //4.写一个你掌握的排序算法
+         //1.选择排序：那第一个和后面所有的 进行比较，如果前面的比较大，交换位置
+         for(var i = 0;i<arr.length;i++){
+             for(var j = i+1;j<arr.length;j++){
+                 if(arr[i]>arr[j]){
+                     //交换位置
+                 }
+             }
+         }
+
+
+         //2.冒泡排序：相邻的两个进行比较
+         for(var i = 0;i<arr.length;i++){
+             for(var j = 0;j<arr.length-1-i;j++){
+                 if(arr[j] > arr[j+1]){
+                     //交换位置
+                 }
+             }
+         }
+
+         //3.快速排序
+         function quickSort(arr){
+            //5.结束递归的条件
+            if(arr.length<=1) return arr;
+
+            //1.获取中间值
+            var middle = arr.splice(parseInt(arr.length/2),1)[0];
+
+            //2.声明两个空数组
+            var left = [],right=[];
+
+            //3.比较，比中间值小的放前面，大的放后面
+            for(var i = 0;i<arr.length;i++){
+                if(middle>arr[i]){
+                    left.push(arr[i]);
+                }else{
+                    right.push(arr[i]);
+                }
+            }
+
+            //4.组合数组
+            return quickSort(left).concat(middle,quickSort(right));
+         }
+         
+    </script>
+</body>
+
+</html>

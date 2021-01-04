@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>疯狂前进</button>
+    <div></div>
+    <script>
+        //1.获取元素（通过tagName，通过calssName获取到的都是集合,不管元素是几个，一定要加下标）
+        var oBtn = document.getElementsByTagName("button")[0];
+        var oDiv = document.getElementsByTagName("div")[0];
+        var n = 0;
+
+        //2.点击button，移动div
+        oBtn.onclick = function () {
+            var timer = setInterval(function () {
+                //4.改变运动值
+                n += 10;
+
+                //5.停止定时器  500
+                if(n>=500){
+                    n = 500;
+                    clearInterval(timer);
+                }
+                
+                //3.移动div
+                oDiv.style.left = n + "px";//0  10 20 30 40
+            }, 30);
+        }
+    </script>
+</body>
+
+</html>

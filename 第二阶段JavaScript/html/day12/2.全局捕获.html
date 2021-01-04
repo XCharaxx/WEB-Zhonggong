@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <p>eesfsfsfsfsfsfsfsfsf</p>
+    <img src="./img/1.jpg" alt="">
+    <script>
+       var oImg =document.getElementsByTagName("img")[0];
+        oImg.onmousedown =function(ev){
+            var ev =window.event||ev; 
+            var xw = ev.clientX - oImg.offsetLeft;
+             var xh =ev.clientY - oImg.offsetTop;
+           document.onmousemove =function(ev){
+                var ev = window.event || ev; 
+                oImg.style.left = ev.clientX-xw +"px";
+                oImg.style.top =ev.clientY-xh +"px";
+            }
+            
+           oImg.onmouseup =function(){
+            document.onmousemove =null;
+            if(oImg.releaseCapture){
+                 oImg.releaseCapture();
+            }
+           
+        } 
+        if( oImg.setCapture){
+                oImg.setCapture();
+            }
+                 
+           return false;  
+        }
+      
+          
+    </script>
+</body>
+</html>

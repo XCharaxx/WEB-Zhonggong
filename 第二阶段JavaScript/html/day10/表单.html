@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text]{
+              border: 1px solid skyblue;
+             outline: none;
+             margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="frm">
+    <input type="text" name="user" id="">&nbsp;&nbsp;&nbsp;<span></span><br>
+    <input type="submit" name="sub" id="">
+</form>
+    <script>
+        var oForm = document.getElementById("frm");
+        var oSpan =document.getElementsByTagName("span")[0];
+       
+        oForm.user.onfocus =function(){
+            this.style.backgroundColor="pink";
+        }
+         oForm.user.onblur =function(){
+             this.style.backgroundColor ="white";
+         }
+         oForm.user.focus();
+        oForm.user.oninput =function(){
+            if(this.value.length>12&& this.value.length<=24){
+                oSpan.innerHTML = "强";
+                oSpan.style.color="green";
+            }else if(this.value.length > 9 && this.value.length <= 12)
+            {
+                   oSpan.innerHTML = "中"; 
+                   oSpan.style.color = "pink";
+            }else if(this.value.length > 6 && this.value.length <= 9){
+                 oSpan.innerHTML = "弱"; 
+                 oSpan.style.color = "yellow";
+            }else{
+                 oSpan.innerHTML = "密码需要在6-24位之间"; 
+            }
+        }
+        oForm.onsubmit =function(){
+            if(oForm.user.value==""){
+                 alert("请输入用户名");
+                 return false;
+               
+            } 
+           
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="user">
+        <input type="text" name="pass">
+        <input type="submit">
+    </form>
+    <script>
+        //1.字面量创建
+        var str = "web";
+        //2.字面量创建
+        var str = new String("Web");
+
+        //字符串的方法
+        /* 
+        1.charAt(下标)：获取对应下标的字符
+        2.charCodeAt(下标)：获取对应下标的字符编码  "0"--48  "a"--97  "A"--65
+        3.indexOf(searchValue,start):查询某个字符在另一个字符串中首次出现的位置，出现返回对应的下标，没有出现返回-1； 作用：判断字符串中是否某个特定字符的存在
+        4.lastIndexOf(searchValue,start):查询某个字符在另一个字符串中最后一次出现的位置，出现返回对应的下标，没有出现返回-1； 从后往前找
+        5.substring(start，end)：从start开始截取到end，包括开始不包括end,负数为0
+        6.slice(start，end)：从start开始截取到end，包括开始不包括end,负数为倒数第几个
+        7.substr(star,length):从start开始，截取几个
+        8.replace(searchValue,replaceValue):替换，一次只能换一个
+        */
+
+
+
+        //9.大小写转换
+        var s1 = "aArT5";
+        var s2 = "aart5";
+        console.log(s1==s2); //false 一位一位比较，比较的是编码
+
+        //转换为大写：toUpperCase();
+        console.log(s1.toUpperCase()); //AART5
+
+        //转换为小写：toLowerCase();
+        console.log(s1.toLowerCase());//aart5
+
+        //不区分大小写比较  比较的时候转换为一样的（小写，大写）
+        console.log(s1.toLowerCase()==s2.toLowerCase());//true
+
+
+
+        //10.split(splitter,length):按分割标记，将字符串分割成数组
+        var date = "2020-12-23";
+        var arr = date.split("-");
+        console.log(arr); // ["2020", "12", "23"]
+
+        var str = "http://item.taobo.com/item.html?a=1&b=2&c=&d=xxx&e";
+        console.log(str.substring(str.indexOf("?")+1));
+        console.log(str.split("?")[1]);
+
+        //11.trim() : 去除字符串首尾空格
+        var str="                     hello world               ";
+        console.log("|"+str+"|");
+        console.log("|"+str.trim()+"|");
+        console.log("|"+str.trimLeft()+"|");
+        console.log("|"+str.trimRight()+"|");
+
+        
+    </script>
+</body>
+</html>

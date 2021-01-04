@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //file:///E:/web%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/day10%20BOM/08%20location.html#div?wd=%E5%85%83%E6%97%A6&user=txf
+        console.log(location);
+        console.log(window.location.href); //设置访问当前窗口显示的url地址
+        console.log(location.hash); //哈希  #div
+        console.log(location.search);//搜索内容  #div?wd=元旦&user=txf
+        console.log(location.protocol); //协议 http  https
+        setTimeout(function(){
+            //location.href = "http://www.ujiuye.com";
+            // location.reload();//刷新
+        },3000);
+
+        alert(window.navigator.userAgent);
+    
+    </script>
+</body>
+</html>

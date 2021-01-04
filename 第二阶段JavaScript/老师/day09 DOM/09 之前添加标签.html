@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>button</li>
+        <li>button</li>
+        <li>button</li>
+    </ul>
+    <script>
+        var oUl = document.getElementsByTagName("ul")[0];
+        var oLi = document.getElementsByTagName("li");
+        for(var i = 0;i<oLi.length;i++){
+            oLi[i].onclick = function(){
+                console.log("我是一个button");
+            }
+        }
+        oUl.innerHTML += "<li>button</li>";
+        //a += 10    a = a+10
+        //  oUl.innerHTML = oUl.innerHTML+ "<li>button</li>";
+    </script>
+</body>
+</html>

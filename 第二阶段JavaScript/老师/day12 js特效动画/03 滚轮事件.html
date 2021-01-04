@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        /* 
+        添加滚轮事件： 
+            chrome、ie :  onmousewheel
+            ff:添加一定要通过事件绑定方式添加  addEventListener("DOMMouseScroll")
+        滚动方向：
+            chrome、ie : ev.wheelDelta    上120    下-120
+            ff:          ev.detail        上-3     下 3
+        */
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //1.添加滚轮事件
+        oDiv.onmousewheel = scroll;
+        if (oDiv.addEventListener) {
+            oDiv.addEventListener("DOMMouseScroll", scroll)
+        }
+
+        //2.声明一个滚动事件发生时调用的函数
+        function scroll(ev) {
+            var oEv = window.event || ev;
+            //console.log(oEv.wheelDelta); //chrome ie
+            //console.log(oEv.detail);//ff
+
+            var tag = true; //上--true   下--false
+            if (oEv.wheelDelta) {
+                tag = oEv.wheelDelta > 0 ? true : false
+            } else {
+                tag = oEv.detail < 0 ? true : false
+            }
+
+            if (tag) {
+                console.log("上");
+            } else {
+                console.log("下");
+            }
+        }
+
+        function mousewheel(elem,upFun,downFun) {
+            //1.添加滚轮事件
+            elem.onmousewheel = scroll;
+            if (elem.addEventListener) {
+                elem.addEventListener("DOMMouseScroll", scroll)
+            }
+
+            //2.声明一个滚动事件发生时调用的函数
+            function scroll(ev) {
+                var oEv = window.event || ev;
+                //console.log(oEv.wheelDelta); //chrome ie
+                //console.log(oEv.detail);//ff
+
+                var tag = true; //上--true   下--false
+                if (oEv.wheelDelta) {
+                    tag = oEv.wheelDelta > 0 ? true : false
+                } else {
+                    tag = oEv.detail < 0 ? true : false
+                }
+
+                if (tag) {
+                    upFun()
+                } else {
+                    downFun();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

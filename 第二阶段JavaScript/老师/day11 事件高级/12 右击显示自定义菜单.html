@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>冒泡：从里往外</li>
+        <li>阻止冒泡：stopPropagation() cancelBubble=true</li>
+        <li>默认行为：标签，浏览器自带的默认的操作</li>
+        <li>阻止默认行为：return false</li>
+        <li>阻止默认行为：ev.preventDefault?ev.preventDefault():ev.returnValue=false</li>
+    </ul>
+
+    <script>
+        var oUl = document.getElementsByTagName("ul")[0];
+
+        //1.右击显示自定义菜单
+        document.oncontextmenu = function(ev){
+            var ev = window.event || ev;
+            //2.显示自定义菜单
+            oUl.style.display = "block";
+
+            //3.鼠标在那，菜单显示在那
+            oUl.style.left = ev.clientX + "px";
+            oUl.style.top = ev.clientY + "px";
+            //取消默认菜单
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 概念：能够访问其他函数内部变量的函数，函数套函数
+           特点：闭包中使用的变量会一直存储在内存中，类似全局变量，避免全局污染
+           缺点：可能会造成内存泄漏 不用的时候记得释放掉  =null
+        */
+        function fun(){
+            var a = 10;
+            console.log(a++); //++在前，先自加，后运算  ++在后，先运算，后自加
+        }
+        fun();//10
+        fun();//10
+        fun();//10
+        //console.log(a); //a is not defined  a是局部变量
+
+
+        //闭包：能够访问其他函数内部变量的函数，函数套函数
+        function outer(){
+            var b = 10;
+            return function inner(){
+                console.log(b++);   //内部作用域可以使用外部作用域中变量和函数
+            }
+        }
+        var f = outer();  //f = function inner(){}
+        console.log(f);
+
+        f(); //10
+        f(); //11
+        f(); //12
+        f = null;
+
+        //每一次的闭包都是独立，不会相互影响
+        var f1 = outer();
+        f1();//10
+
+       
+
+        
+
+    </script>
+</body>
+</html>

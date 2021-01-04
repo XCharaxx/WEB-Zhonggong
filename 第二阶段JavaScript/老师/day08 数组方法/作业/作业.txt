@@ -1,0 +1,18 @@
+var arr = [
+{ "src": "./images/1.jpg", "title": "黄景瑜1",id='1' },
+{ "src": "./images/2.jpg", "title": "朱一龙2",id='1' },
+{ "src": "./images/3.jpg", "title": "PP3",id='1'},
+{ "src": "./images/4.jpg", "title": "BK4",id='1'},
+{ "src": "./images/5.jpg", "title": "PPBK5",id='1'},
+{ "src": "./images/6.jpg", "title": "黄俊捷6",id='1' },
+{ "src": "./images/7.jpg", "title": "戳爷7",id='1' },
+{ "src": "./images/8.jpg", "title": "权志龙8",id='1' }
+];
+
+
+1.先实现所有的布局效果
+2.点击按钮，对数组进行排序
+  清空原来的ul里面  ul.innerHTML = "";
+3.将数组中的数据生成标签，写入到ul中
+
+  类似  ul.innerHTML += "<li><img src='"+arr[i].src+"'></li>"

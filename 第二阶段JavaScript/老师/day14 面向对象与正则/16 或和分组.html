@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //|
+        //验证网址    com cn  net  edu org 
+        var str = "http://www.ujiuye.org";
+        var reg = /^https?:\/\/www\.\w+\.(com|cn|net|edu|org)$/;
+        console.log(reg.exec(str)); //"http://www.ujiuye.org",
+
+        //():分组
+        var str = "http://www.ujiuye.org"
+        var reg = /(http|https):\/\/www\.\w+\.(com|cn|net|edu|org)/;
+        console.log(reg.exec(str)); //["http://www.ujiuye.org", "http", "org"]
+        console.log(RegExp.$1); //http
+        console.log(RegExp.$2); //org
+
+        var str = "hello world";
+        var reg = /(hello) (world)/;
+        console.log(str.replace(reg,"$2 $1")); //world hello
+
+        
+
+
+
+    </script>
+</body>
+</html>

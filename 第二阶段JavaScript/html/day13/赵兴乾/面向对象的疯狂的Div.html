@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>疯狂前进</button>
+    <button>疯狂后退</button>
+    <div></div>
+     
+      <script>
+       function Divv(){
+            this.Btn = document.getElementsByTagName("button");
+            this.Div = document.getElementsByTagName("div")[0];
+            var that = this;
+            this.init = function(){
+                
+                 this.Btn[0].onclick = function(){
+                        that.divforword(that.Div);
+                    }
+                this.Btn[1].onclick =function(){
+                       that.divback(that.Div);
+                }
+                   
+            
+           
+
+            }
+            this.init();
+            this.divforword =function(dd){
+                        //定时器里的函数为普通函数，this指向为window,var there = this;
+                        clearInterval(this.Div.timer);
+               this.Div.timer = setInterval(function () {
+                    if(dd.currentStyle){
+                        var w = dd.currentStyle.left; 
+                    }else{
+                       var w = getComputedStyle(dd).left;
+                    }
+                    var i = parseInt(w) + 10;
+                    if (i >= 500) {
+                        i = 500;
+                        clearInterval(this.Div.timer);
+                    }
+                    dd.style.left = i + "px";
+                }, 30);
+            }
+            this.divback =function(dd){
+                //定时器里的函数为普通函数，this指向为window,var there = this;
+                      clearInterval(this.Div.timer);
+               this.Div.timer = setInterval(function () {
+                     if (dd.currentStyle) {
+                        var w = dd.currentStyle.left;
+                    } else {
+                        var w = getComputedStyle(dd).left;
+                    }
+                    var i = parseInt(w) - 10;
+                    if (i <= 0) {
+                        i = 0;
+                        clearInterval(this.Div.timer);
+                    }
+                    dd.style.left = i + "px";
+                }, 30);
+            }
+       }
+       //实例对象
+      new Divv();
+      </script>
+
+    </body>
+    </html>

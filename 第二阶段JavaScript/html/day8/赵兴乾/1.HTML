@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4682b4;
+            color: white;
+            font-size: 14px;
+            padding: 5px 8px;
+            border: none;
+        }
+
+        div {
+            display: flex;
+            width: 900px;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 900px;
+            list-style: none;
+            margin: 0 auto;
+
+
+        }
+
+        ul li {
+
+            width: 200px;
+            height: 250px;
+
+        }
+
+        ul li img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><button>从大到小</button>
+        <button>随机排序</button>
+    </p>
+
+    <ul>
+        <!-- <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li>
+        <li><img src="./img/1.jpg" alt=""><p>黄景瑜1</p></li> -->
+    </ul>
+
+    <script>
+        var oBtn = document.getElementsByTagName("button");
+        var oUl = document.getElementsByTagName("ul")[0];
+        var arr = [
+            { "src": "./img/1.jpg", "title": "坂井泉水1", id: '1' },
+            { "src": "./img/2.jpg", "title": "章若楠2", id: '2' },
+            { "src": "./img/3.jpg", "title": "肖战3", id: '3' },
+            { "src": "./img/4.jpg", "title": "坂井泉水4", id: '4' },
+            { "src": "./img/5.jpg", "title": "坂井泉水5", id: '5' },
+            { "src": "./img/6.jpg", "title": "杨洋6", id: '6' },
+            { "src": "./img/7.jpg", "title": "坂井泉水7", id: '7' },
+            { "src": "./img/8.jpg", "title": "章若楠8", id: '8' }
+        ];
+        for (var i = 0; i < arr.length; i++) {
+            oUl.innerHTML += "<li><img src='" + arr[i].src + "'><p>" + arr[i].title + "</p></li>";
+        }
+        var tag = true;
+        oBtn[0].onclick = function () {
+            oUl.innerHTML = "";
+            if (tag == true) {
+                arr.sort(function (a, b) {
+                    return b.id - a.id;
+                });
+                oBtn[0].innerHTML="从小到大";
+                tag = false;
+                
+            } else {
+                arr.sort(function (a, b) {
+                    return a.id - b.id;
+                });
+                 oBtn[0].innerHTML = "从大到小";
+                tag = true;
+            }
+
+            for (var i = 0; i < arr.length; i++) {
+                oUl.innerHTML += "<li><img src='" + arr[i].src + "'><p>" + arr[i].title + "</p></li>";
+            }
+        }
+        oBtn[1].onclick = function () {
+            oUl.innerHTML = "";
+            arr.sort(function (a, b) {
+                return Math.random() - 0.5;
+            });
+            for (var i = 0; i < arr.length; i++) {
+                oUl.innerHTML += "<li><img src='" + arr[i].src + "'><p>" + arr[i].title + "</p></li>";
+            }
+        }
+    </script>
+
+
+
+    <!--   1.先实现所有的布局效果
+    2.点击按钮，对数组进行排序
+    清空原来的ul里面 ul.innerHTML = "";
+    3.将数组中的数据生成标签，写入到ul中 -->
+
+    <!-- ul.innerHTML += "<li><img src='"+arr[i].src+"'></li>" -->
+
+</body>
+
+</html>

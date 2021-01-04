@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(name){
+            this.name = name;
+        }
+        Student.prototype.age = 12;
+        Student.prototype.run =function(){
+            console.log("sky");
+        }
+
+
+        var s1 = new Student("李明");
+        console.log(s1.name);
+         console.log(s1.age);
+         s1.run();
+    </script>
+</body>
+</html>

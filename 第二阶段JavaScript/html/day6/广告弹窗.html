@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        border: 2px solid teal;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        display: none;
+    }
+
+    button {
+        float: right;
+    }
+</style>
+</head>
+<body>
+    <img src="./img/1.jpg" alt="">
+    <div>
+        
+        <button>X</button> 
+    </div>
+        <script>
+            var oDiv =document.getElementsByTagName("div")[0];
+            var oBtn =document.getElementsByTagName("button")[0];
+            setTimeout(function(){
+                oDiv.style.display = "block";
+            },2000);
+            oBtn.onclick =function(){
+                oDiv.style.display = "none";
+                 setTimeout(function () {
+                    oDiv.style.display = "block";
+                }, 2000);
+            }
+        </script>
+       
+
+
+
+       <script>
+           var oImg =document.getElementsByTagName("img")[0];
+           arr = ["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg"];
+           var i=1;
+        
+                oImg.onmouseover =function(){
+                    clearInterval(timer);
+                }
+                oImg.onmouseout = function(){
+                  timer = setInterval(function(){
+                   
+                   oImg.src = arr[i];
+                   i++;
+                   if(i==arr.length){
+                       i=0;
+                   }
+           },2000);
+                }
+               
+            var timer = setInterval(function () {
+
+                    oImg.src = arr[i];
+                    i++;
+                    if (i == arr.length) {
+                        i = 0;
+                    }
+                }, 2000);
+          
+       </script>
+</body>
+</html>

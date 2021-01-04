@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.(?=) : 前瞻 正向肯定预查  要检测的字符的后面必须是什么
+        var str = "qew3re4@ewr5rwe";
+        var reg = /\d(?=@)/;//检测数字，@前面的数字
+        console.log(reg.exec(str)); //4
+
+        //2.(?!)：负前瞻 正向否定预查   要检测的字符的后面不能是什么
+        var reg = /\d(?![a-z])/;//检测数字，后面不能是字母
+        console.log(reg.exec(str)); //4
+
+        //3.验证用户名，必须是数字和字母的组合 
+        var user = "rwr12ewrew";
+        //(?=.*[a-zA-Z].*) :必须有字母  (?=.*[0-9].*)：必须有数字
+        var reg = /(?=.*[a-zA-Z].*)(?=.*[0-9].*)^[0-9a-zA-Z]+$/;
+        console.log(reg.exec(user));
+
+        var user = "13213e21312";
+        //(?!^[a-zA-Z]+$):不能纯字母  (?!^[0-9]+$):不能纯数字
+        var reg = /(?!^[a-zA-Z]+$)(?!^[0-9]+$)^[0-9a-zA-Z]+$/;
+        console.log(reg.exec(user));
+
+        //4. (?<=) 后顾 反向肯定预查   要检测的字符的前面必须是什么
+        var str = "ujiuyeweb1116web1102";  
+        var reg = /(?<=\d)web/; //检测web，前面必须是数字
+        console.log(reg.exec(str)); //["web", index: 13]
+
+        //5. (?<!) 负后顾 反向否定预查   要检测的字符的前面不能是什么
+        var reg = /(?<!\d)web/; //检测web，前面不能是数字
+        console.log(reg.exec(str)); //["web", index: 6]
+
+
+
+    </script>
+</body>
+</html>

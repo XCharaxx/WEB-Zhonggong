@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: deeppink;
+            border: 10px solid teal;
+            /* padding: 10px; */
+            margin: 200px;
+            position: relative;
+        }
+        p{
+           margin: 0;
+           padding: 0;
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    <script>
+        /* 
+          offset系列(元素的占位宽高)
+            标签.offsetWidth：元素的占位宽  content+padding+border
+            标签.offsetHeight：元素的占位高
+
+            标签.offsetTop: 获取元素的顶部到定位父元素的位置，如果没有定位父元素获取到body的位置
+            标签.offsetLeft: 获取元素的左边到定位父元素的位置，如果没有定位父元素获取到body的位置
+
+            一般用于获取当前元素在页面中的位置
+
+         */
+        var oDiv = document.getElementsByTagName("div")[0];
+        var oP = document.getElementsByTagName("p")[0];
+
+        //元素的占位宽  content+padding+border
+        console.log(oDiv.offsetWidth); //240
+        console.log(oDiv.offsetHeight); //240
+        
+        //标签.offsetTop: 获取元素的顶部到定位父元素的位置，如果没有定位父元素获取到body的位置
+        console.log(oP.offsetTop); //0
+        
+    </script>
+</body>
+</html>

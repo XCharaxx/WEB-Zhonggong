@@ -1,0 +1,53 @@
+<style>
+    div {
+        width: 300px;
+        height: 300px;
+        border: 2px solid teal;
+        text-align: center;
+        font: 50px/300px "黑体";
+        display: none;
+    }
+
+    .active {
+        color: deeppink;
+        background: pink;
+    }
+</style>
+</head>
+
+<body>
+    <button class="active">菜单一</button>
+    <button>菜单二</button>
+    <button>菜单三</button>
+    <div style="display: block;">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+   <script>
+       function Tabs(){
+           this.menus = document.getElementsByTagName("button");
+           this.ins =document.getElementsByTagName("div"); 
+           var that = this;
+            this.init=function(){
+                for(var i=0;i<this.menus.length;i++){
+                   
+                    this.menus[i].index = i;
+                    this.menus[i].onclick = function(){
+                           that.changeItem(this.index);
+                    }
+                }
+           }
+           this.init();
+           this.changeItem=function(index){
+                for(var j=0;j<this.ins.length;j++){
+                    this.ins[j].style.display="none";
+                    this.menus[j].className ="none";
+                } 
+                this.menus[index].className ="active"; 
+                this.ins[index].style.display = "block";  
+           }
+       }
+       new Tabs();
+   </script>
+</body>
+
+</html>

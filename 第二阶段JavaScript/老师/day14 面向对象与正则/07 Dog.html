@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Dog(){
+            this.wow = function(){
+                console.log("wow");
+            };
+            this.yelp = function(){
+                this.wow();
+            }   
+        }
+
+
+        //疯了MadDog，看到人以后，隔半秒叫一次
+        function MadDog(){
+            //对象冒充继承
+            Dog.call(this);
+            var that = this;
+
+            //重写
+            this.yelp = function(){
+                //setInterval(this.wow,500);
+                setInterval(function(){
+                    that.wow();
+                },500)
+            }
+        }
+
+        var md = new MadDog();
+        md.yelp();
+    </script>
+</body>
+</html>

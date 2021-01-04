@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        对象的组成
+           属性 ---特征的描述，静态  变量
+           方法 --- 行为 ，动态    function
+        对象创建方式
+           1.字面量： 
+             var obj = { "name":"Web","eat":function(){} }
+             优点：直观
+             缺点：代码冗余，适合创建单个对象
+            2.关键字new创建
+             var obj = new Object()
+             obj.name = "Web";
+             obj.eat = function(){}
+             优点：符合标准的创建
+             缺点：代码冗余，适合创建单个对象
+            3.工厂模式创建
+             function createObj(name){
+                 var obj = new Object();
+                 obj.name=name;
+                 obj.eat = function(){}
+                 return obj
+             }
+             var w1 = createObj("web")；
+             优点：解决了代码冗余，可以批量创建
+             缺点：识别不清
+            4.构造函数创建
+             function Student(name){
+                 this.name = name;
+                 this.eat = function(){}
+             }
+             new Student("web");
+             优点：解决了代码冗余，可以批量创建，识别对象类型
+             缺点：浪费内存
+
+             new操作的作用？
+              隐式创建了一个空对象，
+              让this指向这个空对象
+              让实例对象__proto__指向构造函数的prototype
+              执行构造函数的代码  添加属性和方法
+              隐式的返回创建好的对象
+            5.原型创建
+             function Student(){};
+             Student.prototype.name = "web";
+             Student.prototype.eat = function(){}
+             new Student()
+             优点：解决内存浪费的问题
+             缺点：不能传参
+            6.混合创建  构造函数混原型
+             function Student(name){
+                 this.name = name;
+             }
+             Student.prototype.eat = function(){}
+             优点：能够传参，节约内存
+             缺点：破坏了封装性
+            7.动态混合创建
+             
+        call与apply的作用及区别
+        改变this的指向  函数.call(this指向，。。。)  函数.apply(this指向，[..])
+
+
+        this：一般在函数中使用，所处环境的不同，代表的值不一样，取决于是谁调用的这个函数  
+        事件处理函数中----触发事件的对象
+        普通函数中 --- window
+        构造函数中 --- 构造函数创建的实例对象
+        方法中 ---- 指向当前对象
+         */
+    </script>
+</body>
+</html>

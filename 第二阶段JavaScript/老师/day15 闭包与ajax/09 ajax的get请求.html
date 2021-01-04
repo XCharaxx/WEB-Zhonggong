@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.创建请求对象
+        var xhr = new XMLHttpRequest();
+
+        //2.建立连接 xhr.open(method,url,async);
+        //method:请求方式  get  post
+        //url:请求地址
+        //async：是否异步  默认就是true
+        xhr.open("GeT","./bendi.txt",true);
+
+        //3.发送请求
+        xhr.send();
+
+        //4.监听结果
+        /* 
+        准备状态码
+        * 0: 创建了一个请求对象
+        * 1: 和服务器建立了连接
+        * 2: 发送了请求
+        * 3: 服务器接收到了请求，并且正在处理
+        * 4: 服务器处理完成并返回结果 （响应包）
+        * 
+        网络状态码
+        *404  200  500
+        */
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){ //有结果了，并且将结果返回
+               if(xhr.status == 200){ //请求成功
+                document.write( xhr.responseText)
+               } 
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //排序方法：sort()
+
+        //1.默认情况下，按字符串排序
+        var arr = [6, 3, 9, 21, 7, 4, 8, 5, 11];
+        arr.sort();
+        console.log(arr); //[11, 21, 3, 4, 5, 6, 7, 8, 9]
+
+        //2.按number排序
+        arr.sort(function(a,b){//a,b是两个相邻的数组元素
+            //return a-b;  //a-b>0换位置  从小到大
+            return b-a; //从大到小
+        });
+        console.log(arr); //[3, 4, 5, 6, 7, 8, 9, 11, 21]
+
+        //3.按年龄排序 (升序)（number）
+        var student = [
+            {"name":"羊振疼","age":80,"date":"1940-12-12","c":89},
+            {"name":"张振","age":81,"date":"1939-12-12","c":100},
+            {"name":"马杰伦","age":18,"date":"2002-1-1","c":30},
+            {"name":"安德华","age":18,"date":"2002-11-3","c":70},
+        ];
+        student.sort(function(a,b){ 
+            //a={"name":"羊振疼","age":80,"date":"1940-12-12","c":89}
+            //b={"name":"张振","age":81,"date":"1939-12-12","c":100}
+            return a.age-b.age;
+        });
+
+        //3.如果年龄一样，按出生日期的降序排序
+        student.sort(function(a,b){
+            if(a.age == b.age){
+                return new Date(b.date)-new Date(a.date);
+            }else{
+                return a.age - b.age;
+            }
+        })
+        console.log(student);
+        console.log(Date.parse("2002-1-1")); //将字符串格式的时间，转换为时间戳
+        console.log(new Date("2002-1-1")-new Date("2002-11-3"));
+
+
+        //4.按名字升序排序
+        student.sort(function(a,b){
+            //localeCompare:按当前本地的格式进行比较
+            return a.name.localeCompare(b.name)
+        });
+        console.log(student);
+
+        //5.随机排序
+        var arr = [1,2,3,4,5,6,7];
+        arr.sort(function(){
+            return Math.random()-0.5;
+        });
+        console.log(arr);
+
+
+      
+      
+
+      
+    </script>
+</body>
+</html>

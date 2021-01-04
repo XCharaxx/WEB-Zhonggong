@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        //1.什么叫事件对象，事件对象的属性有？
+        //事件发生的时候会将所有和事件相关的信息存储在事件对象中，window.event,在事件处理函数中使用
+        document.onclick = function(ev){
+            console.log(window.event); //chrome和ie浏览器可以正常使用，低版本火狐是undefined
+            console.log(ev); //ff浏览器的事件对象会通过处理函数的第一个参数传入
+            
+            //取值的兼容  ||
+            var oEv = window.event || ev;
+
+            //属性
+            console.log(oEv.type); //事件类型
+            console.log(oEv.target||oEv.srcElement); //事件目标
+            console.log(oEv.clientX,oEv.clientY); //鼠标位置，相对于屏幕
+            console.log(oEv.shiftKey,oEv.ctrlKey,oEv.altKey);
+        }
+        //2.解释一下DOM事件流？
+        //事件捕获机制：事件发生的时候，从window开始，根据结构依次往里，一直到目标对象
+        //事件冒泡机制：目标对象开始处理事件，处理完成后会将事件根据结构依次往父元素传递，一直到window
+
+        //3.阻止事件冒泡，阻止事件默认行为
+        //阻止事件冒泡：ev.stopPropagation?ev.stopPropagation():ev.cancelBubble=true;
+        //阻止事件默认行为: return false    ev.preventDefault?ev.preventDafult():ev.returnValue=false;
+
+        //4.事件委托原理及实现
+        //原理：将事件添加给父元素(事件冒泡子元素可以触发父元素的事件).当事件发生的时候，通过garget找到对应的子元素去处理事件
+        //优点：提高性能，事件可以发生在未来
+        var oUl = document.getElementsByTagName("ul")[0];
+        oUl.onclick = function(ev){
+            var oEv = window.event || ev;
+            //通过garget找到对应的子元素去处理事件
+            var target = oEv.target || oEv.srcElement;
+            if(target.nodeName == "LI"){
+                target.style.background = "red";
+            }
+            
+        }
+
+        //5.封装一个取消事件绑定的函数？
+        /* 
+        标签.事件                 标签.事件null
+        标签.addEventListener     标签.removeEventListener
+        标签.attachEvent          标签.detachEvent
+        */
+       function unbind(elem,type,fun){
+           if(elem.removeEventListener){
+               elem.removeEventListener(type,fun);
+           }else{
+               elem.detachEvent("on"+type,fun)
+           }
+       }
+    </script>
+</body>
+</html>

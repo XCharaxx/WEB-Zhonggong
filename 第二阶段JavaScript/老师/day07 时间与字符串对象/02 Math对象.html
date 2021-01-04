@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.取整(掌握)
+        console.log(parseInt(3.9999999)); //3 舍弃小数部分
+        console.log(Math.floor(3.9999));  //3 向下取整  舍弃小数部分
+        console.log(Math.ceil(3.001));    //4 往上取整  有小数部分就进位
+        console.log(Math.round(3.45));    //3 四舍五入
+        console.log(Math.round(3.55));    //4
+
+
+        //2.数学公式(熟悉)
+        console.log(Math.PI); //3.141592653589793
+        console.log(Math.abs(-10)); //10 取绝对值  正
+        console.log(Math.pow(2,10));  //计算次方数  2的10次方  1024
+        console.log(Math.sqrt(81));  //9  开根号
+
+        //编程计算x(10,20)   (100,100)两个点之间距离;   x2-x1的平方 + y2-y1的平方，开根号
+        var x1=10,x2=100,y1=20,y2=100;
+        console.log(Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2)));
+
+
+        //3.随机数(掌握)
+        //Math.random() : 生成0-1之间的随机数，包括0，不包括1 [0,1)
+        console.log(Math.random());
+
+        //0-x   公式  Math.random()*x
+        //0-10
+        for(var i = 0;i<10;i++){
+            console.log(Math.floor(Math.random()*10));
+        }
+
+        //x-y  公式  Math.random()*(max-min+1)+min
+
+        //20-100
+        //0+20  0  =  20
+        //1     1*80+20 = 100
+        for(var i = 0;i<10;i++){
+            console.log(Math.floor(Math.random()*(100-20+1)+20));
+        }
+
+        var arr = ["mac电脑","500万","对象","帅哥","美女"];
+        console.log(arr[Math.floor(Math.random()*arr.length)]); //0 1 2 3 4 
+
+        //1.封装一个函数，用于生成min-max之间随机数，返回这个随机数
+    </script>
+</body>
+</html>

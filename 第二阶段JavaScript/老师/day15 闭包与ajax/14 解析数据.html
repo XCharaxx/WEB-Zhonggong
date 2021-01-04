@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./ujiuye.js"></script>
+    <script>
+        ujiuye.ajax({
+            "url":"http://edu.xqb.ink/api/banner",
+            "type":"get",
+            "success":function(res){
+                console.log(typeof res); //ajax获取的数据返回的是字符串
+                console.log(res);
+                
+                //1.eval() : 接收一个字符串，把字符串转换真正的数据类型，并且执行里面的代码
+                console.log(eval("3+1")); //4
+                console.log(eval("[1,2,3,4]")); // [1, 2, 3, 4]
+                console.log(eval("[1,2,3,4].length")); //4
+
+                //console.log(eval("{'name':'蜡笔小新'}")); //js认为直接{}开头，这是代码块
+                console.log(eval("({'name':'蜡笔小新'})")); 
+                console.log(eval("("+res+")"));
+
+                //2.JSON.parse():将字符串格式的json数据转换为真正的json数据
+                res = JSON.parse(res);
+                console.log(res);
+
+                //3.JSON.stringify:将json转换转换为字符串
+                console.log(JSON.stringify(res))
+
+            }
+        })
+
+    
+    </script>
+</body>
+</html>

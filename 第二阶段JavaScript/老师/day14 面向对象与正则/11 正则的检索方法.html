@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //----------字符串方法使用正则-------------
+        //字符串方法：charAt，charCodeAt，indexOf，lastIndexOf，slice，substring，substr，split，
+        //toLowerCase,toUpperCase,trim,replace,
+        //1.replace
+        var str = "今天学习明天学习后天学习";
+        var reg1 = /学习/g;
+        console.log(str.replace(reg1,"放假")); //今天放假明天放假后天放假
+
+        //2.split()：分割   
+        var str = "q1w2e3r4t5y6u7i";
+        var arr = str.split(/\d/);
+        console.log(arr); // ["q", "w", "e", "r", "t", "y", "u", "i"]
+
+        //3.search():出现返回对应的下标，没有出现返回-1
+        var index = str.search(/\d/);
+        console.log(index); //1
+
+        //4.match(条件)：挑选，挑满足条件的组成一个新的数组返回
+        var arr = str.match(/\d/g);
+        console.log(arr); //["1", "2", "3", "4", "5", "6", "7"]
+
+
+
+        //-------------正则对象的验证方法---------------
+        //1.正则表达式.test(字符串)：通过检测返回true，没有返回false
+        var reg1 = /^1[3-9]\d{9}$/;
+        var tel = "1311234567";
+        console.log(reg1.test(tel)); //false
+
+
+        //2.正则表达式.exec(字符串)：执行具体的匹配，匹配通过返回匹配到的内容，没有通过返回null
+        var reg1 = /^1[3-9]\d{9}$/;
+        var tel = "13112345678";
+        console.log(reg1.exec(tel)); //["13112345678", index: 0, input: "13112345678", groups: undefined]
+
+
+        //惰性验证，从左往右验证，只要有一个满足条件就结束
+        reg2 = /\d/g; //默认每次都从头开始查找，g：从上一次查找结束的位置开始
+        var str = "aqew2er3tr545rt6";
+        console.log(reg2.exec(str)); //["2", index: 4]
+        console.log(reg2.exec(str)); //["3", index: 7]
+        
+    </script>
+</body>
+</html>

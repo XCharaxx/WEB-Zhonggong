@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .box{
+            top:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="box"></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div");
+
+        //2.点击div让div运动到500
+        oDiv[1].onclick = function () {
+            var timer = setInterval(function () {
+                //4.获取当前值
+                var cur = parseInt(getStyle(oDiv[0],"left"));
+
+                //5.计算速度 (目标值-当前值)/缩放系数
+                var speed = (500-cur)/10;
+
+                //3.运动div
+                oDiv[0].style.left = cur+speed + "px";
+            }, 30);
+
+            setInterval(function () {
+                //4.获取当前值
+                var cur = parseInt(getStyle(oDiv[1],"left"));
+
+                //5.计算速度 (目标值-当前值)/缩放系数
+                var speed = (1000-cur)/10;
+
+                //3.运动div
+                oDiv[1].style.left = cur+speed + "px";
+            }, 30);
+        }
+    </script>
+</body>
+
+</html>

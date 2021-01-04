@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid teal;
+            text-align: center;
+            font:50px/300px "黑体";
+            display: none;
+        }
+        .active{
+            color: deeppink;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <button class="active">菜单一</button>
+    <button>菜单二</button>
+    <button>菜单三</button>
+    <div style="display: block;">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    <script>
+       //1.声明构造函数
+        function TabSwitch(){
+            //1.获取标签的变量，作为属性
+            this.menus = document.getElementsByTagName("button");
+            this.items = document.getElementsByTagName("div");
+            //4.存储正确的this
+            var that = this;
+
+            //2.添加入口方法
+            this.init = function(){
+                for(var i = 0;i<this.menus.length;i++){
+                    this.menus[i].index = i;
+                    this.menus[i].onclick = function(){
+                        //3.事件里面的代码，存放在一个方法中
+                        that.changeItem(this.index);
+                    }
+                }
+            }
+            this.init();
+
+
+            //3.事件里面的代码，存放在一个方法中
+            this.changeItem = function(index){//var index
+                for(var j = 0;j<this.items.length;j++){
+                    this.items[j].style.display = "none";
+                    this.menus[j].className = "";
+                }
+                this.items[index].style.display = "block";
+                this.menus[index].className = "active";
+            }
+        }
+
+       //2.实例化对象
+       new TabSwitch();
+    </script>
+</body>
+</html>

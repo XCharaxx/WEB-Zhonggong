@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.声明一个构造函数
+        function Student(){};
+        
+        //2.在原型中添加属性和方法
+        Student.prototype.name = "小二";
+        Student.prototype.age = "18";
+        Student.prototype.study = function(){
+            console.log("沉迷学习，逐渐自闭");
+        }
+
+
+        //3.实例化对象
+        var s1 = new Student();
+        console.log(s1);
+        console.log(s1.name);
+
+        //4.原型链：一种查找方式，先找实例本身，如果有就用自己的，如果没有就会取__proto__属性中查找
+        var s2= new Student();
+        console.log(s2);
+        console.log(s2.name);
+
+
+        //优点：解决了内存浪费的问题
+        //缺点：不能传参，创建出来的都一样
+
+    </script>
+</body>
+</html>

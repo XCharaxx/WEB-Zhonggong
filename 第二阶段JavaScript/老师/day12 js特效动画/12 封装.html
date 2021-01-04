@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        p{
+           width: 1px;
+           height: 500px;
+           background: teal;
+           position: absolute;
+           left:500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+ 
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //2.点击div让div运动到500
+        oDiv.onclick = function () {
+            // bufferMove(oDiv,"left",500,10);
+            // bufferMove(oDiv,"top",500,10);
+            bufferMove(oDiv,"width",500,1);
+            bufferMove(oDiv,"height",500,1);
+        }
+
+        function bufferMove(elem,attr,target,xs){//elem:运动元素 attr:运动属性 target:目标值 xs:系数
+            var timer = setInterval(function () {
+                //4.获取当前值
+                var cur = parseInt(getStyle(elem,attr));
+                
+                //5.计算速度 (目标值-当前值)/系数
+                var speed = (target-cur)/xs;
+
+                //6.像素取整
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                //7.停止定时器
+                if(cur == target){
+                    clearInterval(timer);
+                }
+
+                //3.移动div
+                elem.style[attr] = cur+speed + "px";
+            }, 30);
+        }
+        /* 
+        1.声明一个函数
+        2.把主要代码放入函数中
+        3.找可变的值做参数
+        4.调用调试
+        
+        */
+    </script>
+</body>
+
+</html>

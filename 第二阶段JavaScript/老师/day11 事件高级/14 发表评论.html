@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <ul></ul>
+    <!-- 按回车，在ul中添加li，内容从输入框中来 -->
+    <div></div>
+
+    <script>
+        //1.获取元素
+        var oIn = document.getElementsByTagName("input")[0];
+        var oUl = document.getElementsByTagName("ul")[0];
+        var oDiv = document.getElementsByTagName("div")[0];
+        
+        //2.在输入框中输入数据，按回车，将显示到ul中
+        oIn.onkeydown = function(ev){
+            var ev = Window.event||ev;
+            //按回车，将显示到ul中
+            if(ev.keyCode == 13){
+                var oLi = document.createElement("li");
+                oLi.innerHTML = oIn.value;
+                oUl.appendChild(oLi);
+
+                //清空输入框
+                oIn.value = "";
+            }
+        }
+
+        //3.按上下左右键，控制div移动
+        window.onkeydown = function(ev){
+            var ev = window.event || ev;
+            //37:左 38：上 39：右 40：下
+            switch(ev.keyCode){
+                case 37:oDiv.style.left = oDiv.offsetLeft - 5 +"px";break;
+                case 39:oDiv.style.left = oDiv.offsetLeft + 5 +"px";break;
+                case 38:oDiv.style.top = oDiv.offsetTop - 5 +"px";break;
+                case 40:oDiv.style.top = oDiv.offsetTop + 5 +"px";break;
+            }
+        }
+    </script>
+
+</body>
+</html>

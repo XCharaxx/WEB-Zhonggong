@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="radio" name='sex' >男 
+   <input type="radio" name='sex' checked>女
+   <button>获取性别</button>
+
+   <script>
+       var oIn = document.getElementsByTagName("input");
+       var oBtn = document.getElementsByTagName("button")[0];
+
+       //1.点击按钮，获取性别
+       oBtn.onclick = function(){
+            //获取选中项   选中--true   没选中false
+            console.log(oIn[0].checked); //没有选中  false
+            console.log(oIn[1].checked); //选中  true
+
+            //设置  选中---true    
+            //oIn[0].checked = true;
+
+            //获取性别  就看第一个input的checked的状态 如果true男，否则女
+            var sex = oIn[0].checked == true ? "男" : "女";
+            console.log(sex);
+
+       }
+
+   </script>
+</body>
+</html>

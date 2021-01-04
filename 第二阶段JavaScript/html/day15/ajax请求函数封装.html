@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ajax(requests){
+        var ajax = new XMLHttpRequest();
+        if(requests.type.toLowerCase()=="get"){
+             var url = requests.data?requests.url + "?"+requests.data :requests.url;
+             ajax.open("get","url",true);
+             ajax.send();
+        }else{
+             ajax.open("post", "requests.url", true);
+             ajax.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+            ajax.send(requests.url);
+        }
+       
+       
+        
+        
+
+        ajax.onreadystatechange =function(){
+            if(ajax.readystate==4&ajax.status==200){
+               requests.success(ajax.responseText); 
+            }
+        } 
+        }
+
+
+        ajax({
+            "url":"http://edu.xqb.ink/api/registers",
+            "type":"post",
+            "data":"pwd",
+            "success":function(res){
+                document.write(res);
+            }
+
+        });
+    </script>
+</body>
+</html>

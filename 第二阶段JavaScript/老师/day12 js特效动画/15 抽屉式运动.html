@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+    
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+ 
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div");
+        /* 
+        问题：抽搐
+        原因：移入开启一个定时器加，离开开启一个定时器减    两个定时器叠加 一加一减
+        解决：如果定时器添加在能够被频繁触发的时候，再开启下一个定时器之前，停止掉上一个定时器
+        */
+        //2.鼠标移入，宽500，离开宽100
+        oDiv[0].onmouseover = function(){
+            bufferMove(oDiv[0],"width",500,5);
+        }
+        oDiv[0].onmouseout = function(){
+            bufferMove(oDiv[0],"width",100,5);
+        }
+        oDiv[1].onmouseover = function(){
+            bufferMove(oDiv[1],"width",500,5);
+        }
+        oDiv[1].onmouseout = function(){
+            bufferMove(oDiv[1],"width",100,5);
+        }
+
+        function bufferMove(elem,attr,target,xs){
+            clearInterval(elem.timer); 
+            elem.timer = setInterval(function () {
+                //4.获取当前值
+                if(attr == "opacity"){
+                    //目标需要放大100
+                    target = target < 1 ? target*100 : target;
+                    var cur = parseInt(getStyle(elem,attr)*100); //透明度的值太小，放大100倍处理
+                }else{
+                    var cur = parseInt(getStyle(elem,attr));
+                }   
+            
+                //5.计算速度 (目标值-当前值)/系数
+                var speed = (target-cur)/xs;
+
+                //6.像素取整
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                //7.停止定时器
+                if(cur == target){
+                    clearInterval(elem.timer);
+                }
+
+                //3.移动div
+                if(attr == "opacity"){
+                    elem.style[attr] = (cur+speed)/100;  //透明度不加单位
+                }else{
+                    elem.style[attr] = cur+speed + "px";
+                }
+            }, 30);
+        }
+    </script>
+</body>
+
+</html>

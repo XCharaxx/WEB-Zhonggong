@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            border: 2px solid teal;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box ul {
+            width: 3000px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .box li {
+            float: left;
+        }
+
+        .box p {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .box p span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #000;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .box p .active {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 可视区 -->
+        <!-- 图片列表 -->
+        <ul>
+            <li><img src="./img/t1.png" alt=""></li>
+            <li><img src="./img/t2.png" alt=""></li>
+            <li><img src="./img/t3.png" alt=""></li>
+            <li><img src="./img/t4.png" alt=""></li>
+            <li><img src="./img/t1.png" alt=""></li>
+        </ul>
+        <p><span class='active'></span><span></span><span></span><span></span></p>
+    </div>
+
+    <script src="./ujiuye.js"></script>
+    <script>
+        var oBox = document.getElementsByTagName("div")[0];
+        var oUl = oBox.getElementsByTagName("ul")[0];
+        var oSpans = oBox.getElementsByTagName("span");
+        var n = 0;
+        
+        
+        //1.
+        var timer=setInterval(auto, 2000);
+        function auto() {
+            n++;
+            // if(n>4){
+            //    n = 1 ;
+            // } 
+             if (n > oSpans.length) {
+                n = 1;
+                oUl.style.left = "0px";
+            }
+
+            move(oUl, "left", 50, -600 * n,30);//0 -600 -1200 -1800
+          
+            for (var j = 0; j < oSpans.length; j++) {
+                oSpans[j].className = "";
+            }
+            //  i++;
+            oSpans[n==oSpans.length?0:n].className = "active";
+            
+        
+        }
+        oBox.onmouseover = function(){
+            clearInterval(timer);
+        }
+        oBox.onmouseout =function(){
+          timer =  setInterval(auto, 2000);
+        }
+        for (var i = 0; i < oSpans.length; i++) {
+
+                oSpans[i].index = i;
+                oSpans[i].onclick = function () {
+                    clearInterval(timer);
+                    move(oUl, "left", 50, -600 * this.index, 30);
+                     for (var j = 0; j < oSpans.length; j++) {
+                        oSpans[j].className = "";
+                    }
+                    n=this.index;
+                    oSpans[this.index].className = "active";
+                    
+                } }
+        
+        // setinterval(function(){
+        //          for(var j=0;j<oSpans.length;j++){
+        //               oSpans[j].className = "";
+        //          }
+                 
+        //         oSpans[i].className = "active";
+        //         i++;
+        // },2000)
+       
+        // running(oUl,"left",50,-1200)
+        // oUl.style.left = "-600px";
+    </script>
+</body>
+
+</html>

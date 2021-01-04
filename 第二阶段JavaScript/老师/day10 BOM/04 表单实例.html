@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 300px;
+            height: 40px;
+            border: 1px solid #333;
+            outline: none;
+        }
+        span{
+            display: inline-block;
+            width: 40px;
+            height: 10px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text"> <span></span><span></span><span></span>
+    <script>
+        var oIn = document.getElementsByTagName("input")[0];
+        var oSpan = document.getElementsByTagName("span");
+        //1.获得焦点事件
+        oIn.onfocus = function(){
+            this.style.background = "pink";
+        }
+        //2.失去焦点
+        oIn.onblur = function(){
+            this.style.background = "#fff";
+        }
+
+        //3.实时监听
+        oIn.oninput = change;
+        oIn.onpropertychange = change;
+        function change(){
+            // 检测密码强度 6位以上弱 9位以上中 12-24强 密码需要在6-24位之间
+            if(this.value.length>12 && this.value.length<=24){
+                oSpan[0].style.background = "green";
+                oSpan[1].style.background = "green";
+                oSpan[2].style.background = "green";
+            }else if(this.value.length>9 && this.value.length<=12){
+                oSpan[0].style.background = "yellow";
+                oSpan[1].style.background = "yellow";
+            }else if(this.value.length>6 && this.value.length<=9){
+                oSpan[0].style.background = "red";
+            }else{
+                oSpan[0].style.background = "";
+                oSpan[1].style.background = "";
+                oSpan[2].style.background = "";
+            }
+        }
+
+
+        //2.自动获得焦点 
+        oIn.focus(); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-weight: 600;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        auto();
+        setInterval(auto,1000);
+       function auto() {
+            var oDate = new Date();
+            var year = oDate.getFullYear();
+            var month = oDate.getMonth() + 1;
+            var date = oDate.getDate();
+            var day = oDate.getDay();
+            var h = oDate.getHours();
+            var m = oDate.getMinutes();
+            var s = oDate.getSeconds();
+            var arr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            document.body.innerHTML = year + "年" + month + "月" + date + "日" + "&nbsp;" + arr[day] + "&nbsp;" + h + "时" + m + "分" + s + "秒";
+          }
+    </script>
+</body>
+</html>

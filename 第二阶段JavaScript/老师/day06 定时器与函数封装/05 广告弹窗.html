@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 2px solid teal;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            display: none;
+        }
+
+        button {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button>X</button>
+    </div>
+
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        var oBtn = document.getElementsByTagName("button")[0];
+
+        //1.隔2秒让div显示
+        setTimeout(function () {
+            oDiv.style.display = "block";
+        }, 2000)
+
+        //2.点击x，隐藏div，只要隐藏一行过两秒又出现
+        oBtn.onclick = function () {
+            oDiv.style.display = "none";
+            setTimeout(function () {
+                oDiv.style.display = "block";
+            }, 2000)
+        }
+    </script>
+</body>
+
+</html>

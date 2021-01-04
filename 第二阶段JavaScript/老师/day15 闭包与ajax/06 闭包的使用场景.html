@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <script>
+        //1.需要使用函数内部变量的时候
+        function outer(){
+            var b = 10;
+            return function inner(){
+                console.log(b++);   //内部作用域可以使用外部作用域中变量和函数
+            }
+        }
+
+        //2.解决全局作用域问题
+        var arr = [];
+        for(var i = 0;i<10;i++){ //i = 10
+            arr.push(function(){console.log(i);})
+        }
+        //[f,f,f,f,f,f,f,f,f,f]
+        //arr[6] === >function(){console.log(i);}
+        //arr[6]() === 调用函数
+        arr[4]();   //代码执行的结果是？怎么修改？  10
+
+
+        //怎么修改
+        //原因：自己作用域没有变量i，使用的是全局变量i
+        //解决：让自己的作用域中有i
+        var arr1 = [];
+        for(var i = 0;i<10;i++){ //i = 10
+           (function(i){//局部变量i
+             arr1.push(function(){console.log(i);}) //局部变量i
+           })(i); //全局变量i
+        }
+        arr1[4](); //4
+        arr1[5](); //5
+
+
+
+        var oBtns = document.getElementsByTagName("button");
+        for(let i = 0;i<oBtns.length;i++){
+            oBtns[i].onclick = function(){
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

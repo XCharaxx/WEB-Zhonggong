@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>海底捞</li>
+        <!-- 想在食堂喝到胡辣汤 -->
+        <li>胡辣汤</li>
+        <li>疙瘩汤</li>
+        <li>馒头</li>
+    </ul>
+    <script>
+        //1.获取元素
+        var oUl = document.querySelector("ul"); //一个
+
+        //2.获取子节点
+        //非标准属性：父节点.children（一般用这个）
+        var childs = oUl.children;
+        console.log(childs);//HTMLCollection(4)
+
+        //标准属性：父节点.childNodes
+        var childs = oUl.childNodes;
+        console.log(childs); //NodeList(9) 
+
+        //3.节点：标签节点，文本节点(空格，回车，文字),属性节点--2,注释节点 。。。。。
+
+        //4.节点属性  nodeType，nodeName，nodeValue
+        console.log(childs[0].nodeType); //文本--3
+        console.log(childs[1].nodeType); //标签--1
+        console.log(childs[3].nodeType); //注释--8
+
+        console.log(childs[0].nodeName); //文本--#text
+        console.log(childs[1].nodeName); //标签--Li
+        console.log(childs[3].nodeName); //注释--#comment
+
+        //nodeValue是操作文本节点
+        childs[0].nodeValue = "吃饭吗？";
+
+
+        //5.使用标准属性获取子节点，给所有的子节点添加背景颜色
+        var children = oUl.childNodes; //标准属性
+        for(var i = 0;i<children.length;i++){
+            //必须是个标签
+            if(children[i].nodeType == 1){
+                children[i].style.background = "teal";
+            }
+        }
+    </script>
+</body>
+</html>

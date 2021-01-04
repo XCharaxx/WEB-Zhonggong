@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+            splice(start,deleteCount,items):删除数组中的一组元素，使用items进行替换，返回被删除元素组成的数组
+            参数：
+              start：开始删除的下标，默认为0
+              deleteCount：可选的，默认删除到最后
+              items:可选，用于替换的元素
+        */
+       //1.删除
+       var arr = [1,2,3,4,5];
+       var delArr = arr.splice(2); //从下标为2的位置开始删除，删除到最后
+       console.log(arr); //[1,2]
+       console.log(delArr); // [3, 4, 5]  被删除元素组成数组
+
+        //从下标为2的位置开始删除2个
+        var arr = [1,2,3,4,5];
+        arr.splice(2,2); 
+        console.log(arr); // [1, 2, 5]
+
+        //2.替换 先删除选中的元素，再用items进行替换
+        var arr = [89,45,67,23];
+        arr.splice(1,1,54,56,67,78);
+        console.log(arr);
+
+        //3.添加
+        var arr = [1,2,5,6];
+        var n = 4;
+        arr.splice(2,0,n);
+        console.log(arr); // [1, 2, 4, 5, 6]
+
+    </script>
+</body>
+</html>

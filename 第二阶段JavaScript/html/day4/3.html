@@ -18,6 +18,16 @@
             n++;
         } while(i>50)
         console.log(n)
+        add(); //和
+            function add() {
+                console.log("和");
+            }
+
+             addd(); //预解析的时候，变量只声明，不赋值，undefined
+            var addd = function () {
+                console.log("addd");
+            } 
+            
     </script>
 </body>
 </html>

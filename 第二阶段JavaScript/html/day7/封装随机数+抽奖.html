@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+    
+        }
+    
+        ul {
+            list-style: none;
+        }
+    
+        .clearfix {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    
+        div {
+            width: 901px;
+            height: 901px;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            margin: 100px auto;
+    
+        }
+    
+        li {
+            float: left;
+            width: 300px;
+            height: 300px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+    
+            font-size: 30px;
+            text-align: center;
+            line-height: 300px;
+            /* color: white; */
+            
+    
+        }
+        li img{
+            width:100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <ul>
+            <li><img src="./img/cts-fan.jpg" alt=""></li>
+            <li><img src="./img/ca273cf50406c7a0e6585e263615364a.jpg" alt=""></li>
+            <li><img src="./img/a74210e230f2fb6f2f210b63f363cb01.jpg" alt=""></li>
+            <li><img src="./img/5e4f4d9f563b9.jpg" alt=""></li>
+            <li style="background-color: skyblue;"><span>给同桌抽一个</span></li>
+            <li><img src="./img/459929012f0c3e0bd9a6dbe2486342a0.jpg" alt=""></li>
+            <li><img src="./img/preview (2).jpg" alt=""></li>
+            <li><img src="./img/preview (3).jpg" alt=""></li>
+            <li><img src="./img/preview (9).jpg" alt=""></li>
+        </ul>
+
+    <script>
+          var oLis =document.getElementsByTagName("li");
+          var oImg =document.getElementsByTagName("img");
+          
+               oLis[4].onclick = function(){
+                var timer= setInterval(function(){
+                for(var i=0;i<oImg.length;i++){
+                       oImg[i].style.display = "none";
+                 }
+                oImg[radm(0,7)].style.display ="block";
+                   },300)
+               setTimeout(function(){
+               clearInterval(timer);
+            },4000)
+          }
+          
+         
+
+
+
+
+        function radm(min,max){    //max:最大值   min：最小值
+             var ra= Math.floor(Math.random()*(max-min+1)+min);
+             return ra;
+        }
+       var a = radm(30,80);
+       console.log(a);
+    </script>
+</body>
+</html>

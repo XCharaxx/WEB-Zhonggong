@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>5</strong>
+    <script>
+        /* setInterval：定时器但凡已开启就不会主动停止 
+           停止定时器：clearInterval(intervalId);
+           intervalId:开启定时器的时候，会返回一个能够唯一标识当前定时器的id
+        */
+        //1.获取标签
+        var oS = document.getElementsByTagName("strong")[0];
+
+        //2.倒计时5-0
+        var n = 5;
+        var timer = setInterval(function(){
+            n--;
+            //到0停止
+            if(n<=0){
+                n = 0;
+                //停止定时器
+                clearInterval(timer)
+            }
+            oS.innerText = n;
+        },1000);
+        console.log(timer); //1
+    </script>
+</body>
+</html>

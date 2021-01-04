@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        /*
+            1.运动到500
+              问题：到不了目标值
+              原因：每次获取当前值都会取整，运动值+小数无效
+              解决：小数的运动取整整数
+            2.封装
+              问题：运动不了透明度
+              原因：运动度运动不带单位
+              解决：去掉单位
+
+              问题：看不到中间的变化过程
+              原因：值太小了，不是0就是1
+              解决：取值的时候放大100，使用的时候缩小100倍
+
+              问题：能够运动透明度，其他属性width，height，left，top不能运动
+              原因：取值放大了100，并且赋值运动的时候，去掉了单位 px
+              解决：判断，如果是透明度再去放大，去单位
+            3.抽屉式运动
+              问题：抽搐
+              原因：定时器叠加，两个定时器同时运动，一个加一个减
+              解决：在开启定时器之前，清除之前的定时器
+
+            4.多属性运动
+              问题：调用多次运动不同的属性值，只有最后一次有效
+              原因：每一次调用函数的时候，都会清除这个元素身上之前存在定时器，只能保留一个  
+              解决：一个元素要运动多个属性，调用一次，一次性把多个属性都传入函数
+              {"width":500,"height":500}
+
+
+              问题：目标值不一样，不能所有的都到达目标值
+              原因：如果两个属性值的目标值不一样，只要有一个到达目标点，定时器就会停止，会有属性不能到达目标点
+              解决： 每次运动的时候都判断是否所有属性都到了目标点，如果都到了，才能停止定时器
+              使用假设法：
+               假设所有都到达了目标点  tag = true
+               验证：循环判断每一个属性值，只要有一个没有到达目标点，说明假设不成立  tag=false
+               验证最后看tag的值
+
+            */
+        oDiv.onmouseover = function () {
+            bufferMove(oDiv, { "width": 102, "height": 500 }, 5)
+        }
+
+
+        //3.封装
+        function bufferMove(elem, attrs, xs,callback) {
+            clearInterval(elem.timer);
+            elem.timer = setInterval(function () {
+                //A.假设所有都到达了目标点  tag = true
+                var tag = true;
+                //B.循环判断每一个属性值，只要有一个没有到达目标点，说明假设不成立  tag=false
+                for (var attr in attrs) {
+                    //2.获取当前值
+                    if (attr == "opacity") {
+                        attrs[attr] = attrs[attr] <= 1 ? attrs[attr] * 100 : attrs[attr];
+                        var cur = parseInt(getStyle(elem, attr) * 100);
+                    } else {
+                        var cur = parseInt(getStyle(elem, attr));
+                    }
+                    //3.计算速度 (目标值-当前值)/系数
+                    var speed = (attrs[attr] - cur) / xs;
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                    //1.div移动
+                    if (attr == "opacity") {
+                        elem.style[attr] = (cur + speed) / 100;
+                    } else {
+                        elem.style[attr] = cur + speed + "px";
+                    }
+
+                    //C.只要有一个没有到达目标点，说明假设不成立  tag=false
+                    if(cur != attrs[attr]){
+                        tag = false;
+                    }
+
+                }
+            
+                
+                //D.验证最后看tag的值
+                if(tag == true){
+                    clearInterval(elem.timer);
+                    callback&&callback();
+                }
+            }, 30);
+        }
+    </script>
+</body>
+
+</html>

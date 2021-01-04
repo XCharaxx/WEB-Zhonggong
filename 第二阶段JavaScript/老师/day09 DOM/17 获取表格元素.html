@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table width='500' border="1">
+        <!-- 表格头部 -->
+        <thead>
+            <tr>
+                <th width="30%">姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <!-- 表格主体 可以有任意多个 -->
+        <tbody>
+            <tr>
+                <td>张珊</td>
+                <td>女</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>李思</td>
+                <td>男</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>王二麻子</td>
+                <td>女</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+
+    <script>
+        var oTab = document.getElementsByTagName("table")[0];
+
+        //简洁的获取方式
+        console.log(oTab.tHead); //thead
+        console.log(oTab.tFoot); //tfoot
+        console.log(oTab.tBodies[0]); //tbody
+        console.log(oTab.rows); //获取整个表格中的行
+        console.log(oTab.tBodies[0].rows); //主体中的行
+        console.log(oTab.tBodies[0].rows[0].cells);//单元格必须通过行获取
+    </script>
+</body>
+</html>

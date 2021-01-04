@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        构造函数创建：  就是个函数，用于构造对象
+        1.构造函数名首字母大写,为了区分普通函数
+        2.不需要创建对象，属性和方法直接添加在this上,不需要return
+        3.构造函数调用，前面一定要加new，不加new，就和普通函数一样了
+
+        new操作符做了什么？
+        1.隐式的创建了对象  new Object
+        2.让this指向这个空对象
+        3.
+        4.执行函数代码 给this添加了属性和方法
+        5.隐式返回创建好的对象
+
+        */
+       //1.声明构造函数
+       function Teacher(name,age,sex){
+            //1.隐式创建了一个空对象  new Object
+            //2.让this指向这个空对象  this = new Object();
+            //添加属性
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            //添加方法
+            this.skill = function(){
+                console.log("插队,淦饭");
+
+            }
+
+            //5.隐式返回创建好的对象 return this
+       }
+
+       //2.实例化对象
+       var t1 = new Teacher("小夏",18,"女");
+       console.log(t1);
+       t1.skill(); //调用方法
+
+       var t2 = new Teacher("小芳",16,"女");
+       console.log(t2);
+       t2.skill();//调用方法
+
+       console.log(t1.skill == t2.skill);//false 比较的是地址
+
+       console.log();
+
+       /* 
+        优点：识别明确，批量创建
+        缺点：浪费内存，一样的属性和方法存储多次
+       */
+
+    </script>
+</body>
+</html>

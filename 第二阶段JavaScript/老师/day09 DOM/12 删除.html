@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>代码敲100遍</li>
+        <li>单词都记下来</li>
+        <li>不睡觉</li>
+        <li>完成两个项目</li>
+        <li>不吃饭</li>
+    </ul>
+    <script>
+        var oUl = document.getElementsByTagName("ul")[0];
+        //1.删除标签本身  标签.remove(); 不建议使用，ie不兼容
+        //oUl.remove(); 
+
+        //2.删除子元素: 父元素.removeChild(子节点)
+        oUl.removeChild(oUl.children[2]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box" index='0'></div>
+    <button>点击获取验证码</button>
+    <button disabled>n秒以后重试</button>
+    <button>点击获取验证码</button>
+    <script>
+        /* 
+        - 获取：标签.getAttribute("属性名")
+        - 设置：标签.setAttribute("属性名","属性值")
+        - 删除：标签.removeAttribute("属性名") 
+      */
+     var oDiv = document.getElementsByTagName("div")[0];
+      //1.获取id
+     console.log(oDiv.getAttribute("id"));;
+     console.log(oDiv.getAttribute("class"));
+
+     //2.设置
+     oDiv.setAttribute("class","active");
+
+     //3.删除
+     oDiv.removeAttribute("id");
+
+
+     //可以获取直接写在行内的自定义属性，删除某个指定的属性
+     console.log(oDiv.index); //undefined  获取不到直接写在标签上自定义属性
+     console.log(oDiv.getAttribute("index")); //0
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 410px;
+            margin:  50px auto;
+        }
+        input{
+            width: 410px;
+            height: 46px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+        p{
+            color: #9e9e9e;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="请输入邮箱">
+        <p>6～18个字符，可使用字母、数字、下划线，需要以字母开头</p>
+    </div>
+
+    <script>
+        //1.获取元素
+        var oIn = document.getElementsByTagName("input")[0];
+        var oP = document.getElementsByTagName("p")[0];
+
+        //2.输入框聚焦显示p标签
+        oIn.onfocus = function(){
+            oP.style.display = "block";
+            oIn.style.borderColor = "blue";
+        }
+
+        //3.失去焦点
+        oIn.onblur = function(){
+            //3.1 如果没有输入，p标签隐藏
+            if(oIn.value == ""){
+                oP.style.display = "none";
+                oIn.style.borderColor = "#9e9e9e"
+            }else if(oIn.value.length<6 || oIn.value.length>18){
+                 //3.2如果长度不够，显示提示信息
+                oP.style.display = "block";
+                oP.innerHTML = "长度应为6-18个字符";
+                oIn.style.borderColor =oIn.style.color=oP.style.color= "red"
+            }else if(!(oIn.value.charAt(0)>="a"&&oIn.value.charAt(0)<="z"||oIn.value.charAt(0)>="A"&&oIn.value.charAt(0)<="Z")){
+                //3.3 第一位是否是字母
+                oP.style.display = "block";
+                oP.innerHTML = "必须以字母开头";
+                oIn.style.borderColor =oIn.style.color=oP.style.color= "red"
+            }else{
+                oP.style.display = "block";
+                oP.innerHTML = "恭喜此账号可以注册";
+                oIn.style.borderColor =oIn.style.color=oP.style.color= "green"
+            }
+        }
+
+    </script>
+</body>
+</html>

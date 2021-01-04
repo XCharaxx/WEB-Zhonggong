@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+   <script src="../../../JS/ujiuye.js"></script>
+    <script>
+        var oIn =document.getElementsByTagName("input")[0];
+         var str = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+   // 1.生成5位随机验证码
+        
+        //  for(var i=0;i<5;i++){
+             
+        //         var s=  Math.floor(Math.random()*(str.length));
+        //         oIn.value += str[s];
+             
+        //  }
+        console.log(getVer(5));
+        oIn.value = getVer(4);
+    </script>
+   
+</body>
+</html>

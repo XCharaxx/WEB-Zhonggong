@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script src="../../JS/ujiuye.js"></script>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+     oDiv.onclick =function(){
+         bufferMove(oDiv,"left",500,10);
+         bufferMove(oDiv,"opacity",0.5,10)
+
+     }
+     
+
+
+     function bufferMove(elem, attr, target, xs) {//elem:运动元素 attr:运动属性 target:目标值 xs:系数
+            var timer = setInterval(function () {
+                //4.获取当前值
+                if(attr=="opacity"){
+                    target<1?target=(target*100):target;
+                     var cur = parseInt(getStyle(elem, attr)*100);
+                }else{
+                      var cur = parseInt(getStyle(elem, attr) );
+                }
+               
+
+                //5.计算速度 (目标值-当前值)/系数
+                var speed = (target - cur) / xs;
+
+                //6.像素取整
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                //7.停止定时器
+                if (cur == target) {
+                    clearInterval(timer);
+                }
+                if(attr == "opacity"){
+                   elem.style[attr] = (cur + speed)/100 ;
+                }else{
+                    elem.style[attr] = cur + speed + "px";
+                }
+                //3.移动div
+                
+            }, 30);
+        }
+
+    </script>
+</body>

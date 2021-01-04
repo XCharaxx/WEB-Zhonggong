@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+       /* 
+         this:一般在函数中使用，在不同的环境代表的值不一样，取决于当前调用函数的对象，谁调用的就指向谁
+         this指向
+            1.在事件处理函数中  this ----  触发事件的对象
+            2.普通函数的this ---- window
+            3.方法中this---- 当前对象
+            4.构造函数中this----构造函数创建出来的实例对象
+       */
+
+       //1.在事件处理函数中  this ----  触发事件的对象
+       var oBtn = document.getElementsByTagName("button")[0];
+    //    oBtn.onclick = function(){
+    //        console.log(this);
+    //    }
+
+       //2.普通函数的this ---- window
+       function eat(){
+           console.log(this);
+       }
+       window.eat(); //所有的全局变量和全局函数，都属于window
+
+
+       //3.方法中this ---  当前对象
+       var obj1 = {
+           "name":"小红",
+           "toString":function(){
+               console.log(this);
+           }
+       }
+       obj1.toString();
+
+
+       //4.构造函数中this----构造函数创建出来的实例对象
+       function Student(){
+           console.log(this);
+       }
+       new Student();
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>疯狂前进</button>
+    <button>疯狂后退</button>
+    <div></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素（通过tagName，通过calssName获取到的都是集合,不管元素是几个，一定要加下标）
+        var oBtn = document.getElementsByTagName("button");
+        var oDiv = document.getElementsByTagName("div")[0];
+        var timer;
+        //2.点击按钮，运动div 往前
+        oBtn[0].onclick = function(){
+            clearInterval(timer);
+            timer = setInterval(function(){
+                //4.计算运动值  在当前位置的基础上+10
+                var l = parseInt(getStyle(oDiv,"left"))+10
+
+                //5.停止定时器 >= 500
+                if(l>=1000){
+                    l = 1000;
+                    clearInterval(timer);
+                }
+                //3.移动div
+                oDiv.style.left = l+"px";
+
+            },30);
+        }
+
+
+        //3.点击按钮，运动div  往回
+        oBtn[1].onclick = function(){
+            clearInterval(timer);
+            timer = setInterval(function(){
+                //4.计算运动值  在当前位置的基础上+10
+                var l = parseInt(getStyle(oDiv,"left"))-10
+
+                //5.停止定时器 >= 500
+                if(l<=0){
+                    l = 0;
+                    clearInterval(timer);
+                }
+    
+                //3.移动div
+                oDiv.style.left = l+"px";
+
+            },30);
+        }
+        /* 
+        问题：点击往前，又往回，抽搐
+        原因：定时器可以叠加，开启了两个定时器(+\-)
+        解决：如果定时器添加在能够频繁被触发的地方，在开启下一个定时器之前，会先清除掉之前的定时器
+        */
+
+
+
+        
+    </script>
+</body>
+
+</html>

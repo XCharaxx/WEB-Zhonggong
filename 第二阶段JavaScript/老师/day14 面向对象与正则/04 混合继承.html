@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.父类构造函数
+        function Student(name,age,sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.arr = [1,2,3];
+        }
+        Student.prototype.classId = "1116"
+        Student.prototype.study = function(){
+            console.log("good good study , day day sleep!");
+        }
+
+
+        //2.子类构造函数
+        function MiniStudent(name,age,sex){
+            //3.对象冒充继承
+            Student.call(this,name,age,sex)
+            this.play = function(){
+                console.log("玩王者荣耀");
+            }
+        }
+        //混合继承  对象冒充（构造函数中属性和方法）+原型链继承(继承原型对象中属性和方法)
+        //4.原型链继承 
+        MiniStudent.prototype = new Student("小明",3,"男");
+
+        //5.实例化对象
+        var ms1 = new MiniStudent("小郝",10,"女");
+        console.log(ms1);
+
+        //
+
+
+
+
+
+      
+
+
+
+
+    </script>
+</body>
+</html>

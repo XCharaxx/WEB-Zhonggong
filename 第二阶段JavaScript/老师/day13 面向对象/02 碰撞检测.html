@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .move {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: red;
+        }
+
+        .box {
+            margin: 200px 400px;
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="move"></div>
+    <div class="box"></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        var oDiv1 = document.getElementsByTagName("div")[1];
+
+        oDiv.onmousedown = function (ev) {
+            var ev = window.event || ev;
+            var x = ev.clientX - oDiv.offsetLeft;
+            var y = ev.clientY - oDiv.offsetTop;
+            document.onmousemove = function(ev){
+                var ev = window.event || ev;
+                //2.获取鼠标位置
+                var l = ev.clientX - x;
+                var t = ev.clientY - y;
+
+                //1.元素随鼠标移动
+                oDiv.style.left = l + "px";
+                oDiv.style.top = t+"px"
+
+                //3.碰撞检测
+                if(l+oDiv.offsetWidth>=oDiv1.offsetLeft &&
+                   t+oDiv.offsetHeight>=oDiv1.offsetTop &&
+                   l<=oDiv1.offsetLeft+oDiv1.offsetWidth &&
+                   t<=oDiv1.offsetTop+oDiv1.offsetHeight 
+                ){
+                    oDiv1.style.background = "red"
+                }else{
+                    oDiv1.style.background = "blueviolet"
+                }
+            }
+
+            document.onmouseup = function(){
+                document.onmousemove = null;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

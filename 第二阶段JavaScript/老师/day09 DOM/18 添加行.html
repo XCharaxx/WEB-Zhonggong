@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入姓名">
+    <input type="text" placeholder="请输入性别">
+    <input type="text" placeholder="请输入年龄">
+    <input type="button" value="添加">
+    <table width='500' border="1">
+        <!-- 表格头部 -->
+        <thead>
+            <tr>
+                <th width="30%">姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <!-- 表格主体 可以有任意多个 -->
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td>女</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>李思</td>
+                <td>男</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>王二麻子</td>
+                <td>女</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+
+    </table>
+
+    <script>
+        //获取tbody
+        var tBody = document.getElementsByTagName("table")[0].tBodies[0];
+        var oIn = document.getElementsByTagName("input");
+
+        //1.点击添加按钮，在表格中添加一行
+        oIn[3].onclick = function(){
+            //3.创建行
+            var tr = document.createElement("tr");
+
+            //4.在tr中添加td
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='checkbox'>";
+            tr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = oIn[1].value;
+            tr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = oIn[2].value;
+            tr.appendChild(td);
+        
+
+            //2.在表格中添加一行 
+            tBody.appendChild(tr);
+        }
+
+       
+    </script>
+</body>
+</html>

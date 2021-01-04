@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            border: 2px solid teal;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box ul {
+            width: 3000px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .box li {
+            float: left;
+        }
+
+        .box p {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .box p span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #000;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .box p .active {
+            background: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 可视区 -->
+        <!-- 图片列表 -->
+        <ul>
+            <li><img src="./image/t1.png" alt=""></li>
+            <li><img src="./image/t2.png" alt=""></li>
+            <li><img src="./image/t3.png" alt=""></li>
+            <li><img src="./image/t4.png" alt=""></li>
+            <li><img src="./image/t1.png" alt=""></li>
+        </ul>
+        <p><span class='active'></span><span></span><span></span><span></span></p>
+    </div>
+
+    <script src="./ujiuye.js"></script>
+    <script>
+        var oBox = document.getElementsByTagName("div")[0];
+        var oUl = oBox.getElementsByTagName("ul")[0];
+        var oSpan = oBox.getElementsByTagName("span");
+        var n = 0;
+        //1.自动切换图片
+        var timer = setInterval(auto, 2000);
+        function auto() {
+            n++;
+
+            //1.3如果后面没有图片
+            if (n > oSpan.length) {
+                n = 1;
+                oUl.style.left = "0px";
+            }
+
+            //1.1切换图片                     //0  1    2      3
+            running(oUl, "left", 50, -600 * n); //0 -600 -1200 -1800
+
+            //1.2小圆点进行样式切换
+            for (var j = 0; j < oSpan.length; j++) {
+                oSpan[j].className = "";
+            }
+            //如果是最后一张图片，对应第一个小圆点，下标为0
+            oSpan[n == oSpan.length ? 0 : n].className = "active";
+        }
+
+
+        //2.鼠标移入停止定时器
+        oBox.onmouseover = function () {
+            clearInterval(timer);
+        }
+        oBox.onmouseout = function () {
+            timer = setInterval(auto, 2000);
+        }
+
+        //3.点击小圆点切换图片
+        for (var i = 0; i < oSpan.length; i++) {
+            oSpan[i].index = i;
+            oSpan[i].onclick = function () {
+                n = this.index;
+                //1.1切换图片                     //0  1    2      3
+                running(oUl, "left", 50, -600 * n); //0 -600 -1200 -1800
+
+                //1.2小圆点进行样式切换
+                for (var j = 0; j < oSpan.length; j++) {
+                    oSpan[j].className = "";
+                }
+                //如果是最后一张图片，对应第一个小圆点，下标为0
+                oSpan[n == oSpan.length ? 0 : n].className = "active";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

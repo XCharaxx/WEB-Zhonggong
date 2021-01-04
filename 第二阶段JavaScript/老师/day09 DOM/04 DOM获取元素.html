@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list1" class="list">
+        <li>睡觉</li>
+        <li>睡觉</li>
+        <li>打游戏</li>
+        <li>吃饭</li>
+        <li>看剧</li>
+        <li>洗衣服</li>
+    </ul>
+    <ul id="list2" class="list">
+        <li>出去玩</li>
+        <li>睡觉</li>
+        <li>睡大觉</li>
+        <li>睡一天</li>
+    </ul>
+    <script>
+        //1.通过选择器获取:静态获取，获取的时候有多少就是多少，后期添加都获取不到
+        //document.querySelector("选择器"):获取选择器选中标签中的第一个元素
+        var oUl = document.querySelector(".list");
+        console.log(oUls);
+
+        //document.querySelectorAll("选择器"):获取选择器选中的所有标签  节点列表
+        var oUls = document.querySelectorAll(".list");
+        console.log(oUls);
+        console.log(oUls.length);
+
+        var oLis = document.querySelectorAll("#list1 li");
+        console.log(oLis);
+
+        oUl.innerHTML += "<li>吃饭</li>";
+        console.log(oLis);
+    </script>
+</body>
+</html>

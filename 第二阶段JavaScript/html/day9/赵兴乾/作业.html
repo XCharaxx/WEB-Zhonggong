@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .frm {
+            width: 600px;
+            padding: 10px 5px 0px;
+            border: 1px solid black;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 80px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        input {
+            height: 30px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        button {
+            float: right;
+            /* height: 25px; */
+            padding: 3px 5px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        table {
+            width: 600px;
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+        }
+
+        table td {
+            line-height: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="frm">
+            <p>请输入姓名 : <input type="text" name="name" id="name"></p>
+            <p>请输入性别 : <input type="radio" name="sex" value="1" id="man" checked>男&nbsp;<input type="radio" name="sex"
+                    id="wman" value="0">女
+            </p>
+            <p>请输入年龄 : <input type="text" name="age" id="age"><button>添加到表格</button></p>
+        </div>
+        <table border="1px" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="all">全选</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                          <td>指针</td>
+                          <td>指针</td>
+                          <td>指针</td>
+                        <td>指针</td>
+                      </tr> -->
+            </tbody>
+        </table>
+        <button>删除所选行</button>
+    </div>
+    <script>
+        var oBtn = document.getElementsByTagName("button");
+        var oName = document.getElementById("name");
+        var oMan = document.getElementById("man");
+        var oWman = document.getElementById("wman");
+        var oAge = document.getElementById("age");
+        var tBody = document.getElementsByTagName("tbody")[0];
+        var n = 0;
+        var oTable = document.getElementsByTagName("table")[0];
+        var ocheckall = document.getElementById("all");
+        var oIns = tBody.getElementsByTagName("input");
+
+        oBtn[0].onclick = function () {
+            n++;
+            var name = oName.value;
+            var sex = oMan.checked == true ? "男" : "女";
+            var age = parseInt(oAge.value);
+            var ctr = document.createElement("tr");
+
+            var ctd = document.createElement("td");
+            ctd.innerHTML = "<input type='checkbox'>";
+            ctr.appendChild(ctd);
+
+            var ctd = document.createElement("td");
+            ctd.innerHTML = name;
+            ctr.appendChild(ctd);
+
+            var ctd = document.createElement("td");
+            ctd.innerHTML = sex;
+            ctr.appendChild(ctd);
+
+            var ctd = document.createElement("td");
+            ctd.innerHTML = age;
+            ctr.appendChild(ctd);
+
+
+            tBody.appendChild(ctr);
+
+
+
+            for (var i = 0; i < oIns.length; i++) {
+                oIns[i].checked = false;
+            }
+            ocheckall.checked = false;
+
+            //复选框全选则ocheckall选中
+
+
+            for (var i = 0; i < oIns.length; i++) {
+                oIns[i].onclick = function () {
+                    //先把标签添加到数组中
+                    var arr = [];
+                    for (var i = 0; i < oIns.length; i++) {
+                        arr.push(oIns[i]);
+                    }
+                    console.log(arr);
+                    //再通过every对所有的input标签的checked值进行判断，所有的结果为true，最后才为true
+                    var isTrue = arr.every(function (inElem) {
+                        return inElem.checked == true;
+                    });
+
+                    //设置全选按钮的checked状态
+                    ocheckall.checked = isTrue;
+
+                }
+            }
+            // arr.push(oIns[n-1].checked);
+
+
+        }
+        //复选框全选则ocheckall选中    
+        // for(var j =0; j <oIns.length; j++) {
+        //     oIns[j].onclick = function () {
+        //         var arr = [];
+        //         for (var j = 0; j < oIns.length; j++) {
+        //             // arr[j] = ;
+        //            arr.push(oIns[j]);
+        //         } 
+        //         var a = arr.every(function (inElem) {
+        //                 return inElem.checked == true;
+        //             });
+        //        ocheckall.checked= a;
+
+        //     }
+
+        // }
+
+  ocheckall.onclick = function () {
+
+            //      if(ocheckall.checked == true){
+            //           for (var j = 0; j < n; j++) {
+            //        tBody.children[j].children[0].children[0].checked = true;
+            //    }
+            //      }else{
+            //          for (var j = 0; j < n; j++) {
+            //              tBody.children[j].children[0].children[0].checked = false;
+            //      }}
+            for (var j = 0; j < n; j++) {
+                tBody.children[j].children[0].children[0].checked = this.checked;
+            }
+        }
+
+
+
+
+
+    // for (var i = 0; i < oIns.length; i++) {
+    //     oIns[i].onclick = function() {
+    //         //先把标签添加到数组中
+    //         var arr =[];
+    //         for (var i = 0; i < oIns.length; i++) {
+    //             arr.push(oIns[i]);
+    //         }
+    //         console.log(arr);
+    //         //再通过every对所有的input标签的checked值进行判断，所有的结果为true，最后才为true
+    //         var isTrue = arr.every(function (inElem) {
+    //             return inElem.checked == true;
+    //         });
+
+    //         //设置全选按钮的checked状态
+    //         ocheckall.checked = isTrue;
+
+    //     }
+    // }
+     
+
+
+
+        //删除选中表格
+        oBtn[1].onclick = function () {
+
+            for (var i = 0; i < n; i++) {
+                if (tBody.children[i].children[0].children[0].checked == true) {
+                    tBody.removeChild(tBody.children[i]);
+                    i--;
+                }
+
+
+            }
+
+        }
+
+      
+
+
+        // if(ocheckall.checked==true){
+        //     for(var j=0;j<n;j++){
+        //         tBody.children[j].children[0].children[0].checked = "checked";
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <ul></ul>
+    <!-- 按回车，在ul中添加li，内容从输入框中来 -->
+
+
+    <div></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        var oIns =document.getElementsByTagName("input")[0];
+        var oUl =document.getElementsByTagName("ul")[0];
+        var oDiv =document.getElementsByTagName("div")[0];
+        // window.onkeydown =function(ev){
+        //     var ev = window.event || ev;
+        //     if(ev.keyCode==13){
+        //         oUl.innerHTML+= oIns.value+"<br>";
+        //         oIns.value ="";
+                
+        //     }
+        // }
+        // window.onkeydown =function(ev){
+        //     var ev = window.event || ev;
+        //     //w
+        //     if(ev.keyCode==87){
+        //         oDiv.style.top =oDiv.offsetTop -5+"px";
+        //     }
+        //     //s
+        //     if (ev.keyCode == 83) {
+        //         oDiv.style.top = oDiv.offsetTop + 5 + "px";
+        //     }
+        //     //a
+        //     if (ev.keyCode == 65) {
+        //         oDiv.style.left = oDiv.offsetLeft - 5 + "px";
+        //     }
+        //     //d
+        //     if (ev.keyCode ==68) {
+        //         oDiv.style.left = oDiv.offsetLeft + 5 + "px";
+        //     }
+        // }
+
+
+
+         
+          function fun1(ev) {
+                var ev = window.event || ev;
+                if (ev.keyCode == 13) {
+                    oUl.innerHTML +="<li>"+ oIns.value+"</li>" + "<br>";
+                    oIns.value = "";
+
+                }
+            }
+         function fun2(ev) {
+                var ev = window.event || ev;
+                //w
+                if (ev.keyCode == 87) {
+                    oDiv.style.top = oDiv.offsetTop - 5 + "px";
+                }
+                //s
+                if (ev.keyCode == 83) {
+                    oDiv.style.top = oDiv.offsetTop + 5 + "px";
+                }
+                //a
+                if (ev.keyCode == 65) {
+                    oDiv.style.left = oDiv.offsetLeft - 5 + "px";
+                }
+                //d
+                if (ev.keyCode == 68) {
+                    oDiv.style.left = oDiv.offsetLeft + 5 + "px";
+                }
+            }
+        bind(oIns,"keydown",fun1);
+        bind(window,"keydown",fun2);
+    </script>
+</body>
+  
+</html>

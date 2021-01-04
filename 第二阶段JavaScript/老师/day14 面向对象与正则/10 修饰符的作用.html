@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            g: global 执行一个全局的匹配
+            i: ignore case  执行一个不区分大小写的匹配
+        */
+
+        //g: global 执行一个全局的匹配
+        var str = "今天学习明天学习后天学习";
+        var reg1 = /学习/;
+        var reg2 = /学习/g;
+        console.log(str.replace(reg1,"放假")); //今天放假明天学习后天学习
+        console.log(str.replace(reg2,"放假")); //今天放假明天放假后天放假
+
+        //i: ignore case  执行一个不区分大小写的匹配
+        var str = "she is boy,SHE is boy";
+        var reg3 = /she/g;
+        var reg4 = /she/gi;
+        console.log(str.replace(reg3,"he"));//he is boy,SHE is boy
+        console.log(str.replace(reg4,"he")); //he is boy,he is boy
+
+
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

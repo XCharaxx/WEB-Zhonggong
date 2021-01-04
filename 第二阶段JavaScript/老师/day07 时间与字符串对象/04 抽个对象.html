@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+        }
+
+        ul li {
+            width: 198px;
+            height: 198px;
+            float: left;
+            border: 1px solid teal;
+        }
+
+        li img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font: bold 30px/200px "微软雅黑";
+            background: teal;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1439198089,711843450&fm=26&gp=0.jpg"
+                alt=""></li>
+        <li><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2181944231,3260797126&fm=26&gp=0.jpg"
+                alt=""></li>
+        <li><img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2892426602,3503479416&fm=26&gp=0.jpg"
+                alt=""></li>
+        <li><img src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3318247765,1530611010&fm=26&gp=0.jpg"
+                alt=""></li>
+        <li><span>给同桌抽对象</span></li>
+        <li><img src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=742309515,2461326731&fm=26&gp=0.jpg"
+                alt=""></li>
+        <li><img src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1033753223,2116096395&fm=26&gp=0.jpg"
+                alt="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2951979440,1658886983&fm=26&gp=0.jpg">
+        </li>
+        <li><img src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3608246519,3485294719&fm=26&gp=0.jpg"
+                alt=""></li>
+        <li><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3326191792,1032747395&fm=26&gp=0.jpg"
+                alt="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3388324725,1535703582&fm=26&gp=0.jpg">
+        </li>
+    </ul>
+
+    <script src="./ujiuye.js"></script>
+    <script>
+        var oImgs = document.getElementsByTagName("img");
+        var oSpan = document.getElementsByTagName("span")[0];
+
+        //1.点击按钮，随机抽取一个img显示
+        oSpan.onclick = function () {
+            var timer = setInterval(function () {
+                for (var i = 0; i < oImgs.length; i++) {
+                    oImgs[i].style.display = "none";
+                }
+                oImgs[getRandom(0, oImgs.length - 1)].style.display = "block";
+            }, 30);
+            
+            //3000毫秒停止定时器
+            setTimeout(function(){
+                clearInterval(timer);
+            },3000);
+        }
+
+
+    </script>
+</body>
+
+</html>

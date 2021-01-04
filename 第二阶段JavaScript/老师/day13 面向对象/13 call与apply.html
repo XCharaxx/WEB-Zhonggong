@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call与apply改变this的指向
+        //call   函数名.call(this的指向,参数一,...)
+        //apply  函数名.apply(this的指向,[参数一,...])
+        function sum(a,b){
+            console.log(this);
+            console.log(a+b);
+        }
+        sum(10,20); //window
+
+        //1.call  函数名.call(this的指向,参数一,...)
+        sum.call(sum,100,200); //sum  300
+
+
+        //2.apply  函数名.apply(this的指向,[参数一,...])
+        sum.apply(true,[1000,2000]); //Boolean {true} 3000
+
+
+        //3.借用其他对象的方法
+        var arr = [1,6,9,4,2,7,3];
+        console.log(Math.max(1,6,9,4,2,7,3));
+        console.log(Math.max.apply(true,arr)); //9
+
+        var n = {};
+        console.log(n.toString()); //[object Object] 对象的toString可以获取的数据的具体的类型
+        console.log(Object.prototype.toString.call([])); //[object Array]
+        console.log(Object.prototype.toString.call(1)); //[object Number]
+        console.log(Object.prototype.toString.call(sum)); //[object Function]
+
+
+        var obj1 = {
+            "name":"周德华",
+            "toString":function(){
+                console.log(this.name);
+            }
+        }
+
+        obj2 = {
+            "name":"刘杰伦"
+        }
+
+        obj1.toString.call(obj2);
+
+
+    </script>
+</body>
+</html>

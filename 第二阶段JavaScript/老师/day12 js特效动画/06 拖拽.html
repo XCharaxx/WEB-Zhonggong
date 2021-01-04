@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            left:0px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //1.按下
+        oDiv.onmousedown = function(ev){
+            var oEv = window.event || ev;
+            // var x = 鼠标的位置-元素的位置
+            var x = oEv.clientX - oDiv.offsetLeft;
+            var y = oEv.clientY - oDiv.offsetTop;
+
+            //2.移动
+            document.onmousemove = function(ev){
+                var oEv = window.event || ev;
+                //4.获取鼠标位置
+                var l = oEv.clientX - x;
+                var t = oEv.clientY - y;
+
+                //3.让元素移动
+                oDiv.style.left = l + "px";
+                oDiv.style.top = t + "px"
+            }
+
+            //3.松手
+            document.onmouseup = function(){
+                //取消移动事件
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</body>
+</html>

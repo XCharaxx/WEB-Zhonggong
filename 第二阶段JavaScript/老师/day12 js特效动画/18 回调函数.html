@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //回调函数callback：某个动作或者是某个行为执行完以后调用的函数，是解决异步操作的有效途径
+        //异步：在做某一个操作的时候，其他的操作可以继续执行  定时器
+        //同步：在做某一个操作的时候，其他的操作只能等待 alert  for
+       
+        console.log(1);
+        setTimeout(function(){ //回调函数
+            console.log(2);
+        },1000);
+        console.log(3);
+
+
+    
+    </script>
+</body>
+</html>

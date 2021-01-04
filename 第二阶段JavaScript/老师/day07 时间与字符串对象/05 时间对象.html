@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.创建时间对象(获取到当前这一秒的时间)
+        var oDate = new Date();
+        console.log(oDate);
+
+        //2.获取固定格式的时间
+        console.log(oDate.toDateString()); //Tue Dec 22 2020
+        console.log(oDate.toLocaleDateString()); //2020/12/22
+
+        console.log(oDate.toTimeString()); //13:42:33 GMT+0800 (中国标准时间)
+        console.log(oDate.toLocaleTimeString()); //下午1:42:33
+
+
+        //3.获取单个时间
+        var year = oDate.getFullYear();
+        console.log(year); //2020
+
+        //月份
+        var month = oDate.getMonth()+1; //月份从0开始，月份+1
+        console.log(month); //12
+
+        //日期
+        var date = oDate.getDate();
+        console.log(date); //22
+
+        //星期
+        var w = oDate.getDay();
+        console.log(w);//2    星期二
+        var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+        console.log(week[w]);
+
+        //小时
+        var h = oDate.getHours();
+        console.log(h);
+
+        //分钟
+        var m = oDate.getMinutes();
+        console.log(m);
+
+        //秒
+        var s = oDate.getSeconds();
+        console.log(s);
+
+        console.log(oDate.getTime());//时间戳 --- 1970,1,1 -- 现在的秒数
+
+
+        //2020年12月22日 星期二 13:42:33
+
+    </script>
+</body>
+</html>

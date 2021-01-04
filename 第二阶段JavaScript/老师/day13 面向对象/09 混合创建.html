@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //混合创建：构造函数(可变的)+原型(共享的、不变的内容)
+        //1.声明构造函数
+        function Student(name,age,sex){
+            //添加属性
+            this.name = name;
+            this.age = age;
+            this.sex = sex;     
+        }
+
+        //2.在原型中添加共享的属性和方法
+        Student.prototype.classId = "1116";
+        Student.prototype.name = "小夏";
+        Student.prototype.study = function(){
+            console.log("good good study，day day sleep！");
+        }
+
+        //3.实例化对象
+        var s1 = new Student("小芳",12,"男");
+        console.log(s1);
+        console.log(s1.name);
+
+
+        var s2 = new Student("小夏",12,"男");
+        console.log(s2);
+        console.log(s2.name);
+
+        console.log(s1.study == s2.study); //true;
+    </script>
+</body>
+</html>

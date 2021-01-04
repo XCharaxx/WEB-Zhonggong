@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.父类构造函数
+        function Student(name,age,sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.arr = [1,2,3];
+        }
+        Student.prototype.classId = "1116"
+        Student.prototype.study = function(){
+            console.log("good good study , day day sleep!");
+        }
+
+
+        //2.子类构造函数
+        function MiniStudent(){
+            this.play = function(){
+                console.log("玩王者荣耀");
+            }
+        }
+
+        //3.继承的操作  原型链继承 子类的原型对象 = 父类的实例对象
+        MiniStudent.prototype = new Student("小夏",6,"男");
+
+        //4.实例化对象
+        var mS = new MiniStudent();
+        mS.play();//玩王者荣耀
+        console.log(mS);
+
+        //原型链：实例本身----》__proto__（prototype）---->父类的实例对象---->父类的__proto__(prototype)....... undefined
+        console.log(mS.name);
+        console.log(mS.classId);
+
+
+        //缺点1：不能传参，每次创建出来都是一样的
+        var ms1 = new MiniStudent();
+        console.log(ms1.arr);
+        ms1.arr.push(4)
+        console.log(ms1.arr);
+
+
+        //缺点2：继承了引用数据类型一改全改
+        var ms2 = new MiniStudent();
+        console.log(ms2.arr);
+
+
+
+
+
+    </script>
+</body>
+</html>

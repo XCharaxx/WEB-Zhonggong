@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "fjsalkjoiu3rklsjfkwursmflkoiwrlkjfjdsoiqiwurew";
+    
+        //思路：
+        //声明一个空字符
+        //将需要去重字符，一个一个添加到空字符串中(条件：s里面没有这个字符加)
+        var s = "";
+        for(var i = 0;i<str.length;i++){
+            //如果s中没有这个符号，就拼接  indexOf():有返回对应的下标，没有返回-1
+            if(s.indexOf(str.charAt(i))==-1){
+                s += str.charAt(i);
+            }
+        }
+        console.log(s);
+    </script>
+</body>
+</html>

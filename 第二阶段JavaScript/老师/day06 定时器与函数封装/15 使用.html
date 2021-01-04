@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left:0px;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //调用
+        running(oDiv,"width",10,500);
+        running(oDiv,"height",10,500);
+        running(oDiv,"left",10,500);
+        running(oDiv,"top",10,500);
+    </script>
+</body>
+</html>

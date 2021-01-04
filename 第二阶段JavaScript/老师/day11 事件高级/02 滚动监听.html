@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        div {
+            height: 1000px;
+        }
+
+        ul {
+            position: fixed;
+            right: 50px;
+            top: 100px;
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+
+        ul li {
+            height: 30px;
+            border-bottom: 1px solid cadetblue;
+        }
+
+        ul .active a {
+            color: red
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="active"><a href="#div1">新闻一</a></li>
+        <li><a href="#div2">新闻二</a></li>
+        <li><a href="#div3">新闻三</a></li>
+        <li><a href="#div4">新闻四</a></li>
+    </ul>
+
+    <div style="background: rosybrown" id="div1"></div>
+    <div style="background: #99CCFF" id="div2"></div>
+    <div style="background: #ffffcc" id="div3"></div>
+    <div style="background: salmon" id="div4"></div>
+
+    <script>
+        var oDivs = document.getElementsByTagName("div");
+        var oLis = document.getElementsByTagName("li");
+
+        //1.添加滚动监听
+        window.onscroll = function () {
+            var sT = document.documentElement.scrollTop;
+            for (var i = 0; i < oDivs.length; i++) {
+                if (sT >= oDivs[i].offsetTop) {
+                    for (var j = 0; j < oLis.length; j++) {
+                        oLis[j].className = "";
+                    }
+                    oLis[i].className = "active";
+                }
+            }
+            /* if(sT>=oDivs[0].offsetTop){
+                for(var j = 0;j<oLis.length;j++){
+                    oLis[j].className = "";
+                }
+                oLis[0].className = "active";
+            }
+            //滚动条的位置已经滚动到了，skyblue块的位置
+
+            if(sT>=oDivs[1].offsetTop){
+                for(var j = 0;j<oLis.length;j++){
+                    oLis[j].className = "";
+                }
+                oLis[1].className = "active";
+            }
+
+            //滚动条的位置已经滚动到了，藕白色块的位置
+            if(sT>=oDivs[2].offsetTop){
+                for(var j = 0;j<oLis.length;j++){
+                    oLis[j].className = "";
+                }
+                oLis[2].className = "active";
+            }
+
+            //滚动条的位置已经滚动到了，胭脂色块的位置
+            if(sT>=oDivs[3].offsetTop){
+                for(var j = 0;j<oLis.length;j++){
+                    oLis[j].className = "";
+                }
+                oLis[3].className = "active";
+            } */
+
+
+        }
+       
+    </script>
+</body>
+
+</html>

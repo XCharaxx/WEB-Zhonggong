@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //工厂模式创建
+        function createStar(name,age,sex){
+            //1.创建空对象(原材料)
+            var obj = new Object();
+
+            //2.添加属性  (加工)
+            obj.name = name;
+            obj.age = age;
+            obj.sex = sex;
+            //3.添加方法
+            obj.skill = function(){
+                console.log("唱跳rap，长的好看，喜欢篮球,闪电五连，china");
+            }
+
+            //4.返回创建好的对象(出厂)
+            return obj;
+        }
+
+        //创建对象
+        var star1 = createStar("马保国",67,"男");
+        console.log(star1);
+        star1.skill(); //调用方法  唱跳rap，长的好看，喜欢篮球,闪电五连
+
+        var star2 = createStar("川建国",72,"男");
+        console.log(star2);
+        star2.skill();
+
+        var star3 = createStar("大黄",2,"男");
+        console.log(star3);
+
+        console.log(typeof star1,typeof star2,typeof star3); //object object object
+        //当前对象是否由右边的对象创建
+        console.log(star3 instanceof Object); //true
+
+
+
+        /* 
+        优点：解决了代码冗余的问题，批量创建对象
+        缺点:对象识别不清
+        */
+
+    </script>
+</body>
+</html>

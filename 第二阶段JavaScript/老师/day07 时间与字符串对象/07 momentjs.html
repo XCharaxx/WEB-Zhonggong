@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./moment.js"></script>
+    <script>
+        //格式化时间
+        console.log(moment().format("YYYY")); //YY:年份
+        console.log(moment().format("MM")); //MM：月份  会自动补0  
+        console.log(moment().format("DD")); //DD：日期  会自动补0  
+        console.log(moment().format("HH")); //HH：小时  会自动补0  
+        console.log(moment().format("mm")); //mm：分钟  会自动补0  
+        console.log(moment().format("ss")); //ss：秒  会自动补0  
+
+        setInterval(function(){
+            document.body.innerHTML = moment().format("YYYY年MM月DD日 HH:mm:ss");
+        },1000);
+        
+    </script>
+</body>
+</html>

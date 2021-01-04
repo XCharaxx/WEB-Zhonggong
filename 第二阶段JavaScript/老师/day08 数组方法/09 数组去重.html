@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var arr = [3,6,4,1,8,8,8,8,8,4,0,9,2,7,8,5,3,4,8,9,3];
+        //1.创建一个空数组，把arr里面的元素往空对象中添加，判断如果空数组没有这个元素，加
+        /* var array = [];
+        for(var i = 0;i<arr.length;i++){
+            if(array.indexOf(arr[i]) == -1){
+                array.push(arr[i]);
+            }
+        } */
+     
+
+
+        //2.拿数组中第一个元素，和后面所有的元素进行比较，如果一样删除后面哪一个
+        //拿数组中第二个元素，和后面所有的元素进行比较，如果一样删除后面哪一个
+        //数组中所有的元素后需要和后面的进行比较
+        for(var i = 0;i<arr.length;i++){
+            //和后面所有的元素进行比较
+            for(var j = i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){ //重复，删除后面的元素
+                    arr.splice(j,1);
+                    j--; //删除一个元素后元素位置会自动往前挪，下标也需要往前j--
+                }
+            }
+        }
+        console.log(arr);
+
+    </script>
+</body>
+</html>

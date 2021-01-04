@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid teal;
+            text-align: center;
+            font:50px/300px "黑体";
+            display: none;
+        }
+        .active{
+            color: deeppink;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <button class="active">菜单一</button>
+    <button>菜单二</button>
+    <button>菜单三</button>
+    <div style="display: block;">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+
+    <script>
+        /* //1.获取元素
+        var oBtns = document.getElementsByTagName("button")
+        var oDivs = document.getElementsByTagName("div");
+
+       //2.循环添加点击事件
+       for(var i = 0;i<oBtns.length;i++){
+           oBtns[i].index = i;
+           oBtns[i].onclick = function(){
+               for(var j = 0;j<oDivs.length;j++){
+                   oDivs[j].style.display = "none";
+                   oBtns[j].className = "";
+               }
+               oDivs[this.index].style.display = "block";
+               oBtns[this.index].className = "active";
+           }
+       } */
+    
+       
+       //1.声明构造函数
+       /* 
+         属性：变量(在其他位置还需要使用到的变量会作为属性),获取的标签就直接作为属性
+
+         方法:  
+       */
+       function TabSwitch(){
+          //1.添加属性
+          this.menus = document.getElementsByTagName("button");
+          this.items = document.getElementsByTagName("div");
+          console.log(this); //TabSwitch创建的对象
+          var that = this; //在this指向对的时候，存储一份
+
+          //2.添加一个入口方法
+          this.init = function(){
+            for(var i = 0;i<this.menus.length;i++){
+                this.menus[i].index = i;
+                this.menus[i].onclick = function(){
+                    //会把事件发生时要执行的操作，放在一个方法中
+                    //事件处理函数中的this---触发事件的对象(点谁就是谁)
+                    that.changeItem(this.index);
+                }
+            }
+          }
+          //入口方法都是自己调用
+          this.init();
+
+          //切换div的方法
+          this.changeItem = function(index){
+              for(var j = 0;j<this.items.length;j++){
+                  this.items[j].style.display = "none";
+                  this.menus[j].className = "";
+              }
+             this.items[index].style.display = "block";
+             this.menus[index].className = "active"
+          }
+          
+       }
+
+       //2.创建实例对象
+       new TabSwitch();
+
+
+       //1.构造函数
+       //标签作为对象的属性
+       //添加一个入口方法 init   在这个方法中进行循环事件操作
+       //事件里面的操作，会放到一个方法里面
+
+       //2.实例化对象
+
+    </script>
+</body>
+</html>

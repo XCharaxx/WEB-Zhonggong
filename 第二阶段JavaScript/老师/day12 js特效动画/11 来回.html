@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 1000px;
+            top: 0px;
+        }
+        p{
+           width: 1px;
+           height: 500px;
+           background: teal;
+           position: absolute;
+           left:500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+ 
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //2.点击div让div运动到500
+        oDiv.onclick = function () {
+            var timer = setInterval(function () {
+                //4.获取当前值
+                var cur = parseInt(getStyle(oDiv,"left"));
+
+                //5.计算速度 （目标值-当前值）/缩放系数
+                var speed = (500-cur)/10;
+                speed = speed > 0 ? Math.ceil(speed):Math.floor(speed);
+
+                //6.停止定时器
+                if(cur == 500){
+                    clearInterval(timer);
+                }
+
+                //3.移动div
+                oDiv.style.left = cur + speed + "px";
+            }, 30);
+
+        
+        }
+    </script>
+</body>
+
+</html>

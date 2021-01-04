@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[0];
+        /* 
+        问题：调用运动函数多次，只有最后一个有效
+        原因：每次调用函数运动元素都会清楚之前的定时器，然后再开启现在的
+        解决：把所有需要运动多属性值，都放到一起，就调用一次
+
+        {"width":500,"height":500}
+        */
+
+        //2.鼠标移入 500    --100
+        oDiv.onclick = function () {
+            /* bufferMove(oDiv,"width",500,5)
+            bufferMove(oDiv,"height",500,5) */
+            bufferMove(oDiv, { "width": 500, "height": 500}, 5)
+        }
+
+
+        function bufferMove(elem, attrs, xs) {
+            clearInterval(elem.timer)
+            elem.timer = setInterval(function () {
+                for (var attr in attrs) {//attr:width  height
+                    //4.获取当前值
+                    if (attr == "opacity") {
+                        //目标需要放大100
+                        attrs[attr] = attrs[attr] < 1 ? attrs[attr] * 100 : attrs[attr];
+                        var cur = parseInt(getStyle(elem, attr) * 100); //透明度的值太小，放大100倍处理
+                    } else {
+                        var cur = parseInt(getStyle(elem, attr));
+                    }
+
+                    //5.计算速度 (目标值-当前值)/系数
+                    var speed = (attrs[attr] - cur) / xs;
+
+                    //6.像素取整
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                    //7.停止定时器
+                    if (cur == attrs[attr] ) {
+                        clearInterval(elem.timer);
+                    }
+
+                    //3.移动div
+                    if (attr == "opacity") {
+                        elem.style[attr] = (cur + speed) / 100;  //透明度不加单位
+                    } else {
+                        elem.style[attr] = cur + speed + "px";
+                    }
+                }
+            }, 30);
+        }
+
+
+        /* var obj = {
+
+            "name":"web",
+            "age":18,
+            "height":180
+        }
+
+        for(var key in obj){
+            console.log(key+"------"+obj[key]); //name age height
+            // console.log(obj[key]); //name age height
+        } */
+    </script>
+</body>
+
+</html>

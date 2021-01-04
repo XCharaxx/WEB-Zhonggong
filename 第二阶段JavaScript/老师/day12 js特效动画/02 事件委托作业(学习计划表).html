@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none
+        }
+
+        ul {
+            width: 400px;
+            margin: 50px auto;
+        }
+
+        li {
+            line-height: 50px;
+            border-bottom: 1px solid red;
+        }
+
+        li span {
+            float: right;
+            height: 30px;
+            background: green;
+            margin-top: 10px;
+            line-height: 30px;
+            color: #fff;
+            margin-right: 5px;
+            padding: 0 5px;
+            cursor: pointer;
+        }
+
+        .del {
+            background: red;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>列表一 <span class="del">删除</span><span>修改</span></li>
+        <li>列表二 <span class="del">删除</span><span>修改</span></li>
+        <li>列表三 <span class="del">删除</span><span>修改</span></li>
+        <li>列表四 <span class="del">删除</span><span>修改</span></li>
+    </ul>
+    <button>添加</button>
+
+    <script>
+        //1.获取元素
+        var oBtn = document.getElementsByTagName("button")[0];
+        var oUl = document.getElementsByTagName("ul")[0];
+
+        //2.点击添加，弹框，如果点击的是确定按钮，并且输入框中有内容，添加到ul
+        oBtn.onclick = function () {
+            //带输入的对话框,确定---返回输入的内容，取消---null
+            var text = prompt("请输入添加的内容");
+            if (text != null && text.trim() != "") {
+                oUl.innerHTML += '<li>' + text + ' <span class="del">删除</span><span>修改</span></li>'
+            }
+        }
+
+        //3.使用事件代理的方式,把事件添加给父元素，当事件发生的时候，通过target找到子元素去处理事件
+        oUl.onclick = function (ev) {
+            var oEv = window.event || ev;
+            //4.当事件发生的时候，通过target找到子元素去处理事件
+            var target = oEv.target || oEv.srcElement;
+
+            //5.判断是修改还是删除
+            if (target.innerHTML == "删除") {
+                oUl.removeChild(target.parentNode);
+            } else if (target.innerHTML == "修改") {
+                //带输入的对话框,确定---返回输入的内容，取消---null
+                var text = prompt("请输入添加的内容").trim();
+                if (text != null && text != "") {
+                    target.parentNode.innerHTML = text+ '<span class="del">删除</span><span>修改</span>';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

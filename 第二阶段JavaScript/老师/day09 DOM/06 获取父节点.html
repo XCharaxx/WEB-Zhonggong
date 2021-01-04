@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p> 
+            <span></span>
+        </p>
+    </div>
+    <script>
+        //1.获取子元素
+        var oSpan = document.querySelector("span");
+
+        //2.获取父节点(直接父元素)  子节点.parentNode
+        var p = oSpan.parentNode;
+        console.log(p);
+
+        //3.获取定位父节点  子节点.offsetParent，没有定位父元素获取到body
+        var oO = oSpan.offsetParent; //
+        console.log(oO);
+    </script>
+</body>
+</html>

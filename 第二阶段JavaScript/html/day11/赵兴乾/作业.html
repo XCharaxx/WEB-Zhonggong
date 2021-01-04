@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 600px;
+            margin: 100px auto;
+            text-align: center
+        }
+
+        ul {
+
+            list-style: none;
+
+
+        }
+
+        ul li {
+            border-bottom: 2px solid #ff2424;
+            line-height: 50px;
+            font-size: 18px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        button {
+            width: 60px;
+            height: 30px;
+            margin-left: 5px;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 16px;
+
+        }
+
+        div button:nth-child(1) {
+            background-color: #008000;
+        }
+
+        div button:nth-child(2) {
+            background-color: #ff0000;
+        }
+
+        .box input {
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><span>列表一</span>
+                <div><button>修改</button><button>删除</button></div>
+            </li>
+            <li><span>列表二</span>
+                <div><button>修改</button><button>删除</button></div>
+            </li>
+            <li><span>列表三</span>
+                <div><button>修改</button><button>删除</button></div>
+            </li>
+            <li><span>列表四</span>
+                <div><button>修改</button><button>删除</button></div>
+            </li>
+        </ul>
+        <input type="submit" value="添加">
+    </div>
+    <script>
+        var oUl = document.getElementsByTagName("ul")[0];
+        var oLis = document.getElementsByTagName("li");
+        var oSpans = document.getElementsByTagName("span");
+        var oBtns = document.getElementsByTagName("button");
+        var oIns = document.getElementsByTagName("input")[0];
+        oIns.onclick = function () {
+            //    var a= confirm("请输入添加的内容","");
+            var word1 = prompt("请输入添加的内容");
+            if (word1 != null && word1.trim()!='') {
+                var cLi = document.createElement("li");
+                var cSpan = document.createElement("span");
+                var cDiv = document.createElement("div");
+                cSpan.innerHTML = word1;
+                cDiv.innerHTML = "<button>修改</button><button>删除</button>";
+                cLi.appendChild(cSpan);
+                cLi.appendChild(cDiv);
+                oUl.appendChild(cLi);
+            }
+
+            //    if(word==""){
+            //        alert("请添加内容");
+            //        return false;
+            //    }
+        }
+        oUl.onclick = function (ev) {
+            var ev = window.event || ev;
+            var target = ev.target || ev.srcElement;
+            if (target.innerHTML == "修改") {
+                var word = prompt("请输入添加的内容");
+                if (word != null && word.trim() != '' ) {
+                    target.parentNode.parentNode.children[0].innerHTML = word;
+                }
+            }
+            if (target.innerHTML == "删除") {
+                oUl.removeChild(target.parentNode.parentNode);
+
+
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

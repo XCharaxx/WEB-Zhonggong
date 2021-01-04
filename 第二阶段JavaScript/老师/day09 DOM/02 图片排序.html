@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片排序</title>
+    <style>
+        .all {
+            box-sizing: border-box;
+            width: 1190px;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: purple;
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-image: linear-gradient(90deg, green, skyblue);
+            border: 1px solidblack;
+            outline: none;
+
+        }
+
+        .imgs-div {
+            width: 100%;
+            width: 1190px;
+            padding: 20px;
+        }
+
+        ul {
+            width: 100%;
+            height: 500px;
+        }
+
+        li {
+            margin: 5px 10px;
+            float: left;
+            width: 251px;
+            height: 230px;
+            list-style: none;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <h2>亚索所有皮肤免费来袭</h2>
+        <div class="btn">
+            <button>从大到小</button>
+            <button>随机排序</button>
+        </div>
+        <div class="imgs-div">
+            <ul>
+                <li> <img src="./img/1.png"> <span>西部牛仔8</span> </li>
+                <li> <img src="./img/2.png"> <span>原计划2</span> </li>
+                <li> <img src="./img/3.png"> <span>猩红之月3</span> </li>
+                <li> <img src="./img/4.png"> <span>黑夜使者1</span> </li>
+                <li> <img src="./img/5.png"> <span>奥德赛5</span> </li>
+                <li> <img src="./img/6.png"> <span>战场boss7</span> </li>
+                <li> <img src="./img/7.png"> <span>真实伤害6</span> </li>
+                <li> <img src="./img/8.png"> <span>灵魂莲华4</span> </li>
+            </ul>
+
+        </div>
+    </div>
+    <script>
+        var arr = [
+            { "src": "./img/1.png", "title": "西部牛仔8", id: '8' },
+            { "src": "./img/2.png", "title": "原计划2", id: '2' },
+            { "src": "./img/3.png", "title": "猩红之月3", id: '3' },
+            { "src": "./img/4.png", "title": "黑夜使者1", id: '1' },
+            { "src": "./img/5.png", "title": "奥德赛5", id: '5' },
+            { "src": "./img/6.png", "title": "战场boss7", id: '7' },
+            { "src": "./img/7.png", "title": "真实伤害6", id: '6' },
+            { "src": "./img/8.png", "title": "昼夜莲华4", id: '4' }
+        ];
+        var oBtn = document.getElementsByTagName("button");
+        var oUl = document.getElementsByTagName("ul")[0];
+        var oSpan = document.getElementsByTagName("span");
+        var tag = true; //true --- 从小到大     false----从大到小
+        
+        //1.点击排序
+        oBtn[0].onclick = function(){
+            //1.清空原有数据
+            oUl.innerHTML = "";
+            //2.对数据进行排序
+            arr.sort(function(a,b){
+                //如果tag==true(从大到小)b-a   否则(从小到大)a-b
+                return tag==true ? b.id-a.id : a.id - b.id;
+            });
+            //3.显示
+            for(var i = 0;i<arr.length;i++){
+                oUl.innerHTML += '<li> <img src="'+arr[i].src+'"> <span>'+arr[i].title+'</span> </li>';
+            }
+            //4.按钮上的文字需要发生变化，状态也需要变化
+            this.innerHTML = tag==true?"从小到大":"从大到小";
+            tag = !tag;
+        }
+
+
+        
+        //2.随机
+        oBtn[1].onclick = function(){
+            //1.清空原有数据
+            oUl.innerHTML = "";
+            //2.随机排序
+            arr.sort(function(){
+                return Math.random()-0.5;
+            })
+            //3.显示
+            for(var i = 0;i<arr.length;i++){
+                oUl.innerHTML += '<li> <img src="'+arr[i].src+'"> <span>'+arr[i].title+'</span> </li>';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

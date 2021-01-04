@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //string：包装类对象，字面量创建的 字符串不能说是一个真正的字符串对象，
+        //调用字符串方法的时候，会暂时包装成String对象
+        //1.字面量
+        var str1 = "web1116";
+        console.log(str1); 
+        console.log(typeof str1);
+        console.log(str1.charAt(1)); //e
+
+        //2.关键字new 创建
+        var str2 = new String("web1116");
+        console.log(str2);
+        console.log(typeof str2);
+
+        //3.属性
+        console.log(str1.length);
+        //4.方法
+        console.log(str.charAt(1));
+    </script>   
+</body>
+</html>

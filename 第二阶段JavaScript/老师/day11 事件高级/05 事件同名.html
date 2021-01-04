@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //标签.事件 添加的事件，如果事件同名会覆盖
+        oDiv.onclick = function(){
+            console.log("程序员1的代码");
+        }
+        oDiv.onclick = function(){
+            console.log("程序员2的代码");
+        }
+    </script>
+</body>
+</html>

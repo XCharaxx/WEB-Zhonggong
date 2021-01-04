@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <button id="btn1">-</button>
+            <span>0</span>
+            <button id="btn2">+</button>
+            单价：<span>12.5元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button id="btn1">-</button>
+            <span>0</span>
+            <button id="btn2">+</button>
+            单价：<span>8.5元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button id="btn1">-</button>
+            <span>0</span>
+            <button id="btn2">+</button>
+            单价：<span>20.34元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button id="btn1">-</button>
+            <span>0</span>
+            <button id="btn2">+</button>
+            单价：<span>100元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button id="btn1">-</button>
+            <span>0</span>
+            <button id="btn2">+</button>
+            单价：<span>200元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button id="btn1">-</button>
+            <span>0</span>
+            <button id="btn2">+</button>
+            单价：<span>10元</span>
+            小计：<span>0元</span>
+        </li>
+    </ul>
+    <script>
+        var oLis = document.getElementsByTagName("li");
+        for (var i = 0; i < oLis.length; i++) {
+            xiaoji(oLis[i]);
+        }
+
+
+        function xiaoji(parent) {
+            var oBtns1 = parent.getElementsByTagName("button")[0];
+            var oBtns2 = parent.getElementsByTagName("button")[1];
+            var oSpn1 = parent.getElementsByTagName("span")[0];
+            var oSpn2 = parent.getElementsByTagName("span")[1];
+            var oSpn3 = parent.getElementsByTagName("span")[2];
+            var price = parseFloat(oSpn2.innerHTML);
+            oBtns1.onclick = function () {
+                if (oSpn1.innerHTML > 0) {
+                    oSpn1.innerHTML--;
+                }
+                var sum = (oSpn1.innerHTML * price).toFixed(2);
+                oSpn3.innerHTML = sum + "元";
+            }
+            oBtns2.onclick = function () {
+                oSpn1.innerHTML++;
+                var sum = (oSpn1.innerHTML * price).toFixed(2);
+                oSpn3.innerHTML = sum + "元";
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

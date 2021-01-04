@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>发送验证码</button>
+    <script>
+        var oBtn = document.getElementsByTagName("button")[0];
+
+        //1.点击
+        oBtn.onclick = function(){
+            //2.改变内容为  n秒以后重新获取,按钮变成不可用
+            oBtn.disabled = "disabled";
+            oBtn.innerHTML = "4秒以后重新获取";
+
+            //添加定时器，倒计时
+            var n = 4;
+            var timer = setInterval(function(){
+                n--;
+                oBtn.innerHTML = n+"秒以后重新获取";
+                
+                if(n<=0){
+                    clearInterval(timer);
+                    oBtn.innerHTML = "发送验证码";
+                    oBtn.removeAttribute("disabled");
+                }
+            },1000);
+           
+        }
+    </script>
+</body>
+</html>

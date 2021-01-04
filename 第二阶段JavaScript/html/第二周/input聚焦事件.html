@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 400px;
+            margin: 100px auto;
+        }
+        input{
+            border: none;
+            width: 400px;
+            height: 40px;
+            font-size: 18px;
+            outline: none;
+            border: 1px solid gray;
+            padding-left: 5px;
+
+        }
+        span{
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+         <input type="text" placeholder="请输入邮箱">
+         <span></span>
+    </div>
+    <script>
+        
+        var oIn = document.getElementsByTagName("input")[0];
+        var oSpan =document.getElementsByTagName("span")[0];
+        oIn.onfocus =function(){
+            oIn.style.borderColor ="#4c83e0"; 
+             oIn.style.color = "gray";
+              oSpan.style.color = "gray";
+            oSpan.innerHTML = "6~12个字符，可使用字母、数字、下划线，需要以字母开头";
+        }
+      
+     
+             oIn.onblur = function () {
+           
+                
+
+              
+
+               for (var i = 0; i < oIn.value.length; i++) {
+                    if (oIn.value.length < 6 || oIn.value.length > 18) {
+
+
+                         oIn.style.borderColor = "#ff8e8e";
+                         oIn.style.color = "#ff8e8e";
+                         oSpan.innerHTML = "长度应为6~18个字符";
+                         oSpan.style.color = "#ff8e8e";
+
+
+
+                     }
+                     else if (oIn.value.charCodeAt(0) < 65 || oIn.value.charCodeAt(0) > 90 && oIn.value.charCodeAt(0) < 97 || (oIn.value.charCodeAt(0) > 122)) {
+
+                         oIn.style.borderColor = "#ff8e8e";
+                         oIn.style.color = "#ff8e8e";
+                         oSpan.innerHTML = "必须以字母开头";
+                         oSpan.style.color = "#ff8e8e";
+
+
+                     }
+                    else  if (!((oIn.value.charCodeAt(i) >= 65 && oIn.value.charCodeAt(i) <= 90) || (oIn.value.charCodeAt(i) == 95) || (oIn.value.charCodeAt(i) >= 97 && oIn.value.charCodeAt(i) <= 122))) {
+                       oIn.style.borderColor = "#ff8e8e";
+                       oIn.style.color = "#ff8e8e";
+                       oSpan.innerHTML = "必须由字母、数字、下划线组成";
+                       oSpan.style.color = "#ff8e8e";
+
+                   }
+                     else if (oIn.value.length >= 6 && oIn.value.length <= 18) {
+
+                         oIn.style.borderColor = "gray";
+                         oIn.style.color = "black";
+                         oSpan.innerHTML = "恭喜，该邮箱可以注册";
+                         oSpan.style.color = "green";
+
+                     }
+
+                 }
+
+
+           }
+      
+       
+            
+
+        
+    </script>
+</body>
+</html>

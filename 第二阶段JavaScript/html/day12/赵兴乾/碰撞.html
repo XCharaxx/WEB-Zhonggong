@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       html,body{
+           width: 100%;
+           height: 100%;
+       }
+        img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            background: #ccc;
+            z-index: -1;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <p>eesfsfsfsfsfsfsfsfsf</p>
+    <img src="./img/1.jpg" alt="">
+    <div class="box"></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        var oImg = document.getElementsByTagName("img")[0];
+        oImg.onmousedown = function (ev) {
+            var ev = window.event || ev;
+            var xw = ev.clientX - oImg.offsetLeft;
+            var xh = ev.clientY - oImg.offsetTop;
+
+            document.onmousemove = function (ev) {
+                var ev = window.event || ev;
+                var vw = document.documentElement.clientWidth;
+                var vh =document.documentElement.clientHeight;
+               
+                      oImg.style.left = ev.clientX - xw + "px";
+                oImg.style.top = ev.clientY - xh + "px";
+                
+              
+                 
+                if(oImg.offsetLeft > oDiv.offsetWidth + oDiv.offsetLeft ){
+                          oDiv.style.backgroundColor = "#ccc";
+               }else if(oImg.offsetLeft + oImg.offsetWidth < oDiv.offsetLeft) {
+                    oDiv.style.backgroundColor = "#ccc";
+                }else if(oImg.offsetTop > oDiv.offsetTop + oDiv.offsetHeight ){
+                    oDiv.style.backgroundColor = "#ccc";
+                }else if(oImg.offsetHeight + oImg.offsetTop < oDiv.offsetTop){
+                             oDiv.style.backgroundColor = "#ccc";
+                }
+                else{
+                    oDiv.style.backgroundColor = "red"
+                }
+            }
+           
+            oImg.onmouseup = function () {
+                document.onmousemove = null;
+                if (oImg.releaseCapture) {
+                    oImg.releaseCapture();
+                }
+
+            }
+            if (oImg.setCapture) {
+                oImg.setCapture();
+            }
+
+            return false;
+        }
+
+
+    </script>
+</body>
+
+</html>

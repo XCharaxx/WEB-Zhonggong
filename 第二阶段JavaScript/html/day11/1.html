@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: teal;
+            cursor: move;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var oDiv =document.getElementsByTagName("div")[0];
+       window.onmousemove=function(ev){
+          var ww= document.documentElement.clientWidth;
+          var wh =document.documentElement.clientHeight;
+          
+          var ev=window.event||ev;
+          if((ev.clientX >=oDiv.clientWidth / 2)&& (ev.clientY >= oDiv.clientHeight/ 2)){
+               oDiv.style.left=(ev.clientX-oDiv.clientWidth/2)+"px";
+            oDiv.style.top=(ev.clientY-oDiv.clientHeight/2)+"px";
+          }
+                
+           
+        
+           
+        }
+        
+    </script>
+</body>
+
+</html>

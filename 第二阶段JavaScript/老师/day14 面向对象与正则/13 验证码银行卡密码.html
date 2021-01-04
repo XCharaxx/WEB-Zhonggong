@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> <span></span>
+    <!-- 6位数字 -->
+    <script>
+       var oSpan = document.getElementsByTagName("span")[0];
+       var oIn = document.getElementsByTagName("input")[0];
+
+       //1.失去焦点的时候检测输入的内容
+       oIn.onblur = function(){
+           //六位数字
+           var reg = /[0-9][0-9][0-9][0-9][0-9][0-9]/;
+           if(reg.test(oIn.value)){
+               oSpan.innerHTML = "对";
+           }else{
+             oSpan.innerHTML = "错";
+           }
+       }
+    </script>
+</body>
+</html>

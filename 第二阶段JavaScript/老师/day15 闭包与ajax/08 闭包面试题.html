@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun(n, o) {
+            console.log(o);
+            return {
+                "fun": function (m) {
+                    return fun(m, n)
+                }
+            }
+        }
+
+        /* 
+        fun(0) : n = 0; o=undefined
+                 console.log(o);  //undefined
+                 return {fun:function(){}} 
+                 a = {
+                        "fun":function(m){
+                            return fun(m,n)
+                        }
+                    }
+        a.fun(1): m = 1
+                  return fun(1,0)   n = 1,o=0
+         a.fun(1): m = 2
+                  return fun(2,0)   n = 1,o=0
+
+        */
+        var a = fun(0);//undefined
+        a.fun(1); //0 
+        a.fun(2); //0
+        a.fun(3); //0
+
+
+
+
+
+
+        //3.代码执行以后的结果是
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function () {
+              console.log(i, new Date()); ////5 Thu Dec 31 2020 13:46:42 GMT+0800 (中国标准时间)
+            }, 1000);
+        }
+        console.log(i, new Date()); //5 Thu Dec 31 2020 13:46:41 GMT+0800 (中国标准时间)
+
+        /* 
+          同步：在做某一个操作的时候，其他的只能等待  for alert
+          异步：在左某一个操作的时候，可以同时执行其他的操作  定时器
+        
+        */
+
+       
+    </script>
+</body>
+
+</html>

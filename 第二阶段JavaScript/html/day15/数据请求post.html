@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ajax =  new XMLHttpRequest();
+        ajax.open("post","http://edu.xqb.ink/api/registers",true);
+        ajax.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        ajax.send("usr=ue&pwd=18d754");
+        ajax.onreadystatechange =function(){
+            if(ajax.readyState==4&ajax.status==200){
+                document.write(ajax.responseText);
+            }
+        }
+    </script>
+</body>
+</html>

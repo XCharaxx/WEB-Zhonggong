@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.选择排序 ，拿第一个和后面所有的进行比较，如果前面比较大，交换位置
+        var arr = [6, 3, 9, 2, 7, 4, 8, 5, 1];
+        for (var i = 0; i < arr.length; i++) {
+            //和后面所有的元素进行比较
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) { //如果前面的比较大，交换位置
+                    var temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        console.log(arr);
+
+
+        
+        //2.冒泡排序，相邻的两个比较
+        var arr = [6, 3, 9, 2, 7, 4, 8, 5, 1];
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr.length-1-i; j++) {
+                //相邻的两个比较
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+
+
+        //3.快排 ： 取中间值，声明两个空数组，比较小放前面，大的放后面
+        var arr = [6, 3, 9, 2, 7, 4, 8, 5, 1];
+        function quickSort(arr){
+            //5.递归结束条件
+            if(arr.length<=1) return arr;
+            //1.取中间值（从数组中删除）
+            var middle = arr.splice(parseInt(arr.length/2),1)[0];
+
+            //2.声明两个空数组
+            var left = [],right=[];
+
+            //3.比较小放前面，大的放后面
+            for(var i = 0;i<arr.length;i++){
+                if(middle>arr[i]){
+                    left.push(arr[i]);
+                }else{
+                    right.push(arr[i]);
+                }
+            }
+
+            //4.组合数组
+            return quickSort(left).concat(middle,quickSort(right));
+        }
+
+        console.log(quickSort(arr));;
+
+
+    </script>
+</body>
+
+</html>

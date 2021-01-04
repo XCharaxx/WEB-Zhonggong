@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <script>
+
+        var oBtn = document.getElementsByTagName("button");
+
+        oBtn[0].onclick = function(){
+            alert("按钮1");
+        }
+        oBtn[1].onclick = function(){
+            alert("按钮2");
+        }
+
+        //全局捕获，添加了全局捕获，会监听整个页面上对应事件的发生，只要发生对应事件就会截取过来
+        //触发自己的事件
+        oBtn[1].setCapture();
+
+        //释放全局捕获
+        oBtn[1].releaseCapture();
+    
+    </script>
+</body>
+</html>

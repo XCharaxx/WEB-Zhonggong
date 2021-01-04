@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "web1116";
+        //1.charAt(pos):获取对应下标位置的字符   下标从0开始
+        //参数：pos下标
+        var s = str.charAt(1);
+        console.log(s);
+
+        //2.charCodeAt(pos)：获取对应下标位置字符的编码 "0"-48  "a"-65  "a":97
+        //参数：pos下标
+        var code = str.charCodeAt(1);
+        console.log(code); //101
+
+        //3.indexOf(searchValue,start):查找一个字符串在另一个字符串中首次出现的位置，出现返回对应下标，没有返回-1  (判断某个字符串中是否有某个字符)
+        //searchValue：查找的字符串
+        //start:可选，默认是0，从下标为0的位置开始往后查找
+        var str = "jfkajwiru";
+        var n = str.indexOf("a"); //从下标为0的位置开始找  a
+        console.log(n); //3
+
+        var n = str.indexOf("a",5);  //从下标为5的位置开始找  a
+        console.log(n); //-1
+
+        //4.lastIndexOf(searchValue,start):查找一个字符串在另一个字符串中最后一次出现的位置，出现返回对应下标，没有返回-1  (判断某个字符串中是否有某个字符)
+        //searchValue：查找的字符串
+        //start:可选，默认是length-1，从后往前找
+        var str = "jfkajwiru";
+        var n = str.lastIndexOf("a",5);  //从下标为5的位置开始找  a
+        console.log(n); //3
+
+        var str = "431102199910101212"; 
+        //5.substring(start,end):提取介于两个指定下标之间的字符
+        //start：可选，默认是0
+        //end：可选，默认为length    包括开始，不包括结束
+        console.log(str.substring(6)); //从下标为6开始截取到最后 199910101212
+        console.log(2020-str.substring(6,10)); //包括开始，不包括结束
+
+        //6.slice(start,end):提取介于两个指定下标之间的字符
+        //start：可选，默认是0
+        //end：可选，默认为length    包括开始，不包括结束
+        console.log(str.slice(6,10));
+
+        //区别
+        var str = "abcdefg";
+        console.log(str.substring(2,0)); //自动调整位置0 - 2
+        console.log(str.slice(2,0)); //不自动调整位置 “”
+
+        console.log(str.substring(2,-1)); //ab 负数默认为0
+        console.log(str.slice(2,-1)); //cdef  负数默认为倒数第几个
+
+        var arr = ["[object Obect]","[object Function]","[object string]"];
+        console.log(arr[0].slice(8,-1));
+        console.log(arr[1].slice(8,-1));
+        console.log(arr[2].slice(8,-1));
+
+        //7.substr(start,length) : 从哪开始，截取几个
+        var str = "431102199910101212"; 
+        console.log(str.substr(6,4));
+ 
+
+
+    </script>
+</body>
+</html>

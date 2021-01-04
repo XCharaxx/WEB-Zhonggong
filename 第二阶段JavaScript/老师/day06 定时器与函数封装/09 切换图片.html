@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image/1.jpg" alt="">
+
+    <script>
+        //隔1秒切换图片，鼠标移入，停止定时器
+        var oImg = document.getElementsByTagName("img")[0];
+        var n = 1;
+        //隔1秒切换图片
+        var timer = setInterval(changeImg,1000);
+        function changeImg(){
+            n++;
+            if(n>5){n=1}
+            oImg.src = "image/"+n+".jpg"
+        }
+
+        //鼠标移入停止定时器
+        oImg.onmouseover = function(){
+            //停止定时器
+            clearInterval(timer);
+        }
+
+        //鼠标离开，定时器继续（定时器只要一停止就没有了，重新写一个）
+        oImg.onmouseout = function(){
+           timer = setInterval(changeImg,1000);
+        }
+       
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.父类构造函数
+        function Student(name,age,sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.arr = [1,2,3];
+        }
+        Student.prototype.classId = "1116"
+        Student.prototype.study = function(){
+            console.log("good good study , day day sleep!");
+        }
+
+        //2.子类构造函数
+        function MiniStudent(name,age,sex){
+            //3.对象冒充继承
+            Student.call(this,name,age,sex);
+            this.play = function(){
+                console.log("玩王者荣耀");
+            }
+        }
+
+        //4.实例化对象
+        var s1 = new MiniStudent("如花","6","女");
+        console.log(s1);
+        s1.arr.push(4);//[1,2,3,4]
+
+        var s2 = new MiniStudent("貂蝉","6","男");
+        console.log(s2);
+        console.log(s2.arr); //[1,2,3]
+
+        //优点：可以传参，解决引用数据类型一改全改的问题
+        //缺点：不能继承父类原型中的属性和方法
+        s2.play();
+        s2.study(); //报错
+    </script>
+</body>
+</html>

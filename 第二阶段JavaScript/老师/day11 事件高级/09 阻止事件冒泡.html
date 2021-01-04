@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div>
+            <button>我是一个小可爱</button>
+        </div>
+        <script>
+            var oDiv = document.getElementsByTagName("div")[0];
+            var oBtn = document.getElementsByTagName("button")[0];
+            /* 
+            阻止事件冒泡：
+               标准浏览器： event.stopPropagation();
+               ie浏览器：event.cancelBubble = true;
+            */
+            oBtn.onclick = function(ev){
+                var ev = window.event||ev;
+                //event.stopPropagation();
+                //ev.cancelBubble = true;
+                //兼容
+                ev.stopPropagation ? ev.stopPropagation():ev.cancelBubble = true;
+                console.log("点击按钮");
+            }
+            oDiv.onclick = function(){
+                console.log("点击div");
+            }
+        </script>
+     
+     </body>
+</body>
+</html>

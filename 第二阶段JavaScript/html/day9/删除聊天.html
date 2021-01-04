@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li><span>吃饭了吗？</span> <button>删除</button></li>
+        <li><span>饿了么？</span> <button>删除</button></li>
+        <li><span>睡了吗？</span> <button>删除</button></li>
+        <li><span>起了吗？</span> <button>删除</button></li>
+    </ul>
+     <script>
+         var oBtn =document.getElementsByTagName("button");
+         for(var i=0;i<oBtn.length;i++){
+              oBtn[i].onclick = function(){
+             this.parentNode.remove();
+         }
+         }
+        
+     </script>
+    <!-- // 标签.remove()删除标签 -->
+</body>
+
+</html>

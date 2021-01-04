@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        /* 
+        滚轮事件
+        添加滚轮事件：
+            chrome、ie： 标签.onmousewheel
+            ff：必须通过事件绑定添加，标签.addEventListener("DOMMouseScroll")
+        获取滚动信息
+             chrome、ie：ev.wheelDelta
+        
+        */
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //  chrome、ie： 标签.onmousewheel
+        oDiv.onmousewheel = scroll;
+        //ff：必须通过事件绑定添加，标签.addEventListener("DOMMouseScroll")
+        if (oDiv.addEventListener) {
+            oDiv.addEventListener("DOMMouseScroll", scroll)
+        }
+
+
+        //滚动调用的函数
+        function scroll(ev){
+           
+        }
+
+    </script>
+</body>
+
+</html>

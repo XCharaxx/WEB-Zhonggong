@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image/1.jpg" alt="">
+
+    <script>
+        //隔2秒换一张图片
+        var oImg = document.getElementsByTagName("img")[0];
+        var n = 1;
+        //1.隔2000切换一次图片
+        setInterval(function(){
+            n++;
+            if(n>5){n=1}
+            oImg.src = "image/"+n+".jpg";//1 2 3 4 5
+        },1000);
+    </script>
+</body>
+</html>

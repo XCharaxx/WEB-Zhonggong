@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.创建请求对象
+        var xhr = new XMLHttpRequest();
+
+        //2.建立连接
+        xhr.open("post","http://edu.xqb.ink/api/registers",true);
+        //post请求，需要设置请求头
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+        //3.发送请求  post请求参数，放在send里面
+        xhr.send("usr=txf1116&pwd=1234567");
+
+        //4.监听结果
+        xhr.onreadystatechange = function(){
+    
+            if(xhr.readyState == 4){
+                if(xhr.status == 200){
+                    console.log(xhr.responseText);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

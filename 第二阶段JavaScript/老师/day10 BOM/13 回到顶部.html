@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        
+        div{
+            width: 100%;
+            height: 500px;
+            margin-bottom: 10px;
+        }
+        p{
+            position: fixed;
+            right:20px;
+            bottom: 20px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font:40px/100px "微软雅黑";
+            background:rgba(0,0,0,0.3);
+            color: #fff;
+            display: none;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <div style='background:red'></div>
+    <div style='background:teal'></div>
+    <div style='background:pink'></div>
+    <div style='background:tomato'></div>
+    <div style='background:orange'></div>
+    <div style='background:yellowgreen'></div>
+    <div style='background:purple'></div>
+    <p>top</p>
+
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[2];
+        var op = document.getElementsByTagName("p")[0];
+
+        //2.添加滚动事件
+        window.onscroll = function(){
+            //获取滚动距离
+            var sT = document.documentElement.scrollTop||document.body.scrollTop;
+            //3.如果滚动到粉色盒子的位置，显示top
+            if(sT >= oDiv.offsetTop){
+                op.style.display = "block";
+            }else{
+                op.style.display = "none";
+            }
+        }
+
+        //3.点击top，回到顶部
+        op.onclick = function(){
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+</html>

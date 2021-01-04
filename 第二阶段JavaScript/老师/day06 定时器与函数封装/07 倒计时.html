@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>5</strong>
+    <script>
+        /* setInterval：定时器但凡已开启就不会主动停止 */
+        //1.获取标签
+        var oS = document.getElementsByTagName("strong")[0];
+        var n = 5;
+        //2.隔1秒减1
+        setInterval(function(){
+            n--;
+            if(n <= 0)n=0;
+            oS.innerText = n;
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .move{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            margin: 150px auto;
+        }
+    </style>
+</head>
+<body>
+    <p>fkljsakfdsajffffffffffffffffffffffffffffffffffffffffffff</p>
+    <div class="move"></div>
+    <div class="box"></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        //1.按下
+        oDiv.onmousedown = function(ev){
+            var oEv = window.event||ev;
+            var x = oEv.clientX - oDiv.offsetLeft;
+            var y = oEv.clientY - oDiv.offsetTop;
+            //2.拖拽 移动
+            document.onmousemove = function(ev){
+                //4.获取鼠标位置
+                var oEv = window.event||ev;
+                var l = oEv.clientX - x;
+                var t = oEv.clientY - y;
+
+                //3.移动div，随鼠标的位置移动
+                oDiv.style.left = l + "px";
+                oDiv.style.top = t + "px";
+            }
+
+            //5.松手，div停止移动
+            document.onmouseup = function(){
+                document.onmousemove = null;
+                //释放全局捕获
+                if(oDiv.releaseCapture){
+                    oDiv.releaseCapture();
+                }
+            }
+            //6.取消浏览器的默认行为
+            //设置全局捕获
+            if(oDiv.setCapture){
+                oDiv.setCapture();
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><span>吃饭了吗？</span> <button>删除</button></li>
+        <li><span>学习吗？</span> <button>删除</button></li>
+        <li><span>睡了吗？</span> <button>删除</button></li>
+        <li><span>起了吗？</span> <button>删除</button></li>
+    </ul>
+
+    <script>
+        //1.获取元素
+        var oBtns = document.querySelectorAll("button");
+        var oLis = document.querySelectorAll("li");
+
+        //2.点击button，删除对应的li
+        for(var i = 0;i<oBtns.length;i++){
+            oBtns[i].onclick = function(){
+                //3.删除对应的li
+                this.parentNode.remove();
+            }
+        }
+    </script>
+</body>
+</html>

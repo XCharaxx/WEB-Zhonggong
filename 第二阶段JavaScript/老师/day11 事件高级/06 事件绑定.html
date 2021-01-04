@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        /* 
+        事件绑定的形式添加
+        标准浏览器绑定：标签.addEventListener(事件类型[不加on]，事件处理函数，是否捕获)
+        ie浏览器绑定：标签.attachEvent(事件类型[加on],事件处理函数)  没有捕获
+            ie低版本倒序执行
+            this指window
+        */
+        function fun1() {
+            alert(this)
+        }
+        function fun2() {
+            alert(2)
+        }
+
+        //1.标准浏览器绑定：标签.addEventListener(事件类型[不加on]，事件处理函数，是否捕获)
+        //oDiv.addEventListener("click",fun1);
+        //oDiv.addEventListener("click",fun2);
+
+        //2.ie浏览器绑定：标签.attachEvent(事件类型[加on],事件处理函数)  没有捕获
+        //oDiv.attachEvent("onclick",fun2);
+        //oDiv.attachEvent("onclick",fun1);
+
+
+        //3.兼容
+        if(oDiv.addEventListener){
+          oDiv.addEventListener("click",fun1);
+        }else{
+          oDiv.attachEvent("onclick",fun1);
+        }
+        
+        bind(oDiv,"click",fun1);
+        bind(oDiv,"click",fun2);
+
+        //4.封装一个绑定事件的方法
+        function bind(elem,type,fun) {//标签,事件类型,事件处理函数
+            if (elem.addEventListener) {
+                elem.addEventListener(type, fun);
+            } else {
+                elem.attachEvent("on"+type, fun);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

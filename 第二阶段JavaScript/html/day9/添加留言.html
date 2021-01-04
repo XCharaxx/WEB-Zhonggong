@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"><button>评论</button>
+    <ul>
+
+    </ul>
+    <script>
+        var oIn =document.getElementsByTagName("input")[0];
+        var oBtn =document.getElementsByTagName("button")[0];
+        var oUl =document.getElementsByTagName("ul")[0];
+        // oBtn.onclick = function(){
+            
+        //     var cLi =document.createElement("li");
+        //     cLi.innerHTML =oIn.value;
+        //     oUl.appendChild(cLi);
+        // }
+         oBtn.onclick = function () {
+               
+                var iLi = document.createElement("li");
+                iLi.innerHTML = oIn.value;
+               var first= oUl.firstChild;
+                oUl.insertBefore(iLi,first);
+            }
+
+    </script>
+</body>
+</html>

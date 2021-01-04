@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var oDate = new Date();
+        console.log(oDate); //当前时间 Tue Dec 22 2020 14:58:14 GMT+0800 (中国标准时间)
+
+        //创建时间  new Date(年,月,日,时,分,秒);  时分秒省略默认就是0
+        var oDate1 = new Date(2021,1-1,1,0,0,0);
+        console.log(oDate1); //Fri Jan 01 2021 00:00:00 GMT+0800 (中国标准时间)
+
+        //创建时间  new Date(“年,月,日,时:分:秒");  时分秒省略默认就是0
+        var oDate2 = new Date("2021,1,1,00:00:00");
+        console.log(oDate2);////Fri Jan 01 2021 00:00:00 GMT+0800 (中国标准时间)
+
+        //创建时间
+        var oDate3 = new Date("Jan 01 2021,00:00:00");
+        console.log(oDate3);//Fri Jan 01 2021 00:00:00 GMT+0800 (中国标准时间)
+
+        //创建时间 7天以后
+        var oDate = new Date();
+        oDate.setDate(oDate.getDate()+7);
+        console.log(oDate);
+
+        //7个小时以后
+        oDate.setHours(oDate.getHours()+7);
+        console.log(oDate);
+
+
+
+
+
+    </script>
+</body>
+</html>

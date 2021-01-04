@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+            单价：<span>12.5元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+            单价：<span>8.5元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+            单价：<span>6.99元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+            单价：<span>50元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+            单价：<span>31.2元</span>
+            小计：<span>0元</span>
+        </li>
+        <li>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+            单价：<span>998元</span>
+            小计：<span>0元</span>
+
+        </li>
+    </ul>
+    
+    <script>
+        /* 
+        代码复用：功能一样，结构一样，多组效果
+        1.先实现一个，里面用的标签必须通过父元素获取
+        2.声明函数，把主要代码放入到函数中，父元素必须做为参数
+        3.调用
+        */
+
+        var oLi = document.getElementsByTagName("li");
+        for(var i = 0 ;i<oLi.length;i++){
+            shopCar(oLi[i]);
+        }
+
+
+        function shopCar(parent) {
+            // 1.先实现一个，里面用的标签必须通过父元素获取
+            var oBtns = parent.getElementsByTagName("button");
+            var oSpan = parent.getElementsByTagName("span");
+
+            //2.点击+，数量+1，小计计算
+            oBtns[1].onclick = function () {
+                oSpan[0].innerHTML++; //++ --可以直接改变标签内容值
+                oSpan[2].innerHTML = (oSpan[0].innerHTML * parseFloat(oSpan[1].innerHTML)).toFixed(2) + "元";
+            }
+
+            oBtns[0].onclick = function () {
+                if (oSpan[0].innerHTML > 0) {
+                    oSpan[0].innerHTML--; //++ --可以直接改变标签内容值
+                }
+                oSpan[2].innerHTML = (oSpan[0].innerHTML * parseFloat(oSpan[1].innerHTML)).toFixed(2) + "元";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

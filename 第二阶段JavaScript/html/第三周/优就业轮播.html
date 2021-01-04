@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .wrap,
+        .wrap ul,
+        .wrap li {
+            width: 100%;
+            height: 393px;
+            position: relative;
+        }
+
+        .wrap li {
+            position: absolute;
+            opacity: 0;
+           
+        }
+        
+        .wrap p {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .wrap p span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: skyblue;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .wrap p .active {
+            background: #fff;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <!-- 1.布局 -->
+    <div class="wrap">
+        <ul>
+            <!-- <li style="background: url('http://xue.ujiuye.com/uploads_it/2012/QuanGuo/FCF13641725R2CJ7.jpg') center top no-repeat;opacity: 1;" ></li>
+            <li style="background: url('http://xue.ujiuye.com/uploads_it/2012/QuanGuo/FCF13641725R2CJ7.jpg') center top no-repeat"></li>
+            <li style="background: url('http://xue.ujiuye.com/uploads_it/2012/QuanGuo/FCF13641725R2CJ7.jpg') center top no-repeat"></li>
+            <li style="background: url('http://xue.ujiuye.com/uploads_it/2012/QuanGuo/FCF13641725R2CJ7.jpg') center top no-repeat"></li> -->
+        </ul>
+        <p><span class='active'></span><span></span><span></span><span></span></p>
+    </div>
+
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+         var oWrap = document.querySelector(".wrap");
+        var oUl = oWrap.getElementsByTagName("ul")[0];
+        var oLi = oUl.getElementsByTagName("li");
+        var oSpans = oWrap.getElementsByTagName("span");
+        //2.完善静态布局(获取后台数据，根据后台数据生成对应的标签)
+        ujiuye.ajax({
+            "url": "http://edu.xqb.ink/api/banner",
+            "type": "get",
+            "success": function (res) {
+                var data = res.data;
+                 var n = 0;
+                //根据后台数据生成对应的标签
+                for (var i = 0; i < data.length; i++) {
+                    oUl.innerHTML += " <li style='background: url(" + data[i].coverimg + ") center top no-repeat'></li>";
+                }
+                //1.初始化样式
+                oLi[0].style.opacity = 1;
+                 //自动轮播
+                 var timer = setInterval(auto, 3000);
+             function auto(){
+                
+                  n++;
+                  if(n>=oLi.length){
+                        n=0;
+                    for(var j =0;j<oLi.length;j++){
+                        oLi[j].style.opacity =0;
+                    }
+                  }
+                //   oLi[n].style.opacity = 1;
+                ujiuye.bufferMove(oLi[n],{"opacity":1},20);
+                 
+                
+                for (var k = 0; k < oSpans.length; k++) {
+                      oSpans[k].className = "";
+                  }
+                  oSpans[n == oSpans.length ? 0 : n].className = "active";
+             }
+                 
+               oWrap.onmouseover = function () {
+                    clearInterval(timer);
+                }
+                oWrap.onmouseout = function () {
+                    timer = setInterval(auto, 3000);
+                }
+                 for (var i = 0; i < oSpans.length; i++) {
+
+                    oSpans[i].index = i;
+                    oSpans[i].onclick = function () {
+                        clearInterval(timer);
+                         for (var j = 0; j < oLi.length; j++) {
+                            oLi[j].style.opacity = 0;
+                        }
+                       oLi[this.index].style.opacity = 1;
+                        // bufferMove(oLi[this.index], { "opacity":1 }, 20);
+                        for (var j = 0; j < oSpans.length; j++) {
+                            oSpans[j].className = "";
+                        }
+                        n = this.index;
+                        oSpans[this.index].className = "active";
+
+                    }
+                }
+
+            }
+        });
+    
+    </script>
+
+</body>
+
+</html>

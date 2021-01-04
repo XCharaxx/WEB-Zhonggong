@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //2.点击div让div运动到500
+        oDiv.onclick = function () {
+            var timer = setInterval(function () {
+                //4.计算运动值  在当前位置的基础上+10;
+                var s = parseInt(getStyle(oDiv, "left")) + 10;
+
+                //5.停止定时器  500
+                if(s >= 1000){
+                    s = 1000;
+                    clearInterval(timer);
+                }
+
+                //3.让div移动
+                oDiv.style.left = s + "px";
+            }, 30);
+        }
+    </script>
+</body>
+
+</html>

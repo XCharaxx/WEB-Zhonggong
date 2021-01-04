@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var arr = [3,6,8,4,1,8,4,0,9,2,7,8,5,3,4,8,9,3];
+        //  var array= new Array();
+        //  for(var i=0;i<arr.length;i++){
+
+        //      if(array.indexOf(arr[i])==-1){
+        //                array.push(arr[i]);
+        //      }
+               
+        //  }
+        //  console.log(array);
+         for(var i=0;i<arr.length;i++){
+             for(var j=i+1;j<arr.length;j++){
+                 if(arr[i]==arr[j]){
+                     arr.splice(j,1);
+                     j--;//删除一个元素后元素位置会自动往后挪，下标也要往前j--
+                 }
+                 
+             }
+             
+         }
+         console.log(arr);
+    </script>
+</body>
+</html>

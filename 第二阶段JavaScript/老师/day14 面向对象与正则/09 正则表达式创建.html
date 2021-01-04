@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.关键字new创建  new RegExp("检索的内容","修饰符ig")
+        var reg1 = new RegExp("o","ig");
+        console.log(reg1); //   /o/gi
+
+        //2.字面量创建
+        var reg2 = /o/ig;
+        console.log(reg2);  // /o/gi
+        
+        var a = "web";
+        console.log(/a/); //  /a/  字面量里面的就是一个符号
+        console.log(new RegExp(a)); // /web/
+    </script>
+</body>
+</html>

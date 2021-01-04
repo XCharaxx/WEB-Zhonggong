@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        auto(); //在定时器等待的时候，先调用函数一次
+        setInterval(auto, 1000);
+        function auto() {
+            //1.创建时间对象 ,,获取的是这一秒的时间，get都是从这个时间的基础上获取的
+            var oDate = new Date();
+            var y = oDate.getFullYear();
+            var m = oDate.getMonth() + 1;
+            var d = oDate.getDate();
+            var w = oDate.getDay();
+            var h = oDate.getHours();
+            var mi = oDate.getMinutes();
+            var s = oDate.getSeconds();
+            var week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            //2020年12月22日 星期二 13:42:33
+            var str = y + "年" + m + "月" + d + "日 " + week[w] + h + ":" + mi + ":" + s;
+            document.body.innerText = str;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "http://item.taobo.com/item.html?a=1&b=2&c=&d=xxx&e";
+        var json = {}; //声明一个空对象，用于存储
+
+        //1.获取url中的get参数(？号后面的内容)
+        str = str.split("?")[1];
+        console.log(str); //a=1&b=2&c=&d=xxx&e
+
+        //2.将get参数分成一对一对  a=1   b=2
+        var getArr = str.split("&");
+        console.log(getArr); // ["a=1", "b=2", "c=", "d=xxx", "e"]
+
+        //3.将get参数一对一对的存入到json中
+        for (var i = 0; i < getArr.length; i++) {
+            var arr = getArr[i].split("=");  //"a=1"   ["a", "1"]
+            json[arr[0]] = arr[1];
+        }
+        console.log(json);
+
+       
+
+
+        /* var arr = getArr[0].split("=");  //"a=1"   ["a", "1"]
+        json[arr[0]] = arr[1];
+        console.log(json);
+
+        var arr = getArr[1].split("=");
+        json[arr[0]] = arr[1];
+        console.log(json);
+
+        var arr = getArr[2].split("=");
+        json[arr[0]] = arr[1];
+        console.log(json); */
+    </script>
+</body>
+
+</html>

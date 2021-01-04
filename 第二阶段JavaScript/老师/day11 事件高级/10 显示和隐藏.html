@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 400px;
+            background: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>显示</button>
+    <div></div>
+    <!-- 点击按钮，显示div，点击页面空白部分隐藏div -->
+    <script>
+        //1.获取元素
+        var oBtn = document.getElementsByTagName("button")[0];
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //2.点击按钮，显示div
+        oBtn.onclick = function(ev){
+            var ev = window.event || ev;
+            //4.阻止事件冒泡
+            ev.stopPropagation ? ev.stopPropagation():ev.cancelBubble = true;
+            oDiv.style.display = "block";
+        }
+
+        //3.点击页面空白部分隐藏div
+        window.onclick = function(){
+            oDiv.style.display = "none";
+        }
+    </script>
+</body>
+</html>

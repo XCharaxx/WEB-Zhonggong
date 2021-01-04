@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./ujiuye.js"></script>
+    <button>开始抽奖</button>
+    <script>
+        /* 
+        添加                          事件取消
+        标签.事件                      标签.事件 = null
+        标签.addEventListener          标签.removeEventListener()
+        标签.attachEvent               标签.detachEvent()
+        
+        */
+        var oBtn = document.getElementsByTagName("button")[0];
+        var arr = ["500百万","阿拉丁神灯","女朋友","变成奥特曼","光","假面骑士"];
+
+        //1.简单事件的添加
+        oBtn.onclick = function(){
+            console.log(arr[getRandom(0,arr.length-1)]);
+            oBtn.onclick = null; //取消
+        }
+
+        //2.绑定的添加
+        function fun1(){
+            console.log(arr[getRandom(0,arr.length-1)]);
+            //oBtn.removeEventListener("click",fun1);  标准浏览器取消
+            //oBtn.detachEvent("onclick",fun1);//ie浏览器取消
+            if(oBtn.removeEventListener){
+                oBtn.removeEventListener("click",fun1);
+            }else{
+                oBtn.detachEvent("onclick",fun1);
+            }
+        }
+        bind(oBtn,"click",fun1);
+
+
+        
+    </script>
+</body>
+</html>

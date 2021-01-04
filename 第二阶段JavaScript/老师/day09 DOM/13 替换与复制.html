@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 40px;
+            background: skyblue;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>我是一个小天才</div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        //点击复制一个div标签添加在页面上
+        oDiv.onclick = function(){
+            //复制节点：被复制的节点.cloneNode(boolean)
+            //boolean 默认是false:只复制标签没有内容      true：复制标签和内容
+            var cloneD = oDiv.cloneNode(true);
+            document.body.appendChild(cloneD);
+        }
+
+
+        //点击替换div
+        oDiv.onclick = function(){
+            //替换：父节点.replaceChild(newChild,refChild)
+            var cDiv = document.createElement("div");
+            cDiv.innerHTML = "我是一个小可爱";
+            document.body.replaceChild(cDiv,oDiv)
+        }
+    </script>
+</body>
+</html>

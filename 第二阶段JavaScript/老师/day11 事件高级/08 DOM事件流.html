@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+
+<body>
+    <div style="padding: 30px;background:teal" id="box1">
+        <div style="padding: 30px;background:tan" id="box2">
+            <div style="padding: 30px;background:pink;position: absolute;top:300px" id="box3" ></div>
+        </div>
+    </div>
+    <script>
+        /* 
+        DOM事件流：
+          事件捕获机制：事件发生的时候，事件从window开始,根据结构一层一层往里查找，一直到目标元素位置(不处理事件)
+          事件冒泡机制：由目标元素开始处理事件，处理完成以后将事件根据结构依次传递给父元素，一直到window
+          window--document--body--标签
+
+          oDiv[0].addEventListener("click",fun,是否捕获);
+          是否捕获：默认是false
+          false：冒泡    true：捕获
+        */
+       var oDiv = document.getElementsByTagName("div");
+       function fun(){
+           alert(this.id);
+       }
+
+       oDiv[0].addEventListener("click",fun,false);
+       oDiv[1].addEventListener("click",fun,false);
+       oDiv[2].addEventListener("click",fun,false);
+
+    </script>
+</body>
+
+</html>

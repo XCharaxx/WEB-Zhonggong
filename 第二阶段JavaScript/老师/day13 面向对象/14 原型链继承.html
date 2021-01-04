@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.父
+        function Student(name,age,sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+        Student.prototype.study = function(){
+            console.log("吃饭睡觉长身体");
+        }
+
+        //2.子
+        function MiniStudent(){
+            this.play = function(){
+                console.log("玩王者荣耀");
+            }
+        }
+
+        //4.原型链继承 让子类的prototype指向父类的实例
+        MiniStudent.prototype = new Student("哈哈",7,"男");
+
+        //3.实例化对象
+        var mini = new MiniStudent();
+        console.log(mini);
+    </script>
+</body>
+</html>

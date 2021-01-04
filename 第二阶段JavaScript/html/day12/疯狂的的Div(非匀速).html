@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script src="../../JS/ujiuye.js"></script>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        oDiv.onclick = function () {
+            var timer=setInterval(function () {
+                var cur = parseInt(getStyle(oDiv, "left"));
+                var speed = (500-cur)/10;
+                speed= speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                oDiv.style.left = cur + speed+ "px";
+                if(cur==500){
+                     cur=500;
+                     clearInterval(timer);
+                } 
+            }, 30)
+        }
+
+
+    </script>
+</body>
+
+</html>

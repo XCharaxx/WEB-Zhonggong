@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" >
+        <input type="text" name="user">
+        <input type="submit">
+    </form>
+    <script>
+        //1.创建请求对象
+        var xhr = new XMLHttpRequest();
+
+        //2.建立连接  get请求的参数在地址栏的后面  url?参数&参数
+        xhr.open("get","http://edu.xqb.ink/api/courselist?limits=5&classname=web前端",true);
+
+        //3.发送请求
+        xhr.send();
+
+        //4.监听结果
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){ //服务器已经处理完成并返回结果
+                if(xhr.status == 200){ //请求成功
+                    document.write(xhr.responseText)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

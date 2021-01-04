@@ -1,0 +1,8 @@
+{
+    "editor.codeActionsOnSave": null,
+    "autoprefixer.browsers": [
+    
+        "last 2 versions",
+        "> 5%"
+    ]
+}

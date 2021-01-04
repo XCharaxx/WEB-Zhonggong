@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.字面量创建
+        var arr1 = [1,2,3,4,5];
+
+        //2.关键字new创建
+        var arr2 = new Array("A","b","C","d","e");
+        console.log(arr1,arr2);
+
+        //3.如果创建的时候参数只有一个并且是number类型，创建长度为n的空数组
+        var arr3 = new Array(5);
+        console.log(arr3,arr3[0]); //undefined
+
+        //4.length  获取数组的长度
+        console.log(arr3.length); //5
+
+        //5.存储  可以通过下标存储
+        var arr4 = [];
+        arr4[0] = 1;
+        arr4[10] = 10;
+        console.log(arr4);  // [1, empty × 9, 10]
+
+        //5.可以通过键值对存储，不计算在长度中
+        arr4.name = "web";
+        console.log(arr4);
+        console.log(arr4.name);
+    </script>
+</body>
+</html>

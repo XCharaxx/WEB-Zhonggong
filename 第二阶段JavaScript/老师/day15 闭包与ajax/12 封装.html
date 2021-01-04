@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ajax(requests) { //{url,type,data}
+            //1.创建一个请求对象
+            var xhr = new XMLHttpRequest();
+
+            //2.建立连接
+            if (requests.type.toLowerCase() == "get") {
+                //如果有参数，就拼接在url的后面，没有就不拼
+                var url = requests.data ? requests.url + "?" + requests.data : requests.url;
+                xhr.open("get", url, true);
+                //3.发送请求
+                xhr.send();
+            } else {
+                xhr.open("post", requests.url, true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+                //3.发送请求
+                xhr.send(requests.data);
+            }
+
+            //4.监听结果
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4){ //服务器处理结束，并且已经返回响应包
+                    if(xhr.status == 200){//请求成功
+                        requests.success(xhr.responseText);
+                    }
+                }
+            }
+
+        }
+
+
+   
+
+        ajax({
+            "url": "http://edu.xqb.ink/api/banner",
+            "type": "get",
+            // "data":"",
+            "success":function(res){//var res = xhr.responseText
+                console.log(res);
+            }        
+        });
+   
+
+    </script>
+</body>
+
+</html>

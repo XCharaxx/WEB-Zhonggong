@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 480px;
+            margin: 50px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            line-height: 30px;
+            position: relative;
+        }
+
+        div button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        table {
+            width: 500px;
+            margin: 50px auto;
+            border-collapse: collapse;
+            /*细线表格*/
+        }
+
+        th,
+        td {
+            border: 1px solid;
+            padding: 5px;
+            text-align: center;
+        }
+
+        input[type=checkbox] {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        请输入姓名：<input type="text"> <br>
+        请选择性别: <input type="radio" name="sex" checked>男 <input type="radio" name="sex">女<br>
+        请输入年龄：<input type="text">
+        <button>添加到表格</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th width="20%"><input type="checkbox" id="all">全选</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>张三</td>
+                <td>男</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>李思</td>
+                <td>女</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>王武</td>
+                <td>男</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div style="border: none">
+        <button>删除所选行</button>
+    </div>
+
+    <script>
+        //1.获取元素
+        var oBtns = document.getElementsByTagName("button");
+        var oIns = document.getElementsByTagName("input");
+        var tBody = document.getElementsByTagName("tbody")[0];
+        var checkIns = tBody.getElementsByTagName("input"); //表格主体中input
+        var allCheck = document.getElementById("all");
+
+        //2.点击添加按钮，在表格中添加一行
+        oBtns[0].onclick = function () {
+            //2.2 创建tr
+            var tr = document.createElement("tr");
+            //2.3 在tr中添加td
+            tr.appendChild(createElem("td", '<input type="checkbox">'));
+            tr.appendChild(createElem("td", oIns[0].value));
+            tr.appendChild(createElem("td", oIns[1].checked == true ? "男" : "女"));
+            tr.appendChild(createElem("td", oIns[3].value));
+
+            //2.1 在表格中添加一行
+            tBody.appendChild(tr);
+
+
+            //5.点击下面的复选框，如果所有的复选框都是选中的，上面的全选按钮就需要选中
+            for (var i = 0; i < checkIns.length; i++) {
+                checkIns[i].onclick = function () {
+                    //先把标签添加到数组中
+                    var arr = [];
+                    for (var i = 0; i < checkIns.length; i++) {
+                        arr.push(checkIns[i]);
+                    }
+                    //再通过every对所有的input标签的checked值进行判断，所有的结果为true，最后才为true
+                    var isTrue = arr.every(function (inElem) {
+                        return inElem.checked == true;
+                    });
+
+                    //设置全选按钮的checked状态
+                    allCheck.checked = isTrue;
+
+                }
+            }
+
+        }
+
+        //3.删除   点击删除按钮，删除所选行
+        oBtns[1].onclick = function () {
+            //循环查询每一个input标签的状态，如果checked值为true，删除所在行
+            for (var i = 0; i < checkIns.length; i++) {
+                if (checkIns[i].checked == true) {//checked值为true，删除所在行
+                    tBody.removeChild(checkIns[i].parentNode.parentNode);
+                    i--;
+                }
+            }
+        }
+
+
+        //4.全选  点击上面的全选按钮，改变表格中所有input的标签checked
+        allCheck.onclick = function () {
+            for (var i = 0; i < checkIns.length; i++) {
+                //下面的input和全选按钮，保持一致，直接获取全选按钮的状态，赋值给下面的input
+                checkIns[i].checked = allCheck.checked;
+            }
+        }
+
+
+        //5.点击下面的复选框，如果所有的复选框都是选中的，上面的全选按钮就需要选中
+        for (var i = 0; i < checkIns.length; i++) {
+            checkIns[i].onclick = function () {
+                //先把标签添加到数组中
+                var arr = [];
+                for (var i = 0; i < checkIns.length; i++) {
+                    arr.push(checkIns[i]);
+                }
+                //再通过every对所有的input标签的checked值进行判断，所有的结果为true，最后才为true
+                var isTrue = arr.every(function (inElem) {
+                    return inElem.checked == true;
+                });
+
+                //设置全选按钮的checked状态
+                allCheck.checked = isTrue;
+
+            }
+        }
+
+
+        //创建标签
+        function createElem(tagName, text) {
+            var elem = document.createElement(tagName);
+            elem.innerHTML = text;
+            return elem;
+        }
+    </script>
+</body>
+
+</html>

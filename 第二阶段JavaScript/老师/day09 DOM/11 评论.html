@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"><input type="button" value='发表'>
+    <ul>
+    </ul>
+    <!-- 1.点击发表按钮，发表一条信息(后面)   2.往上加-->
+
+    <script>
+        //1.获取元素
+        var oIn = document.getElementsByTagName("input");
+        var oUl = document.getElementsByTagName("ul")[0];
+
+        //2.点击发表按钮，往ul中添加一个li
+        oIn[1].onclick = function(){
+            //3.创建一个li
+            var cLi = document.createElement("li");
+            cLi.innerHTML = oIn[0].value;
+
+            //4.追加到oul中
+            oUl.appendChild(cLi);
+
+            //5.清空输入框
+            oIn[0].value = "";
+        }
+
+        oIn[1].onclick = function(){
+            //3.创建一个li
+            var cLi = document.createElement("li");
+            cLi.innerHTML = oIn[0].value;
+
+            //4.在头部添加  想法：添加到第一个li标签的前面
+            oUl.insertBefore(cLi,oUl.children[0]);
+
+            //5.清空输入框
+            oIn[0].value = "";
+        }
+    </script>
+</body>
+</html>

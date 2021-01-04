@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid teal;
+            text-align: center;
+            font:50px/300px "黑体";
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>菜单一</button>
+    <button>菜单二</button>
+    <button>菜单三</button>
+    <div style="display: block;">内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    <script>
+        //1.操作标签内容、属性、样式语法、案例？
+        /* 
+            操作内容：
+                表单：标签.value   :   计算器
+                闭合标签：标签.innerHTML/innerText  ： 聊天框
+            操作标签属性：
+                标签.属性名 = 属性值  ：  切换图片
+            操作样式：
+                标签.style.属性名 = 属性值  ：  显示隐藏
+        */
+        //2.Number，parseInt，parseFloat
+        /* 
+            Number:转换纯数字  
+            parsetInt:取整
+            parsetFloat:保留小数  商品总价
+        */
+
+
+        //3.for-in遍历对象
+        var obj = {
+            "name":"web",
+            "age":"25",
+            "sex":"？"
+        }
+        for(var key in obj){
+            console.log(key+"-----------"+obj[key]);//key：属性名
+        }
+
+        //4.选项卡
+        var oBtns = document.getElementsByTagName("button");
+        var oDivs = document.getElementsByTagName("div");
+
+        //循环添加点击事件
+        for(var i = 0;i<oBtns.length;i++){
+            oBtns[i].index = i;
+            oBtns[i].onclick = function(){
+                for(var j = 0;j<oDivs.length;j++){
+                    oDivs[j].style.display = "none";
+                }
+                oDivs[this.index].style.display = "block";
+            }
+        }
+
+        //5.声明一个函数，找数组中最大的值返回
+        function arrayToMax(arr){
+            //1.声明一个变量，用于存放最大值，初始默认数组的第一个元素为最大值
+            var max = arr[0];
+
+            //2.和数组中所有的元素都比较一下，如果数组中存在比max中还要大的值，max=最大值
+            for(var i = 0;i<arr.length;i++){
+                if(max<arr[i]){
+                    max = arr[i];
+                }
+            }
+            //3.返回最大值
+            return max;
+        }
+        var max = arrayToMax([1,5,7,3]);
+        console.log(max);
+    </script>
+</body>
+</html>

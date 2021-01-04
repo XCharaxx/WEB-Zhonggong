@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            "name": "web"
+        }
+        console.log(obj.name); //对象.属性名
+        obj.age = 10;//赋值  对象.属性名(key) = 属性值(value)
+
+
+        /* 
+         http://item.taobo.com/item.html?a=1&b=2&c=&d=xxx&e,请写
+        一段js程序提取url中各个get参数(参数名和参数个数不确定)，将其key-value
+        形式返回到一个json结构中，如{a:“1”,b:“2”，c:“”，d：“xxx”，e:undefined}
+        
+        */
+        var str = "http://item.taobo.com/item.html?a=1&b=2&c=&d=xxx&e";
+        var json = {};
+
+        //1.获取get参数(?号后面的)
+        str = str.split("?")[1];
+        console.log(str); //a=1&b=2&c=&d=xxx&e
+
+        //2.将联系的一段get参数分割成一对一对
+        var arr = str.split("&");
+        console.log(arr); //["a=1", "b=2", "c=", "d=xxx", "e"]
+
+        //3.将数组中的每一组数据，分割开，分别作为json的key和value
+        for (var i = 0; i < arr.length; i++) {
+            var a = arr[i].split("="); //["a",1]
+            json[a[0]] = a[1];
+        }
+        console.log(json);
+
+
+    </script>
+</body>
+
+</html>

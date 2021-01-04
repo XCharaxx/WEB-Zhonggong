@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>疯狂前进</button>
+    <button>疯狂后退</button>
+    <div></div>
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.获取元素（通过tagName，通过calssName获取到的都是集合,不管元素是几个，一定要加下标）
+        var oBtn = document.getElementsByTagName("button");
+        var oDiv = document.getElementsByTagName("div")[0];
+        var timer;
+        //2.点击按钮，运动div 往前
+        oBtn[0].onclick = function () {
+            running(oDiv,"left",10,500);
+        }
+
+
+        //3.点击按钮，运动div  往回
+        oBtn[1].onclick = function () {
+            running(oDiv,"left",-10,0);
+            // clearInterval(timer);
+            // timer = setInterval(function () {
+            //     //4.计算运动值  在当前位置的基础上+10
+            //     var l = parseInt(getStyle(oDiv, "left")) - 10
+
+            //     //5.停止定时器 >= 500
+            //     if (l <= 0) {
+            //         l = 0;
+            //         clearInterval(timer);
+            //     }
+
+            //     //3.移动div
+            //     oDiv.style.left = l + "px";
+
+            // }, 30);
+        }
+
+
+        /* 
+         封装：
+         1.实现功能
+         2.声明一个函数，把主要代码放进去
+         3.找可变值做参数，代入到函数中
+         4.调用调试
+        */
+        function running(elem,attr,step,target) {//运动元素elem,属性attr,步长step，目标值target
+            clearInterval(timer);
+            timer = setInterval(function () {
+                //4.计算运动值  在当前位置的基础上+10
+                var l = parseInt(getStyle(elem, attr)) + step
+
+                //5.停止定时器 >= 500
+               /*  if (l >= target && step>0) { //往前
+                    l = target;
+                    clearInterval(timer);
+                }
+                if (l <= target && step<0) {//往后
+                    l = target;
+                    clearInterval(timer);
+                } */
+                //往前到目标值停止，往后到目标值也停止
+                if((l >= target && step>0) || (l<= target && step<0)){
+                    l = target;
+                    clearInterval(timer);
+                }
+
+                //3.移动div
+                elem.style[attr] = l + "px";
+
+            }, 30);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

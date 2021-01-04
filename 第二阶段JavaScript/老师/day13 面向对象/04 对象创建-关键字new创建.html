@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.关键字new创建
+        var star = new Object();
+        //添加属性
+        star.name = "帝都白少";
+        star.age = 24;
+
+        //添加方法
+        star.wyy = function(){
+            console.log("音乐的力量");
+        }
+        console.log(star);
+        console.log(star.name);
+        //调用方法
+        star.wyy();
+
+        //优点：标准创建，通过new创建
+        //缺点：代码冗余
+    </script>
+</body>
+</html>

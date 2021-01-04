@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <span>fd</span>
+
+    </ul>
+    <script>
+        //如果for循环进行数值特别的大运算的时候，会卡顿，不能执行
+        //事件代理：将事件添加个父元素(代理)，当事件发生的时候，通知具体的子元素去处理  (事件冒泡)
+        //好处：提高性能，事件可以发生在未来
+        var oUl = document.getElementsByTagName("ul")[0];
+
+        //将事件添加给父元素
+        oUl.onclick = function(ev){
+            var ev = window.event || ev;
+
+            //当事件发生的时候，可以通过target获取到具体触发事件的子元素
+            var target = ev.target || ev.srcElement;
+
+            //精确的判断 必须是li标签才可以
+            if(target.nodeName == "LI"){
+                target.style.background = "red";
+            }
+        }
+        oUl.innerHTML += "<li>11</li>";
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./ujiuye.js"></script>
+    <script>
+        //1.匿名函数（没有名字的函数）
+        /* function (){
+            console.log("匿名函数");
+        } */
+
+        //2.匿名函数自执行，立即执行函数(IIFE)    
+        //语法：(声明函数)(调用)
+        (function(){
+            console.log("匿名函数");
+        })();
+
+        //3.传参
+        (function(a,b){
+            console.log(a+b);
+        })(10,20); //30
+
+        //4.返回值
+        var s = (function(a,b){
+            return a+b;
+        })(10,20); 
+        console.log(s);
+
+        /* 
+            优点：避免全局污染，节约内存,优美的嵌入代码
+
+        */
+        console.log(ujiuye.randomCode(4));
+
+    </script>
+</body>
+</html>

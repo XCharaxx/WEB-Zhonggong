@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0];
+        var oP = document.getElementsByTagName("p")[0];
+
+        //声明构造函数
+        function Drag(elem) {
+            //1.添加属性
+            this.moveElem = elem;
+            this.x = 0;
+            this.y = 0;
+            var that = this;
+
+            //2.添加方法
+            this.init = function () {
+                //3.按下
+                this.moveElem.onmousedown = function () {
+                    //调用按下方法
+                    that.downFun();
+                    return false;
+                }
+            }
+            this.init();
+
+            //3.按下的方法
+            this.downFun = function (ev) {
+                var ev = window.event || ev;
+                this.x = ev.clientX - this.moveElem.offsetLeft;
+                this.y = ev.clientY - this.moveElem.offsetTop;
+                document.onmousemove = function () {
+                    that.moveFun();
+                }
+                document.onmouseup = function () {
+                    document.onmousemove = null;
+                }
+            }
+
+            //4.移动的方法
+            this.moveFun = function (ev) {
+                var ev = window.event || ev;
+                //元素随鼠标动
+                var l = ev.clientX - this.x;
+                var t = ev.clientY - this.y;
+
+                this.moveElem.style.left = l + "px";
+                this.moveElem.style.top = t + "px";
+
+            }
+        }
+           function  SDrag(elem){
+                 Drag.call(this,elem);
+                  this.moveFun = function (ev) {
+                   var ev = window.event || ev;
+                   //元素随鼠标动
+                 
+                   var l = ev.clientX - this.x;
+                   var t = ev.clientY - this.y;
+                  if(l<=0){
+                       l=0;
+                   }
+                   if(t<=0){
+                       t=0;}
+                   if(l>=document.documentElement.clientWidth- this.moveElem.offsetWidth){
+                        l = document.documentElement.clientWidth - this.moveElem.offsetWidth;
+                   }
+                    if (t >= document.documentElement.clientHeight - this.moveElem.offsetHeight) {
+                           t = document.documentElement.clientHeight - this.moveElem.offsetHeight;
+                       }
+                   this.moveElem.style.left = l + "px";
+                   this.moveElem.style.top = t + "px";
+
+               }
+
+           }
+       new Drag(oDiv);
+       new SDrag(oP);
+        </script>
+</body>
+</html>

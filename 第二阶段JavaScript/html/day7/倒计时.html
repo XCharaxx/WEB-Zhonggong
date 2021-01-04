@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <script>
+            //倒计时 时间差 = 目标(未来)时间-当前时间   
+
+            auto();
+            setInterval(auto, 1000)
+            function auto() {
+                //1.获取当前时间
+                var currentDate = new Date();
+
+                //2.创建未来时间
+                var futureDate = new Date("2021,1,1,00:00:00");
+
+                //3.时间差 = 目标(未来)时间-当前时间     时间戳  某个时间到某个时间之间毫秒数
+                var time = parseInt((futureDate - currentDate) / 1000);
+                console.log(time);
+
+                //4.计算
+                var t = parseInt(time / 86400);
+                console.log(t);
+
+                var h = parseInt(time % 86400 / 3600);  //(time%86400:计算天数，剩余再算小时)
+                console.log(h);
+
+                var m = parseInt(time % 3600 / 60);
+                console.log(m);
+
+                var s = time % 60;
+                console.log(s);
+
+                document.body.innerText = "现在距离元旦放假还剩：" + fillZero(t) + "天" + fillZero(h) + ":" + fillZero(m) + ":" + fillZero(s);
+            }
+
+
+            function fillZero(num) {
+                return num < 10 ? "0" + num : num;
+            }
+            /*
+            s=timer
+            m = s/60
+            h = s/60/60
+            t = s/60/60/24
+            */
+        </script>
+    </body>
+    
+    </html>   
+</body>
+</html>

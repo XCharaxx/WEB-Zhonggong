@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>children</li>
+        <li>parentNode</li>
+        <li>charAt，charCodeAt</li>
+        <li>indexOf，lastIndexOf</li>
+        <li id="oo">substring，slice，substr</li>
+        <li>replace</li>
+        <li>split</li>
+        <li>toLowerCase，toUpperCase</li>
+        <li>trim</li>
+    </ul>
+    <script>
+        var oUl = document.querySelector("ul");
+        //1.获取首节点 ： 父节点.firstChild
+
+        //1.1 父节点.firstChild:ie8-可以使用 ,标准浏览器中获取到折行
+        //var first = oUl.firstChild;
+        //first.style.background = "deeppink";
+
+        //1.2 父节点.firstElementChild:专门为标准浏览器提供的获取第一个子节点的方式,ie低版本不兼容
+        //var first = oUl.firstElementChild;
+        //first.style.background = "deeppink"
+
+        //兼容  如果是两个属性的取值的兼容  用||
+        var frist = oUl.firstElementChild || oUl.firstChild;
+        frist.style.background = "deeppink";
+
+
+        //2.获取尾节点  父节点.lastElementChild    父节点.lastChild
+        var last = oUl.lastElementChild || oUl.lastChild;
+        last.style.background = "gold";
+
+
+
+        var oO = document.getElementById("oo");
+        //3.获取下一个兄弟元素  参考节点.nextElementSibling  参考节点.nextSibling
+        var next = oO.nextElementSibling || oO.nextSibling;
+        next.style.background = "green";
+
+
+        //4.获取上一个兄弟  参考节点.previousElementSibling || 参考节点.previousSibling
+        var previous = oO.previousElementSibling || oO.previousSibling;
+        previous.style.background = "teal";
+    </script>
+</body>
+</html>

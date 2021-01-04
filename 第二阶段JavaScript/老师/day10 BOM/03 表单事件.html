@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            border: 1px solid #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="f">
+        请输入用户名: <input type="text" name="user"><span></span><br>
+        <input type="submit" name="sub">
+        <input type="reset">
+    </form>
+    <script>
+        /* 
+        表单事件
+            oForm.onsubmit :   表单提交事件
+                        return true : 默认，允许提交
+                        return false： 阻止提交
+            oForm.onreset  : 表单重置事件
+                        return true：默认  允许重置
+                        return false：阻止重置
+        表单元素事件：
+            oIn.onfocus : 获取焦点
+            oIn.onblur :  失去焦点
+            oIn.oninput/oIn.onpropertychange : 输入框发生改变的时候实时触发
+            onchange: 失去焦点时，内容发生变化时触发
+        表单方法
+            自动获得焦点方法
+            oIn.focus();
+        */
+        var oForm = document.getElementsByTagName("form")[0];
+        var oSpan = document.getElementsByTagName("span")[0];
+
+        //点击提交按钮，如果用户名为空，不能提交
+        oForm.onsubmit = function () {
+            if (oForm.user.value == "") {
+                alert("请输入用户名");
+                return false;
+            }
+        }
+
+        //2.oForm.onreset  : 表单重置事件
+        oForm.onreset = function () {
+            //confirm(确认信息) 带确认的对话框  true--确定    false---取消
+            /* var is = confirm("是否重置");
+            console.log(is); */
+
+            return confirm("是否重置");
+        }
+
+        //3.获得焦点  表单元素.onfocus
+        oForm.user.onfocus = function () {
+            this.style.borderColor = "red";
+        }
+
+        //4.失去焦点 表单元素.onblur
+        oForm.user.onblur = function () {
+            this.style.borderColor = "#ccc";
+        }
+
+        //5.oIn.oninput : 输入框发生改变的时候实时触发
+        oForm.user.oninput = mim;
+        oForm.user.onpropertychange = mim;
+        function mim(){
+             //6位以上弱  9位以上中  12-24强    密码需要在6-24位之间
+             if (this.value.length >= 12 && this.value.length <= 24) {
+                oSpan.innerHTML = "强";
+                oSpan.style.color = "green";
+            } else if (this.value.length >= 9&&this.value.length < 12) {
+                oSpan.innerHTML = "中";
+                oSpan.style.color = "orange";
+            } else if (this.value.length >= 6&&this.value.length < 9) {
+                oSpan.innerHTML = "弱";
+                oSpan.style.color = "red";
+            }else{
+                oSpan.innerHTML = "密码需要在6-24位之间";
+                oSpan.style.color = "#ccc";
+            }
+        }
+
+        oForm.user.onchange = function(){
+            console.log(this.value);
+        }
+
+        oForm.user.focus();
+    </script>
+</body>
+
+</html>

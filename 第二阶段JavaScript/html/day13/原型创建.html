@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(){};
+            Student.prototype.name = "小明";
+            Student.prototype.age = 18;
+            Student.prototype.run =function(){
+                console.log("吃饭睡觉打豆豆");
+            }
+       
+        var s1 = new Student();
+            console.log(s1.name);
+            console.log(s1.age);
+            s1.run();
+    </script>
+</body>
+</html>

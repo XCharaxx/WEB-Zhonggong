@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: teal;
+            cursor:move;
+            position: absolute;
+            left:0px;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        //1.获取元素
+        var oDiv = document.getElementsByTagName("div")[0];
+
+        //2.给窗口添加移动事件，让div跟着移动
+        window.onmousemove = function(ev){
+            //4.获取鼠标位置
+            var ev = window.event || ev;
+
+            //3.移动div
+            oDiv.style.left = ev.clientX - oDiv.offsetWidth/2+ "px";
+            oDiv.style.top =  ev.clientY - oDiv.offsetHeight/2+ "px";
+        }
+    </script>
+</body>
+</html>

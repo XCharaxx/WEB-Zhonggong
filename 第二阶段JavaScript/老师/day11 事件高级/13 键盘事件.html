@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        键盘事件：
+            onkeydown：键盘按钮按下
+            onkeyup：键盘按钮抬起
+            onkeypress：键盘按钮按下
+        */
+
+        document.onkeydown = function(ev){
+            var ev = window.event || ev;
+            console.log(ev.key); //获取到具体的按键信息，ie获取不到undefined
+            console.log(ev.keyCode);//按键编码不区分大小写，都是大写编码 “0”--48  “A”--65 “a"--97
+            console.log(ev.shiftKey,ev.ctrlKey,ev.altKey);//按了--true  没按--false
+
+
+            //按ctrl+c打印复制
+            //console.log(ev.keyCode);
+            if(ev.keyCode == 67 && ev.ctrlKey==true){
+                console.log("复制");
+            }
+        }
+
+        document.onkeypress = function(ev){
+            var ev = window.event || ev;
+            //console.log(ev.key); //组合按键触发最后一次
+            //console.log(ev.keyCode); //a-97 区分大小写
+
+        }
+    </script>
+</body>
+</html>
