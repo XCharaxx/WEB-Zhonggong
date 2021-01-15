@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="all">全选</button>&nbsp;<button class="noall">反选</button>
+    <ul>
+        <li>  
+            <input type="checkbox" class="cbox">商品1    
+            单价：<span class="danprice">19.99元</span>
+            <button class="btn1">-</button>
+            <input type="text" value="0"  class="tex1">
+            <button class="btn2">+</button>
+            小计：<span class="xiaosum">0元</span>
+        </li>
+        <li>
+            <input type="checkbox" class="cbox">商品1
+            单价：<span class="danprice">19.99元</span>
+            <button class="btn1">-</button>
+            <input type="text" value="0"  class="tex1">
+            <button class="btn2">+</button>
+            小计：<span class="xiaosum">0元</span>
+        </li>
+        <li>
+            <input type="checkbox" class="cbox">商品1
+            单价：<span class="danprice">19.99元</span>
+            <button class="btn1">-</button>
+            <input type="text" value="0" class="tex1">
+            <button class="btn2">+</button>
+            小计：<span class="xiaosum">0元</span>
+        </li>
+       
+    </ul>
+    一共<span class="amount">0</span>件商品，共计<span class="sum">0</span>元
+    <script src="./jquery.js"></script>
+    <script>
+        $(".all").click(function(){
+             $(".cbox").prop("checked","checked");
+             total();
+        });
+        $(".noall").click(function(){
+            //   $(".cbox").attr("checked", "checked");
+            $(".cbox").each(function(index, elem){
+                $(elem).prop("checked")? $(elem).prop("checked",""): $(elem).prop("checked", "checked");
+            })
+              total();
+        });
+        $(".btn1").click(function(){
+               if($(this).next().val()>0) {
+                  var valu= $(this).next().val();
+                  valu--;
+                  $(this).next().val(valu); 
+                  var danprice = parseFloat($(this).prev().html());
+             $(this).siblings(".xiaosum").html((danprice*valu).toFixed(2)+"元");
+               }
+             
+             total();
+        });
+
+        $(".btn2").click(function () {
+               
+                    var valu = $(this).prev().val();
+                    valu++;
+                    $(this).prev().val(valu);
+             
+                var danprice = parseFloat($(this).siblings(".danprice").html());
+                $(this).siblings(".xiaosum").html((danprice * valu).toFixed(2) + "元");
+
+              total();
+            });
+        
+        $(".cbox").click(function(){
+           total();
+        });
+     
+
+function total(){
+     var amount = 0;
+    var sum = 0;
+    $(".cbox:checked").map(function (index, value) {
+        amount += parseInt($(value).siblings(".tex1").val());
+        sum += parseFloat($(value).siblings(".xiaosum").html());
+    })
+     
+    $(".sum").html(sum.toFixed(2));
+    $(".amount").html(amount);
+}
+    
+
+
+    </script>
+</body>
+
+</html>

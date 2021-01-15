@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="remove">remove</button>
+    <button class="detach">detach</button>
+
+    <ul>
+        <li>第一周：前7天js复习完</li>
+        <li>第二周：前15天js复习完</li>
+        <li>第三周：国美项目完成</li>
+        <li>第四周：过年</li>
+        <li>第五周：回顾</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        /* 
+         detach:删除元素，返回被删除元素的引用,方便下次使用，会保留被删除元素的事件
+         remove:删除元素，返回被删除元素的引用,方便下次使用，不会保留被删除元素的事件
+         empty:清空子元素
+        */
+        $("li").click(function(){
+            console.log("美好的提醒，需要学习");
+        });
+
+        //detach:删除元素，返回被删除元素的引用,方便下次使用，会保留被删除元素的事件
+        $(".detach").click(function(){
+            var del = $("li").detach();
+            
+            setTimeout(function(){
+                $("ul").append(del);
+            },2000);
+        })
+
+
+        //remove:删除元素，返回被删除元素的引用,方便下次使用，不会保留被删除元素的事件
+        $(".remove").click(function(){
+            var del = $("li").remove();
+            
+            setTimeout(function(){
+                $("ul").append(del);
+            },2000);
+        })
+
+
+        //empty:清空子元素
+        $("ul").empty();
+    </script>
+</body>
+</html>

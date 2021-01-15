@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 480px;
+            margin: 50px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            line-height: 30px;
+            position: relative;
+        }
+
+        div button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        table {
+            width: 500px;
+            margin: 50px auto;
+            border-collapse: collapse;
+            /*细线表格*/
+        }
+
+        th,
+        td {
+            border: 1px solid;
+            padding: 5px;
+            text-align: center;
+        }
+
+        input[type=checkbox] {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        请输入姓名：<input type="text" id="name"> <br>
+        请选择性别: <input type="radio" name="sex" checked id="sex" value="男">男 <input type="radio" name="sex" value="女">女<br>
+        请输入年龄：<input type="text" id="age">
+        <button id="btn1">添加到表格</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th width="20%"><input type="checkbox" id="all">全选</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>张三</td>
+                <td>男</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>李思</td>
+                <td>女</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>王武</td>
+                <td>男</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div style="border: none">
+        <button id="btn2">删除所选行</button>
+    </div>
+ <script src="../../JS/jquery.js"></script>
+    <script>
+         $("#btn1").click(function(){
+            
+             $("<tr> <td><input type='checkbox'></td><td class='n1'>"+$('#name').val()+"</td ><td class='s1'>"+ $("input:radio:checked").val()+"</td><td class='a1'>"+ $("#age").val()+"</td></tr>").appendTo("tbody");
+              
+         });
+         $("#btn2").click(function () {
+               $("tbody input:checked").parents("tr").remove();
+         });
+         $("tbody input:checkbox").click(function(){
+             if($("tbody input:checked").length==$("tbody input").length){
+                   $("thead input:checkbox").prop("checked",true);
+             }else{
+                  $("thead input:checkbox").prop("checked", false);
+             }
+             
+         });
+        //  $("tbody").on("click", "input", function () {
+        //         //选中个数 和 标签个数一样，全选
+        //         if ($("tbody :checkbox:checked").length == $("tbody :checkbox").length) {
+        //             //全选
+        //             $("#all").prop("checked", true);
+        //         } else {
+        //             //没有全选
+        //             $("#all").prop("checked", false);
+        //         }
+        //     });
+         $("thead input:checkbox").click(function () {
+              if($("thead input:checkbox").prop("checked")){
+                 $("tbody input:checkbox").prop("checked",true);
+
+              }else{
+                   $("tbody input:checkbox").prop("checked", false);
+              }
+         });
+
+    </script>
+</body>
+
+</html>

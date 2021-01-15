@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .all{
+            width: 1000px;
+            height: 40px;
+            margin-top: 100px;
+            background: skyblue;
+        }
+        .content{
+            position: relative;
+            width: 1000px;
+            height: 40px;
+            margin: 0 auto;
+        }
+        ul{
+            position: relative;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            font:16px/40px "黑体" ;
+            color: #fff;
+        }
+        li:nth-of-type(1){
+            background-color:silver;
+        }
+        .bg{
+            position: absolute;
+            left: 0;
+            width: 80px;
+            height: 40px;
+            background-color:silver;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="content">
+            <div class="bg"></div>
+            <ul class="clearfix">
+                <li class="first">首页</li>
+                <li>国内</li>
+                <li>国际</li>
+                <li>军事</li>
+                <li>财经</li>
+                <li>娱乐</li>
+                <li>体育</li>
+                <li>互联网</li>
+                <li>科技</li>
+                <li>游戏</li>
+                <li>汽车</li>
+                <li>房产</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        function move(){
+            $(".bg").stop().animate({left:$(this).offset().left - $(".first").offset().left});
+        }
+        $("li").mouseover(move);
+        $(".bg").mouseover(function(){
+            $("li").off("mouseover")
+        })
+        $("li").mouseout(function(){
+            $(".bg").stop().animate({left:0});
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            margin: 0 auto;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font: 30px/100px "黑体";
+            float: left;;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //1.给li添加点击事件
+        $("li").click(function(){
+           /*  $("li").css("background","");
+            $(this).css("background","red"); */
+            $(this).css("background","red").siblings().css("background","");
+        });
+    </script>
+</body>
+</html>

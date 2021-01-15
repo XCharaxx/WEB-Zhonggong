@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <ul></ul>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $("input").on("input",function(){
+            //1.根据输入的内容，发起请求
+            $.ajax({
+                "url":"https://www.baidu.com/sugrec",
+                "type":"get",
+                "data":{"ie":"utf-8","prod":"pc","wd":$(this).val()},
+                "dataType":"jsonp",
+                "success":function(res){
+                    console.log(res);
+
+                    //2.根据获取的数据生成标签，显示到ul中
+                    var str = "";
+                    $(res.g).map(function(index,value){
+                        str += "<li>"+value.q+"</li>";
+                    });
+
+                    $("ul").html(str);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

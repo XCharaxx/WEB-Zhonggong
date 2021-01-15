@@ -1,0 +1,274 @@
+/* 顶部导航 */
+.head-nav{
+    width: 100%;
+    padding-top: 10px;
+     background-color: #fff; 
+     z-index: -2;
+}
+.head-wrap {
+    position: relative;
+}
+.head-wrap .logo{
+    padding-top: 4px;
+}
+/* .head-wrap ul{
+    
+   
+} */
+.head-wrap ul:nth-child(2){
+     float: left;
+     padding-top: 8px;
+    margin-left: 5px;
+}
+.head-wrap ul:nth-child(2) li{
+    /* position: relative;
+    padding-right: 20px;
+    font:16px/30px "Microsoft YaHei"; */
+      float: left;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+     z-index: 1;
+}
+.head-wrap  ul:nth-child(2) li a{
+    display: block;
+    width: 88px;
+    font:16px/30px "Microsoft YaHei";
+    text-align: center;
+   
+    
+}
+.head-wrap ul:nth-child(2) li em{
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background: url("../images/NavIcoActive.jpg") center no-repeat;
+    left:0px;
+    z-index: -1;
+    top:0px;
+    opacity: 0;
+    transform: scale(0.6,0.6);
+    transition: 0.3s;
+    
+}
+
+.head-wrap ul:nth-child(2) li:hover em{
+     
+    opacity: 1;
+    transform: scale(1.4,1.4);
+}
+
+.head-wrap ul:nth-child(3){
+     padding-top: 15px;
+    margin-left: 15px;
+}
+.head-wrap ul:nth-child(3) li:nth-child(1){
+    position: relative;
+}
+.head-wrap ul:nth-child(3) li:nth-child(1) input{
+    height:22px ;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #333;
+}
+.head-wrap ul:nth-child(3) li:nth-child(1) img{
+    position:absolute;
+    right: 15px;
+    top: 3px;
+}
+.head-wrap ul:nth-child(3) img{
+    vertical-align: middle;
+}
+.head-wrap ul li{
+      display: inline-block; 
+}
+.head-wrap ul .lozhu{
+   padding-top: 5px;
+   padding-left: 10px;
+}
+.head-wrap ul .login-head{
+        position: relative;
+        display:none;
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+       
+}
+.head-wrap ul .login-head:hover div{
+       display: block;
+}
+.head-wrap ul .login-head div{
+     display: none;
+       position: absolute;
+       left: -27px;
+       top: 25px;
+       width: 80px;
+        z-index: 99;
+        background-color: #555;
+        text-align: center;
+        padding: 40px 0;
+        border-radius: 3px;
+}
+.head-wrap ul .login-head div a{
+      font-size: 14px;
+      color: white;
+
+}
+.head-wrap ul .login-head div a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.head-wrap ul .login-head img{
+    width: 25px;
+    height: 25px;
+     border-radius: 50%;
+    vertical-align: middle;
+}
+.head-wrap  ul a:hover {
+    color: orange;
+}
+
+
+
+ /* 底部导航栏 */
+.footer{
+    width: 100%;
+    background: #404144;
+    color: #999;
+    line-height: 28px;
+    text-align: center;
+    padding: 34px 0;
+   
+}
+.footer a{
+    color: #999999;
+}
+.footer a:hover{
+    color: tomato;
+}
+
+
+
+
+
+
+
+
+/* 在线咨询 */
+.fix-right1{
+   position: fixed;
+    right: 0;
+    bottom: 60%;
+    width: 36px;
+    height: 120px;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 5px;
+    color: white;
+    text-align: center;
+    background-color: #ff4a00;
+}
+
+/* 微博微信跳转 */
+.fix-jump{
+    position: fixed;
+    /* width: 45px;
+    height: 150px; */
+    right: 0;
+    bottom: 30%;
+}
+.fix-jump .ibox{
+  position: absolute;
+    right: 66px;
+    top: -35px;
+    display: none;
+}
+.fix-jump .ibox1{
+  position: absolute;
+    right: 66px;
+    top: 12px;
+     width: 135px;
+    height: 135px;
+    background-color: #eee;
+    font-size: 18px;
+    color:lightskyblue;
+    text-align: center;
+    line-height: 129px;
+    border: 1px solid #aaa;
+    display: none;
+}
+.fix-jump .ibox2{
+  position: absolute;
+    right: 66px;
+    top: 66px;
+   
+    display: none;
+}
+.fix-jump .iweixin{
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    background:url(../images/dsf_07.jpg) no-repeat center center transparent;
+}
+.fix-jump .iweixin:hover{
+      background:url(../images/dsh_h_07.jpg) no-repeat center center transparent;
+}
+.fix-jump .iweixin:hover + .ibox{
+  
+     display: block;
+}
+
+.fix-jump .iweibo{
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+     border-radius: 50%;
+      margin-bottom:8px;
+    background:url(../images/dsf_05.jpg) no-repeat center center transparent;
+}
+.fix-jump .iweibo:hover{
+      background:url(../images/dsh_h_05.jpg) no-repeat center center transparent;
+}
+.fix-jump .iweibo:hover + .ibox1{
+  
+     display: block;
+}
+.fix-jump .iqq{
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+     border-radius: 50%;
+      margin-bottom: 8px;
+    background:url(../images/dsf_03.jpg) no-repeat center center transparent;
+}
+.fix-jump .iqq:hover{
+      background:url(../images/dsh_h_03.jpg) no-repeat center center transparent;
+}
+.fix-jump .iqq:hover +.ibox2{
+  
+     display: block;
+}
+/* 回到顶部 */
+.fix-tips{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    bottom: 5%;
+    background: url(../images/icon_32.png);
+    display: none;
+}
+.fix-tips a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.fix-tips:hover{
+    background: url(../images/offcn-icon_33.png);
+}

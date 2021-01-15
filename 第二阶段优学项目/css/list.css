@@ -1,0 +1,189 @@
+/* 分类栏 */
+.list-classfiy {
+    border-top: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+.list-classfiy p{
+    
+    line-height: 40px;
+    padding: 10px 0;
+}
+.list-classfiy p a{
+    color: #a4a4a4;
+    font-size: 14px;
+
+}
+.list-classfiy p a:hover{
+    color: #ff4a00;
+    text-decoration: underline;
+}
+.list-classfiy  .top-classfiy dl{
+    line-height: 40px;
+}
+.list-classfiy  .top-classfiy dt{
+    font-size: 14px;
+     color: #a4a4a4;
+     margin-right: 30px;
+}
+.list-classfiy  .top-classfiy dd a{
+       font-size: 14px;
+       margin-right: 20px;
+}
+.list-classfiy  .top-classfiy a:hover{
+       color: #ff4a00 ;
+}
+.list-classfiy  .top-classfiy dd .xk_click{
+    display: inline-block;
+    background: #ff4a00;
+    color: #fff;
+    line-height: 30px;
+     padding: 0 15px;
+}
+
+
+
+/* 筛选栏 */
+.sort ul{
+    width: 100%;
+    height: 42px;
+    background-color: #f8f8f8;
+    border: 1px solid rgb(239,239,239);
+    margin-bottom: 30px;
+}
+.sort ul li{
+      float: left;
+      width: 200px;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+}
+.sort ul li.li-s{
+     width: 100px;
+    border-right: 1px solid rgb(239,239,239);
+}
+.sort ul .li-in{
+    position: relative;
+    padding-left: 25px;
+}
+.sort ul li input{
+    position: absolute;
+   left: 30px;
+   top: 14px;
+    margin-left: 11px;
+     
+}
+.sort ul li:nth-child(2){
+    background: url(../images/xkp_08.png) no-repeat  70px center;
+}
+.sort ul li:nth-child(3){
+    background: url(../images/xkp_08.png) no-repeat  70px center;
+}
+.sort ul li:nth-child(4){
+    background: url(../images/xkp_03.png) no-repeat  70px center;
+}
+.sort ul li.li-t2{
+    z-index: 9;
+   background: url(../images/xkp_06.jpg) no-repeat  70px center;
+}
+.sort ul li.li-t3{
+   background: url(../images/xkp_06.jpg) no-repeat  70px center;
+}
+.sort ul li.li-t4{
+   background: url(../images/xkp_032.jpg) no-repeat  70px center;
+}
+.sort ul li.li-t5{
+   background: url(../images/xkp_031.jpg) no-repeat  70px center;
+}
+
+/* 直播热门 */
+.perlon .perlon-body{
+    width: 1220px;
+    position: relative;
+    left: -20px;
+    top: 0;
+    margin-bottom: 35px;
+    
+}
+.perlon .perlon-body li{
+    
+    float: left;
+    width: 285px;
+    height: 255px;
+    background-color:#fff;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.perlon .perlon-body li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    overflow: hidden;
+}
+.perlon .perlon-body li a img{
+    width: 100%;
+    transition: 0.5s;
+}
+.perlon .perlon-body li:hover img{
+     transform: scale(1.1);
+}
+.perlon .perlon-body li:hover{
+    box-shadow: 0 0 4px 2px #555;
+}
+.perlon .perlon-body li a p{
+    width: 100%;
+    font-size: 16px;
+    line-height: 38px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.perlon .perlon-body li a p:hover{
+    text-decoration: underline;
+}
+
+.perlon .perlon-body li a div span:nth-child(3){
+    line-height: 24px;
+    padding: 0px 10px;
+    color:tomato;
+
+}
+.perlon .perlon-body li a div span:nth-child(3) em{
+    color:green;
+}
+
+
+/* 分页 */
+.paging ul li{
+    float:right;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    padding: 0px 16px;
+    line-height: 33px;
+    border:1px solid #555;
+    border-radius: 3px;
+}
+.paging ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.paging ul li:hover{
+    background-color: #188eee;
+}
+.paging ul li:hover a{
+    color: white;
+}
+
+.paging ul li.active{
+      background-color: #188eee;
+      
+}
+.paging ul li.active a{
+    color: white;
+}

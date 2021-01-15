@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script src="./js/my.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //window.jQuery = window.$ = jQuery;
+        /* jQuery("div").css("height",200);
+        $("div").css("background","red") */
+
+
+        //$的命名冲突
+        $.noConflict(); //jquery让出$的使用权
+        
+        (function($){ //局部变量$
+            $("div").css("height",200);
+            $("div").css("background","red");
+        })(jQuery); 
+
+
+    
+    </script>
+</body>
+</html>

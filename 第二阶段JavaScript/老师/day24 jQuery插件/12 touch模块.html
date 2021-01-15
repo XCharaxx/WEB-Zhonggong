@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/touch.js"></script>
+    <script>
+        /* 
+        ['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown',
+      'doubleTap', 'tap', 'singleTap', 'longTap']
+        */
+
+        $("div").tap(function(){
+            console.log("弹弹弹");
+        });
+        $("div").singleTap(function(){
+            console.log("单单单");
+        });
+        $("div").doubleTap(function(){
+            console.log("双双双");
+        });
+
+
+        $("div").swipeLeft(function(){
+            console.log("左滑");
+        })
+    </script>
+</body>
+</html>

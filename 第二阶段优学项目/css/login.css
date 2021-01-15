@@ -1,0 +1,124 @@
+/* 登录表单 */
+.login-form{
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+.login-form .body-form{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+}
+.login-form .div-a{
+    width: 500px;
+    display: inline-block;
+    border-right: 1px solid #e7e7e7;
+}
+.login-form .tsp {
+display: inline-block;
+width: 50px;
+font-size: 14px;
+        }
+.login-form .sp {
+    margin-left: 20px;
+   width: 200px;
+        }
+
+.login-form input {
+ outline: none;
+ width: 264px;
+ height: 38px;
+ padding-left: 10px;
+ 
+        }
+.login-form input:nth-of-type(3){
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ff4a00;
+}
+.login-form .body-form .div-a p {
+    padding-left: 200px;
+}
+.login-form .body-form .div-a p a{
+    color: #333;
+    margin-right: 10px;
+}
+.login-form .body-form p a:hover{
+    color: #ff4a00;
+    text-decoration: underline;
+}
+.login-form .div-b{
+    width: 490px;
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 14px;
+   
+}
+.login-form .div-b p:nth-of-type(1){
+    margin-bottom: 20px;
+}
+.login-form .div-b p:nth-of-type(2){
+    margin-bottom: 20px;
+}
+.login-form .div-b dl{
+     line-height: 25px;
+}
+.login-form .div-b dl dt{
+    color: #333;
+}
+.login-form .div-b dl dd{
+    color: #666;
+}
+
+
+
+/* qq微信 */
+.jump{
+    
+  margin-bottom: 20px;
+  
+}
+
+
+.jump .iweixin{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background:url(../images/dsf_07.jpg) no-repeat center center transparent;
+}
+.jump .iweixin:hover{
+      background:url(../images/dsh_h_07.jpg) no-repeat center center transparent;
+}
+
+.jump .iweibo{
+   
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+     border-radius: 50%;
+      margin-right:8px;
+    background:url(../images/dsf_05.jpg) no-repeat center center transparent;
+}
+.jump .iweibo:hover{
+      background:url(../images/dsh_h_05.jpg) no-repeat center center transparent;
+}
+
+.jump .iqq{
+   
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+     border-radius: 50%;
+      margin-right: 8px;
+    background:url(../images/dsf_03.jpg) no-repeat center center transparent;
+}
+.jump .iqq:hover{
+      background:url(../images/dsh_h_03.jpg) no-repeat center center transparent;
+}

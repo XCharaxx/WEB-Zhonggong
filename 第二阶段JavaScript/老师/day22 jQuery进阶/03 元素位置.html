@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 200px;
+            border: 10px solid deeppink;
+            margin: 100px;
+            position: relative;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: absolute;
+            top:20px;
+        }
+    </style>
+</head>
+<body style="height: 2000px;">
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        //1.在页面中的位置   当前元素到body
+        var offset = $(".inner").offset();
+        console.log(offset); //top: 130, left: 118}
+        console.log(offset.top);
+
+
+        //2.获取定位距离
+        var pos = $(".inner").position(); 
+        console.log(pos); //{top: 20, left: 0}
+
+        //3.滚动距离
+        $(window).scroll(function(){
+            console.log($(window).scrollTop());
+        })
+
+    </script>
+</body>
+</html>

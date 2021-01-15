@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <ul></ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(":text").on("input", function () {
+            $.ajax({
+                "url": "https://www.baidu.com/sugrec",
+                "type": "get",
+                "data": { "ie": "utf-8", "prod": "pc", "wd": $(this).val() },
+                "dataType": "jsonp",
+                "success": function (res) { 
+                    console.log(res);
+                    $("ul").empty();
+                   
+                    $(res.g).map(function (index, value) {
+                        $('ul').append('<li>' + value.q + '</li>');
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

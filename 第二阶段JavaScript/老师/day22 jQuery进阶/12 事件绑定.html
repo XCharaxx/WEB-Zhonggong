@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        function week1(){
+            console.log("吃饭，睡觉，玩游戏，看奥特曼");
+        }
+        function week2(){
+            console.log("睡觉");
+        }
+
+        //1.事件绑定语法：$().on(事件类型，事件处理函数)
+
+        //1.不会覆盖，可以叠加
+        $("div").on("click",week1);
+        $("div").on("click",week2);
+
+        //2.可以多个不同事件添加同一个事件处理函数
+        $("div").on("click mouseover",week1);
+
+        //3.同时添加多个事件
+        $("div").on({
+            "click":week1,
+            "mouseover":week2
+        });
+
+        //4.可以自定义事件
+        $("div").on("classover",function(){
+            console.log("睡觉看奥特曼，梦里啥都有");
+        });
+
+        //触发自定义事件
+        setTimeout(function(){
+            $("div").trigger("classover");
+        },2000);
+
+
+        //5.命名空间，如果项目足够大，或者引入了大量的第三个库，可能会出来命名冲突
+        var index = {}; 
+        index.name = "首页";
+
+        var detail = {};
+        detail.name = "详情页";
+     
+
+        $("div").on("click.txf",week1);
+        $("div").on("click.ujiuye",week2);
+
+
+    </script>
+</body>
+</html>

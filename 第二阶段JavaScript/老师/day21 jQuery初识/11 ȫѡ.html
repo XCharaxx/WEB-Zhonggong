@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="" id="all">
+    <ul>
+        <li><input type="checkbox"> 睡觉</li>
+        <li><input type="checkbox"> 上王者</li>
+        <li><input type="checkbox"> 睡觉</li>
+        <li><input type="checkbox"> 写项目</li>
+        <li><input type="checkbox"> 写作业</li>
+        <li><input type="checkbox"> 复习</li>
+        <li><input type="checkbox"> 预习</li>
+        <li><input type="checkbox"> 敲代码</li>
+        <li><input type="checkbox"> 过年</li>
+        <li><input type="checkbox"> 自闭</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //1.添加点击事件
+        $("li input").click(function(){
+            //思路：li的个数 == 被选中的个数
+            if($("li").length == $("input:checked").length){
+                console.log("全选");
+            }else{
+                console.log("没有全选");
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        div{
+            position: relative;
+            width: 11.25rem;
+            height: 3.52rem;
+            overflow: hidden;
+        }
+        ul{
+            position: absolute;
+             width: 45rem;
+            left: 0;
+            top: 0;
+
+        }
+       li{
+           float: left;
+           width: 11.25rem;
+       }
+       img{
+           width: 100%;
+           vertical-align: middle;
+       }
+       p{
+           position:absolute;
+           width: 100%;
+           left: 0;
+           bottom: .05rem;
+           text-align: center;
+       }
+       p span{
+           display: inline-block;
+           width: .3rem;
+           height: .3rem;
+           border-radius: 50%;
+           background-color: red;
+       }
+       .active{
+           background-color: #fff;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="./img/img1（1）.jpg" alt=""></li>
+            <li><img src="./img/img2（1）.jpg" alt=""></li>
+            <li><img src="./img/img3（1）.jpg" alt=""></li>
+            <li><img src="./img/img4（1）.jpg" alt=""></li>
+        </ul>
+        <p>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </p>
+    </div>
+    <script src="../../JS/remScale.js"></script>
+    <script src="../../JS/touch.js"></script>
+     <script>
+       
+         window.onload = function(){
+             var oDiv = document.getElementsByTagName("div")[0];
+             var oUl = document.getElementsByTagName("ul")[0];
+             var oli = document.getElementsByTagName("li");
+             var width = oWrap.clientWidth;
+              oUl.innerHTML+=oUl.innerHTML;
+               oUl.style.width = width * oSPan.length * 2 + "px";
+         }
+     </script>
+</body>
+</html>

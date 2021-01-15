@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        function week1(){
+            console.log("吃饭，睡觉，玩游戏，看奥特曼");
+        }
+        function week2(){
+            console.log("睡觉");
+        }
+        $("div").on("mouseover",week1);
+        $("div").on("click.txf",week1);
+        $("div").on("click.ujiuye",week2);
+
+        //取消：$().off(事件类型,事件处理函数)
+        //$("div").off(); //默认清除这个标签上的所有事件
+        //$("div").off("click"); //清除标签上所有的点击事件
+        $("div").off("click.txf",week1); //清除这一个
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{padding: 0;margin: 0;text-decoration: none;}
+        #wrap{
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border: 1px solid gray;
+            padding: 20px;
+        }
+        #leftBox{
+            width: 300px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        #rightBut{
+            position: absolute;
+            top:20px;
+            left:340px;
+        }
+        #gray{
+            display: none;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0.4;
+        }
+        #edit{
+            display: none;
+            position: absolute;
+            top:20px;
+            right:20px;
+            width: 180px;
+            height: 260px;
+            padding: 10px;
+            background: #fff;
+        }
+        #edit a{
+            display: inline-block;
+            color: #000;
+            border: 1px solid gray;
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div id="leftBox"></div>  <!-- 操作div -->
+        <button id="rightBut">点击显示div样式</button>
+        <div id="gray"></div>
+        <div id="edit">
+            <h2>大小</h2>
+            <p>
+                <a href="#" id="size1">300*300</a>
+                <a href="#" id="size2">200*300</a>
+                <a href="#" id="size3">300*200</a>
+                <a href="#" id="size4">100*300</a>
+            </p>
+            <h2>颜色</h2>
+            <p>
+                <a href="#" id="color1">#ff0000</a>
+                <a href="#" id="color2">#00ff00</a>
+                <a href="#" id="color3">#0000ff</a>
+                <a href="#" id="color4">#00ffff</a>
+            </p>
+            <button id="true">确定</button>
+            <button id="false">取消</button>
+        </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //1.点击显示按钮，显示功能框和灰色框
+        $("#rightBut").click(function(){
+            $("#gray,#edit").css("display","block");
+        })
+
+        //2.划过a，改变div的大小和颜色
+        $("#edit a").mouseover(function(){
+            var pr = $(this).html().split("*");
+            $("#leftBox").css({"width":pr[0],"height":pr[1],"background":$(this).html()})
+        });
+
+        //3.点击确定
+        $("#true").click(function(){
+            $("#gray,#edit").css("display","none");
+        })
+        $("#false").click(function(){
+            $("#gray,#edit").css("display","none");
+            $("#leftBox").css({"width":300,"height":100,"background":""})
+        })
+    </script>
+</body>
+</html>

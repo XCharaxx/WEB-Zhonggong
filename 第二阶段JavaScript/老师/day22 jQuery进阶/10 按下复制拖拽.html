@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 40px;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./js/jquery.js"></script>
+    <script>
+       //1.按下，复制一个div
+       $("div").mousedown(function(ev){
+            var x = ev.clientX - $(this).offset().left;
+            var y = ev.clientY - $(this).offset().top;
+
+            //2.复制一个标签  $(被复制的标签).clone()
+            var $Div = $(this).clone();
+            $Div.appendTo("body");
+
+            //3.设置div初始值
+            $Div.css({"position":"absolute","left":8,"top":8});
+
+
+            //4.拖拽，div随鼠标移动
+            $(window).mousemove(function(ev){
+                $Div.css({"left":ev.clientX-x,"top":ev.clientY-y});
+            });
+
+            //5.松手删除
+            $(window).mouseup(function(){
+                $Div.remove();
+            })
+        return false;
+       });
+    </script>
+</body>
+</html>

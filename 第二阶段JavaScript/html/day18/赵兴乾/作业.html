@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            float: left;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            
+            border: 1px solid #555;
+            overflow: hidden;
+        }
+        .box1 img{
+            width: 100%;
+        }
+        .box2{
+            float: left;
+            position: relative;
+              width: 300px;
+            height: 300px;
+             border: 1px solid #555;
+            overflow: hidden;
+            display: none;
+        }
+        .box2 img{
+           width: 900px;
+            height: 900px;
+            position: absolute;
+        }
+     .box3{
+         width: 100px;
+         height:100px;
+         background-color: rgba(0,0,0,0.5);
+         position: absolute;
+         cursor: move;
+         display: none;
+         
+     }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+        <img src="./img/smallpic.jpg" alt="">
+    </div>
+    <div class="box2">
+        <img src="./img/bigpic.jpeg" alt="" class="big">
+    </div>
+    <script src="./jquery.js"></script>
+    <script>
+           $(".box1").hover(function () {
+                $(".box3,.box2").show();
+            }, function () {
+                $(".box3,.box2").hide();
+            });
+        $(".box1").mousemove(function(ev){
+           
+             var l = ev.clientX-$(".box3").outerWidth()/2;
+            var h =ev.clientY-$(".box3").outerHeight()/2;
+                 $(".box3").css({
+                  "left":l,
+                  "top":h
+            });
+            if(l<=0){
+                l=0;
+            }
+           $(".big").css({
+                "left": -l*3,
+                "top": -h*3
+            });
+            
+           
+        });
+    </script>
+</body>
+</html>

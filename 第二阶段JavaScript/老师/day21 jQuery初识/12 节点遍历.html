@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>
+            <span>我是个笨蛋</span>
+        </p>
+    </div>
+    <div>
+        <span>我是个废物</span>
+    </div>
+
+
+    <ul>
+        <li><input type="checkbox"> 睡觉</li>
+        <li><input type="checkbox"> 上王者</li>
+        <li><input type="checkbox"> 睡觉</li>
+        <li class="box"><input type="checkbox"> 写项目</li>
+        <li><input type="checkbox"> 写作业</li>
+        <li><input type="checkbox"> 复习</li>
+        <li><input type="checkbox"> 预习</li>
+        <li><input type="checkbox"> 敲代码</li>
+        <li><input type="checkbox"> 过年</li>
+        <li><input type="checkbox"> 自闭</li>
+    </ul>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+       //1.找子节点  
+       //$().children(selector); 找直系的子元素
+       $("div").children("span").css("color","green");
+
+       //$().find(selector) :  找后代子元素
+       $("div").find("span").css("color","deeppink");
+
+       //2.找父节点
+       //$().parent(selector)：找直接父元素
+       //console.log( $("span").parent()); //找直接父元素
+      console.log( $("span").parents()); //找所有的父元素
+
+      //3.找兄弟元素
+      //$("").next(selector) : 下一个
+      $(".box").next().css("background","#666"); 
+
+      //$("").nextAll(selector) : 下面所有的
+      $(".box").nextAll().css("background","#666"); 
+
+      //$("").prev(selector) : 上一个
+      $(".box").prev().css("background","skyblue"); 
+      //$("").prevAll(selector) : 上面所有的
+      $(".box").prevAll().css("background","skyblue"); 
+
+      //$().siblings(selector) 所有的兄弟
+      $(".box").siblings().css("background","orange");
+    
+
+    </script>
+</body>
+</html>

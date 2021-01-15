@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>泰罗</li>
+        <li>迪迦</li>
+        <li>李达康</li>
+        <li>范闲</li>
+        <li>马冬梅</li>
+        <li>大秦赋</li>
+        <li>上阳赋</li>
+        <li>有匪</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //1.创建节点  $("<li>大江大河2</li>")
+        console.log($("<li>大江大河2</li>"));
+
+        //2.追加,在父元素的末尾添加
+        //2.1 $(父节点).append(子元素)
+        $("ul").append("<li>家有儿女</li>");
+
+        //2.2 $(子元素).appendTo(父元素)
+        $("<li>品如的衣柜</li>").appendTo("ul");
+
+        //3.在头部添加
+        //3.1 $(父元素).prepend(子元素)
+        $("ul").prepend("<li>赵四</li>");
+
+        //3.2 $(子元素).prependTo(父元素)
+        $("<li>刘能</li>").prependTo("ul");
+
+        //4.在某个元素之前添加
+        //4.1 $("参考元素").before(添加的节点)
+        $("li:eq(4)").before("<li>大郎</li>");
+
+        //4.1 $("添加的节点").insertBefore("参考节点")
+        $("<li>牛郎</li>").insertBefore("li:eq(4)");
+
+        //5.在某个元素之后添加
+        //5.1 $("参考元素").after("要添加的节点")
+        //5.2 $("要添加的节点").insertAfter("参考元素")
+        $("li:eq(1)").after("<li>谢大脚</li>");
+
+    </script>
+
+</body>
+</html>

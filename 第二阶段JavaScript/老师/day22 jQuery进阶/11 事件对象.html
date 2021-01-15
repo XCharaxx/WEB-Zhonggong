@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度</a>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(window).click(function(ev){
+            //1.事件对象，jQuery通过事件处理函数的参数获取，已经做好了兼容
+            //console.log(ev); //jQuery.Event
+            //console.log(ev.originalEvent); //原生事件对象
+
+            //2.事件对象属性
+            console.log(ev.clientX+"-----"+ev.clientY); //鼠标位置，相对于可视区
+            console.log(ev.keyCode); //按键编码
+            console.log(ev.shiftKey,ev.ctrlKey,ev.altKey); //有没有按，按了-true  没按-false
+        });
+
+        $("a").click(function(ev){
+            ev.stopPropagation(); //阻止事件冒泡
+            ev.preventDefault(); //阻止默认行为
+            console.log("被点击了");
+        })
+    </script>
+</body>
+</html>

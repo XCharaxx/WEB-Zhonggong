@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>白菜</li>
+        <li>豆芽菜</li>
+        <li>土豆</li>
+        <li>油麦菜</li>
+        <li>木耳</li>
+        <li class="t">白萝卜炖胡萝卜</li>
+        <li>西红柿炒番茄</li>
+        <li>土豆炒马铃薯</li>
+        <li>猪肉炖白菜</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $("ul li:first").css("background","green");
+        $("ul li:last").css("background","green");
+        $("ul li:nth-child(6)").css("background","orange");
+
+        //通过下标获取  :eq(下标)
+        $("ul li:eq(5)").css("background","orangered");
+        var n = 2;
+        $("ul li").eq(n).css("background","orangered");
+
+        //奇偶
+        $("ul li:even").css("background","pink");
+        $("ul li:odd").css("background","skyblue");
+
+        //大于gt(下标) 小于lt
+        $("ul li:lt(3)").css("background","red");
+        $("ul li:gt(2)").css("background","green");
+
+
+        $("ul li:not(.t)").css("background","pink")
+    </script>
+    <div>&gt;&lt</div>
+</body>
+</html>

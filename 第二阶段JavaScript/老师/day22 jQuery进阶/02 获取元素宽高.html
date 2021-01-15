@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid deeppink;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body style="height: 2000px;">
+    <div>
+        我是内容
+    </div>
+    <p>fdsfds</p>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //元素内容宽高 content
+        console.log($("div").width()); //100
+
+        //元素可视宽高  content+padding
+        console.log($("div").innerWidth()); //120
+
+        //元素占位宽高  content+padding+border
+        console.log($("div").outerWidth(false)); //140  false:默认，不包含margin
+        console.log($("div").outerWidth(true)); //340   true：包含margin
+
+        //屏幕宽
+        console.log($(window).height());
+        console.log($(document).height());
+    </script>
+</body>
+</html>

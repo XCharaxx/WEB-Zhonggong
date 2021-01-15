@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+        .active{
+            background:red
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="./js/jquery.js"></script>
+    <script >
+
+        /* $("div").mouseover(function(){
+            //添加 $().addClass()
+            $("div").addClass("active");
+        })
+        $("div").mouseout(function(){
+            //删除 $().removeClass()
+            $("div").removeClass("active");
+        }) */
+
+
+        //toggleClass(类名) ： 开关  有就删除没有就添加
+        $("div").click(function(){
+            $("div").hasClass("active");//判断当前元素是否有这个class，有返回true，没有返回false
+            $("div").is("active"); //判断当前元素是否有这个class，有返回true，没有返回false
+            $("div").toggleClass("active");
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

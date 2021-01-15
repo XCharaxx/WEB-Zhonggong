@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 600px;
+            background: pink;
+            float: left;
+            margin-left: 3px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+ <script src="../../JS/jquery.js"></script>
+ <script>
+
+     $(window).click(function(){
+            $("div:eq(0)").slideDown(400,function Down(){
+                      $(this).next("div").slideDown(400,Down);
+            });
+     });
+ </script>
+</body>
+    
+</html>

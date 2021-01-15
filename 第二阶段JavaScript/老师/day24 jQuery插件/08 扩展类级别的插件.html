@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery.js"></script>
+    <script>
+
+        //语法：$.extend({方法名:function(){ }})
+        $.extend({
+            "getMaxString":function(str){
+                //1.先把字符串里面的字符及出现的次数存储在对象中{"a":1}
+                var obj = {};
+                for(var i = 0;i<str.length;i++){
+                    obj[str[i]] = str.split(str[i]).length-1;
+                }
+                
+                //2.判断出现次数最多的字符  先顶一个最大值，然后依次进行比较，如果后面的值比当前这个最大值还大，存储当前的最大值
+                var maxCount = 0,maxStr = "";
+                for(var s in obj){//s= q w e r f 
+                    if(maxCount < obj[s]){
+                        maxCount = obj[s];
+                        maxStr = s;
+                    }
+                }
+                return [maxStr,maxCount];
+            },
+            "quchong":function(){}
+        });
+
+        var arr = $.getMaxString("qweqreqfsfqsfqeqwqewqewqewqewqe");
+        console.log(arr[0]+"出现次数最多，共出现了："+arr[1]);
+
+
+
+  
+
+
+
+
+
+
+
+
+
+/* 
+        //找字符串中出现次数最多的字符
+        var str = "qweqreqfsfqsfqeqwqewqewqewqewqe";
+
+        //1.声明一个对象，字符：出现的次数
+        var obj = {"w":1};
+        for(var i = 0;i<str.length;i++){
+            //如果这个对象中，没有这个符号，存储并且值为1，如果已经有了，值+1
+            var s = str[i];  //当前需要存储的字符
+            if(obj[s]){  //数字，为真，已经存在
+                obj[s]++;
+            }else{
+                obj[s] = 1
+            }
+        }
+        
+
+        //2判断出现次数最多的字符
+        var max = 0,maxStr = "";
+        for(var s in obj){
+            if(max < obj[s]){ //现在的最大值和  后面的值进行比较
+                max = obj[s];
+                maxStr = s;
+            }
+        }
+        console.log(max,maxStr); */
+
+
+    </script>
+</body>
+</html>

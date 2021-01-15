@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text"><br>
+        <input type="password"><br>
+        <input type="radio" name="sex" value='男' checked>男
+        <input type="radio" name="sex" value='女'>女
+        <br>
+
+        <input type="checkbox" >
+        <input type="checkbox" checked>
+        <input type="checkbox" >
+        <input type="checkbox" checked>
+        <input type="checkbox" >
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>fd</button>
+        <select name="" id=""></select>
+    </form>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        //表单选择器
+        console.log($(":input")); //获取表单元素  和类型无关
+        console.log($(":radio")); //获取单选框
+        console.log($(":checkbox")); //获取复选框
+        console.log($(":text")); //文本框
+
+
+        //获取选择框的选中
+        console.log($(":radio:checked"));
+        console.log($(":checkbox:checked"));
+        console.log($(":checkbox:checked").length);
+
+        var arr = [
+            "张振","郑浩然","张雅","张娜","职璐彬","贾桂玲","曹建丽","闫贺雲","韩雪","龙萍萍","王容","丁小牛","张源江","卢博文","张冰","赵子航","羊振腾","冯仁海","张子琦","闫锴","宋博","梁钰琪","赵士浩","赵兴乾","董延华","魏圣峰","郭佳旗","彭华钟","陈旭超","郑浩","朱欣跃","柴楠","包琴娟","刘真真","张梦静","曹咏鹏","陈志明","林卫东","单利强","张晓月","白若石","吴宇宇","赵晨阳","王运舵"
+        ];
+
+
+        ["赵士浩", "梁钰琪", "张源江", "张振", "郑浩然", "吴宇宇", "刘真真", "王运舵", "丁小牛", "职璐彬", "张雅", "闫锴", "龙萍萍", "郭佳旗", "闫贺雲", "王容", "张晓月", "赵子航", "张冰", "张梦静", "魏圣峰", "陈旭超", "冯仁海", "朱欣跃", "彭华钟", "郑浩", "赵晨阳", "董延华", "陈志明", "卢博文", "柴楠", "包琴娟", "曹咏鹏", "韩雪", "张子琦", "张娜", "赵兴乾", "单利强", "白若石", "林卫东", "贾桂玲", "曹建丽", "羊振腾", "宋博"];
+
+
+        console.log(arr.sort(function(){
+            return Math.random()-0.5;
+        }));
+
+
+        //["雷高蕾","罗鑫","张依阳"]
+        console.log(arr.length);
+    </script>
+</body>
+</html>

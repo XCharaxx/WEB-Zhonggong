@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: teal;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./js/jquery.js"></script>
+    <script>
+       
+       $("div").hover(function(){
+           //移入执行代码
+           $("div").css("width",200)
+       },function(){
+           //移出执行代码
+           $("div").css("width",100)
+       })
+    </script>
+</body>
+</html>

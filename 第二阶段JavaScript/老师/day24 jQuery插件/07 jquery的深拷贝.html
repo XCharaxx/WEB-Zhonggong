@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery.js"></script>
+    <script>
+        /* 
+        $.extend(deep,目标对象，被复制的对象,....)
+            deep:是否深拷贝，默认是false(作用对象，对象里面嵌套的引用数据类型)
+        */
+
+        var obj = {
+            "sex":"女"
+        }
+        var obj1 = {
+            "name":"web",
+            "detail":{
+                'age':10
+            }
+        }
+        var newObj = $.extend(true,{},obj1);
+        console.log(newObj);
+
+        obj1.detail.age = 20;
+        console.log(newObj);
+        
+    </script>
+</body>
+</html>

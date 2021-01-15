@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        /* 
+         设置/获取元素的样式：$().css()
+         可以链式操作：$().css({})
+        */
+       //设置/获取元素的样式：$().css()  number  字符串加单位，因为margin值“200”无效
+       $("div").css("width",200);
+       $("div").css("height","200");
+       $("div").css("margin","200px");
+       $("div").css("background","red");
+
+       //可以链式操作：$().css({})
+       $("div").css({
+           "width":100,
+           height:100,
+           backgroundColor:"pink",
+           "background-color":"pink"
+       });
+
+
+       var pro = $("div").css(["width","height"]);
+       console.log(pro); //{width: "100px", height: "100px"}
+
+
+
+
+       $().html()
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>4</li>
+        <li>1</li>
+        <li>7</li>
+        <li>9</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //$.map:返回值可以组成一个新的数组返回
+        //$.map(循环项,function(value,index){})
+        //$(循环项).map(function(index,vlaue){})
+
+        //1.循环数组
+        var arr = ["a","b","c"];
+        $.map(arr,function(value,index){
+            console.log(index+"----"+value); //0----a
+        });
+
+        //2.循环对象
+        var obj = {
+            "name":"待定",
+            "age":"1-100",
+            "sex":"女"
+        }
+        $.map(obj,function(value,key){ 
+            console.log(key+"----"+value); //name----待定
+        });
+
+
+        //3.循环标签
+        var s = 0;
+        /* $.map($("li"),function(elem,index){
+            console.log(elem); //<li>4</li>
+            s += parseInt($(elem).html());
+        }); */
+        console.log(s); //21
+
+
+        //$(循环项).map(function(index,vlaue){})
+        /* $("li").map(function(index,elem){
+            s += parseInt($(elem).html());
+        });
+        console.log(s); */
+
+
+
+
+        //$.each:循环，没有返回值
+        $("li").each(function(index,elem){
+            s += parseInt($(elem).html());
+        });
+          $().each($("li"),function (index, elem) {
+                s += parseInt($(elem).html());
+            });
+        console.log(s);
+
+       
+    </script>
+</body>
+</html>

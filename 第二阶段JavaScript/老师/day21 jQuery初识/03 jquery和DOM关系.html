@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        /* jquery的加载 
+           $(document).ready(function(){})
+           $().ready(function(){})
+           $(function(){});
+        */
+
+        // $(document).ready(function(){})
+        // $(document).ready(function(){
+        //     $("div").css("width",200);
+        // })
+
+        // $().ready(function(){})
+        // $().ready(function(){
+        //     $("div").css("height",200);
+        // })
+
+        // $(function(){});
+        // $(function(){
+        //     $("div").css("background","deeppink");
+        // })     
+    </script>
+</head>
+<body>
+    <div></div>
+    <script>
+        //1.可以共存，不能混用
+        var oDiv = document.getElementsByTagName("div")[0];
+        //可以共存
+        oDiv.style.width = "200px";
+        $("div").css("height","200");
+        //不能混用
+        //oDiv.css("background","deeppink");
+
+
+        //2.jquery和DOM相互转换
+        //DOM对象：通过document.get      document.query    
+        console.log(oDiv); //DOM对象
+        console.log($("div")); //jquery
+
+        //DOM转jQuery    $(DOM对象)
+        console.log($(oDiv)); //jQuery.fn.init [div]
+
+
+        //jQuery转DOM   通过下标
+        console.log($("div")[0]);
+        console.log($("div").get(0)); //<div style="width: 200px; height: 200px;"></div>
+
+
+    </script>
+</body>
+</html>

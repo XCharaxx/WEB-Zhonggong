@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="1">
+    <div>
+        <p>该吃饭了？</p>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        /* 
+        原生js
+            操作表单元素：标签.value
+            操作闭合标签：标签.innerHTML/text
+              特点：
+                 innerHTML识别标签，会覆盖原有的内容
+                 innerText不识别标签，会覆盖原有的内容
+        jq：
+            操作表单元素：$().val();
+            操作闭合标签：$().html()/text()
+        */
+
+        //1.操作表单元素：$().val();
+        console.log($("input").val());
+        $("input").val("17:20");
+
+        //2. 操作闭合标签：$().html()
+        var html = $("div").html()  //获取到标签
+        console.log(html);
+        //不想覆盖，之前+现在
+        $("div").html(html+"<p>今天不吃饭了？</p>");
+
+        //3.操作闭合标签：$().text()
+        var text = $("div").text() //只获取文本
+        console.log(text);
+        //$("div").text("<p>今天不吃饭了？</p>");
+    </script>
+</body>
+</html>

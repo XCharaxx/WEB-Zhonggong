@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" class="active" title='我是一个小可爱' index='0'></div>
+    <input type="checkbox" index='0' >
+    <script src="./js/jquery.js"></script>
+    <script>
+        /* 
+        之前操作属性：
+            原生：标签.属性名
+            DOM: 标签.setAttribute(属性名,属性值)/标签.getAttribute(属性名)
+        jquery操作属性：
+          attr
+            设置/获取：$().attr()
+            批量操作：$().attr({  })
+            删除属性：$().removeAttr()
+          prop  
+            设置/获取：$().prop()
+            批量操作：$().prop({  })
+            删除属性：$().removeProp()
+          官方：prop操作固定属性，attr操作自定义属性
+        */
+
+
+        //获取
+        console.log($("div").attr("id"));
+        //设置
+        $("div").attr("id","active");
+
+        //批量操作
+        $("div").attr({
+            "id":"box",
+            "class":"box",
+            "title":"我们不想写作业"
+        });
+
+        //删除属性
+        $("div").removeAttr("class");
+
+        //prop
+        $("div").prop({
+            "id":"active",
+            "class":"box"
+        });
+
+        //区别：官方：prop操作固定属性，attr操作自定义属性
+        //一般使用attr，但是input的checked值需要使用prop
+        console.log($("input").attr("checked")); //标签上实际的内容  checked undefined
+        console.log($("input").prop("checked")); //处理过的 true  false
+        console.log($("input").attr("index")); //0
+        console.log($("input").prop("index")); //undefined  
+
+        
+
+
+        
+    </script>
+</body>
+</html>

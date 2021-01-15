@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            <span>赵晨阳真漂亮</span>
+        </p>
+    </div>
+    <div>
+        <span>河南张氏</span>
+    </div>
+
+
+    
+    <ul>
+        <h2>朋友</h2>
+        <span></span>
+        <li>王二麻子</li>
+        <li>王二麻子</li>
+        <li>王二麻子</li>
+        <li>王二麻子</li>
+    </ul>
+
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        //后代选择器  父 子  
+        $("div span").css("color","pink");
+        // 子代选择器  父>子
+        $("div>span").css("color","green");
+        //+: 下一个兄弟  
+        $("h2+li").css("background","red");
+        //~：下面所有的兄弟
+        $("h2~li").css("background","red");
+    </script>
+</body>
+</html>

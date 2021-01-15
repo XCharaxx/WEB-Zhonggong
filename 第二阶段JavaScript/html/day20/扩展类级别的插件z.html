@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../../JS/jquery.js"></script>
+    <script>
+        $.extend({
+           "getMaxString":function(str){
+               var obj={};
+               for(var  i =0;i<str.length;i++){
+                   obj[str[i]]=str.split(str[i]).length-1;
+               }
+               var maxCount=0,maxStr="";
+               for(var key in obj){
+                if(maxCount<obj[key]){
+                    maxCount=obj[key];
+                    maxStr=key;
+                }  
+               
+               }
+               return [maxStr,maxCount];
+           },
+
+
+            "quchong":function () { }
+        });
+       var s= $.getMaxString("adawdnoawwwwwwjfaiwcnjoawdjaoxa");
+       console.log(s);
+       console.log("出现次数最多的是"+s[0]+",其出现次数为"+s[1]+"次")
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <div></div>
+    <!-- <script src="./js/jquery.js"></script> -->
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/fx.js"></script>
+    <script>
+        $("div").css({"width":100,"height":100,"background":"red",padding:10});
+        $("div").click(function(){
+            alert("新年好，万事大吉");
+            $("div").animate({"width":500})
+        });
+
+        //zepto和jquery的区别
+        //1、zepto没有innerWidth和outerWidth方法,获取元素可见的宽度,元素隐藏为0
+        console.log($("div").width());
+        // console.log($("div").innerWidth());
+        // console.log($("div").outerWidth());
+
+
+        //2、{left: 0, top: 0, width: 0, height: 0}
+        console.log($("div").offset());
+
+    </script>
+</body>
+</html>

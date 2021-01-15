@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getType(data){
+            return Object.prototype.toString.call(data).slice(8,-1);
+        }
+        function deepCopy(obj){
+            //1.创建一个空对象/空数组
+            if(getType(obj) == "Array"){
+                var res = [];
+            }else if(getType(obj) == "Object"){
+                var res = {};
+            }else{
+                return obj;  //如果不是数组和对象，就不存在深浅拷贝
+            }
+
+            //2.循环往这个空对象/空数组中添加属性
+            for(var key in obj){
+                //4.如果复制的值还是一个引用数据类型，继续进行深拷贝
+                if(getType(obj[key])=="Array"||getType(obj[key])=="Object"){
+                    res[key] = deepCopy(obj[key]);
+                }else{
+                    res[key] = obj[key];
+                }
+            }
+
+            //3.返回复制好的内容
+            return res;
+        }
+
+        var arr = [1,2,3,4];
+        var obj = {"name":"web","mes":{"age":18}};
+        var newArr = deepCopy(arr);
+        var newObj = deepCopy(obj);
+
+        //验证
+        console.log(newArr); //[1,2,3,4];
+        newArr.pop();  
+        console.log(newArr); //[1,2,3]
+        console.log(arr); //[1,2,3,4]
+
+
+        //对象里面套对象
+        newObj.mes.age = 17;
+        console.log(newObj);
+        console.log(obj);
+
+
+        //对象的toString方法可以获取到具体的数据类型，获取其他的数据类型，可以借用对象的toString方法
+        // console.log(Object.prototype.toString.call(arr));
+        // console.log(Object.prototype.toString.call(obj));
+    </script>
+</body>
+</html>

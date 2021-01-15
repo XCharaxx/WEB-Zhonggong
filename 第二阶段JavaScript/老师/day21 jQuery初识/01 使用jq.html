@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <!-- 1.引入本地 -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- 2.引入网上CDN的 -->
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        //使用
+        $("div").css("width",100); //语法简洁单一：$("selector").action()
+        $("#box").css("height",100); //强大的选择器功能，所有css的选择器都可以使用
+        $(".box").css("background","red");
+        console.log($("div").css("width")); //取值赋值一体
+
+        //链式操作
+        $("div").css("width",200).css("height",200).css("background","blue");
+
+       
+    </script>
+</body>
+</html>

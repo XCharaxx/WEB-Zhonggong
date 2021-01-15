@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getType(data){
+            return Object.prototype.toString.call(data).slice(8,-1);
+        }
+    function deepCopy(obj){
+         if(getType(obj)=="Array"){
+             var res=[];
+         }else if(getType(obj)=="Object"){
+             var res={};
+         }else{
+             return obj;
+         }
+        for(var key in obj){
+             if (getType(obj[key]) == "Array" || getType(obj[key]) == "Object") {
+                res[key] = deepCopy(obj[key]);
+            }else{
+                res[key]=obj[key];
+            }
+            
+        }
+        return res; 
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>抽奖</button>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //一次性事件语法：$().one(事件类型，事件处理函数)
+        var arr = ["1600压岁钱","对象","1060显卡","苹果全套"];
+        $("button").one("click",function(){
+            console.log(arr[Math.floor(Math.random()*arr.length)]);
+        });
+    </script>
+</body>
+</html>

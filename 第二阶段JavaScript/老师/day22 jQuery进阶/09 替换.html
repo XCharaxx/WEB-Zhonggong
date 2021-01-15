@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>第一周：前7天js复习完</li>
+        <li>第二周：前15天js复习完</li>
+        <li>第三周：国美项目完成</li>
+        <li>第四周：过年</li>
+        <li>第五周：回顾</li>
+    </ul>
+    <script src="./js/jquery.js"></script>
+    <script>
+        //$(被替换的内容).replaceWith(替换的内容)
+        $("li:eq(2)").replaceWith("<li>第三周：睡觉</li>");
+
+        //$(替换的内容).replaceAll(被替换的内容)
+        $("<li>第二周：国美项目完成</li>").replaceAll("li:eq(1)");
+    </script>
+</body>
+</html>

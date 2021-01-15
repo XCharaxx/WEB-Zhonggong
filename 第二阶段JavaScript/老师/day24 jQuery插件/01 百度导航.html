@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 100%;
+            height: 40px;
+            background: #01204f;
+            margin-top: 50px;
+        }
+
+        .box ul {
+            width: 1000px;
+            height: 40px;
+            margin: 0 auto;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .box li {
+            float: left;
+            color: #fff;
+            padding: 0 10px;
+            font: bold 14px/40px "Microsoft YaHei";
+            position: relative;  /* 提升层级，不会改变元素特性 */
+        }
+        .box .active{
+            background: #cc0000;
+        }
+        .move{
+            width: 40px;
+            height: 40px;
+            background: #cc0000;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <div class="move"></div> <!-- 移动盒子 -->
+            <li class="active">首页</li>
+            <li>国内</li>
+            <li>国际</li>
+            <li>军事</li>
+            <li>军事</li>
+            <li>军事</li>
+            <li>财经</li>
+            <li>体育</li>
+            <li>物联网</li>
+            <li>科技</li>
+            <li>有效起床</li>
+            <li>女人</li>
+        </ul>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $("li").hover(function(){
+            //鼠标移入：鼠标到那个li，div就需要运动到那个li
+            $(".move").stop().animate({"left":$(this).position().left,"width":$(this).innerWidth()});
+        },function(){
+            $(".move").stop().animate({"left":$(".active").position().left,"width":40})
+        });
+
+
+        $("li").click(function(){
+            $(this).addClass("active").siblings("li").removeClass("active");
+        })
+    </script>
+</body>
+
+</html>

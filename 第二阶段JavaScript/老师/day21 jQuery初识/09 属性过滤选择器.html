@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="hox">床前明月光</div>
+    <div class="wo">疑是地上霜</div>
+    <div class="haha">举头望明月</div>
+    <div class="xix">低头思故乡</div>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        //E[attr] : 获取有attr的E标签
+        $("div[class]").css("background", "red");
+
+        //E[attr=value] : 获取有attr属性并且值为value的E标签
+        $("div[class=wo]").css("background", "green");
+
+        //E[attr!=value] : 获取有attr属性并且值不为value的E标签
+        $("div[class!=wo]").css("background", "pink");
+
+        //E[attr^=value] : 获取有attr属性并且以value开头的E标签
+        $("div[class^=h]").css("background", "deeppink");
+
+        //E[attr$=value] : 获取有attr属性并且以value结尾的E标签
+        $("div[class$=x]").css("background", "green");
+
+        //E[attr*=value] : 获取有attr属性并且包含value的E标签
+        $("div[class*=x]").css("background", "orangered");
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <button class="all">全选</button>
+        <button class="inverse">反选</button>
+        <ul>
+            <li>
+                <input type="checkbox">
+                商品1 单价 <i>19.99</i>
+                <button class="jian">-</button>
+                <input type="text" value="0">
+                <button class="jia">+</button>
+                小计：<span>0.00</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                商品2 单价 <i>99.99</i>
+                <button class="jian">-</button>
+                <input type="text" value="0">
+                <button class="jia">+</button>
+                小计：<span>0.00</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                商品3 单价 <i>999.9</i>
+                <button class="jian">-</button>
+                <input type="text" value="0">
+                <button class="jia">+</button>
+                小计：<span>0.00</span>
+            </li>
+        </ul>
+        <p>一共<span class="count">0</span>件商品，共计 <span class="total">00</span>元</p>
+
+
+        <script src="./js/jquery.js"></script>
+        <script>
+            //1.点击+
+            $(".jia").click(function () {
+                //1.更新数量，获取当前输入框中的数量+1， 设置到输入框
+                var count = parseInt($(this).prev().val()) + 1;
+                $(this).prev().val(count);
+
+                //2.计算小计
+                var s = (count * $(this).prevAll("i").text()).toFixed(2);
+                $(this).next().html(s);
+                total();
+            });
+
+
+            //2.点击-
+            $(".jian").click(function () {
+                //1.更新数量，获取当前输入框中的数量+1， 设置到输入框
+                var count = parseInt($(this).next().val()) - 1;
+                if (count <= 0) count = 0;
+                $(this).next().val(count);
+
+                //2.计算小计
+                var s = (count * $(this).prev("i").text()).toFixed(2);
+                $(this).nextAll("span").html(s);
+                total();
+            })
+
+
+            //3.如果当前选择框选中，计算总数量和总计
+            $(":checkbox").click(function () {
+                total();
+            });
+
+            //4.全選
+            $(".all").click(function(){
+                $(":checkbox").prop("checked",true);
+                total();
+            });
+
+
+            //5.反選
+            $(".inverse").click(function(){
+                $(":checkbox").each(function(index,elem){
+                    $(elem).prop("checked",!$(elem).prop("checked"))
+                });
+                total();
+            })
+
+
+            function total() {
+                var count = 0, sum = 0;
+                //计算被选中商品的数量的总价，总数量
+                $(":checkbox:checked").map(function (index, elem) {
+                    count += parseInt($(elem).nextAll("input").val());
+                    sum += parseFloat($(elem).nextAll("span").text());
+                });
+                $(".count").text(count);
+                $(".total").text(sum.toFixed(2));
+            }
+
+
+        </script>
+
+
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //深浅拷贝：引用数据类型  arr obj
+
+        //浅拷贝：拷贝的是地址，一改全改
+        var arr1 = [1,2,3,4];
+        var arr2 = arr1; //[1,2,3,4];
+
+        arr2.push(5); //arr2 = [1,2,3,4,5];
+        console.log(arr1); //[1,2,3,4,5];
+
+
+        //深拷贝：拷贝值，相互之间不影响
+        var arr3 = [1,2,3,4];
+        var arr4 = [];
+
+        for(var key in arr3){
+        
+            arr4[key] = arr3[key];
+        }
+        console.log(arr4);
+        arr4.push("a"); //arr4 = [1,2,3,4,"a"];
+        console.log(arr3);
+
+
+
+        //浅拷贝，拷贝的是地址，一改全改
+       /*  var obj1  = {"name":"web"};
+        var obj2 = obj1;
+
+        obj2.name = "ui";
+        console.log(obj1);
+
+
+        //深拷贝
+        var obj3 = {"age":18};
+        var obj4 = {};
+        for(var key in obj3){
+           obj4[key] = obj3[key]
+        }
+        console.log(obj4);
+        obj4.age = 17;
+
+        console.log(obj3); */
+         
+    </script>
+</body>
+</html>

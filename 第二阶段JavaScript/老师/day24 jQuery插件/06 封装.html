@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //浅拷贝   拷贝的是地址，一改全改
+        var arr1 = [1,2,3];
+        var arr2 = arr1;  //复制地址
+
+        //深拷贝   拷贝的是值，相互没有影响
+        var arr3 = [1,2,3,4];
+        var arr4 = [];
+        for(var i = 0;i<arr3.length;i++){
+            arr4[i] = arr3[i]
+        }
+
+        //封装判断数据的具体类型
+        function getType(data){
+            Object.prototype.toString.call(data) //data = obj
+            return Object.prototype.toString.call(data).slice(8,-1);
+        }
+        //封装
+        function deepCopy(obj){
+            //1.创建空数组/空对象
+            if(getType(obj) == "Array"){
+                var res = [];
+            }else if(getType(obj) == "Object"){
+                var res = {}
+            }else{
+                return obj; //基本数据类型没有浅拷贝，直接返回，不需要操作
+            }
+
+            //2.循环对象/数组，把值一个一个赋值给空对象/数组
+            for(var key in obj){
+                //4.如果复制的值还有引用数据类型，这个数据也需要进行深拷贝
+                if(getType(obj[key]) == "Array"||getType(obj[key]) == "Object"){
+                    res[key] = deepCopy(obj[key]);
+                }else{
+                    res[key] = obj[key];
+                }
+            }
+
+            //3.返回复制好的数组/对象
+            return res;
+
+        }
+    </script>
+</body>
+</html>

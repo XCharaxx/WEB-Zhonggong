@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="alert(1)">我是一个？？</div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $("div").click(function(){
+            alert("你猜我是个啥？");
+        })
+        //$().clone(boolean)
+        //默认是false：复制标签，不会复制js中添加的事件
+        //true:复制标签，会复制js中添加的事件
+        
+        $("div").clone(false).appendTo("body");
+        // $("div").clone(true).appendTo("body");
+    </script>
+</body>
+</html>

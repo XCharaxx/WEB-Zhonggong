@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        div {
+            height: 1000px;
+        }
+
+        ul {
+            position: fixed;
+            right: 50px;
+            top: 100px;
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+
+        ul li {
+            height: 30px;
+            border-bottom: 1px solid cadetblue;
+        }
+
+        ul .active a {
+            color: red
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="active"><a href="#div1">新闻一</a></li>
+        <li><a href="#div2">新闻二</a></li>
+        <li><a href="#div3">新闻三</a></li>
+        <li><a href="#div4">新闻四</a></li>
+    </ul>
+
+    <div style="background: rosybrown" id="div1"></div>
+    <div style="background: #99CCFF" id="div2"></div>
+    <div style="background: #ffffcc" id="div3"></div>
+    <div style="background: salmon" id="div4"></div>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        //1.添加滚动事件
+        $(window).scroll(function(){
+            //2.滚动距离 到了div2的位置，样式需要作用在新闻2
+            // if($(window).scrollTop() >= $("div:eq(0)").offset().top){
+            //     $("li:eq(0)").addClass("active").siblings().removeClass("active");
+            // }
+            // if($(window).scrollTop() >= $("div:eq(1)").offset().top){
+            //     $("li:eq(1)").addClass("active").siblings().removeClass("active");
+            // }
+            // if($(window).scrollTop() >= $("div:eq(2)").offset().top){
+            //     $("li:eq(2)").addClass("active").siblings().removeClass("active");
+            // }
+            // if($(window).scrollTop() >= $("div:eq(3)").offset().top){
+            //     $("li:eq(3)").addClass("active").siblings().removeClass("active");
+            // }
+
+            //3.循环，判断每一个div，看scrollTop到了那个div的位置
+            $("div").map(function(index,elem){ //下标，elem：div
+                if($(window).scrollTop() >= $(elem).offset().top){
+                    $("li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            })
+            
+        });
+    </script>
+</body>
+
+</html>

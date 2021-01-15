@@ -1,0 +1,89 @@
+/* 登录表单 */
+.login-form{
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+.login-form .body-form{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+}
+.login-form .div-a{
+    width: 500px;
+    display: inline-block;
+    border-right: 1px solid #e7e7e7;
+}
+.login-form .tsp {
+display: inline-block;
+width: 70px;
+font-size: 14px;
+text-align: right;
+padding-right: 10px;
+}
+.login-form .sp {
+   width: 200px;
+}
+.mes1{
+    color:steelblue ;
+}
+.mes2{
+    color: #ff4a00;
+}
+.mes3{
+    display: inline-block;
+    margin-left: 10px;
+    width: 16px;
+    height: 11px;
+    background:url(../images/offcn_img15.jpg);
+}
+.login-form input {
+ outline: none;
+ width: 264px;
+ height: 38px;
+ padding-left: 10px;
+ 
+        }
+.login-form .sub{
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ff4a00;
+}
+.login-form .body-form .div-a p {
+    padding-left: 200px;
+}
+.login-form .body-form .div-a p a{
+    color: #ff4a00;
+    text-decoration: underline;  
+}
+i{
+    position: absolute;
+    width: 72px;
+    height: 30px;
+    left: 215px;
+    top: 7px;
+    font-size: 20px;
+}
+.login-form .div-b{
+    width: 490px;
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 14px;
+   
+}
+
+.login-form .div-b dl{
+     line-height: 30px;
+}
+.login-form .div-b dl dt{
+    color: #333;
+}
+.login-form .div-b dl dd{
+    color: #666;
+}
+

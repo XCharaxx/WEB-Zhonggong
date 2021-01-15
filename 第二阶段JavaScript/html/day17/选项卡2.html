@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        #wrap {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border: 1px solid gray;
+            padding: 20px;
+        }
+
+        #leftBox {
+            width: 300px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+
+        #rightBut {
+            position: absolute;
+            top: 20px;
+            left: 340px;
+        }
+
+        #gray {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0.4;
+        }
+
+        #edit {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 180px;
+            height: 260px;
+            padding: 10px;
+            background: #fff;
+        }
+
+        #edit a {
+            display: inline-block;
+            color: #000;
+            border: 1px solid gray;
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="leftBox"></div> <!-- 操作div -->
+        <button id="rightBut">点击显示div样式</button>
+        <div id="gray"></div>
+        <div id="edit">
+            <h2>大小</h2>
+            <p>
+                <a href="#" id="size1" class="size1">300*300</a>
+                <a href="#" id="size2" class="size1">200*300</a>
+                <a href="#" id="size3" class="size1">300*200</a>
+                <a href="#" id="size4" class="size1">100*300</a>
+            </p>
+            <h2>颜色</h2>
+            <p>
+                <a href="#" id="color1" class="size1">#ff0000</a>
+                <a href="#" id="color2" class="size1">#00ff00</a>
+                <a href="#" id="color3" class="size1">#0000ff</a>
+                <a href="#" id="color4" class="size1">#00ffff</a>
+            </p>
+            <button id="true">确定</button>
+            <button id="false">取消</button>
+        </div>
+    </div>
+    <script src="../../JS/jquery.js"></script>
+    <script>
+       $("#rightBut").click(function(){
+           $("#gray").css("display","block");
+           $("#edit").css("display","block");
+       });
+       $(".size1").mouseover(function(){
+           $("#leftBox").css({
+               "width":$(this).html().split("*")[0],
+               "height": $(this).html().split("*")[1],
+               "background":$(this).html()
+           });
+       });
+
+        //3.划过大小
+       $("#true").click(function(){
+            $("#gray").css("display","none");
+            $("#edit").css("display","none");
+       });
+        
+        //4.点击确定
+       $("#false").click(function () {
+            $("#gray").css("display", "none");
+            $("#edit").css("display", "none");
+            $("#leftBox").css({
+                "width":300,
+                "height":100,
+                "background":"white"
+            });
+        });
+
+    </script>
+</body>
+
+</html>

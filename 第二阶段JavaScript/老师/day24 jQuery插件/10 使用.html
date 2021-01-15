@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .lunbo{
+            width: 960px;
+            height: 320px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .lunbo ul li{
+            position: absolute;
+            opacity: 0;
+        }
+        .lunbo ol{
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+        }
+        .lunbo ol li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        .lunbo ol .active{
+            background: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="lunbo">
+        <ul>
+            <li style="opacity:1"><img src="./image/1.jpg" alt=""></li>
+            <li><img src="./image/2.jpg" alt=""></li>
+            <li><img src="./image/3.jpg" alt=""></li>
+            <li><img src="./image/4.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+   
+    <script src="./js/jquery.js"></script>
+    <script src="./jquery.lunbo.js"></script>
+    <script>
+        $(".lunbo").fadeLunbo().remove();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

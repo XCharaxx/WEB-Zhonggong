@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        div {
+            height: 1000px;
+        }
+
+        ul {
+            position: fixed;
+            right: 50px;
+            top: 100px;
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+
+        ul li {
+            height: 30px;
+            border-bottom: 1px solid cadetblue;
+            cursor: pointer;
+            
+        }
+        ul li:hover{
+            text-decoration: underline;
+            color: red;
+        }
+        ul  .active {
+            color: red;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="active">新闻一</li>
+        <li>新闻二</li>
+        <li>新闻三</li>
+        <li>新闻四</li>
+    </ul>
+
+    <div style="background: rosybrown" id="div1"></div>
+    <div style="background: #99CCFF" id="div2"></div>
+    <div style="background: #ffffcc" id="div3"></div>
+    <div style="background: salmon" id="div4"></div>
+    <script src="../../JS/jquery.js"></script>
+    <script>
+         $(window).scroll(function(){
+             $("div").map(function(index,elem){
+                  
+             if($(window).scrollTop()>=$(elem).offset().top){ 
+                    $("li").eq(index).addClass("active").siblings().removeClass("active");
+             } 
+             });
+            
+         });
+       
+    </script>
+</body>
+
+</html>
