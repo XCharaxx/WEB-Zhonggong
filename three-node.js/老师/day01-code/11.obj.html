@@ -1,0 +1,22 @@
+<script>
+let obj = {
+    name : 'Eric',
+    age : 18,
+    sex : '男'
+};
+console.log(obj);
+
+// 解构obj对象  我们使用的方式
+// 但是解构的时候 键名必须和原对象的键名保持一致
+// let {name : uname,sex : usex,age : uage} = obj;
+// console.log(uname);
+// console.log(uage);
+// console.log(usex);
+
+// let {name:name,sex:sex,age:age} = obj;
+let {name,sex,age} = obj;
+console.log(name);
+console.log(age);
+console.log(sex);
+
+</script>

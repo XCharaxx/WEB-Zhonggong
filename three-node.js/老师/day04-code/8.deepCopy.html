@@ -1,0 +1,67 @@
+<script>
+// 深拷贝
+let obj = {name : 'Eric','age' : 18,sex : '男'};  // [object Object]
+let arr = [33,66,99];  // [object Array]
+let data = [
+    {name : '知行合一',author : '王阳明',price : 99,arr : [22,66,88]},
+    {name : '齐民要术',author : '贾思勰',price : 99},
+    {name : '史记',author : '司马迁',price : 99},
+    {name : '资治通鉴',author : '司马光',price : 99},
+    {name : '伤寒杂病论',author : '张仲景',price : 99},
+    {name : '本草纲目',author : '李时珍',price : 99},
+]
+
+// let result = [];
+// for (let i in arr){
+//     result[i] = arr[i];
+// }
+// console.log(result);
+// let result = {};
+// for(let key in obj){
+//     result[key] = obj[key];
+// }
+// console.log(result);
+
+
+// 定义一个函数
+// 需要一个参数  参数是拷贝的对象
+function deepCopy(object){
+    // 先判断我们拷贝的对象的具体数据类型  是数组还是对象
+    // 如果是数组  我们创建空数组   如果是对象  我们创建空对象
+    let result;
+    if (Object.prototype.toString.call(object) == '[object Object]'){
+        result = {};
+    }else if (Object.prototype.toString.call(object) == '[object Array]'){
+        result = [];
+    }else{
+        return object;
+    }
+    // 进行对象的拷贝
+    for (let key in object){
+        // console.log(typeof object[key]);
+        if (typeof object[key] == 'object'){
+            result[key] = deepCopy(object[key]);
+        }else{
+            result[key] = object[key];
+        }
+        // result[key] = object[key];
+    }
+
+    return result;
+}
+
+let newData = deepCopy(data);
+console.log(data);
+console.log(newData);
+data.name = '1232132';
+console.log(data);
+console.log(newData);
+data[0].page = 300;
+console.log(data);
+console.log(newData);
+
+console.log(data[0].arr.push(365));
+console.log(data[0].arr);
+console.log(newData[0].arr);
+
+</script>

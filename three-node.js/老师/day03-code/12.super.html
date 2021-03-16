@@ -1,0 +1,44 @@
+<script>
+class Worker{
+    constructor(name){
+        this.name = name;
+    }
+    jx(){
+        console.log(this.name + '的绩效');
+    }
+}
+
+class Boss extends Worker{
+    // 给boss中添加一个属性  属性是工资
+    // constructor(money) {  // 报错
+    //     this.money = money;
+    // }
+    // constructor(money) {
+    //     this.name = name;
+    //     this.money = money;
+    // }
+    // 如果说我们想重写构造器  那么必须先将父类的构造器继承过来
+    // 继承之后在加以补充
+    // 调用父类的构造器  使用super方法进行调用  继承的时候  必须继承父类构造器中的所有参数
+    constructor(name,money) {
+        // Worker.constructor(name);
+        super(name);
+        // 补充我们需要的属性
+        this.money = money;
+    }
+    sjx(){
+        console.log(this.name + '审核绩效');
+    }
+    jx(){
+        console.log(this.name + '说  我的绩效和你的不一样  我是按年的' + '我的工资是' + this.money);
+    }
+}
+
+let w = new Worker('Eric');
+w.jx();
+
+let b = new Boss('Mary',60000);
+b.jx();
+b.sjx();
+
+</script>

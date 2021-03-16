@@ -1,0 +1,38 @@
+<script>
+// 使用set  需要new Set  内置一个参数  可选
+// 返回值是一个set集合
+let arr = [1,7,3,0,1,0,7,9,2,0,1];
+let set = new Set(arr);
+let set1 = new Set();
+
+console.log(set);
+console.log(set1);
+
+// 去重数组
+// console.log(...set);
+// let newArr = [...set];
+
+// set集合中对应的方法
+// add  添加集合元素
+set.add('Eric');
+console.log(set);
+console.log(set[1]);
+
+// 查看set集合中的具体个数
+console.log(set.size);
+
+// 删除一个集合元素
+set.delete(9);
+console.log(set);
+
+// 查看set元素是否存在
+console.log(set.has(9));
+console.log(set.has(8));
+console.log(set.has(3));
+console.log(set.has('Eric'));
+
+// 清空set集合
+set.clear();
+console.log(set);
+
+</script>

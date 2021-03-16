@@ -1,0 +1,26 @@
+<script>
+let str = 'YES';
+
+// 完全解构
+let [a,b,c] = str;
+console.log(a);
+console.log(b);
+console.log(c);
+
+// 缺省情况
+let [d,e] = str;
+console.log(d);
+console.log(e);
+
+// 默认值
+let [f,g,h,i = 'NNN'] = str;
+console.log(f);
+console.log(g);
+console.log(h);
+console.log(i);
+
+// 占位
+let [,k] = str;
+console.log(k);
+
+</script>

@@ -1,0 +1,28 @@
+<script>
+// 箭头函数中没有自己的this
+let obj1 = {
+    name : '大哥',
+    say : function(){
+        // console.log(this);
+        console.log('我是' + this.name);
+    }
+}
+obj1.say();
+
+// 箭头函数的this
+let obj2 = {
+    name : '大爷',
+    say : function(){
+        return {
+            name : '二大爷',
+            say : ()=>{
+                console.log('我是' + this.name);
+            }
+        }
+    }
+}
+
+// obj2.say();
+obj2.say().say();
+
+</script>

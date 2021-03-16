@@ -1,0 +1,35 @@
+<script>
+let name = Symbol('姓名');
+let age = Symbol('年龄');
+let rename = Symbol('新名');
+
+// 使用Symbol
+// let obj = {
+//     name : 'Eric',
+//     age : 18,
+//     rename : '康柏松'
+// };
+// console.log(obj);
+
+// 如果使用外部的变量作为对象中的键  那么我们可以使用中括号的方式
+let obj = {
+    [name] : 'Mary',
+    [age] : 19,
+    [rename] : '小张'
+}
+
+console.log(obj);
+console.log(obj[name]);
+
+// 第二种方法  追加对象元素
+let address = Symbol('地址');
+obj[address] = '吉林长春';
+console.log(obj);
+
+// 第三种方法  可以通过对象中的方法向对象中追加一个属性
+let school = Symbol('学校');
+Object.defineProperty(obj,school,{
+    value : '吉林大学'
+});
+console.log(obj);
+</script>

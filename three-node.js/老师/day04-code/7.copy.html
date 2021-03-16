@@ -1,0 +1,62 @@
+<script>
+// 浅拷贝
+let obj = {name : 'Eric','age' : 18,sex : '男',arr : [33,66,99],friend : {name : 'MM',age : 17}};
+// let arr = [22,44,66,88];
+let data = [
+    // 22,44,66,88,
+    {name : 'Eric','age' : 18,sex : '男'},
+    {name : 'Mary','age' : 16,sex : '女'},
+    [22,44,66,88]
+];
+
+// 对对象进行浅拷贝
+// let newObj = obj;
+// console.log(obj);
+// console.log(newObj);
+
+// newObj.school = '吉林大学';
+// console.log(obj);
+// console.log(newObj);
+
+// 浅拷贝模式之...
+// let newArr = [...arr];
+// console.log(arr);
+// console.log(newArr);
+// newArr.push(99);
+// console.log(arr);
+// console.log(newArr);
+// let newData = [...data];
+// console.log(data);
+// console.log(newData);
+// newData[4].school = '吉林大学';
+// console.log(data);
+// console.log(newData);
+
+// 浅拷贝之JSON
+// let str = JSON.stringify(data);
+// let newData = JSON.parse(str);
+// console.log(data);
+// console.log(newData);
+// newData.push({name : 'Jack','age' : 22,sex : '男'});
+// console.log(data);
+// console.log(newData);
+// newData[2].push(99);
+// console.log(data);
+// console.log(newData);
+// newData[0].school = '吉林大学';
+// console.log(data);
+// console.log(newData);
+
+// let str = JSON.stringify(obj);
+// let newObj = JSON.parse(str);
+// console.log(obj);
+// console.log(newObj);
+// newObj.arr.push(88);
+// console.log(obj);
+// console.log(newObj);
+// obj.friend.sex = '女';
+// console.log(obj);
+// console.log(newObj);
+
+
+</script>

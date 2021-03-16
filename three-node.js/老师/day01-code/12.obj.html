@@ -1,0 +1,47 @@
+<script>
+let name = 'Mary';
+let age = 19;
+let sex = "女";
+let school = '中国地质大学';
+let address = '河北廊坊';
+
+// let obj = {
+//     name : 'Eric',
+//     age : 18,
+//     sex : '男',
+//     school : school,
+//     address : address
+// };
+
+// let obj = {
+//     name : 'Eric',
+//     age : 18,
+//     sex : '男',
+//     school,
+//     address
+// };
+
+let obj = {name,age,sex,school,address};
+console.log(obj);
+
+// 方法的简写
+// let newObj = {
+//     name,
+//     age,
+//     say : function(){
+//         console.log(this.name + '在说话');
+//     }
+// }
+let newObj = {
+    name,
+    age,
+    say(){
+        console.log(this.name + '在说话');
+    }
+}
+
+
+console.log(newObj);
+newObj.say();
+
+</script>

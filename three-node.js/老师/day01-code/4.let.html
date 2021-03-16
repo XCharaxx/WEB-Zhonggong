@@ -1,0 +1,51 @@
+<script>
+// var num = 200;
+// console.log(num);
+// let age = 18;
+// console.log(age);
+
+// 不能重复定义let变量
+var num = 200;
+var num = 400;
+console.log(num);
+let num = 200;
+let num = 300;
+num = 600;
+console.log(num);
+
+// 2.let变量是块作用域  只要是在大括号{}中定义的let变量  那么在大括号{}外部就无法进行访问
+// 可能出现大括号的  if  for  switch  while  do...while
+// if (true){
+//     var username = 'Eric';
+//     let password = "123";
+//     let blcaklist = '1';
+// }
+let school = '吉林大学';
+{
+    var username = 'Eric';
+    let password = "123";
+    let blcaklist = '1';
+    console.log(school);
+}
+
+console.log(username);
+// console.log(password);
+
+
+// let变量不做变量提升
+console.log(title);
+var title = '奥迪';
+
+// console.log(color);  
+// let color = 'black';  //报错  不做变量提升
+
+// 暂时性死区
+let age = 18;
+if (true){
+    console.log(age);
+    let age = 22;
+    // console.log(age);
+}
+// console.log(age);
+
+</script>

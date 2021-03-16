@@ -1,0 +1,20 @@
+<script>
+// 不能使用箭头函数定义构造
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+}
+
+let p = new Person('Eric',18);
+console.log(p);
+
+// 箭头函数是不能定义的
+let Car = (name,color)=>{
+    this.name = name;
+    this.color = color;
+}
+
+let c = new Car('Aodi','black');
+
+
+</script>

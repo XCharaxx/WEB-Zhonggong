@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// class Cat{
+//     constructor() {
+//         console.log('类已经被实例化了');
+//     }
+    
+// }
+// let c = new Cat();
+// let a = new Cat();
+// let b = new Cat();
+// console.log(c);
+// console.log(typeof c);
+
+class Cat{
+    constructor(name,color,age) {
+        this.name = name;
+        this.color = color;
+        this.age = age
+        // 初始化成功
+        // console.log(this.name,this.age,this.color);
+    }
+
+    // 定义方法
+    eat(food){
+        console.log(`${this.name}在吃东西 吃的是${food}`);
+    }
+
+}
+
+let c = new Cat('Tom','灰色',3);
+// console.log(c);
+c.eat('奶酪');
+
+</script>

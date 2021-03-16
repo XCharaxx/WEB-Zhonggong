@@ -1,0 +1,37 @@
+<script>
+class Worker{  // 基类
+    constructor(name){
+        this.name = name;
+    }
+    kq(){
+        console.log(this.name + '的考勤信息');
+    }
+    jx(){
+        console.log(this.name + '的绩效');
+    }
+}
+
+class Boss extends Worker{  // 派生类
+    skq(){
+        console.log(this.name + '审核考勤');
+    }
+    sjx(){
+        console.log(this.name + '审核绩效');
+    }
+    // 方法的重写  覆写  重载
+    // 直接命名相同的名字  覆盖父类中的方法
+    jx(){
+        console.log(this.name + '说  我的绩效和你的不一样  我是按年的');
+    }
+}
+
+let w = new Worker('Eric');
+w.kq();
+w.jx();
+
+let b = new Boss('Mary');
+b.jx();
+b.kq();
+b.sjx();
+b.skq();
+</script>

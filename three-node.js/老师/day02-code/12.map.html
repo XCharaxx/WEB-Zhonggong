@@ -1,0 +1,41 @@
+<script>
+// map集合
+let arr = [
+    ['name','Eric'],
+    ['rename','Eric'],
+    ['age',18],
+    ['sex','女'],
+    ['sex','男']
+];
+// console.log(arr);
+// 创建集合
+let map = new Map(arr);
+let newMap = new Map();
+console.log(map);
+console.log(newMap);
+
+// map集合中的内置方法
+// set  添加集合元素
+map.set('address','吉林长春');
+console.log(map);
+
+// delete删除集合元素
+map.delete('sex');
+console.log(map);
+
+// has查看是否存在某个集合元素
+console.log(map.has('sex'));
+console.log(map.has('address'));
+
+// 查看集合的长度
+console.log(map.size);
+
+// 获取集合元素
+console.log(map.get('name'));
+console.log(map.get('age'));
+
+// 清空集合
+map.clear();
+console.log(map);
+
+</script>

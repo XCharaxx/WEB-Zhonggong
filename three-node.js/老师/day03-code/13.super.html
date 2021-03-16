@@ -1,0 +1,30 @@
+<script>
+class Worker{
+    constructor(name){
+        this.name = name;
+    }
+    jx(){
+        console.log(this.name + '的绩效');
+    }
+}
+class Boss extends Worker{
+    constructor(name,money) {
+        // Worker.constructor(name)
+        super(name);
+        this.money = money;
+    }
+    sjx(){
+        console.log(this.name + '审核绩效');
+    }
+    jx(){
+        console.log(this.name + '说  我的绩效和你的不一样  我是按年的' + '我的工资是' + this.money);
+    }
+}
+
+let w = new Worker('Eric');
+w.jx();
+
+let b = new Boss('Mary',60000);
+b.jx();
+b.sjx();
+</script>

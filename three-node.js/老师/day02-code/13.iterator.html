@@ -1,0 +1,35 @@
+<script>
+// 编辑iterator工作原理
+
+// 定义一个数组  一会迭代这个数组
+let arr = [11,33,55,99];
+
+// 定义一个iterator方法  用来迭代数据结构
+function myIter(array){
+    // 定义一个数组指针
+    let index = 0;
+    return {
+        next : function(){
+            // return 'iter是返回的对象  next方法是iter中的方法';
+            // 判断迭代数据解构的长度是否大于数组指针
+            if (array.length > index){
+                // 成功指向返回的数据
+                return {value : array[index++],done : false};
+            }else{
+                // 失败的时候  返回的数据
+                return {value : undefined,done : true};
+            }
+        }
+    };
+}
+
+// 调用方法  准备迭代
+let iter = myIter(arr);
+console.log(iter);
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+
+</script>

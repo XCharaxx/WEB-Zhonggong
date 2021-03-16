@@ -1,0 +1,30 @@
+<script>
+let promise = new Promise((resolve,reject)=>{
+    let arr = '获取一级栏目数据';
+    if (arr.length > 0){
+        resolve(arr);
+    }
+})
+
+// 触发Promise
+// 因为promise触发得到的结果是一个promise对象  所以说 我们可以继续触发
+// 前一个then中的回调函数中的返回值  作为新的promise的resolve状态  成功状态
+let a = promise.then(data=>{
+    console.log(data);
+    return data + '中的食品';
+}).then(data=>{
+    console.log(data);
+    return data + '中的元宵';
+}).then(data=>{
+    console.log(data);
+    return data + '只提供一人份';
+}).then(data=>{
+    console.log(data);
+    return data + '豆沙馅的'
+}).then(data=>{
+    console.log(data);
+})
+
+
+
+</script>

@@ -1,0 +1,31 @@
+<script>
+class Person{
+    static name = 'MM';
+    constructor(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    eat(){
+        console.log('吃饭');
+    }
+    // 定义静态方法
+    static say(name){
+        // console.log(name + '说话');
+        // console.log(this.name + '说话');
+        console.log(Person.name + '和' + name + '在说话');
+    }
+}
+let p = new Person('Mary',13);
+
+// 使用静态方法
+Person.say('Eric');
+
+// Person.eat();
+
+// 使用eat需要实例化
+// let p = new Person('Mary',13);
+// console.log(p);
+// p.say('nnn');
+
+</script>

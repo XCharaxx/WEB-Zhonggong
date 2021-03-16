@@ -1,0 +1,22 @@
+{
+  "name": "day05-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.text.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "time-stamp": "^2.2.0"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.5"
+  }
+}

@@ -1,0 +1,80 @@
+<script>
+// 对象扩展
+// Object.is  ：  判断v1, v2数据是否完全相等
+// 只要是对象类型的数据  两个对象就不可能完全相等  除非是拷贝
+let arr1 = [1,2,3];
+let arr2 = [1,2,3];
+console.log(Object.is(arr1,arr2));
+let str1 = '123';
+let str2 = '123';
+console.log(Object.is(str1,str2));
+console.log(arr1 == arr2);
+console.log(str1 == str2);
+
+
+// Object.assign  ：  将源对象source的属性复制到新的目标target对象上
+let obj = {name : 'Eric',age : 18};
+let newObj = {sex : '男'};
+Object.assign(newObj,obj);
+console.log(newObj);
+
+
+// Object.keys  : 取出对象中所有的键  作为一个数组
+let keys = Object.keys(obj);
+console.log(keys);
+
+
+// Object.valuess  : 取出对象中所有的值  作为一个数组
+let values = Object.values(obj);
+console.log(values);
+
+
+// Object.create  : 以一个对象为原型创建另一个对象
+// 实质上就是实现了对象的继承
+// 内置两个参数  第一个参数是原型对象  object
+// 第二个参数是描述  是一个对象
+    // 对象中的键是添加的属性名字  键名  对象的值还是一个对象
+        // 对象中有4个属性
+            // value  :  属性值
+            // writable  ：  属性是否可写  是否可以修改  默认为false
+            // configurable  :  是否可删除  默认为false
+            // enumerable : 是否可枚举  其实就是遍历  默认为false
+let object = {name : 'Eric',age : 18,sex : '男'}
+let newObject = Object.create(object,{
+    address : {
+        value : '吉林长春',
+        writable : true,
+        configurable : true,
+        enumerable : true
+    },
+    school : {
+        value : '吉林大学',
+        writable : false,
+        configurable : false,
+        enumerable : false
+    }
+})
+
+console.log(newObject);
+console.log(newObject.name);
+
+// 修改对象属性
+newObject.address = '河北廊坊';
+newObject.school = '北京大学';
+console.log(newObject);
+
+// 删除对象属性
+// delete newObject.address;
+// delete newObject.school;
+// console.log(newObject);
+
+// 遍历对象
+for (let key in newObject){
+    console.log(newObject[key]);
+}
+
+
+
+
+
+</script>

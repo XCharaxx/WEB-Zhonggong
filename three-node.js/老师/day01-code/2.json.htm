@@ -1,0 +1,46 @@
+<script>
+var obj = {
+    name : 'Eric',
+    age : 18,
+    sex : '男'
+}
+
+var arr = [
+    {name : '齐民要术',page : 1300,price : 35.99,author : '贾思勰'},
+    {name : '全球通史',page : 2300,price : 39.44,author : '斯塔夫里阿诺斯'},
+    {name : '资治通鉴',page : 1600,price : 36.66,author : '司马光'},
+    {name : '史记',page : 900,price : 88.33,author : '司马迁'},
+];
+
+console.log(obj);
+console.log(typeof obj);
+console.log(arr);
+console.log(typeof arr);
+
+// 使用JSON.stringify方法进行将对象格式的数据转化为json
+var objJson = JSON.stringify(obj);
+var arrJson = JSON.stringify(arr);
+
+console.log(objJson);
+console.log(typeof objJson);
+console.log(arrJson);
+console.log(typeof arrJson);
+
+
+// 将JSON转化为对象  使用parse方法
+var newObj = JSON.parse(objJson);
+var newArr = JSON.parse(arrJson);
+console.log(newObj);
+console.log(newArr);
+
+
+// 手动在代码中定义JSON
+var json1 = '{"name":"Marry","age":19}';
+console.log(json1);
+console.log(typeof json1);
+
+var obj1 = JSON.parse(json1);
+console.log(obj1);
+
+
+</script>

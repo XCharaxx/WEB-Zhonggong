@@ -1,0 +1,40 @@
+<script>
+// 如果函数参数是数组的时候
+function fun1([a,b,c] = array){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+let arr = [11,33,66];
+fun1(arr);
+
+// 如果说函数参数是对象的时候
+// function fun2({name,age,sex} = object){
+//     // console.log(object);
+//     console.log(name);
+//     console.log(age);
+//     console.log(sex);
+// }
+
+// let obj = {name:'Eric',age:18,sex:'男'};
+// fun2(obj);
+
+function fun2({name = '战三',age = 22,sex = '女'} = object){
+    console.log(name);
+    console.log(age);
+    console.log(sex);
+}
+// fun2();
+
+let obj = {uname:'Eric',uage:18,usex:'男'};
+fun2(obj);
+
+
+// let aa = {name:'Eric',age:18,sex:'男'};
+// let {uname = '潘金莲',uage = 22,usex = '女'} = aa;
+// console.log(uname);
+// console.log(uage);
+// console.log(usex);
+
+</script>

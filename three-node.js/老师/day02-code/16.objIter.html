@@ -1,0 +1,36 @@
+<script>
+let obj = {
+    name : 'Eric',
+    age : 18,
+    sex : '男'
+};
+
+// 迭代对象
+obj[Symbol.iterator] = function(){
+    // 定义一个数组指针
+    let index = 0;
+    // 取出当前对象中的所有的键名  组成一个数组
+    let keys = Object.keys(this);
+    return {
+        next : ()=>{
+            if (keys.length > index){
+                return {value : this[keys[index++]],done : false};
+            }else{
+                return {value : undefined,done : true};
+            }
+        }
+    }
+}
+
+let objIter = obj[Symbol.iterator]();
+console.log(objIter.next());
+console.log(objIter.next());
+console.log(objIter.next());
+console.log(objIter.next());
+
+// 取出对象中所有的键
+// console.log(Object.keys(obj));
+// 取出对象中所有的值
+// console.log(Object.values(obj));
+
+</script>

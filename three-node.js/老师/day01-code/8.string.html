@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #app{
+            width: 770px;
+            height: 230px;
+            border: 1px solid;
+            margin: 100px auto;
+        }
+        #app div{
+            width: 140px;
+            height: 230px;
+            float: left;
+            margin-left: 10px;
+        }
+        #app div .image{
+            width: 140px;
+            height:180px;
+            margin: 0px;
+            margin-top: 5px;
+        }
+        #app div .image img{
+            width: 100%;
+            height:100%;
+        }
+        #app div p{
+            text-align: center;
+            font-size: 12px;
+            line-height: 29px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <div class="image"><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2632091530.jpg" /></div>
+            <p>发财日记&nbsp;&nbsp;<span>6.0</span></p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+let arr = [
+    {title : '发财日记',score : 6.0,src : "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2632091530.jpg"},
+    {title : '无依之地',score : 8.4,src : "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2628328069.jpg"},
+    {title : '反击',score : 5.3,src : "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2631923710.jpg"},
+    {title : '无声',score : 7.6,src : "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2619399682.jpg"},
+    {title : '夺冠',score : 7.3,src : "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2620083313.jpg"}
+];
+let str = arr.map(function(item){
+    return `<div>
+            <div class="image"><img src="${item.src}" /></div>
+            <p>${item.title}&nbsp;&nbsp;<span>${item.score}</span></p>
+        </div>`;
+}).join('');
+
+let app = document.querySelector('#app');
+app.innerHTML = str;
+
+
+</script>
+

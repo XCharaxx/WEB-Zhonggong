@@ -1,0 +1,32 @@
+<script>
+// 默认值传参
+// let sum = (a,b = 0,c = 0,d = 0)=>{
+//     return a+b+c+d;
+// }
+// console.log(sum(1,2,3,4));
+// console.log(sum(1,2));
+
+// 我们使用剩余参数  进行处理
+let sum = (...value)=>{
+    // console.log(value);
+    // console.log(Object.prototype.toString.call(value));
+    // 这是一个容器
+    let result = 0;
+    // 遍历数组  将其相加
+    for (let i = 0; i < value.length;i++){
+        result += value[i]
+    };
+    return result
+
+}
+console.log(sum(1,2,3,4,5,6,7,8,9,10));
+
+// 如果说我们使用rest不定参数  我们还可以和普通参数一起传递  但是rest参数必须放在最后
+// let total = (a,b,...item)=>{
+//     console.log(a);
+//     console.log(b);
+//     console.log(item);
+// }
+
+total(1,2,3,4,5,6,7,8,9);
+</script>

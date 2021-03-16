@@ -31,7 +31,6 @@
         //detach:删除元素，返回被删除元素的引用,方便下次使用，会保留被删除元素的事件
         $(".detach").click(function(){
             var del = $("li").detach();
-            
             setTimeout(function(){
                 $("ul").append(del);
             },2000);

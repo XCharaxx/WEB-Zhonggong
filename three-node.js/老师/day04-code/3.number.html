@@ -1,0 +1,42 @@
+<script>
+// 数组的扩展
+// JS中的数字的最大值
+// console.log(99999999999999**9);
+console.log(Number.MAX_VALUE);
+console.log(1.7976931348623157e+309);  // Infinity 无穷大
+console.log('*'.repeat(50));
+
+// Number.isFinite 判断数组是否有限大
+console.log(Number.isFinite(99999999));
+console.log(Number.isFinite(1.7976931348623157e+309));
+console.log(Number.isFinite(Infinity));
+console.log(Number.isFinite(9999**99));
+console.log('*'.repeat(50));
+
+// isInteger  :  判断数字是否是整数
+console.log(Number.isInteger(5));
+console.log(Number.isInteger(5.1));
+console.log(Number.isInteger(5.0));
+console.log(5.0);
+console.log(Number.isInteger(5.));
+console.log(Number.isInteger(5.0000000000000001));
+console.log(5.000000000000001);
+console.log('*'.repeat(50));
+
+// Number.parseInt  :  强制转化为整形
+console.log(Number.parseInt('1.2'));
+console.log(Number.parseInt('a1.2'));
+console.log(Number.parseInt('1q2.2'));
+console.log(Number.parseInt('12.2'));
+console.log(Number.parseFloat('1.2'));
+console.log(Number.parseFloat('a1.2'));
+console.log(Number.parseFloat('1q2.2'));
+console.log(Number.parseFloat('12.2a1'));
+console.log('*'.repeat(50));
+
+// trunc  ： 向下取整
+console.log(Math.trunc(3.1));
+console.log(Math.trunc(3.9));
+console.log(Math.trunc(3.9999999999999999));
+
+</script>

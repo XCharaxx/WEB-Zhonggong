@@ -1,0 +1,30 @@
+<script>
+// i = 123;
+// console.log(i);
+// 定义严格模式
+'use strict';
+// num = 200;
+// 定义变量必须使用变量修饰符
+var num = 300;
+console.log(num);
+
+
+// 2.严格模式中不允许删除变量
+// console.log(delete num);
+
+// 3.eval函数独立的作用域
+eval('var age = 18');
+// console.log(age);
+console.log(eval('3+2'));
+
+// 4.八进制必须使用0o开头
+// console.log(056); 
+console.log(0o56);
+
+// 5.不能使用this返回window
+function fun(){ 
+    return this;
+}
+console.log(fun());
+ 
+</script>

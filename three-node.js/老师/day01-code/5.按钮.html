@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <button>按钮6</button>
+    <button>按钮7</button>
+    <button>按钮8</button>
+</body>
+</html>
+<script>
+var obtns = document.querySelectorAll('button');
+// for (var i = 0; i < obtns.length; i++){
+//     obtns[i].aaa = i;
+//     obtns[i].onclick = function(){
+//         alert(this.aaa + 1);
+//     }
+// }
+for (let i = 0; i < obtns.length; i++){
+    obtns[i].onclick = function(){
+        alert(i + 1);
+    }
+}
+</script>

@@ -1,0 +1,33 @@
+<script>
+// let obj = {
+//     name : 'Eric',
+//     age : 18,
+//     sex : '女',
+//     sex : '男'
+// }
+// console.log(obj);
+
+// 两个Symbol不相等
+let symbol1 = Symbol();
+console.log(symbol1);
+console.log(typeof symbol1);
+
+let symbol2 = Symbol();
+console.log(symbol2);
+console.log(typeof symbol2);
+console.log(symbol1 == symbol2);
+
+// 传递参数作为标识
+let name = Symbol('姓名');
+let username = Symbol('姓名');
+let age = Symbol('年龄');
+console.log(name);
+console.log(username);
+console.log(age);
+console.log(name == username);
+
+// Symbol类型不能和其他数据类型进行运算
+// console.log(name + 123);
+// console.log(name + 12.3);
+// console.log(name + '123');
+</script>

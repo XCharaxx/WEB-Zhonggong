@@ -1,0 +1,36 @@
+<script>
+// 使用for...of迭代数组
+let arr = [66,88,99,88,66];
+for (let value of arr){
+    console.log(value);
+}
+
+// 使用for...of迭代字符串
+let str = 'YES';
+for (let value of str){
+    console.log(value);
+}
+
+// 大多数情况下  我们使用for...of  迭代set或者map
+// 使用for...of迭代set集合
+let set = new Set(arr);
+for (let value of set){
+    console.log(value);
+}
+
+// 使用for...of迭代map集合
+let map = new Map([['name','Eric'],['age',18]]);
+for (let value of map){
+    console.log(value);
+}
+
+// 不能迭代对象
+// let obj = {
+//     name : 'Eric',
+//     age : 18
+// };
+// for (let value of obj){
+//     console.log(value);
+// }
+
+</script>

@@ -1,0 +1,45 @@
+<script>
+// 定义箭头函数箭头函数只有一个参数的时候  可以省略小括号
+// let fn1 = ()=>{
+//     console.log(123);
+// }
+// let fn1 = (num)=>{
+//     console.log(100 + num);
+// }
+let fn1 = num=>{
+    console.log(100 + num);
+}
+// let fun2 = a,b=>{
+//     console.log(a+b);
+// }
+fn1(200);
+
+// 箭头函数中  函数体只有一句话的时候  可以省略大括号
+// let fun2 = ()=>{
+//     console.log('这是只有一句话的时候');
+// }
+let fun2 = ()=>console.log('这是只有一句话的时候')
+fun2();
+
+// 当我们省略大括号  函数体只有一句话  并且这句话是返回值的时候  那么我们必须省略return
+// let fun3 = ()=>{
+//     return '你好  北京';
+// }
+let fun3 = ()=>'你好 北京';
+console.log(fun3());
+
+// 当返回值是一个对象的时候  省略大括号会出现问题
+// let fun4 = ()=>{
+//     return {
+//         name : 'Eric',
+//         age : 18,
+//         sex : '男'
+//     }
+// }
+// 因为函数和对象都有大括号  此时程序无法分辨大括号究竟是函数的还是对象的
+// 我们处理的方式是  把我们返回的对象  用小括号包裹  代表是一个整体
+// let fun4 = ()=>{name : 'Eric',age : 18,sex : '男'}
+let fun4 = ()=>({name : 'Eric',age : 18,sex : '男'});
+console.log(fun4());
+
+</script>

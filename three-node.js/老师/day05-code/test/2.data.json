@@ -1,0 +1,23 @@
+[
+    {
+        "book_id" : 1,
+        "book_name" : "全球通史",
+        "book_page" : 1300,
+        "book_price" : 66,
+        "book_author" : "斯塔夫里阿诺斯"
+    },
+    {
+        "book_id" : 2,
+        "book_name" : "神曲",
+        "book_page" : 600,
+        "book_price" : 88,
+        "book_author" : "但丁"
+    },
+    {
+        "book_id" : 3,
+        "book_name" : "茶花女",
+        "book_page" : 1500,
+        "book_price" : 33,
+        "book_author" : "小仲马"
+    }
+]

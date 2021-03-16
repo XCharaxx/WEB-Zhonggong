@@ -1,0 +1,37 @@
+<script>
+function p1(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('这是p1  3s');
+        }, 3000);
+    })
+}
+
+function p2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('这是p2  1s');
+        }, 1000);
+    })
+}
+
+function p3(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('这是p3  2s');
+        }, 2000);
+    })
+}
+
+async function test(){
+    let v1 = await p1();
+    console.log(v1);
+    let v2 = await p2();
+    console.log(v2);
+    let v3 = await p3();
+    console.log(v3);
+}
+
+test();
+
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text"  id="user">
+        <input type="button" id="btn" value="搜索">
+    </div>
+</body>
+</html>
+<script src="./jquery.js"></script>
+<script>
+// let p1 = new Promise((resolve,reject)=>{
+//     $.ajax({
+//         url : './index.php',
+//         type : 'get',
+//         data : {user : 'Eric'},
+//         success : (res)=>{
+//             resolve(res);
+//         },
+//         error : (err)=>{
+//             reject(err);
+//         }
+//     })
+// })
+
+// p1.then(d=>{
+//     console.log(d);
+//     return d;
+// }).then(d=>{
+//     console.log(d);
+//     $.ajax({
+//         url : './server.php',
+//         type : 'get',
+//         data : {user : d},
+//         success : (res)=>{
+//             console.log(res);
+//         }
+//     })
+// })
+
+$('#btn').click(function(){
+    let search = $('#user').val();
+    let p = new Promise((resolve,reject)=>{
+        $.ajax({
+            url : './index.php',
+            data : {web : search},
+            type : 'get',
+            success : (data)=>{
+                resolve(data);
+            }
+        })
+    })
+    p.then(data=>{
+        console.log(data);
+        return data;
+    }).then(data=>{
+        $.ajax({
+            url : './server.php',
+            data : {user : data},
+            type : 'get',
+            success : (data)=>{
+                console.log(data);
+            }
+        })
+    })
+})
+
+
+
+
+
+
+
+
+</script>

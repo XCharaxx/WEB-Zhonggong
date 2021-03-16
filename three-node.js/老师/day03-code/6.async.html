@@ -1,0 +1,21 @@
+<script>
+// async函数的返回值都是一个promise
+// async function fn(){
+//     console.log('你好');
+// }
+// console.log(fn());
+
+
+// async函数中的await能够获取promise的状态  不需要then和catch
+let promise = new Promise((resolve,reject)=>{
+    resolve('成功')
+})
+
+async function fn(){
+    let v1 = await promise
+    console.log(v1);
+}
+fn();
+
+
+</script>

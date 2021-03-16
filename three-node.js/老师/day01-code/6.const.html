@@ -1,0 +1,25 @@
+<script>
+const age = 18;
+console.log(age);
+
+// 不能重复定义
+// const age = 22;
+
+// 不能修改
+// age = 33;
+
+// 块作用域
+if (true){
+    const pi = 3.14;
+    // console.log(pi);
+}
+// console.log(pi);
+
+// 其实严格上来说  常量是可以修改的  但是前提是保证不修改其堆栈空间
+const arr = [11,33,55];
+console.log(arr);
+// arr = 3345;
+arr.push(99);
+console.log(arr);
+
+</script>

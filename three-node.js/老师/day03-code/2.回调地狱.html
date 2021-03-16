@@ -1,0 +1,33 @@
+<script>
+$({
+    url : 'www.jd.com',
+    type : 'get',
+    data : {request : '*'},
+    success : (response)=>{
+        $({
+            url : 'www.jd.com' + response,
+            type : 'get',
+            data : {request : '食品'},
+            success : (response1)=>{
+                $({
+                    url : 'www.jd.com' + response1,
+                    type : 'get',
+                    data : {request : '元宵'},
+                    success : (response2)=>{
+                        $({
+                            url : 'www.jd.com' + response2,
+                            type : 'get',
+                            data : {request : '豆沙馅'},
+                            success : (result)=>{
+                                console.log('所有得数据' + result);
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    }
+})
+
+
+</script>

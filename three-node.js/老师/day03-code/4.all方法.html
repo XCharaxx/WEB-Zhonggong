@@ -1,0 +1,30 @@
+<script>
+let p1 = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        console.log('p1');
+        resolve('这是第一个promise');
+    }, 3000);
+})
+
+let p2 = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        console.log('p2');
+        resolve('这是第二个promise');
+    }, 1000);
+})
+
+let p3 = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        console.log('p3');
+        resolve('这是第三个promise');
+    }, 2000);
+})
+
+// 使用Promise中的all方法  执行所有的Promise
+// all方法是Promise对象中的静态方法
+// 内置一个参数  参数是一个数组  数组中的每个元素是你要执行的所有的promise
+// 执行所有的Promise  但是没有顺序
+let a = Promise.all([p1,p2,p3]);
+// Promise.all([p1,p2,p3]).then(data=>console.log(data));
+a.then(d=>console.log(d))
+</script>

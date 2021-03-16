@@ -1,0 +1,21 @@
+<script>
+// Promise
+let promise = new Promise(function(resolve,reject){
+    let num = 11;
+    if (num){
+        resolve('成功');
+    }else{
+        reject('失败');
+    }
+})
+
+// 触发
+// let a = promise.then(data=>console.log(data));
+// let a = promise.then(data=>console.log(data),error=>console.log(error));
+
+// 链式
+let a = promise.then(d=>console.log(d)).catch(e=>console.log(e));
+
+console.log(a);
+
+</script>

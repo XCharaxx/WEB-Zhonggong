@@ -1,0 +1,48 @@
+<script>
+// 我们使用iterator的时候  没有这么麻烦  只需要使用一种方法就可以
+// 使用[Symbol.iterator]()方法  进行迭代数据结构
+
+// 使用iterator迭代数组
+let arr = [66,88,99,88,66];
+let arrIter = arr[Symbol.iterator]();
+console.log(arrIter.next());
+console.log(arrIter.next());
+console.log(arrIter.next());
+console.log(arrIter.next());
+console.log(arrIter.next());
+console.log(arrIter.next());
+
+// iterator迭代字符串
+let str = 'YES';
+let strIter = str[Symbol.iterator]();
+console.log(strIter.next());
+console.log(strIter.next());
+console.log(strIter.next());
+console.log(strIter.next());
+
+// iterator迭代set集合
+let set = new Set(arr)
+// console.log(set);
+let setIter = set[Symbol.iterator]();
+console.log(setIter.next());
+console.log(setIter.next());
+console.log(setIter.next());
+console.log(setIter.next());
+
+// iterator迭代map集合
+let map = new Map([['name','Eric'],['age',18]]);
+console.log(map);
+let mapIter = map[Symbol.iterator]();
+console.log(mapIter.next());
+console.log(mapIter.next());
+console.log(mapIter.next());
+
+// 但是注意  iterator不能迭代对象
+let obj = {
+    name : 'Eric',
+    age : 18
+};
+let objIter = obj[Symbol.iterator]();
+
+
+</script>
